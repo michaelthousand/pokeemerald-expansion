@@ -27,6 +27,13 @@
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN",
       "dest_warp_id": "3"
+    },
+    {
+      "x": 22,
+      "y": 18,
+      "elevation": 0,
+      "dest_map": "MAP_TEST_LAB",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

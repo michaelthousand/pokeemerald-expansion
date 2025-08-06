@@ -94,14 +94,16 @@
     "Underwater_Route105",
     "Underwater_Route125",
     "TestMapA",
-    "Test_Route"
+    "Test_Route",
+    "NewHope"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
     "LittlerootTown_BrendansHouse_2F",
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
-    "LittlerootTown_ProfessorBirchsLab"
+    "LittlerootTown_ProfessorBirchsLab",
+    "TestLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

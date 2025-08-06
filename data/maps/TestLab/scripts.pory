@@ -1,0 +1,401 @@
+mapscripts TestLab_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: TestLab_EventScript_BallDefault
+}
+ 
+script TestLab_EventScript_BallDefault{
+    setvar(VAR_UNUSED_0x40FF, 0)
+}
+ 
+script TestLab_EventScript_Birch{
+    lockall
+    faceplayer
+    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
+        msgbox("Hello, would you like to see more?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            if(var(VAR_UNUSED_0x40FF) != 2){
+                addvar(VAR_UNUSED_0x40FF, 1)
+            }
+            else{
+                setvar(VAR_UNUSED_0x40FF, 0)
+            }
+            msgbox("Choose your Pokemon wisely")
+        }
+        else{
+            msgbox("Choose your Pokemon wisely")
+        }
+    }
+    else{
+        msgbox("Take care of your Pokemon")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script TestLab_EventScript_PokeballOne{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
+        if(var(VAR_UNUSED_0x40FF) == 0){
+            call(TestLab_EventScript_Sprigatito)
+        }
+        elif(var(VAR_UNUSED_0x40FF) == 1){
+            call(TestLab_EventScript_Grookey)
+        }
+        elif(var(VAR_UNUSED_0x40FF) == 2){
+            call(TestLab_EventScript_Chespin)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script TestLab_EventScript_PokeballTwo{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
+        if(var(VAR_UNUSED_0x40FF) == 0){
+            call(TestLab_EventScript_Litten)
+        }
+        elif(var(VAR_UNUSED_0x40FF) == 1){
+            call(TestLab_EventScript_Chimchar)
+        }
+        elif(var(VAR_UNUSED_0x40FF) == 2){
+            call(TestLab_EventScript_Charmander)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+script TestLab_EventScript_PokeballThree{
+    lockall
+    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
+        if(var(VAR_UNUSED_0x40FF) == 0){
+            call(TestLab_EventScript_Quaxly)
+        }
+        elif(var(VAR_UNUSED_0x40FF) == 1){
+            call(TestLab_EventScript_Popplio)
+        }
+        elif(var(VAR_UNUSED_0x40FF) == 2){
+            call(TestLab_EventScript_Froakie)
+        }
+    }
+    else{
+        msgbox("Don't Take Another")
+    }
+    waitmessage
+    releaseall
+    end
+}
+ 
+ 
+script TestLab_EventScript_Sprigatito{
+    showmonpic(SPECIES_SPRIGATITO, 10,3)
+    msgbox("Do you want to choose Sprigatito?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_SPRIGATITO, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Sprigatito")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x04F)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Sprigatito")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x04F)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Grookey{
+    showmonpic(SPECIES_GROOKEY, 10,3)
+    msgbox("Do you want to choose Grookey?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_GROOKEY, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Grookey")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x04F)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Grookey")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x04F)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Chespin{
+    showmonpic(SPECIES_CHESPIN, 10,3)
+    msgbox("Do you want to choose Chespin?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHESPIN, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chespin")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x04F)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chespin")
+            removeobject(1)
+            setflag(FLAG_UNUSED_0x04F)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Litten{
+    showmonpic(SPECIES_LITTEN, 10,3)
+    msgbox("Do you want to choose Litten?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_LITTEN, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Litten")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x04E)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Litten")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x04E)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Chimchar{
+    showmonpic(SPECIES_CHIMCHAR, 10,3)
+    msgbox("Do you want to choose Chimchar?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHIMCHAR, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chimchar")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x04E)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Chimchar")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x04E)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Charmander{
+    showmonpic(SPECIES_CHARMANDER, 10,3)
+    msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_CHARMANDER, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Charmander")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x04E)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Charmander")
+            removeobject(2)
+            setflag(FLAG_UNUSED_0x04E)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Quaxly{
+    showmonpic(SPECIES_QUAXLY, 10,3)
+    msgbox("Do you want to choose Quaxly?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_QUAXLY, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Quaxly")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x04D)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Quaxly")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x04D)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Popplio{
+    showmonpic(SPECIES_POPPLIO, 10,3)
+    msgbox("Do you want to choose Popplio?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_POPPLIO, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Popplio")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x04D)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Popplio")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x04D)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+script TestLab_EventScript_Froakie{
+    showmonpic(SPECIES_FROAKIE, 10,3)
+    msgbox("Do you want to choose Froakie?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        givemon(SPECIES_FROAKIE, 5, ITEM_NONE)
+        if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Froakie")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x04D)
+            call(NicknamePartyMon)
+        }
+        elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+            playfanfare(MUS_OBTAIN_ITEM)
+            msgbox("Recieved Froakie")
+            removeobject(3)
+            setflag(FLAG_UNUSED_0x04D)
+            call(NicknameBoxMon)
+        }
+        else{
+            hidemonpic
+            msgbox("No More Room")
+        }
+    }
+    else{
+        hidemonpic
+        msgbox(TestLab_NotChosen)
+    }
+ 
+}
+ 
+ 
+script NicknamePartyMon{
+    msgbox("Give a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_GetGiftMonPartySlot)
+        call(Common_EventScript_NameReceivedPartyMon)
+    }
+ 
+ 
+}
+ 
+script NicknameBoxMon{
+    msgbox("Give a nickname?", MSGBOX_YESNO)
+    hidemonpic
+    if(var(VAR_RESULT) == YES){
+        call(Common_EventScript_NameReceivedBoxMon)
+    }
+    msgbox("Transferred to PC")
+}
+ 
+text TestLab_NotChosen{
+    "You did not choose the Pokemon"
+}

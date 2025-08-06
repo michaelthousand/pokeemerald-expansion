@@ -4430,6 +4430,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Test_Route/border.bin",
       "blockdata_filepath": "data/layouts/Test_Route/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEST_LAB",
+      "name": "TestLab_Layout",
+      "width": 25,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/TestLab/border.bin",
+      "blockdata_filepath": "data/layouts/TestLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE",
+      "name": "NewHope_Layout",
+      "width": 60,
+      "height": 50,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/NewHope/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope/map.bin"
     }
   ]
 }
