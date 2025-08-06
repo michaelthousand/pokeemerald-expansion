@@ -1,0 +1,25 @@
+mapscripts Test_Route_MapScripts {}
+
+
+script Test_Route_EventScript_RoxanneBattle{
+    trainerbattle_double(TRAINER_ROXANNE_2, Roxanne_Intro, Roxanne_Outro, Roxanne_NotEnoughMons)
+    msgbox(PostBattle_Roxanne, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text Roxanne_Intro{
+    "I hope this works"
+}
+
+text Roxanne_Outro{
+    "Yay! It worked!"
+}
+
+text Roxanne_NotEnoughMons{
+    "You're not ready for this fight"
+}
+
+text PostBattle_Roxanne{
+    "Eat my ass, trainer"
+}

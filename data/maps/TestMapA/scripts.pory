@@ -1,1 +1,32 @@
 mapscripts TestMapA_MapScripts {}
+
+
+script TestMapA_EventScript_SetupTestBattle{
+    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
+        setflag(FLAG_UNUSED_0x04C)
+    }
+    else{
+        clearflag(FLAG_UNUSED_0x04C)
+    }
+}
+
+
+
+script TestMapA_EventScript_MayTestBattle{
+    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro)
+    msgbox(PostBattle_May, MSGBOX_AUTOCLOSE)
+    waitmessage
+    end
+}
+
+text May_Intro{
+    "You'll never win!"
+}
+
+text May_Outro{
+    "Okay, you won"
+}
+
+text PostBattle_May{
+    "I'll win next time"
+}

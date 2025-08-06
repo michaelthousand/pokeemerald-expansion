@@ -239,7 +239,7 @@ TestLab_EventScript_Sprigatito::
 
 TestLab_EventScript_Sprigatito_1:
 # 103 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_SPRIGATITO, 50, ITEM_NONE
+	givemon SPECIES_SPRIGATITO, 5, ITEM_NONE
 # 104 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Sprigatito_4
@@ -295,7 +295,7 @@ TestLab_EventScript_Grookey::
 
 TestLab_EventScript_Grookey_1:
 # 134 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_GROOKEY, 50, ITEM_NONE
+	givemon SPECIES_GROOKEY, 5, ITEM_NONE
 # 135 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Grookey_4
@@ -351,7 +351,7 @@ TestLab_EventScript_Chespin::
 
 TestLab_EventScript_Chespin_1:
 # 165 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_CHESPIN, 50, ITEM_NONE
+	givemon SPECIES_CHESPIN, 5, ITEM_NONE
 # 166 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Chespin_4
@@ -407,7 +407,7 @@ TestLab_EventScript_Litten::
 
 TestLab_EventScript_Litten_1:
 # 196 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_LITTEN, 50, ITEM_NONE
+	givemon SPECIES_LITTEN, 5, ITEM_NONE
 # 197 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Litten_4
@@ -463,7 +463,7 @@ TestLab_EventScript_Chimchar::
 
 TestLab_EventScript_Chimchar_1:
 # 227 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_CHIMCHAR, 50, ITEM_NONE
+	givemon SPECIES_CHIMCHAR, 5, ITEM_NONE
 # 228 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Chimchar_4
@@ -519,7 +519,7 @@ TestLab_EventScript_Charmander::
 
 TestLab_EventScript_Charmander_1:
 # 258 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_CHARMANDER, 50, ITEM_NONE
+	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
 # 259 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Charmander_4
@@ -575,7 +575,7 @@ TestLab_EventScript_Quaxly::
 
 TestLab_EventScript_Quaxly_1:
 # 289 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_QUAXLY, 50, ITEM_NONE
+	givemon SPECIES_QUAXLY, 5, ITEM_NONE
 # 290 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Quaxly_4
@@ -631,7 +631,7 @@ TestLab_EventScript_Popplio::
 
 TestLab_EventScript_Popplio_1:
 # 320 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_POPPLIO, 50, ITEM_NONE
+	givemon SPECIES_POPPLIO, 5, ITEM_NONE
 # 321 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Popplio_4
@@ -687,7 +687,7 @@ TestLab_EventScript_Froakie::
 
 TestLab_EventScript_Froakie_1:
 # 351 "data/maps/TestLab/scripts.pory"
-	givemon SPECIES_FROAKIE, 50, ITEM_NONE
+	givemon SPECIES_FROAKIE, 5, ITEM_NONE
 # 352 "data/maps/TestLab/scripts.pory"
 	compare VAR_RESULT, MON_GIVEN_TO_PARTY
 	goto_if_eq TestLab_EventScript_Froakie_4
