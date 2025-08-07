@@ -55,3 +55,48 @@ text May_Outro{
 text PostBattle_May{
     "I'll win next time"
 }
+
+
+script TestMapA_EventScript_Kyogre{
+    lockall
+    setflag(FLAG_UNUSED_0x04A)
+    playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
+    delay(40)
+    waitmoncry
+    setwildbattle(SPECIES_KYOGRE, 15, ITEM_BLUE_ORB)
+    dowildbattle
+    specialvar(VAR_RESULT, GetBattleOutcome)
+    if(var(VAR_RESULT)==B_OUTCOME_CAUGHT){
+        call(Won_or_Caught)
+    }
+    elif(var(VAR_RESULT) == B_OUTCOME_WON){
+        call(Won_or_Caught)
+    }
+    elif(var(VAR_RESULT) ==B_OUTCOME_RAN){
+        call(RanAway)
+    }
+    elif(var(VAR_RESULT) == B_OUTCOME_PLAYER_TELEPORTED){
+        call(RanAway)
+    }
+    waitmessage
+    releaseall
+}
+
+script Won_or_Caught{
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox("You are the Pokemon Master")
+    return
+}
+
+script RanAway{
+    playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
+    msgbox("Kyuhh...", MSGBOX_AUTOCLOSE)
+    delay(20)
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox("You are not the Pokemon Master")
+    return
+}

@@ -93,6 +93,105 @@ MayLeave:
 	walk_left
 	step_end
 
+TestMapA_EventScript_Kyogre::
+# 61 "data/maps/TestMapA/scripts.pory"
+	lockall
+# 62 "data/maps/TestMapA/scripts.pory"
+	setflag FLAG_UNUSED_0x04A
+# 63 "data/maps/TestMapA/scripts.pory"
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+# 64 "data/maps/TestMapA/scripts.pory"
+	delay 40
+# 65 "data/maps/TestMapA/scripts.pory"
+	waitmoncry
+# 66 "data/maps/TestMapA/scripts.pory"
+	setwildbattle SPECIES_KYOGRE, 15, ITEM_BLUE_ORB
+# 67 "data/maps/TestMapA/scripts.pory"
+	dowildbattle
+# 68 "data/maps/TestMapA/scripts.pory"
+	specialvar VAR_RESULT, GetBattleOutcome
+# 69 "data/maps/TestMapA/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_CAUGHT
+	goto_if_eq TestMapA_EventScript_Kyogre_2
+# 72 "data/maps/TestMapA/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq TestMapA_EventScript_Kyogre_3
+# 75 "data/maps/TestMapA/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq TestMapA_EventScript_Kyogre_4
+# 78 "data/maps/TestMapA/scripts.pory"
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq TestMapA_EventScript_Kyogre_5
+TestMapA_EventScript_Kyogre_1:
+# 81 "data/maps/TestMapA/scripts.pory"
+	waitmessage
+# 82 "data/maps/TestMapA/scripts.pory"
+	releaseall
+	return
+
+TestMapA_EventScript_Kyogre_2:
+# 70 "data/maps/TestMapA/scripts.pory"
+	call Won_or_Caught
+	goto TestMapA_EventScript_Kyogre_1
+
+TestMapA_EventScript_Kyogre_3:
+# 73 "data/maps/TestMapA/scripts.pory"
+	call Won_or_Caught
+	goto TestMapA_EventScript_Kyogre_1
+
+TestMapA_EventScript_Kyogre_4:
+# 76 "data/maps/TestMapA/scripts.pory"
+	call RanAway
+	goto TestMapA_EventScript_Kyogre_1
+
+TestMapA_EventScript_Kyogre_5:
+# 79 "data/maps/TestMapA/scripts.pory"
+	call RanAway
+	goto TestMapA_EventScript_Kyogre_1
+
+
+Won_or_Caught::
+# 86 "data/maps/TestMapA/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 87 "data/maps/TestMapA/scripts.pory"
+	removeobject 2
+# 88 "data/maps/TestMapA/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 89 "data/maps/TestMapA/scripts.pory"
+	msgbox Won_or_Caught_Text_0
+	return
+
+
+RanAway::
+# 94 "data/maps/TestMapA/scripts.pory"
+	playmoncry SPECIES_KYOGRE, CRY_MODE_ENCOUNTER
+# 95 "data/maps/TestMapA/scripts.pory"
+	msgbox RanAway_Text_0, MSGBOX_AUTOCLOSE
+# 96 "data/maps/TestMapA/scripts.pory"
+	delay 20
+# 97 "data/maps/TestMapA/scripts.pory"
+	fadescreen FADE_TO_BLACK
+# 98 "data/maps/TestMapA/scripts.pory"
+	removeobject 2
+# 99 "data/maps/TestMapA/scripts.pory"
+	fadescreen FADE_FROM_BLACK
+# 100 "data/maps/TestMapA/scripts.pory"
+	msgbox RanAway_Text_1
+	return
+
+
+Won_or_Caught_Text_0:
+# 89 "data/maps/TestMapA/scripts.pory"
+	.string "You are the Pokemon Master$"
+
+RanAway_Text_0:
+# 95 "data/maps/TestMapA/scripts.pory"
+	.string "Kyuhh...$"
+
+RanAway_Text_1:
+# 100 "data/maps/TestMapA/scripts.pory"
+	.string "You are not the Pokemon Master$"
+
 May_Intro::
 # 47 "data/maps/TestMapA/scripts.pory"
 	.string "You'll never win!$"
