@@ -271,7 +271,7 @@
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
-#define VAR_UNUSED_0x40FE                                0x40FE // Unused Var
+#define TESTMAPA_STATE                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK
 #define VAR_UNUSED_0x40FF                                0x40FF // Unused Var // USED FOR STARTER POKEBALL SELECTION
 
 #define VARS_END                                         0x40FF

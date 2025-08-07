@@ -1,22 +1,47 @@
-mapscripts TestMapA_MapScripts {}
+raw `
+TestMapA_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, TestMapA_OnTransition
 
+TestMapA_OnTransition:
+    call_if_unset FLAG_UNUSED_0x04C, TestMapA_EventScript_SetupTestBattle
+
+`
 
 script TestMapA_EventScript_SetupTestBattle{
     if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
         setflag(FLAG_UNUSED_0x04C)
+        setvar(TESTMAPA_STATE, 0)
     }
     else{
-        clearflag(FLAG_UNUSED_0x04C)
+        if(var(TESTMAPA_STATE) == 0){
+            clearflag(FLAG_UNUSED_0x04C)
+        }
     }
 }
 
 
 
 script TestMapA_EventScript_MayTestBattle{
-    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro)
+    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, MayBattleOver)
     msgbox(PostBattle_May, MSGBOX_AUTOCLOSE)
     waitmessage
     end
+}
+
+script MayBattleOver{
+    lockall
+    applymovement(1, MayLeave)
+    waitmovement(0)
+    removeobject(1)
+    setflag(FLAG_UNUSED_0x04C)
+    setvar(TESTMAPA_STATE, 1)
+    waitmessage
+    releaseall
+}
+
+movement MayLeave{
+    walk_down
+    walk_left * 7
 }
 
 text May_Intro{
