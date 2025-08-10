@@ -16873,3 +16873,162 @@ Double Battle: No
 Kyogre
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+
+=== TRAINER_FLYING_GYM_1 ===
+Name: FLYING LDR
+Class: Leader
+Pic: Leader Flannery
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Basic Trainer
+
+Hoothoot
+Level: 16
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Protect
+- Defog
+- Confusion
+- Reflect
+
+Fletchinder
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Ember
+- Aerial Ace
+- Protect
+- Flame Charge
+
+Rufflet
+Level: 18
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Tailwind
+- Wing Attack
+- Protect
+- Hone Claws
+
+Wingull
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Wing Attack
+- Supersonic
+- Protect
+- Water Pulse
+
+Trumbeak
+Level: 20
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Pluck
+- Supersonic
+- Protect
+- Swords Dance
+
+Gligar
+Level: 21
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+Tera Type: TYPE_GROUND
+- Poison Tail
+- Fury Cutter
+- Protect
+- Knock Off
+
+=== TRAINER_PSYCHIC_GYM_1 ===
+Name: PSYCHIC LD
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Basic Trainer
+
+Solosis
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Protect
+- Psybeam
+- Charm
+- Astonish
+
+Kadabra
+Level: 18
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Ally Switch
+- Reflect
+- Protect
+- Psychic
+
+Drowzee
+Level: 19
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Confusion
+- Poison Gas
+- Protect
+- Dazzling Gleam
+
+Girafarig
+Level: 19
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Psybeam
+- Assurance
+- Protect
+- Stomp
+
+Gothorita
+Level: 21
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Psyshock
+- Foul Play
+- Protect
+- Trick Room
+
+Indeedee-F
+Level: 21
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+Tera Type: TYPE_FAIRY
+- Helping Hand
+- Expanding Force
+- Protect
+- Encore
+
+
+=== TRAINER_PSY_FLY_T1 ===
+Name: PSY FLY 1
+Class: Pkmn Trainer 1
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Basic Trainer
+
+Natu
+Level: 16
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Protect
+- Confuse Ray
+- Peck
+- Double Team
+
+Woobat
+Level: 16
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Air Cutter
+- Confusion
+- Protect
+- Thunder Wave
+
+Staravia
+Level: 17
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Double Team
+- Wing Attack
+- Protect
+- Facade
+
+Sigilyph
+Level: 19
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+- Air Cutter
+- Hypnosis
+- Protect
+- Icy Wind

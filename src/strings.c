@@ -1147,6 +1147,10 @@ const u8 gText_F701Players[] = _("{DYNAMIC 1} players");
 const u8 gText_F702Players[] = _("{DYNAMIC 2} players");
 const u8 gText_F703Players[] = _("{DYNAMIC 3} players");
 
+const u8 gText_StarterOption1[] = _("Options 1");
+const u8 gText_StarterOption2[] = _("Options 2");
+const u8 gText_StarterOption3[] = _("Options 3");
+
 const u8 *const gTextTable_Players[] = {
     gText_F700Players,
     gText_F701Players,

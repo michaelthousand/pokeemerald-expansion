@@ -1,0 +1,19 @@
+mapscripts TestMapA_Mart_MapScripts{}
+
+script TestMapA_Mart_Employee{
+    lock
+    faceplayer
+    message("How can I help you?")
+    waitmessage
+    pokemart(MyMartItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart MyMartItems {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_LEMONADE
+}
+

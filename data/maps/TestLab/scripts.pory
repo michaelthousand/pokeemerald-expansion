@@ -3,45 +3,56 @@ mapscripts TestLab_MapScripts {
 }
  
 script TestLab_EventScript_BallDefault{
-    setvar(VAR_UNUSED_0x40FF, 0)
+    setvar(STARTER_REGION, 0)
 }
  
 script TestLab_EventScript_Birch{
-    lockall
-    faceplayer
-    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
-        msgbox("Hello, would you like to see more?", MSGBOX_YESNO)
-        if(var(VAR_RESULT) == YES){
-            if(var(VAR_UNUSED_0x40FF) != 2){
-                addvar(VAR_UNUSED_0x40FF, 1)
-            }
-            else{
-                setvar(VAR_UNUSED_0x40FF, 0)
-            }
-            msgbox("Choose your Pokemon wisely")
+    if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
+        lock
+        faceplayer
+        message("Would you like to see more?")
+        multichoice(25,5,MULTI_STARTER_CHOICE, 0)
+        closemessage
+
+        if (var(VAR_RESULT) == 0){
+            call(StarterFade)
+            setvar(STARTER_REGION, 2)
         }
-        else{
-            msgbox("Choose your Pokemon wisely")
+        elif (var(VAR_RESULT) == 1){
+            call(StarterFade)
+            setvar(STARTER_REGION, 1)
         }
+        elif (var(VAR_RESULT) == 2){
+            call(StarterFade)
+            setvar(STARTER_REGION, 0)
+        }
+        msgbox("Choose your Pokemon wisely")
+        waitmessage
+        release
     }
     else{
-        msgbox("Take care of your Pokemon")
+        msgbox("Take care of your Pokemon", MSGBOX_NPC)
     }
-    waitmessage
-    releaseall
     end
+}
+
+script StarterFade{
+    fadescreen(FADE_TO_BLACK)
+    delay(20)
+    fadescreen(FADE_FROM_BLACK)
+    return
 }
  
 script TestLab_EventScript_PokeballOne{
     lockall
-    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
-        if(var(VAR_UNUSED_0x40FF) == 0){
+    if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
+        if(var(STARTER_REGION) == 0){
             call(TestLab_EventScript_Sprigatito)
         }
-        elif(var(VAR_UNUSED_0x40FF) == 1){
+        elif(var(STARTER_REGION) == 1){
             call(TestLab_EventScript_Grookey)
         }
-        elif(var(VAR_UNUSED_0x40FF) == 2){
+        elif(var(STARTER_REGION) == 2){
             call(TestLab_EventScript_Chespin)
         }
     }
@@ -55,14 +66,14 @@ script TestLab_EventScript_PokeballOne{
  
 script TestLab_EventScript_PokeballTwo{
     lockall
-    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
-        if(var(VAR_UNUSED_0x40FF) == 0){
+    if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
+        if(var(STARTER_REGION) == 0){
             call(TestLab_EventScript_Litten)
         }
-        elif(var(VAR_UNUSED_0x40FF) == 1){
+        elif(var(STARTER_REGION) == 1){
             call(TestLab_EventScript_Chimchar)
         }
-        elif(var(VAR_UNUSED_0x40FF) == 2){
+        elif(var(STARTER_REGION) == 2){
             call(TestLab_EventScript_Charmander)
         }
     }
@@ -76,14 +87,14 @@ script TestLab_EventScript_PokeballTwo{
  
 script TestLab_EventScript_PokeballThree{
     lockall
-    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
-        if(var(VAR_UNUSED_0x40FF) == 0){
+    if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
+        if(var(STARTER_REGION) == 0){
             call(TestLab_EventScript_Quaxly)
         }
-        elif(var(VAR_UNUSED_0x40FF) == 1){
+        elif(var(STARTER_REGION) == 1){
             call(TestLab_EventScript_Popplio)
         }
-        elif(var(VAR_UNUSED_0x40FF) == 2){
+        elif(var(STARTER_REGION) == 2){
             call(TestLab_EventScript_Froakie)
         }
     }
@@ -105,14 +116,14 @@ script TestLab_EventScript_Sprigatito{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Sprigatito")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(STARTER_BALL_ONE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Sprigatito")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(STARTER_BALL_ONE)
             call(NicknameBoxMon)
         }
         else{
@@ -136,14 +147,14 @@ script TestLab_EventScript_Grookey{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Grookey")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(STARTER_BALL_ONE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Grookey")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(STARTER_BALL_ONE)
             call(NicknameBoxMon)
         }
         else{
@@ -167,14 +178,14 @@ script TestLab_EventScript_Chespin{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Chespin")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(STARTER_BALL_ONE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Chespin")
             removeobject(1)
-            setflag(FLAG_UNUSED_0x04F)
+            setflag(STARTER_BALL_ONE)
             call(NicknameBoxMon)
         }
         else{
@@ -198,14 +209,14 @@ script TestLab_EventScript_Litten{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Litten")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x04E)
+            setflag(STARTER_BALL_TWO)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Litten")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x04E)
+            setflag(STARTER_BALL_TWO)
             call(NicknameBoxMon)
         }
         else{
@@ -229,14 +240,14 @@ script TestLab_EventScript_Chimchar{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Chimchar")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x04E)
+            setflag(STARTER_BALL_TWO)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Chimchar")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x04E)
+            setflag(STARTER_BALL_TWO)
             call(NicknameBoxMon)
         }
         else{
@@ -260,14 +271,14 @@ script TestLab_EventScript_Charmander{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Charmander")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x04E)
+            setflag(STARTER_BALL_TWO)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Charmander")
             removeobject(2)
-            setflag(FLAG_UNUSED_0x04E)
+            setflag(STARTER_BALL_TWO)
             call(NicknameBoxMon)
         }
         else{
@@ -291,14 +302,14 @@ script TestLab_EventScript_Quaxly{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Quaxly")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x04D)
+            setflag(STARTER_BALL_THREE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Quaxly")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x04D)
+            setflag(STARTER_BALL_THREE)
             call(NicknameBoxMon)
         }
         else{
@@ -322,14 +333,14 @@ script TestLab_EventScript_Popplio{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Popplio")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x04D)
+            setflag(STARTER_BALL_THREE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Popplio")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x04D)
+            setflag(STARTER_BALL_THREE)
             call(NicknameBoxMon)
         }
         else{
@@ -353,14 +364,14 @@ script TestLab_EventScript_Froakie{
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Froakie")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x04D)
+            setflag(STARTER_BALL_THREE)
             call(NicknamePartyMon)
         }
         elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
             playfanfare(MUS_OBTAIN_ITEM)
             msgbox("Recieved Froakie")
             removeobject(3)
-            setflag(FLAG_UNUSED_0x04D)
+            setflag(STARTER_BALL_THREE)
             call(NicknameBoxMon)
         }
         else{

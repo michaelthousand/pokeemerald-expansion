@@ -1,0 +1,37 @@
+raw `
+TestMapA_PC_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, TestMapA_PokemonCenter_OnTransition
+    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+
+`
+
+script TestMapA_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_TESTMAPA)
+    end
+}
+
+
+script TestMapA_PC_Nurse {
+    lock
+    faceplayer
+    // Use the common nurse flow, it handles fades/text/etc.
+    call(Common_EventScript_PkmnCenterNurse)
+    release
+    end
+}
+
+
+script TestMapA_PC_NPC_Heal {
+    lock
+    faceplayer
+    msgbox("Would you like to heal your party?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        incrementgamestat(GAME_STAT_USED_POKECENTER)
+        special(HealPlayerParty)
+        msgbox("Please come again.", MSGBOX_NPC)
+    } else {
+        msgbox("Have a nice day.", MSGBOX_NPC)
+    }
+    release
+    end
+}

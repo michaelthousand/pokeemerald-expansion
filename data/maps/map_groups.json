@@ -33,7 +33,9 @@
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
     "gMapGroup_IndoorRoute119",
-    "gMapGroup_IndoorRoute124"
+    "gMapGroup_IndoorRoute124",
+    "gMapGroup_IndoorNewHope",
+    "gMapGroup_IndoorForestsEdge"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -95,7 +97,12 @@
     "Underwater_Route125",
     "TestMapA",
     "Test_Route",
-    "NewHope"
+    "NewHope",
+    "Route1",
+    "EvergreenWoods",
+    "Route2",
+    "PortValor",
+    "ForestsEdge"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -103,7 +110,9 @@
     "LittlerootTown_MaysHouse_1F",
     "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab",
-    "TestLab"
+    "TestLab",
+    "TestMapA_Mart",
+    "TestMapA_PC"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",
@@ -624,5 +633,12 @@
   ],
   "gMapGroup_IndoorRoute124": [
     "Route124_DivingTreasureHuntersHouse"
+  ],
+  "gMapGroup_IndoorNewHope": [
+    "ProfessorCinder",
+    "LEAGUE_HEADQUARTERS"
+  ],
+  "gMapGroup_IndoorForestsEdge": [
+    "ForestsEdge_Gym"
   ]
 }

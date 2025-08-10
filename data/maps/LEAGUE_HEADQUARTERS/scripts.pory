@@ -1,0 +1,19 @@
+mapscripts LEAGUE_HEADQUARTERS_MapScripts {}
+
+
+
+script LEAGUE_HEADQUARTERS_Chairman{
+    lock
+    faceplayer
+    message("Welcome to the Pokemon League!")
+    giveitem(ITEM_TM_PROTECT, 1)
+    giveitem(ITEM_AMULET_COIN, 1)
+    giveitem(ITEM_EVIOLITE, 1)
+    giveitem(ITEM_LEFTOVERS, 1)
+    giveitem(ITEM_LUCKY_EGG, 1)
+    giveitem(ITEM_RARE_CANDY, 50)
+    giveitem(ITEM_QUICK_BALL, 50)
+    msgbox("Hopefully these will help get you started.")
+    release
+    end
+}

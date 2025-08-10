@@ -269,10 +269,10 @@
 #define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
 #define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                                0x40FD // Unused Var
+#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var // USED FOR TEST MAP NURSE
+#define TestMapA_State                                0x40FD // Unused Var // USED FOR TEST MAP STATE
 #define TESTMAPA_STATE                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK
-#define VAR_UNUSED_0x40FF                                0x40FF // Unused Var // USED FOR STARTER POKEBALL SELECTION
+#define STARTER_REGION                                0x40FF // Unused Var // USED FOR STARTER POKEBALL SELECTION
 
 #define VARS_END                                         0x40FF
 #define VARS_COUNT                                       (VARS_END - VARS_START + 1)

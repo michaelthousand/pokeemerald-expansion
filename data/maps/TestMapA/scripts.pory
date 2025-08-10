@@ -8,7 +8,7 @@ TestMapA_OnTransition:
 `
 
 script TestMapA_EventScript_SetupTestBattle{
-    if(!(flag(FLAG_UNUSED_0x04F) || flag(FLAG_UNUSED_0x04E) || flag(FLAG_UNUSED_0x04D))){
+    if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
         setflag(FLAG_UNUSED_0x04C)
         setvar(TESTMAPA_STATE, 0)
     }
@@ -99,4 +99,17 @@ script RanAway{
     fadescreen(FADE_FROM_BLACK)
     msgbox("You are not the Pokemon Master")
     return
+}
+
+
+script TestMapA_Trigger_BlockPath{
+    lockall
+    msgbox("You don't have a Pokemon yet")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    waitmovement(0)
+    releaseall
+}
+
+movement StopPlayer{
+    walk_down
 }

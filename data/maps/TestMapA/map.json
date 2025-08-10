@@ -61,8 +61,57 @@
       "elevation": 0,
       "dest_map": "MAP_TEST_LAB",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 4,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_TEST_MAP_A_MART",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 23,
+      "elevation": 0,
+      "dest_map": "MAP_TEST_MAP_A_PC",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 26,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE",
+      "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 16,
+      "y": 1,
+      "elevation": 0,
+      "var": "TestMapA_State",
+      "var_value": "0",
+      "script": "TestMapA_Trigger_BlockPath"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 1,
+      "elevation": 0,
+      "var": "TestMapA_State",
+      "var_value": "0",
+      "script": "TestMapA_Trigger_BlockPath"
+    },
+    {
+      "type": "trigger",
+      "x": 14,
+      "y": 1,
+      "elevation": 0,
+      "var": "TestMapA_State",
+      "var_value": "0",
+      "script": "TestMapA_Trigger_BlockPath"
+    }
+  ],
   "bg_events": []
 }

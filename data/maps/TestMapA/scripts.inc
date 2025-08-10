@@ -13,7 +13,7 @@ TestMapA_OnTransition:
 
 TestMapA_EventScript_SetupTestBattle::
 # 11 "data/maps/TestMapA/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x04F, TestMapA_EventScript_SetupTestBattle_3
+	goto_if_unset STARTER_BALL_ONE, TestMapA_EventScript_SetupTestBattle_3
 TestMapA_EventScript_SetupTestBattle_2:
 # 16 "data/maps/TestMapA/scripts.pory"
 	compare TESTMAPA_STATE, 0
@@ -29,12 +29,12 @@ TestMapA_EventScript_SetupTestBattle_1:
 
 TestMapA_EventScript_SetupTestBattle_3:
 # 11 "data/maps/TestMapA/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x04E, TestMapA_EventScript_SetupTestBattle_5
+	goto_if_unset STARTER_BALL_TWO, TestMapA_EventScript_SetupTestBattle_5
 	goto TestMapA_EventScript_SetupTestBattle_2
 
 TestMapA_EventScript_SetupTestBattle_5:
 # 11 "data/maps/TestMapA/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x04D, TestMapA_EventScript_SetupTestBattle_1
+	goto_if_unset STARTER_BALL_THREE, TestMapA_EventScript_SetupTestBattle_1
 	goto TestMapA_EventScript_SetupTestBattle_2
 
 TestMapA_EventScript_SetupTestBattle_8:
@@ -180,6 +180,26 @@ RanAway::
 	return
 
 
+TestMapA_Trigger_BlockPath::
+# 106 "data/maps/TestMapA/scripts.pory"
+	lockall
+# 107 "data/maps/TestMapA/scripts.pory"
+	msgbox TestMapA_Trigger_BlockPath_Text_0
+# 108 "data/maps/TestMapA/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+# 109 "data/maps/TestMapA/scripts.pory"
+	waitmovement 0
+# 110 "data/maps/TestMapA/scripts.pory"
+	releaseall
+	return
+
+
+# 113 "data/maps/TestMapA/scripts.pory"
+StopPlayer:
+# 114 "data/maps/TestMapA/scripts.pory"
+	walk_down
+	step_end
+
 Won_or_Caught_Text_0:
 # 89 "data/maps/TestMapA/scripts.pory"
 	.string "You are the Pokemon Master$"
@@ -191,6 +211,10 @@ RanAway_Text_0:
 RanAway_Text_1:
 # 100 "data/maps/TestMapA/scripts.pory"
 	.string "You are not the Pokemon Master$"
+
+TestMapA_Trigger_BlockPath_Text_0:
+# 107 "data/maps/TestMapA/scripts.pory"
+	.string "You don't have a Pokemon yet$"
 
 May_Intro::
 # 47 "data/maps/TestMapA/scripts.pory"

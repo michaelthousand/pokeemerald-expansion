@@ -1165,3 +1165,23 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/TestLab/scripts.inc"
 
 	.include "data/maps/NewHope/scripts.inc"
+
+	.include "data/maps/ProfessorCinder/scripts.inc"
+
+	.include "data/maps/TestMapA_Mart/scripts.inc"
+
+	.include "data/maps/TestMapA_PC/scripts.inc"
+
+	.include "data/maps/EvergreenWoods/scripts.inc"
+
+	.include "data/maps/Route2/scripts.inc"
+
+	.include "data/maps/PortValor/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/ForestsEdge/scripts.inc"
+
+	.include "data/maps/ForestsEdge_Gym/scripts.inc"
+
+	.include "data/maps/LEAGUE_HEADQUARTERS/scripts.inc"
