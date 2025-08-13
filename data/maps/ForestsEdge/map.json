@@ -29,11 +29,11 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 25,
-      "y": 16,
+      "x": 16,
+      "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_FORESTS_EDGE_GYM",
-      "dest_warp_id": "0"
+      "dest_map": "MAP_FORESTS_EDGE_POKE_CENTER",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

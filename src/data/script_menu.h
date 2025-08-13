@@ -790,6 +790,34 @@ static const struct MenuAction MultichoiceList_Starters[] =
     {gText_StarterOption3},
 };
 
+static const struct MenuAction MultichoiceList_Tera_P1[] =
+{
+    {gText_TeraOption1},
+    {gText_TeraOption2},
+    {gText_TeraOption3},
+    {gText_TeraOption4},
+    {gText_TeraOption5},
+    {gText_TeraOption6},
+    {gText_TeraOption7},
+    {gText_TeraOption8},
+    {gText_TeraOption9},
+    {gText_TeraOption19},
+};
+
+static const struct MenuAction MultichoiceList_Tera_P2[] =
+{
+    {gText_TeraOption10},
+    {gText_TeraOption11},
+    {gText_TeraOption12},
+    {gText_TeraOption13},
+    {gText_TeraOption14},
+    {gText_TeraOption15},
+    {gText_TeraOption16},
+    {gText_TeraOption17},
+    {gText_TeraOption18},
+    {gText_TeraOption20},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -914,6 +942,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
     [MULTI_STARTER_CHOICE]             = MULTICHOICE(MultichoiceList_Starters),
+    [TERA_CHOICE_P1]                   = MULTICHOICE(MultichoiceList_Tera_P1),
+    [TERA_CHOICE_P2]                   = MULTICHOICE(MultichoiceList_Tera_P2),
 };
 
 const u8 *const gStdStrings[] =

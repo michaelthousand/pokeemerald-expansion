@@ -124,6 +124,8 @@
 #define MULTI_TAG_MATCH_TYPE               113
 #define MULTI_BERRY_PLOT                   114
 #define MULTI_STARTER_CHOICE               115
+#define TERA_CHOICE_P1                     116
+#define TERA_CHOICE_P2                     117
 
 
 // Lilycove SS Tidal Multichoice Selections

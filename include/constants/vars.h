@@ -267,8 +267,8 @@
 #define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
 #define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
 #define VAR_UNUSED_0x40F9                                0x40F9 // Unused Var
-#define VAR_UNUSED_0x40FA                                0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var
+#define TERA_CHANGE_TYPE                                0x40FA // Used for tera change
+#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var // USED FOR TERA CHANGE TEST
 #define VAR_UNUSED_0x40FC                                0x40FC // Unused Var // USED FOR TEST MAP NURSE
 #define TestMapA_State                                0x40FD // Unused Var // USED FOR TEST MAP STATE
 #define TESTMAPA_STATE                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK

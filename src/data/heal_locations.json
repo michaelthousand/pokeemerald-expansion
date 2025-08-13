@@ -137,6 +137,24 @@
       "map": "MAP_TEST_MAP_A",
       "x": 10,
       "y": 24
+    },
+    {
+      "id": "HEAL_LOCATION_FORESTS_EDGE",
+      "map": "MAP_FORESTS_EDGE",
+      "x": 16,
+      "y": 5
+    },
+    {
+      "id": "HEAL_LOCATION_FORESTS_EDGE_PC",
+      "map": "MAP_FORESTS_EDGE_PC",
+      "x": 17,
+      "y": 12
+    },
+    {
+      "id": "HEAL_LOCATION_LEAGUE_HEADQUARTERS",
+      "map": "MAP_LEAGUE_HEADQUARTERS",
+      "x": 12,
+      "y": 9
     }
   ]
 }

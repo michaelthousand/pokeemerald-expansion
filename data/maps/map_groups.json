@@ -636,9 +636,11 @@
   ],
   "gMapGroup_IndoorNewHope": [
     "ProfessorCinder",
-    "LEAGUE_HEADQUARTERS"
+    "LEAGUE_HEADQUARTERS",
+    "ForestsEdge_PC"
   ],
   "gMapGroup_IndoorForestsEdge": [
-    "ForestsEdge_Gym"
+    "ForestsEdge_Gym",
+    "ForestsEdge_PokeCenter"
   ]
 }

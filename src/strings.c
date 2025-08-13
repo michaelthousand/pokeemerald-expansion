@@ -1151,6 +1151,27 @@ const u8 gText_StarterOption1[] = _("Options 1");
 const u8 gText_StarterOption2[] = _("Options 2");
 const u8 gText_StarterOption3[] = _("Options 3");
 
+const u8 gText_TeraOption1[] = _("Normal");
+const u8 gText_TeraOption2[] = _("Fire");
+const u8 gText_TeraOption3[] = _("Water");
+const u8 gText_TeraOption4[] = _("Electric");
+const u8 gText_TeraOption5[] = _("Grass");
+const u8 gText_TeraOption6[] = _("Ice");
+const u8 gText_TeraOption7[] = _("Fighting");
+const u8 gText_TeraOption8[] = _("Poison");
+const u8 gText_TeraOption9[] = _("Ground");
+const u8 gText_TeraOption10[] = _("Flying");
+const u8 gText_TeraOption11[] = _("Psychic");
+const u8 gText_TeraOption12[] = _("Bug");
+const u8 gText_TeraOption13[] = _("Rock");
+const u8 gText_TeraOption14[] = _("Ghost");
+const u8 gText_TeraOption15[] = _("Dragon");
+const u8 gText_TeraOption16[] = _("Dark");
+const u8 gText_TeraOption17[] = _("Steel");
+const u8 gText_TeraOption18[] = _("Fairy");
+const u8 gText_TeraOption19[] = _("More");
+const u8 gText_TeraOption20[] = _("Back");
+
 const u8 *const gTextTable_Players[] = {
     gText_F700Players,
     gText_F701Players,

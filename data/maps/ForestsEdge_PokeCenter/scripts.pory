@@ -1,0 +1,27 @@
+raw `
+ForestsEdge_PokeCenter_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, ForestsEdge_PokemonCenter_OnTransition
+    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+
+`
+
+script ForestsEdge_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_FORESTS_EDGE)
+    end
+}
+
+
+script ForestsEdge_PokeCenter_Heal {
+    lock
+    faceplayer
+    msgbox("Would you like to heal your party?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        incrementgamestat(GAME_STAT_USED_POKECENTER)
+        special(HealPlayerParty)
+        msgbox("Please come again.", MSGBOX_NPC)
+    } else {
+        msgbox("Have a nice day.", MSGBOX_NPC)
+    }
+    release
+    end
+}

@@ -1185,3 +1185,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ForestsEdge_Gym/scripts.inc"
 
 	.include "data/maps/LEAGUE_HEADQUARTERS/scripts.inc"
+
+	.include "data/maps/ForestsEdge_PC/scripts.inc"
+
+	.include "data/maps/ForestsEdge_PokeCenter/scripts.inc"

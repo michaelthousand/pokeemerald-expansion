@@ -2430,4 +2430,25 @@ extern const u8 gText_StarterOption1[];
 extern const u8 gText_StarterOption2[];
 extern const u8 gText_StarterOption3[];
 
+extern const u8 gText_TeraOption1[];
+extern const u8 gText_TeraOption2[];
+extern const u8 gText_TeraOption3[];
+extern const u8 gText_TeraOption4[];
+extern const u8 gText_TeraOption5[];
+extern const u8 gText_TeraOption6[];
+extern const u8 gText_TeraOption7[];
+extern const u8 gText_TeraOption8[];
+extern const u8 gText_TeraOption9[];
+extern const u8 gText_TeraOption10[];
+extern const u8 gText_TeraOption11[];
+extern const u8 gText_TeraOption12[];
+extern const u8 gText_TeraOption13[];
+extern const u8 gText_TeraOption14[];
+extern const u8 gText_TeraOption15[];
+extern const u8 gText_TeraOption16[];
+extern const u8 gText_TeraOption17[];
+extern const u8 gText_TeraOption18[];
+extern const u8 gText_TeraOption19[];
+extern const u8 gText_TeraOption20[];
+
 #endif // GUARD_STRINGS_H

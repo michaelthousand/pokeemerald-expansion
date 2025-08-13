@@ -4550,6 +4550,26 @@
       "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/LEAGUE_HEADQUARTERS/border.bin",
       "blockdata_filepath": "data/layouts/LEAGUE_HEADQUARTERS/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORESTS_EDGE_POKE_CENTER",
+      "name": "ForestsEdge_PokeCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ForestsEdge_PokeCenter/border.bin",
+      "blockdata_filepath": "data/layouts/ForestsEdge_PokeCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORESTS_EDGE_PC",
+      "name": "ForestsEdge_PC_Layout",
+      "width": 35,
+      "height": 25,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/ForestsEdge_PC/border.bin",
+      "blockdata_filepath": "data/layouts/ForestsEdge_PC/map.bin"
     }
   ]
 }
