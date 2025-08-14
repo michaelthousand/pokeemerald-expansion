@@ -2429,6 +2429,12 @@ extern const u8 gText_CannotSendMonToBoxHM[];
 extern const u8 gText_StarterOption1[];
 extern const u8 gText_StarterOption2[];
 extern const u8 gText_StarterOption3[];
+extern const u8 gText_StarterOption4[];
+extern const u8 gText_StarterOption5[];
+extern const u8 gText_StarterOption6[];
+extern const u8 gText_StarterOption7[];
+extern const u8 gText_StarterOption8[];
+extern const u8 gText_StarterOption9[];
 
 extern const u8 gText_TeraOption1[];
 extern const u8 gText_TeraOption2[];

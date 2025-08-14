@@ -34,6 +34,27 @@
       "elevation": 0,
       "dest_map": "MAP_LEAGUE_HEADQUARTERS",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 13,
+      "y": 29,
+      "elevation": 0,
+      "dest_map": "MAP_PROFESSOR_CINDER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE_POKEMON_CENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 35,
+      "y": 31,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE_POKE_MART",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

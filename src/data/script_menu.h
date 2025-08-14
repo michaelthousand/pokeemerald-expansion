@@ -788,6 +788,12 @@ static const struct MenuAction MultichoiceList_Starters[] =
     {gText_StarterOption1},
     {gText_StarterOption2},
     {gText_StarterOption3},
+    {gText_StarterOption4},
+    {gText_StarterOption5},
+    {gText_StarterOption6},
+    {gText_StarterOption7},
+    {gText_StarterOption8},
+    {gText_StarterOption9},
 };
 
 static const struct MenuAction MultichoiceList_Tera_P1[] =

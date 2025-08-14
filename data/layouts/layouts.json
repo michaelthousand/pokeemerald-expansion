@@ -4570,6 +4570,26 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ForestsEdge_PC/border.bin",
       "blockdata_filepath": "data/layouts/ForestsEdge_PC/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_POKEMON_CENTER",
+      "name": "NewHope_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/NewHope_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_POKE_MART",
+      "name": "NewHope_PokeMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/NewHope_PokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_PokeMart/map.bin"
     }
   ]
 }

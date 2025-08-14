@@ -1147,9 +1147,15 @@ const u8 gText_F701Players[] = _("{DYNAMIC 1} players");
 const u8 gText_F702Players[] = _("{DYNAMIC 2} players");
 const u8 gText_F703Players[] = _("{DYNAMIC 3} players");
 
-const u8 gText_StarterOption1[] = _("Options 1");
-const u8 gText_StarterOption2[] = _("Options 2");
-const u8 gText_StarterOption3[] = _("Options 3");
+const u8 gText_StarterOption1[] = _("Kanto");
+const u8 gText_StarterOption2[] = _("Johto");
+const u8 gText_StarterOption3[] = _("Hoenn");
+const u8 gText_StarterOption4[] = _("Sinnoh");
+const u8 gText_StarterOption5[] = _("Unova");
+const u8 gText_StarterOption6[] = _("Kalos");
+const u8 gText_StarterOption7[] = _("Alola");
+const u8 gText_StarterOption8[] = _("Galar");
+const u8 gText_StarterOption9[] = _("Paldea");
 
 const u8 gText_TeraOption1[] = _("Normal");
 const u8 gText_TeraOption2[] = _("Fire");

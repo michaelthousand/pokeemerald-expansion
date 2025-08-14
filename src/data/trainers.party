@@ -16884,22 +16884,6 @@ Music: Male
 Double Battle: Yes
 AI: Basic Trainer
 
-Hoothoot
-Level: 16
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Defog
-- Confusion
-- Reflect
-
-Fletchinder
-Level: 17
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Ember
-- Aerial Ace
-- Protect
-- Flame Charge
-
 Rufflet
 Level: 18
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -16927,7 +16911,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 Gligar
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Tera Type: TYPE_GROUND
+Tera Type: Steel
 - Poison Tail
 - Fury Cutter
 - Protect
@@ -16941,22 +16925,6 @@ Gender: Male
 Music: Male
 Double Battle: Yes
 AI: Basic Trainer
-
-Solosis
-Level: 17
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Protect
-- Psybeam
-- Charm
-- Astonish
-
-Kadabra
-Level: 18
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Ally Switch
-- Reflect
-- Protect
-- Psychic
 
 Drowzee
 Level: 19

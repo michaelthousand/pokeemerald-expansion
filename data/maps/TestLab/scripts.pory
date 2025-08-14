@@ -15,15 +15,15 @@ script TestLab_EventScript_Birch{
         closemessage
 
         if (var(VAR_RESULT) == 0){
-            call(StarterFade)
+            call(TestLab_StarterFade)
             setvar(STARTER_REGION, 2)
         }
         elif (var(VAR_RESULT) == 1){
-            call(StarterFade)
+            call(TestLab_StarterFade)
             setvar(STARTER_REGION, 1)
         }
         elif (var(VAR_RESULT) == 2){
-            call(StarterFade)
+            call(TestLab_StarterFade)
             setvar(STARTER_REGION, 0)
         }
         msgbox("Choose your Pokemon wisely")
@@ -36,7 +36,7 @@ script TestLab_EventScript_Birch{
     end
 }
 
-script StarterFade{
+script TestLab_StarterFade{
     fadescreen(FADE_TO_BLACK)
     delay(20)
     fadescreen(FADE_FROM_BLACK)

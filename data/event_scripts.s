@@ -1189,3 +1189,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ForestsEdge_PC/scripts.inc"
 
 	.include "data/maps/ForestsEdge_PokeCenter/scripts.inc"
+
+	.include "data/maps/NewHope_PokemonCenter/scripts.inc"
+
+	.include "data/maps/NewHope_PokeMart/scripts.inc"

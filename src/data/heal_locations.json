@@ -155,6 +155,12 @@
       "map": "MAP_LEAGUE_HEADQUARTERS",
       "x": 12,
       "y": 9
+    },
+    {
+      "id": "HEAL_LOCATION_NEW_HOPE",
+      "map": "MAP_NEW_HOPE",
+      "x": 39,
+      "y": 32
     }
   ]
 }

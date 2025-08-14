@@ -1,0 +1,21 @@
+raw `
+NewHope_PokemonCenter_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, NewHope_PokemonCenter_OnTransition
+    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+
+`
+
+script NewHope_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_NEW_HOPE)
+    end
+}
+
+
+script NewHope_PokemonCenter_Nurse {
+    lock
+    faceplayer
+    // Use the common nurse flow, it handles fades/text/etc.
+    call(Common_EventScript_PkmnCenterNurse)
+    release
+    end
+}

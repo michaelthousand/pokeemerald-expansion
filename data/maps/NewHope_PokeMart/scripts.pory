@@ -1,0 +1,38 @@
+mapscripts NewHope_PokeMart_MapScripts{}
+
+script NewHope_PokeMart_Employee{
+    lock
+    faceplayer
+    message("How can I help you?")
+    waitmessage
+    pokemart(NewHopeMartItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart NewHopeMartItems {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_LEMONADE
+}
+
+script NewHope_PokeMart_PT_Employee{
+    lock
+    faceplayer
+    message("How can I help you?")
+    waitmessage
+    pokemart(NewHopePTItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart NewHopePTItems {
+    ITEM_LOADED_DICE
+    ITEM_MENTAL_HERB
+    ITEM_SAFETY_GOGGLES
+    ITEM_THROAT_SPRAY
+}

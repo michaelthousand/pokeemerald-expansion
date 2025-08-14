@@ -60,27 +60,27 @@ TestLab_EventScript_Birch_6:
 
 TestLab_EventScript_Birch_10:
 # 18 "data/maps/TestLab/scripts.pory"
-	call StarterFade
+	call TestLab_StarterFade
 # 19 "data/maps/TestLab/scripts.pory"
 	setvar STARTER_REGION, 2
 	goto TestLab_EventScript_Birch_9
 
 TestLab_EventScript_Birch_11:
 # 22 "data/maps/TestLab/scripts.pory"
-	call StarterFade
+	call TestLab_StarterFade
 # 23 "data/maps/TestLab/scripts.pory"
 	setvar STARTER_REGION, 1
 	goto TestLab_EventScript_Birch_9
 
 TestLab_EventScript_Birch_12:
 # 26 "data/maps/TestLab/scripts.pory"
-	call StarterFade
+	call TestLab_StarterFade
 # 27 "data/maps/TestLab/scripts.pory"
 	setvar STARTER_REGION, 0
 	goto TestLab_EventScript_Birch_9
 
 
-StarterFade::
+TestLab_StarterFade::
 # 40 "data/maps/TestLab/scripts.pory"
 	fadescreen FADE_TO_BLACK
 # 41 "data/maps/TestLab/scripts.pory"
