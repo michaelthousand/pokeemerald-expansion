@@ -1193,3 +1193,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewHope_PokemonCenter/scripts.inc"
 
 	.include "data/maps/NewHope_PokeMart/scripts.inc"
+
+	.include "data/maps/Prometheus_Tech_HQ/scripts.inc"
+
+	.include "data/maps/Prometheus_Tech_Lab/scripts.inc"
+
+	.include "data/maps/Prometheus_Tech_Training_Facility/scripts.inc"

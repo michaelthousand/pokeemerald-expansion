@@ -1,5 +1,11 @@
 mapscripts Route1_MapScripts { }
 
 script Route1_OranBerries{
-    giveitem(ITEM_ORAN_BERRY, 10)
+    giveitem(ITEM_ORAN_BERRY, 3)
+    removeobject(1)
+}
+
+script Route1_CheriBerries{
+    giveitem(ITEM_CHERI_BERRY, 2)
+    removeobject(2)
 }

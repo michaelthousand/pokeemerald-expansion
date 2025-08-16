@@ -35,7 +35,8 @@
     "gMapGroup_IndoorRoute119",
     "gMapGroup_IndoorRoute124",
     "gMapGroup_IndoorNewHope",
-    "gMapGroup_IndoorForestsEdge"
+    "gMapGroup_IndoorForestsEdge",
+    "gMapGroup_Prometheus_Tech_Indoor"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -102,7 +103,8 @@
     "EvergreenWoods",
     "Route2",
     "PortValor",
-    "ForestsEdge"
+    "ForestsEdge",
+    "Prometheus_Tech_HQ"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -644,5 +646,9 @@
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",
     "ForestsEdge_PokeCenter"
+  ],
+  "gMapGroup_Prometheus_Tech_Indoor": [
+    "Prometheus_Tech_Lab",
+    "Prometheus_Tech_Training_Facility"
   ]
 }

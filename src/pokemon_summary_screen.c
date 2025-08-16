@@ -52,6 +52,8 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
+
+
 // Screen titles (upper left)
 #define PSS_LABEL_WINDOW_POKEMON_INFO_TITLE 0
 #define PSS_LABEL_WINDOW_POKEMON_SKILLS_TITLE 1
@@ -121,6 +123,24 @@ enum
 #define TILE_FILLED_APPEAL_HEART 0x103A
 #define TILE_FILLED_JAM_HEART    0x103C
 #define TILE_EMPTY_JAM_HEART     0x103D
+
+
+ // Test helper function for hyper training display
+static bool8 IsMonStatHyperTrained(struct Pokemon *mon, u8 statId)
+{
+    u8 dummy;
+    switch (statId)
+    {
+    case STAT_HP:    return GetMonData3(mon, MON_DATA_HYPER_TRAINED_HP,    &dummy);
+    case STAT_ATK:   return GetMonData3(mon, MON_DATA_HYPER_TRAINED_ATK,   &dummy);
+    case STAT_DEF:   return GetMonData3(mon, MON_DATA_HYPER_TRAINED_DEF,   &dummy);
+    case STAT_SPATK: return GetMonData3(mon, MON_DATA_HYPER_TRAINED_SPATK, &dummy);
+    case STAT_SPDEF: return GetMonData3(mon, MON_DATA_HYPER_TRAINED_SPDEF, &dummy);
+    case STAT_SPEED: return GetMonData3(mon, MON_DATA_HYPER_TRAINED_SPEED, &dummy);
+    }
+    return FALSE;
+}
+
 
 static EWRAM_DATA struct PokemonSummaryScreenData
 {
@@ -748,6 +768,7 @@ static const u8 sStatsLeftColumnLayout[] = _("{DYNAMIC 0}/{DYNAMIC 1}\n{DYNAMIC 
 static const u8 sStatsLeftIVEVColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
 static const u8 sStatsRightColumnLayout[] = _("{DYNAMIC 0}\n{DYNAMIC 1}\n{DYNAMIC 2}");
 static const u8 sMovesPPLayout[] = _("{PP}{DYNAMIC 0}/{DYNAMIC 1}");
+static const u8 sTextHyperStar[] = _("HT"); // test
 
 #define TAG_MOVE_SELECTOR 30000
 #define TAG_MON_STATUS 30001
@@ -1802,6 +1823,8 @@ static void ShowMonSkillsInfo(u8 taskId, s16 mode)
 {
     struct PokeSummary *sum = &sMonSummaryScreen->summary;
     struct Pokemon *mon = &sMonSummaryScreen->currentMon;
+
+    (void)IsMonStatHyperTrained(mon, STAT_HP);
 
     FillWindowPixelBuffer(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_SKILLS_STATS_LEFT], 0);
     FillWindowPixelBuffer(sMonSummaryScreen->windowIds[PSS_DATA_WINDOW_SKILLS_STATS_RIGHT], 0);
@@ -3774,11 +3797,37 @@ static void BufferStat(u8 *dst, u8 statIndex, u32 stat, u32 strId, u32 n)
     else
         txtPtr = StringCopy(dst, sTextNatureNeutral);
 
-    if (!P_SUMMARY_SCREEN_IV_EV_VALUES
-        && sMonSummaryScreen->skillsPageMode == SUMMARY_SKILLS_MODE_IVS)
-        StringAppend(dst, GetLetterGrade(stat));
+    // When showing IVs, prefer Hyper Training indicator
+    if (sMonSummaryScreen->skillsPageMode == SUMMARY_SKILLS_MODE_IVS)
+    {
+        if (IsMonStatHyperTrained(&sMonSummaryScreen->currentMon, statIndex))
+        {
+            if (!P_SUMMARY_SCREEN_IV_EV_VALUES)
+            {
+                // Letter-grade mode: always show "S" if HT
+                StringAppend(dst, GetLetterGrade(31));
+            }
+            else
+            {
+                // Numeric mode: show "HT" instead of the raw IV
+                // (alternatively: show "31" and append a marker)
+                txtPtr = StringCopy(dst, sTextHyperStar);
+            }
+        }
+        else
+        {
+            if (!P_SUMMARY_SCREEN_IV_EV_VALUES)
+                StringAppend(dst, GetLetterGrade(stat));
+            else
+                ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
+        }
+    }
     else
+    {
+        // Not the IV view: keep existing behavior (actual stat values)
         ConvertIntToDecimalStringN(txtPtr, stat, STR_CONV_MODE_RIGHT_ALIGN, n);
+    }
+
 
     DynamicPlaceholderTextUtil_SetPlaceholderPtr(strId, dst);
 }

@@ -1178,6 +1178,59 @@ const u8 gText_TeraOption18[] = _("Fairy");
 const u8 gText_TeraOption19[] = _("More");
 const u8 gText_TeraOption20[] = _("Back");
 
+const u8 gText_MintOption1[] = _("Attack");
+const u8 gText_MintOption2[] = _("Defense");
+const u8 gText_MintOption3[] = _("Sp. Attack");
+const u8 gText_MintOption4[] = _("Sp. Defense");
+const u8 gText_MintOption5[] = _("Speed");
+const u8 gText_MintOption6[] = _("None");
+
+const u8 gText_MintLonely[] = _("Defense");
+const u8 gText_MintAdamant[] = _("Sp. Attack");
+const u8 gText_MintNaughty[] = _("Sp. Defense");
+const u8 gText_MintBrave[] = _("Speed");
+const u8 gText_MintBold[] = _("Attack");
+const u8 gText_MintImpish[] = _("Sp. Attack");
+const u8 gText_MintLax[] = _("Sp. Defense");
+const u8 gText_MintRelaxed[] = _("Speed");
+const u8 gText_MintModest[] = _("Attack");
+const u8 gText_MintMild[] = _("Defense");
+const u8 gText_MintRash[] = _("Sp. Defense");
+const u8 gText_MintQuiet[] = _("Speed");
+const u8 gText_MintCalm[] = _("Attack");
+const u8 gText_MintGentle[] = _("Defense");
+const u8 gText_MintCareful[] = _("Sp. Attack");
+const u8 gText_MintSassy[] = _("Speed");
+const u8 gText_MintTimid[] = _("Attack");
+const u8 gText_MintHasty[] = _("Defense");
+const u8 gText_MintJolly[] = _("Sp. Attack");
+const u8 gText_MintNaive[] = _("Sp. Defense");
+
+const u8 gText_HT_HP[] = _("HP");
+const u8 gText_HT_Attack[] = _("Attack");
+const u8 gText_HT_Defense[] = _("Defense");
+const u8 gText_HT_Sp_Attack[] = _("Sp. Attack");
+const u8 gText_HT_Sp_Defense[] = _("Sp. Defense");
+const u8 gText_HT_Speed[] = _("Speed");
+const u8 gText_HT_All[] = _("All");
+
+
+const u8 gText_EV_HP[] = _("HP");
+const u8 gText_EV_Attack[] = _("Attack");
+const u8 gText_EV_Defense[] = _("Defense");
+const u8 gText_EV_Sp_Attack[] = _("Sp. Attack");
+const u8 gText_EV_Sp_Defense[] = _("Sp. Defense");
+const u8 gText_EV_Speed[] = _("Speed");
+const u8 gText_EV_All[] = _("All");
+
+const u8 gText_EV_Plus10[] = _("+10");
+const u8 gText_EV_Minus10[] = _("-10");
+const u8 gText_EV_Plus1[] = _("+!");
+const u8 gText_EV_Minus1[] = _("-1");
+const u8 gText_EV_SetTo0[] = _("Set to 0");
+const u8 gText_EV_SetTo252[] = _("Set to 252");
+
+
 const u8 *const gTextTable_Players[] = {
     gText_F700Players,
     gText_F701Players,

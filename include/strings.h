@@ -2457,4 +2457,56 @@ extern const u8 gText_TeraOption18[];
 extern const u8 gText_TeraOption19[];
 extern const u8 gText_TeraOption20[];
 
+extern const u8 gText_MintOption1[];
+extern const u8 gText_MintOption2[];
+extern const u8 gText_MintOption3[];
+extern const u8 gText_MintOption4[];
+extern const u8 gText_MintOption5[];
+extern const u8 gText_MintOption6[];
+
+extern const u8 gText_MintLonely[];
+extern const u8 gText_MintAdamant[];
+extern const u8 gText_MintNaughty[];
+extern const u8 gText_MintBrave[];
+extern const u8 gText_MintBold[];
+extern const u8 gText_MintImpish[];
+extern const u8 gText_MintLax[];
+extern const u8 gText_MintRelaxed[];
+extern const u8 gText_MintModest[];
+extern const u8 gText_MintMild[];
+extern const u8 gText_MintRash[];
+extern const u8 gText_MintQuiet[];
+extern const u8 gText_MintCalm[];
+extern const u8 gText_MintGentle[];
+extern const u8 gText_MintCareful[];
+extern const u8 gText_MintSassy[];
+extern const u8 gText_MintTimid[];
+extern const u8 gText_MintHasty[];
+extern const u8 gText_MintJolly[];
+extern const u8 gText_MintNaive[];
+
+extern const u8 gText_HT_HP[];
+extern const u8 gText_HT_Attack[];
+extern const u8 gText_HT_Defense[];
+extern const u8 gText_HT_Sp_Attack[];
+extern const u8 gText_HT_Sp_Defense[];
+extern const u8 gText_HT_Speed[];
+extern const u8 gText_HT_All[];
+
+extern const u8 gText_EV_HP[];
+extern const u8 gText_EV_Attack[];
+extern const u8 gText_EV_Defense[];
+extern const u8 gText_EV_Sp_Attack[];
+extern const u8 gText_EV_Sp_Defense[];
+extern const u8 gText_EV_Speed[];
+extern const u8 gText_EV_All[];
+
+extern const u8 gText_EV_Plus10[];
+extern const u8 gText_EV_Minus10[];
+extern const u8 gText_EV_Plus1[];
+extern const u8 gText_EV_Minus1[];
+extern const u8 gText_EV_SetTo0[];
+extern const u8 gText_EV_SetTo252[];
+
+
 #endif // GUARD_STRINGS_H

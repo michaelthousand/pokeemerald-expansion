@@ -1,0 +1,150 @@
+mapscripts Prometheus_Tech_Training_Facility_MapScripts { }
+
+
+script Prometheus_Tech_Training_Facility_EventScript_Hyper {
+    lock
+    faceplayer
+
+    msgbox("Pick a Pokémon to Hyper Train.", MSGBOX_DEFAULT)
+    waitmessage
+    callnative(ChoosePartyMon)
+    waitstate
+
+    msgbox("Pick a stat to Hyper Train.", MSGBOX_DEFAULT)
+    waitmessage
+    multichoice(20, 0, MULTI_HT_STATS, 0)
+        if (var(VAR_RESULT) == 0){
+            hypertrain(stat=STAT_HP, slot=VAR_0x8004)
+            msgbox("Your Pokemon's HP stat has been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+        elif (var(VAR_RESULT) == 1){
+            hypertrain(stat=STAT_ATK, slot=VAR_0x8004)
+            msgbox("Your Pokemon's attack stat has been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+        elif (var(VAR_RESULT) == 2){
+            hypertrain(stat=STAT_DEF, slot=VAR_0x8004)
+            msgbox("Your Pokemon's defense stat has been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+        elif (var(VAR_RESULT) == 3){
+            hypertrain(stat=STAT_SPATK, slot=VAR_0x8004)
+            msgbox("Your Pokemon's sp. attack stat has been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+        elif (var(VAR_RESULT) == 4){
+            hypertrain(stat=STAT_SPDEF, slot=VAR_0x8004)
+            msgbox("Your Pokemon's sp. defense stat has been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+        elif (var(VAR_RESULT) == 5){
+            hypertrain(stat=STAT_SPEED, slot=VAR_0x8004)
+            msgbox("Your Pokemon's speed stat has been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+        elif (var(VAR_RESULT) == 6){
+            hypertrain(stat=STAT_HP, slot=VAR_0x8004)
+            hypertrain(stat=STAT_ATK, slot=VAR_0x8004)
+            hypertrain(stat=STAT_DEF, slot=VAR_0x8004)
+            hypertrain(stat=STAT_SPATK, slot=VAR_0x8004)
+            hypertrain(stat=STAT_SPDEF, slot=VAR_0x8004)
+            hypertrain(stat=STAT_SPEED, slot=VAR_0x8004)
+            msgbox("All of your Pokemon's stats have been hyper\ntrained.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    
+    release
+    end
+}
+
+script Prometheus_Tech_Training_Facility_EventScript_EV {
+    lock
+    faceplayer
+
+    msgbox("I can help you tune your Pokemon's EVs\pWhich pokemon are we editing?", MSGBOX_DEFAULT)
+    waitmessage
+    callnative(ChoosePartyMon)
+    waitstate
+
+    msgbox("Pick a stat to change.", MSGBOX_DEFAULT)
+    waitmessage
+    multichoice(20, 0, MULTI_EV_STATS, 0)
+    if (var(VAR_RESULT) == 0){
+        setvar(VAR_0x8005, 0)   // HP
+    }
+    elif (var(VAR_RESULT) == 1){
+        setvar(VAR_0x8005, 1)   // ATK
+    }
+    elif (var(VAR_RESULT) == 2){
+        setvar(VAR_0x8005, 2)   // DEF
+    }
+    elif (var(VAR_RESULT) == 3){
+        setvar(VAR_0x8005, 3)   // SPATK
+    }
+    elif (var(VAR_RESULT) == 4){
+        setvar(VAR_0x8005, 4)   // SPDEF
+    }
+    elif (var(VAR_RESULT) == 5){
+        setvar(VAR_0x8005, 5)   // SPEED
+    }
+    else {
+        msgbox("Never mind then.", MSGBOX_DEFAULT)
+        waitmessage
+        release
+        end
+    }
+
+    msgbox("How should I change it?", MSGBOX_DEFAULT)
+    waitmessage
+    multichoice(20, 0, MULTI_EV_MODES, 0)
+
+    // Map the chosen mode to VAR_0x8006:
+    // 0:+10  1:-10  2:+1  3:-1  4:set0  5:set252
+    if (var(VAR_RESULT) == 0){
+        setvar(VAR_0x8006, 0)   // +10
+    }
+    elif (var(VAR_RESULT) == 1){
+        setvar(VAR_0x8006, 1)   // -10
+    }
+    elif (var(VAR_RESULT) == 2){
+        setvar(VAR_0x8006, 2)   // +1
+    }
+    elif (var(VAR_RESULT) == 3){
+        setvar(VAR_0x8006, 3)   // -1
+    }
+    elif (var(VAR_RESULT) == 4){
+        setvar(VAR_0x8006, 4)   // set 0
+    }
+    elif (var(VAR_RESULT) == 5){
+        setvar(VAR_0x8006, 5)   // set 252
+    }
+    else {
+        msgbox("Canceled.", MSGBOX_DEFAULT)
+        waitmessage
+        release
+        end
+    }
+
+    callnative(EVEditor_Adjust)
+
+    if (var(VAR_RESULT) == 0){
+        msgbox("Done! EVs updated and stats recalculated.", MSGBOX_DEFAULT)
+        waitmessage
+    }
+    elif (var(VAR_RESULT) == 1){
+        msgbox("That stat is already at its limit (252).", MSGBOX_DEFAULT)
+        waitmessage
+    }
+    elif (var(VAR_RESULT) == 2){
+        msgbox("Total EVs would exceed 510. Reduce another stat first.", MSGBOX_DEFAULT)
+        waitmessage
+    }
+    else {
+        msgbox("Something went wrong. Try again.", MSGBOX_DEFAULT)
+        waitmessage
+    }
+
+    release
+    end
+}

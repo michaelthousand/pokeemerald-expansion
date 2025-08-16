@@ -2,41 +2,41 @@ mapscripts ForestsEdge_Gym_MapScripts {}
 
 
 
-script ForestsEdge_Gym_EventScript_FlyingBattle{
-    trainerbattle_double(TRAINER_FLYING_GYM_1, Flying_Leader_Intro, Flying_Leader_Outro, Not_Enough_Mons)
-    msgbox(PostBattle_Flying, MSGBOX_AUTOCLOSE)
+script ForestsEdge_Gym_EventScript_Arwen{
+    trainerbattle_double(TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
+    msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
 
-text Flying_Leader_Intro{
+text Arwen_Intro{
     "My birds will clip your wings!"
 }
 
-text Flying_Leader_Outro{
+text Arwen_Outro{
     "Oh no! My wings were clipped!"
 }
 
-text PostBattle_Flying{
+text PostBattle_Arwen{
     "You're ready to soar."
 }
 
-script ForestsEdge_Gym_EventScript_PsychicBattle{
-    trainerbattle_double(TRAINER_PSYCHIC_GYM_1, Psychic_Leader_Intro, Psychic_Leader_Outro, Not_Enough_Mons)
-    msgbox(PostBattle_Psychic, MSGBOX_AUTOCLOSE)
+script ForestsEdge_Gym_EventScript_Orion{
+    trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons)
+    msgbox(PostBattle_Orion, MSGBOX_AUTOCLOSE)
     waitmessage
     end
 }
 
-text Psychic_Leader_Intro{
+text Orion_Intro{
     "I already know your every move!"
 }
 
-text Psychic_Leader_Outro{
+text Orion_Outro{
     "I didn't see that coming..."
 }
 
-text PostBattle_Psychic{
+text PostBattle_Orion{
     "Congrats on your first badge"
 }
 

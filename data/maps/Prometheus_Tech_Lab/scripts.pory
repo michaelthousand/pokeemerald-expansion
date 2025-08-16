@@ -1,0 +1,279 @@
+mapscripts Prometheus_Tech_Lab_MapScripts { }
+
+script Prometheus_Tech_Lab_EventScript_Tera {
+    lock
+    faceplayer
+
+    msgbox("Do you want to change the tera type\nfor one of your pokemon?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        msgbox("Pick a Pokemon to set its Tera type.")
+
+        callnative(ChoosePartyMon)
+        waitstate
+
+        goto(TeraMenu1)
+
+        TeraMenu1:
+            multichoice(20,0, TERA_CHOICE_P1, 0)
+            if (var(VAR_RESULT) == 0){
+                setteratype(type=TYPE_NORMAL, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Normal.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 1){
+                setteratype(type=TYPE_FIRE, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Fire.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 2){
+                setteratype(type=TYPE_WATER, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Water.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 3){
+                setteratype(type=TYPE_ELECTRIC, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Electric.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 4){
+                setteratype(type=TYPE_GRASS, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Grass.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 5){
+                setteratype(type=TYPE_ICE, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Ice.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 6){
+                setteratype(type=TYPE_FIGHTING, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Fighting.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 7){
+                setteratype(type=TYPE_POISON, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Poison.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 8){
+                setteratype(type=TYPE_GROUND, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Ground.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 9){
+                goto(TeraMenu2)
+            }
+
+        TeraMenu2:
+            multichoice(20,0,TERA_CHOICE_P2, 0)
+            if (var(VAR_RESULT)==0){
+                setteratype(type=TYPE_FLYING, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Flying.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==1){
+                setteratype(type=TYPE_PSYCHIC, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Psychic.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==2){
+                setteratype(type=TYPE_BUG, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Bug.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==3){
+                setteratype(type=TYPE_ROCK, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Rock.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==4){
+                setteratype(type=TYPE_GHOST, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Ghost.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==5){
+                setteratype(type=TYPE_DRAGON, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Dragon.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==6){
+                setteratype(type=TYPE_DARK, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Dark.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==70){
+                setteratype(type=TYPE_STEEL, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Steel.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==8){
+                setteratype(type=TYPE_FAIRY, slot=VAR_0x8004)
+                msgbox("Your Pokemon's tera type is now Fairy.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif(var(VAR_RESULT)==9){
+                goto(TeraMenu1)
+            }
+        }
+    release
+    end
+}
+
+script Prometheus_Tech_Lab_EventScript_Nature {
+    lock
+    faceplayer
+
+    msgbox("Do you want an experimental mint to\nchange the nature of your pokemon?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        msgbox("What stat would you like to raise?")
+
+        goto(MintMenu1)
+
+        MintMenu1:
+            multichoice(20,0, MINT_CHOICE_P1, 0)
+            if (var(VAR_RESULT) == 0){
+                msgbox("What stat should we lower to raise\nattack?", MSGBOX_DEFAULT)
+                waitmessage
+                goto(AttackMints)
+            }
+            elif (var(VAR_RESULT) == 1){
+                msgbox("What stat should we lower to raise\ndefense.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 2){
+                msgbox("What stat should we lower to raise\nsp. attack.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 3){
+                msgbox("What stat should we lower to raise\nsp. defense.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 4){
+                msgbox("What stat should we lower to raise\nspeed.", MSGBOX_DEFAULT)
+                waitmessage
+            }
+            elif (var(VAR_RESULT) == 5){
+                msgbox("Here's a serious mint", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_SERIOUS_MINT, 1)
+            }
+        
+        AttackMints:
+            multichoice(20,0, MINT_CHOICE_P2, 0)
+            if (var(VAR_RESULT) == 0){
+                msgbox("Here's a lonely mint", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_LONELY_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 1){
+                msgbox("Here's an adamant mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_ADAMANT_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 2){
+                msgbox("Here's a naughty mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_NAUGHTY_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 3){
+                msgbox("Here's a brave mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_BRAVE_MINT, 1)
+            }
+
+        DefenseMints:
+            multichoice(20,0, MINT_CHOICE_P3, 0)
+            if (var(VAR_RESULT) == 0){
+                msgbox("Here's a bold mint", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_BOLD_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 1){
+                msgbox("Here's an impish mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_IMPISH_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 2){
+                msgbox("Here's a lax mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_LAX_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 3){
+                msgbox("Here's a relaxed mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_RELAXED_MINT, 1)
+            }
+
+        SpAttackMints:
+            multichoice(20,0, MINT_CHOICE_P4, 0)
+            if (var(VAR_RESULT) == 0){
+                msgbox("Here's a modest mint", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_MODEST_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 1){
+                msgbox("Here's a mild mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_MILD_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 2){
+                msgbox("Here's a rash mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_RASH_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 3){
+                msgbox("Here's a quiet mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_QUIET_MINT, 1)
+            }
+
+        SpDefenseMints:
+            multichoice(20,0, MINT_CHOICE_P5, 0)
+            if (var(VAR_RESULT) == 0){
+                msgbox("Here's a calm mint", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_CALM_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 1){
+                msgbox("Here's a gentle mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_GENTLE_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 2){
+                msgbox("Here's a careful mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_CAREFUL_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 3){
+                msgbox("Here's a sassy mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_SASSY_MINT, 1)
+            }
+
+        SpeedkMints:
+            multichoice(20,0, MINT_CHOICE_P6, 0)
+            if (var(VAR_RESULT) == 0){
+                msgbox("Here's a timid mint", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_TIMID_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 1){
+                msgbox("Here's an hasty mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_HASTY_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 2){
+                msgbox("Here's a jolly mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_JOLLY_MINT, 1)
+            }
+            elif (var(VAR_RESULT) == 3){
+                msgbox("Here's a naive mint.", MSGBOX_DEFAULT)
+                waitmessage
+                giveitem(ITEM_NAIVE_MINT, 1)
+            }
+    }
+
+    release
+    end
+}

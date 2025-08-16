@@ -16875,50 +16875,57 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 
-=== TRAINER_FLYING_GYM_1 ===
-Name: FLYING LDR
+=== TRAINER_ARWEN_1 ===
+Name: Arwen
 Class: Leader
 Pic: Leader Flannery
-Gender: Male
-Music: Male
+Gender: Female
+Music: Female
 Double Battle: Yes
 AI: Basic Trainer
 
-Rufflet
+Gligar @ Oran Berry
 Level: 18
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Tailwind
-- Wing Attack
+EVs: 4 HP / 232 Atk / 0 Def / 0 SpA / 24 SpD / 248 Spe
+Ability: Hyper Cutter
+- Fury Cutter
+- Knock Off
+- Aerial Ace
 - Protect
-- Hone Claws
 
-Wingull
-Level: 17
+Rufflet @ Leftovers
+Level: 18
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
+Ability: Sheer Force
 - Wing Attack
-- Supersonic
+- Tailwind
+- Helping Hand
 - Protect
-- Water Pulse
 
-Trumbeak
+Noibat @ Sitrus Berry
 Level: 20
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-- Pluck
-- Supersonic
+EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
+- Bite
+- Wing Attack
+- Dragon Claw
 - Protect
-- Swords Dance
 
-Gligar
+Fletchinder @ Eviolite
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-Tera Type: Steel
-- Poison Tail
-- Fury Cutter
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Gale Wings
+Tera Type: Rock
+- Flare Blitz
+- Brave Bird
+- Tailwind
 - Protect
-- Knock Off
 
-=== TRAINER_PSYCHIC_GYM_1 ===
-Name: PSYCHIC LD
+=== TRAINER_ORION_1 ===
+Name: Orion
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -16926,39 +16933,46 @@ Music: Male
 Double Battle: Yes
 AI: Basic Trainer
 
-Drowzee
-Level: 19
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Slowpoke @ Eviolite
+Level: 18
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 0 HP / 0 Atk / 248 Def / 12 SpA / 248 SpD / 0 Spe
+Ability: Regenerator
+- Water Pulse
 - Confusion
-- Poison Gas
+- Yawn
 - Protect
-- Dazzling Gleam
 
-Girafarig
+Girafarig @ Throat Spray
 Level: 19
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
+Ability: Inner Focus
 - Psybeam
-- Assurance
+- Hyper Voice
+- Trick Room
 - Protect
-- Stomp
 
-Gothorita
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+Gothita @ Sitrus Berry
+Level: 20
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+Ability: Shadow Tag
 - Psyshock
 - Foul Play
+- Shadow Ball
 - Protect
-- Trick Room
 
-Indeedee-F
+Hatenna @ Leftovers
 Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 0 Spe
+Ability: Magic Bounce
 Tera Type: TYPE_FAIRY
-- Helping Hand
-- Expanding Force
+- Psybeam
+- Psychic Terrain
+- Trick Room
 - Protect
-- Encore
-
 
 === TRAINER_PSY_FLY_T1 ===
 Name: PSY FLY 1

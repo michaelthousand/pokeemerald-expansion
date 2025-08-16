@@ -11669,32 +11669,32 @@
               {
                 "min_level": 5,
                 "max_level": 8,
-                "species": "SPECIES_PIKACHU"
+                "species": "SPECIES_SHINX"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
+                "max_level": 8,
                 "species": "SPECIES_COTTONEE"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 7,
+                "species": "SPECIES_PIKACHU"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 9,
+                "species": "SPECIES_ROCKRUFF"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 8,
+                "species": "SPECIES_POOCHYENA"
               },
               {
                 "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "max_level": 9,
+                "species": "SPECIES_HOUNDOUR"
               }
             ]
           }
@@ -11708,7 +11708,7 @@
               {
                 "min_level": 8,
                 "max_level": 11,
-                "species": "SPECIES_TANDEMAUS"
+                "species": "SPECIES_SPINARAK"
               },
               {
                 "min_level": 8,
@@ -11718,12 +11718,12 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_MANKEY"
+                "species": "SPECIES_TANDEMAUS"
               },
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_HERACROSS"
+                "species": "SPECIES_MANKEY"
               },
               {
                 "min_level": 8,
@@ -11733,7 +11733,7 @@
               {
                 "min_level": 8,
                 "max_level": 10,
-                "species": "SPECIES_EEVEE"
+                "species": "SPECIES_HERACROSS"
               },
               {
                 "min_level": 8,
@@ -11951,12 +11951,12 @@
               {
                 "min_level": 9,
                 "max_level": 14,
-                "species": "SPECIES_VOLTORB_HISUI"
+                "species": "SPECIES_ELECTRIKE"
               },
               {
-                "min_level": 5,
-                "max_level": 5,
-                "species": "SPECIES_NONE"
+                "min_level": 8,
+                "max_level": 14,
+                "species": "SPECIES_VOLTORB_HISUI"
               }
             ]
           }

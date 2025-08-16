@@ -858,8 +858,8 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
-#define TRAINER_PSYCHIC_GYM_1               855
-#define TRAINER_FLYING_GYM_1                856
+#define TRAINER_ORION_1                     855
+#define TRAINER_ARWEN_1                     856
 #define TRAINER_PSY_FLY_T1                  857
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows

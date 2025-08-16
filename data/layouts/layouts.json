@@ -4590,6 +4590,36 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/NewHope_PokeMart/border.bin",
       "blockdata_filepath": "data/layouts/NewHope_PokeMart/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROMETHEUS_TECH_HQ",
+      "name": "Prometheus_Tech_HQ_Layout",
+      "width": 40,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Prometheus_Tech_HQ/border.bin",
+      "blockdata_filepath": "data/layouts/Prometheus_Tech_HQ/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROMETHEUS_TECH_LAB",
+      "name": "Prometheus_Tech_Lab_Layout",
+      "width": 18,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/Prometheus_Tech_Lab/border.bin",
+      "blockdata_filepath": "data/layouts/Prometheus_Tech_Lab/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROMETHEUS_TECH_TRAINING_FACILITY",
+      "name": "Prometheus_Tech_Training_Facility_Layout",
+      "width": 25,
+      "height": 18,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFactory",
+      "border_filepath": "data/layouts/Prometheus_Tech_Training_Facility/border.bin",
+      "blockdata_filepath": "data/layouts/Prometheus_Tech_Training_Facility/map.bin"
     }
   ]
 }

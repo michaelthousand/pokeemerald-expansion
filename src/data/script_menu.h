@@ -824,6 +824,88 @@ static const struct MenuAction MultichoiceList_Tera_P2[] =
     {gText_TeraOption20},
 };
 
+static const struct MenuAction MultichoiceList_Mint_P1[] =
+{
+    {gText_MintOption1},
+    {gText_MintOption2},
+    {gText_MintOption3},
+    {gText_MintOption4},
+    {gText_MintOption5},
+    {gText_MintOption6},
+};
+
+static const struct MenuAction MultichoiceList_Mint_P2[] =
+{
+    {gText_MintLonely},
+    {gText_MintAdamant},
+    {gText_MintNaughty},
+    {gText_MintBrave},
+};
+
+static const struct MenuAction MultichoiceList_Mint_P3[] =
+{
+    {gText_MintBold},
+    {gText_MintImpish},
+    {gText_MintLax},
+    {gText_MintRelaxed},
+};
+
+static const struct MenuAction MultichoiceList_Mint_P4[] =
+{
+    {gText_MintModest},
+    {gText_MintMild},
+    {gText_MintRash},
+    {gText_MintQuiet},
+};
+
+static const struct MenuAction MultichoiceList_Mint_P5[] =
+{
+    {gText_MintCalm},
+    {gText_MintGentle},
+    {gText_MintCareful},
+    {gText_MintSassy},
+};
+
+static const struct MenuAction MultichoiceList_Mint_P6[] =
+{
+    {gText_MintTimid},
+    {gText_MintHasty},
+    {gText_MintJolly},
+    {gText_MintNaive},
+};
+
+static const struct MenuAction MultichoiceList_HT_Stats[] =
+{
+    {gText_HT_HP},
+    {gText_HT_Attack},
+    {gText_HT_Defense},
+    {gText_HT_Sp_Attack},
+    {gText_HT_Sp_Defense},
+    {gText_HT_Speed},
+    {gText_HT_All},
+};
+
+static const struct MenuAction MultichoiceList_EV_Stats[] =
+{
+    {gText_EV_HP},
+    {gText_EV_Attack},
+    {gText_EV_Defense},
+    {gText_EV_Sp_Attack},
+    {gText_EV_Sp_Defense},
+    {gText_EV_Speed},
+    {gText_EV_All},
+};
+
+static const struct MenuAction MultichoiceList_EV_Modes[] =
+{
+    {gText_EV_Plus10},
+    {gText_EV_Minus10},
+    {gText_EV_Plus1},
+    {gText_EV_Minus1},
+    {gText_EV_SetTo0},
+    {gText_EV_SetTo252},
+};
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -950,6 +1032,15 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_STARTER_CHOICE]             = MULTICHOICE(MultichoiceList_Starters),
     [TERA_CHOICE_P1]                   = MULTICHOICE(MultichoiceList_Tera_P1),
     [TERA_CHOICE_P2]                   = MULTICHOICE(MultichoiceList_Tera_P2),
+    [MINT_CHOICE_P1]                   = MULTICHOICE(MultichoiceList_Mint_P1),
+    [MINT_CHOICE_P2]                   = MULTICHOICE(MultichoiceList_Mint_P2),
+    [MINT_CHOICE_P3]                   = MULTICHOICE(MultichoiceList_Mint_P3),
+    [MINT_CHOICE_P4]                   = MULTICHOICE(MultichoiceList_Mint_P4),
+    [MINT_CHOICE_P5]                   = MULTICHOICE(MultichoiceList_Mint_P5),
+    [MINT_CHOICE_P6]                   = MULTICHOICE(MultichoiceList_Mint_P6),
+    [MULTI_HT_STATS]                   = MULTICHOICE(MultichoiceList_HT_Stats),
+    [MULTI_EV_STATS]                   = MULTICHOICE(MultichoiceList_EV_Stats),
+    [MULTI_EV_MODES]                   = MULTICHOICE(MultichoiceList_EV_Modes),
 };
 
 const u8 *const gStdStrings[] =

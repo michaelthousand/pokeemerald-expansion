@@ -2,21 +2,21 @@ ForestsEdge_Gym_MapScripts::
 	.byte 0
 
 
-ForestsEdge_Gym_EventScript_FlyingBattle::
+ForestsEdge_Gym_EventScript_Arwen::
 # 6 "data/maps/ForestsEdge_Gym/scripts.pory"
-	trainerbattle_double TRAINER_FLYING_GYM_1, Flying_Leader_Intro, Flying_Leader_Outro, Not_Enough_Mons
+	trainerbattle_double TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons
 # 7 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox PostBattle_Flying, MSGBOX_AUTOCLOSE
+	msgbox PostBattle_Arwen, MSGBOX_AUTOCLOSE
 # 8 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmessage
 	end
 
 
-ForestsEdge_Gym_EventScript_PsychicBattle::
+ForestsEdge_Gym_EventScript_Orion::
 # 25 "data/maps/ForestsEdge_Gym/scripts.pory"
-	trainerbattle_double TRAINER_PSYCHIC_GYM_1, Psychic_Leader_Intro, Psychic_Leader_Outro, Not_Enough_Mons
+	trainerbattle_double TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons
 # 26 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox PostBattle_Psychic, MSGBOX_AUTOCLOSE
+	msgbox PostBattle_Orion, MSGBOX_AUTOCLOSE
 # 27 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmessage
 	end
@@ -32,27 +32,27 @@ ForestsEdge_Gym_EventScript_FirstTrainer::
 	end
 
 
-Flying_Leader_Intro::
+Arwen_Intro::
 # 12 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "My birds will clip your wings!$"
 
-Flying_Leader_Outro::
+Arwen_Outro::
 # 16 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Oh no! My wings were clipped!$"
 
-PostBattle_Flying::
+PostBattle_Arwen::
 # 20 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "You're ready to soar.$"
 
-Psychic_Leader_Intro::
+Orion_Intro::
 # 31 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "I already know your every move!$"
 
-Psychic_Leader_Outro::
+Orion_Outro::
 # 35 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "I didn't see that coming...$"
 
-PostBattle_Psychic::
+PostBattle_Orion::
 # 39 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Congrats on your first badge$"
 

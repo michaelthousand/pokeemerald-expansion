@@ -265,7 +265,7 @@
 #define VAR_SCOTT_BF_CALL_STEP_COUNTER                   0x40F5
 #define VAR_RIVAL_RAYQUAZA_CALL_STEP_COUNTER             0x40F6
 #define VAR_UNUSED_0x40F7                                0x40F7 // Unused Var
-#define VAR_UNUSED_0x40F8                                0x40F8 // Unused Var
+#define HT_STAT                                0x40F8 // Unused Var - testing for hyper training
 #define VAR_LEVEL_CAP                                0x40F9 // Used to change level cap
 #define TERA_CHANGE_TYPE                                0x40FA // Used for tera change
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var // USED FOR TERA CHANGE TEST

@@ -62,6 +62,9 @@ bool32 ValidateSavedRamScript(void);
 u8 *GetSavedRamScriptIfValid(void);
 void InitRamScript_NoObjectEvent(u8 *script, u16 scriptSize);
 
+bool8 EVEditor_Adjust(void); // EV editor
+
+
 // srccmd.h
 void SetMovingNpcId(u16 npcId);
 

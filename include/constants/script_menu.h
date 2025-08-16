@@ -126,6 +126,15 @@
 #define MULTI_STARTER_CHOICE               115
 #define TERA_CHOICE_P1                     116
 #define TERA_CHOICE_P2                     117
+#define MINT_CHOICE_P1                     118
+#define MINT_CHOICE_P2                     119
+#define MINT_CHOICE_P3                     120
+#define MINT_CHOICE_P4                     121
+#define MINT_CHOICE_P5                     122
+#define MINT_CHOICE_P6                     123
+#define MULTI_HT_STATS                     124
+#define MULTI_EV_STATS                     125
+#define MULTI_EV_MODES                     126
 
 
 // Lilycove SS Tidal Multichoice Selections
