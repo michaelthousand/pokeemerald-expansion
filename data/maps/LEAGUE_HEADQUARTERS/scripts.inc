@@ -22,34 +22,36 @@ LEAGUE_HEADQUARTERS_Chairman::
 # 16 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	giveitem ITEM_LEFTOVERS, 1
 # 17 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_LUCKY_EGG, 1
+	giveitem ITEM_ABILITY_CAPSULE, 10
 # 18 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 50
+	giveitem ITEM_ABILITY_PATCH, 2
 # 19 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	giveitem ITEM_RARE_CANDY, 50
+# 20 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	giveitem ITEM_QUICK_BALL, 50
-# 21 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	message LEAGUE_HEADQUARTERS_Chairman_Text_3
 # 22 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_TERA_ORB, 1
+	message LEAGUE_HEADQUARTERS_Chairman_Text_3
 # 23 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	setflag B_FLAG_TERA_ORB_CHARGED
+	giveitem ITEM_TERA_ORB, 1
 # 24 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	setflag B_FLAG_TERA_ORB_CHARGED
+# 25 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	setflag B_FLAG_TERA_ORB_NO_COST
-# 27 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_4
 # 28 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_4
+# 29 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	release
 	end
 
 
 LEAGUE_HEADQUARTERS_Registration::
-# 33 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	lock
 # 34 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	lock
+# 35 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	faceplayer
-# 36 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 37 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	msgbox LEAGUE_HEADQUARTERS_Registration_Text_0
-# 39 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 40 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	release
 	end
 
@@ -67,13 +69,13 @@ LEAGUE_HEADQUARTERS_Chairman_Text_2:
 	.string "And, of course, some items!$"
 
 LEAGUE_HEADQUARTERS_Chairman_Text_3:
-# 21 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 22 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "But most importantly: a Tera Orb$"
 
 LEAGUE_HEADQUARTERS_Chairman_Text_4:
-# 27 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 28 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "Hopefully these will help going!$"
 
 LEAGUE_HEADQUARTERS_Registration_Text_0:
-# 36 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 37 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "Pick a Pokemon to set its Tera type.$"

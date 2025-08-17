@@ -16884,8 +16884,29 @@ Music: Female
 Double Battle: Yes
 AI: Basic Trainer
 
+Yanma @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 8 HP / 0 Atk / 0 Def / 248 SpA / 12 SpD / 240 Spe
+Ability: Speed Boost
+- Air Cutter
+- Struggle Bug
+- Tailwind
+- Detect
+
+Wingull @ Sharp Beak
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
+Ability: Sheer Force
+- Wing Attack
+- Tailwind
+- Helping Hand
+- Protect
+
+
 Gligar @ Oran Berry
-Level: 18
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 232 Atk / 0 Def / 0 SpA / 24 SpD / 248 Spe
 Ability: Hyper Cutter
@@ -16895,7 +16916,7 @@ Ability: Hyper Cutter
 - Protect
 
 Rufflet @ Leftovers
-Level: 18
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
 Ability: Sheer Force
@@ -16905,7 +16926,76 @@ Ability: Sheer Force
 - Protect
 
 Noibat @ Sitrus Berry
-Level: 20
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
+- Bite
+- Wing Attack
+- Dragon Claw
+- Protect
+
+Fletchinder @ Eviolite
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Gale Wings
+Tera Type: Rock
+- Flare Blitz
+- Brave Bird
+- Tailwind
+- Protect
+
+=== TRAINER_ARWEN_2 ===
+Name: Arwen
+Class: Leader
+Pic: Leader Flannery
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Basic Trainer
+
+Gligar @ Oran Berry
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 232 Atk / 0 Def / 0 SpA / 24 SpD / 248 Spe
+Ability: Hyper Cutter
+- Fury Cutter
+- Knock Off
+- Aerial Ace
+- Protect
+
+Rufflet @ Leftovers
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
+Ability: Sheer Force
+- Wing Attack
+- Tailwind
+- Helping Hand
+- Protect
+
+Yanma @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 8 HP / 0 Atk / 0 Def / 248 SpA / 12 SpD / 240 Spe
+Ability: Speed Boost
+- Air Cutter
+- Struggle Bug
+- Tailwind
+- Detect
+
+Wingull @ Sharp Beak
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
+Ability: Sheer Force
+- Wing Attack
+- Tailwind
+- Helping Hand
+- Protect
+
+Oricorio @ Sitrus Berry
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
 - Bite
@@ -16934,7 +17024,7 @@ Double Battle: Yes
 AI: Basic Trainer
 
 Slowpoke @ Eviolite
-Level: 18
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 0 HP / 0 Atk / 248 Def / 12 SpA / 248 SpD / 0 Spe
 Ability: Regenerator
@@ -16944,7 +17034,7 @@ Ability: Regenerator
 - Protect
 
 Girafarig @ Throat Spray
-Level: 19
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
 Ability: Inner Focus
@@ -16954,7 +17044,7 @@ Ability: Inner Focus
 - Protect
 
 Gothita @ Sitrus Berry
-Level: 20
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
 Ability: Shadow Tag

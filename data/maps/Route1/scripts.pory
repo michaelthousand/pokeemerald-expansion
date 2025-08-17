@@ -9,3 +9,8 @@ script Route1_CheriBerries{
     giveitem(ITEM_CHERI_BERRY, 2)
     removeobject(2)
 }
+
+script Route1_GrassySeed{
+    giveitem(ITEM_GRASSY_SEED, 1)
+    removeobject(2)
+}

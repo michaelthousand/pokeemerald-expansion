@@ -17,3 +17,11 @@ Route1_CheriBerries::
 	removeobject 2
 	return
 
+
+Route1_GrassySeed::
+# 14 "data/maps/Route1/scripts.pory"
+	giveitem ITEM_GRASSY_SEED, 1
+# 15 "data/maps/Route1/scripts.pory"
+	removeobject 2
+	return
+

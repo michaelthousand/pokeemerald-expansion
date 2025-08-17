@@ -14,7 +14,8 @@ script LEAGUE_HEADQUARTERS_Chairman{
     giveitem(ITEM_AMULET_COIN, 1)
     giveitem(ITEM_EVIOLITE, 1)
     giveitem(ITEM_LEFTOVERS, 1)
-    giveitem(ITEM_LUCKY_EGG, 1)
+    giveitem(ITEM_ABILITY_CAPSULE, 10)
+    giveitem(ITEM_ABILITY_PATCH, 2)
     giveitem(ITEM_RARE_CANDY, 50)
     giveitem(ITEM_QUICK_BALL, 50)
 
