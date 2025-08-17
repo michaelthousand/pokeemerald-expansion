@@ -76,6 +76,56 @@
 #include "constants/trainers.h"
 #include "constants/weather.h"
 #include "cable_club.h"
+#include "trainer_party_select.h"
+#include "vgc_preview.h"
+
+// Simple local LCG using current Random() as entropy
+static inline u32 lcg_next(u32 *s) { *s = *s * 1103515245u + 12345u; return *s; }
+
+
+static void SelectTrainerPartyIndices(const struct WeightedPartyMeta *meta, u8 outIndices[PARTY_SIZE])
+{
+    // Seed local RNG from the current global RNG + trainer selection context
+    u32 s = (Random() << 16) ^ Random();
+
+    u8 poolIdx[PARTY_SIZE], poolW[PARTY_SIZE];
+    u8 n = 0, k = 0;
+
+    if (meta->flags & AI_BRING_LOCK_ACE)
+        outIndices[k++] = meta->aceIndex;
+
+    for (u8 i = 0; i < PARTY_SIZE; i++) {
+        if ((meta->flags & AI_BRING_LOCK_ACE) && i == meta->aceIndex)
+            continue;
+        poolIdx[n] = i;
+        poolW[n]   = meta->weights[i];
+        n++;
+    }
+
+    while (k < meta->selectCount && n > 0) {
+        u32 total = 0; for (u8 i = 0; i < n; i++) total += poolW[i];
+        if (total == 0) break;
+
+        // use local RNG instead of global Random()
+        u32 r = (lcg_next(&s) >> 1) % total;
+
+        for (u8 i = 0; i < n; i++) {
+            if (r < poolW[i]) {
+                outIndices[k++] = poolIdx[i];
+                for (u8 j = i + 1; j < n; j++) { poolIdx[j-1] = poolIdx[j]; poolW[j-1] = poolW[j]; }
+                n--;
+                break;
+            }
+            r -= poolW[i];
+        }
+    }
+
+    for (; k < meta->selectCount; k++)
+        outIndices[k] = (k < PARTY_SIZE) ? k : 0;
+}
+
+
+
 
 extern const struct BgTemplate gBattleBgTemplates[];
 extern const struct WindowTemplate *const gBattleWindowTemplates[];
@@ -571,8 +621,58 @@ static void CB2_InitBattleInternal(void)
         }
     }
 
+    // --- PLAYER 6→4 TRIM (unconditional) ---
+    {
+        struct Pokemon temp[PARTY_SIZE];
+        u8 n = 0;
+
+        if ((gBattleTypeFlags & BATTLE_TYPE_VGC_PREVIEW) && gVgcPlayerChosenCount > 0)
+        {
+            // Use the order the player selected in the preview
+            n = BuildPlayerBattlePartyFromSelection(temp);
+        }
+        else
+        {
+            // Fallback: first 4 valid mons (alive, non-egg) in party order
+            for (u8 k = 0; k < PARTY_SIZE && n < 4; k++)
+            {
+                u16 species = GetMonData(&gPlayerParty[k], MON_DATA_SPECIES, NULL);
+                if (species == SPECIES_NONE) continue;
+                if (GetMonData(&gPlayerParty[k], MON_DATA_IS_EGG, NULL)) continue;
+                if (GetMonData(&gPlayerParty[k], MON_DATA_HP, NULL) == 0) continue;
+                CopyMon(&temp[n], &gPlayerParty[k], sizeof(struct Pokemon));
+                n++;
+            }
+        }
+
+        if (n > 0)
+        {
+            for (u8 k = 0; k < n; k++)
+                CopyMon(&gPlayerParty[k], &temp[k], sizeof(struct Pokemon));
+            for (u8 k = n; k < PARTY_SIZE; k++)
+                ZeroMonData(&gPlayerParty[k]);
+
+            extern u8 gPlayerPartyCount;
+            gPlayerPartyCount = n;
+        }
+    }
+    // --- END PLAYER 6→4 TRIM ---
+
     gMain.inBattle = TRUE;
     gSaveBlock2Ptr->frontier.disableRecordBattle = FALSE;
+
+    // Safety clamp: ensure slots 4–5 are empty in preview battles
+    if (gBattleTypeFlags & BATTLE_TYPE_VGC_PREVIEW)
+    {
+        u16 sp4 = GetMonData(&gPlayerParty[4], MON_DATA_SPECIES, NULL);
+        if (sp4 != SPECIES_NONE)
+        {
+            for (u8 j = 4; j < PARTY_SIZE; j++)
+                ZeroMonData(&gPlayerParty[j]);
+            extern u8 gPlayerPartyCount;
+            gPlayerPartyCount = 4;
+        }
+    }
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
@@ -591,6 +691,7 @@ static void CB2_InitBattleInternal(void)
 
     gBattleCommunication[MULTIUSE_STATE] = 0;
 }
+
 
 #define BUFFER_PARTY_VS_SCREEN_STATUS(party, flags, i)                      \
     for ((i) = 0; (i) < PARTY_SIZE; (i)++)                                  \
@@ -1882,7 +1983,7 @@ void CustomTrainerPartyAssignMoves(struct Pokemon *mon, const struct TrainerMon 
     }
 }
 
-u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer *trainer, bool32 firstTrainer, u32 battleTypeFlags)
+u8 CreateNPCTrainerPartyFromTrainer_Vanilla(struct Pokemon *party, const struct Trainer *trainer, bool32 firstTrainer, u32 battleTypeFlags)
 {
     u32 personalityValue;
     s32 i;
@@ -2021,13 +2122,61 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
     return trainer->partySize;
 }
 
+u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer *trainer, bool32 firstTrainer, u32 battleTypeFlags)
+{
+    return CreateNPCTrainerPartyFromTrainer_Vanilla(party, trainer, firstTrainer, battleTypeFlags);
+}
+
+
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
 {
-    u8 retVal;
+    const struct WeightedPartyMeta *meta = FindWeightedPartyMeta(trainerNum);
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
-    retVal = CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
-    return retVal;
+
+    // If no weighted config, just do vanilla (via public 4-arg name/shim)
+    if (meta == NULL || !(meta->flags & AI_BRING_USE_WEIGHTS))
+        return CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+
+    // 1) Build full party (up to 6) into a temp buffer using VANILLA
+    struct Pokemon temp[PARTY_SIZE];
+    for (u8 i = 0; i < PARTY_SIZE; i++) ZeroMonData(&temp[i]);
+    u8 builtCount = CreateNPCTrainerPartyFromTrainer_Vanilla(
+        temp, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+    if (builtCount > PARTY_SIZE) builtCount = PARTY_SIZE;
+
+    // 2) Choose which to bring
+    u8 chosen[PARTY_SIZE] = {0};
+    SelectTrainerPartyIndices(meta, chosen);
+
+    #if defined(BUILD_DEBUG) || defined(UG_DEBUG)
+    // Prints trainer id and the selected party slots
+    DebugPrintf("Trainer %d bring: %d %d %d %d",
+        trainerNum, chosen[0], chosen[1], chosen[2], chosen[3]);
+#endif
+
+    // 3) Cap to what actually exists
+    u8 bringCount = meta->selectCount;
+    if (bringCount > builtCount) bringCount = builtCount;
+
+    // Ensure ace is in the back (so it won't lead)
+    for (u8 i = 0; i < bringCount; i++) {
+        if (chosen[i] == meta->aceIndex) {
+            u8 tmp = chosen[i];
+            chosen[i] = chosen[bringCount - 1];
+            chosen[bringCount - 1] = tmp;
+            break;
+        }
+    }
+
+
+    // 4) Copy chosen into live party; clear the rest
+    for (u8 i = 0; i < bringCount; i++)
+        CopyMon(&party[i], &temp[chosen[i]], sizeof(struct Pokemon));
+    for (u8 i = bringCount; i < PARTY_SIZE; i++)
+        ZeroMonData(&party[i]);
+
+    return bringCount;
 }
 
 void CreateTrainerPartyForPlayer(void)

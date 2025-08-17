@@ -16898,12 +16898,11 @@ Wingull @ Sharp Beak
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
-Ability: Sheer Force
+Ability: Rain Dish
 - Wing Attack
 - Tailwind
 - Helping Hand
 - Protect
-
 
 Gligar @ Oran Berry
 Level: 21
@@ -16988,7 +16987,7 @@ Wingull @ Sharp Beak
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
-Ability: Sheer Force
+Ability: Rain Dish
 - Wing Attack
 - Tailwind
 - Helping Hand
@@ -17023,6 +17022,26 @@ Music: Male
 Double Battle: Yes
 AI: Basic Trainer
 
+Meditite @ Assault Vest
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 248 HP / 244 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
+Ability: Pure Power
+- Zen Headbutt
+- Force Palm
+- Facade
+- Rock Slide
+
+Elgyem @ Rocky Helmet
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+Ability: Analytic
+- Psybeam
+- Destiny Bond
+- Trick Room
+- Protect
+
 Slowpoke @ Eviolite
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
@@ -17046,11 +17065,81 @@ Ability: Inner Focus
 Gothita @ Sitrus Berry
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 252 SpD / 0 Spe
 Ability: Shadow Tag
 - Psyshock
 - Foul Play
 - Shadow Ball
+- Protect
+
+Hatenna @ Leftovers
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 0 Spe
+Ability: Magic Bounce
+Tera Type: TYPE_FAIRY
+- Psybeam
+- Psychic Terrain
+- Trick Room
+- Protect
+
+=== TRAINER_ORION_2 ===
+Name: Orion
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Basic Trainer
+
+Slowpoke @ Eviolite
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 0 HP / 0 Atk / 248 Def / 12 SpA / 248 SpD / 0 Spe
+Ability: Regenerator
+- Water Pulse
+- Confusion
+- Yawn
+- Protect
+
+Girafarig @ Throat Spray
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
+Ability: Inner Focus
+- Psybeam
+- Hyper Voice
+- Trick Room
+- Protect
+
+Meditite @ Assault Vest
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+Ability: Pure Power
+- Zen Headbutt
+- Force Palm
+- Facade
+- Rock Slide
+
+Elgyem @ Rocky Helmet
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+Ability: Analytic
+- Psybeam
+- Destiny Bond
+- Trick Room
+- Protect
+
+Spoink @ Twisted Spoon
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 24 SpA / 248 SpD / 0 Spe
+Ability: Own Tempo
+- Expanding Force
+- Thunder Wave
+- Encore
 - Protect
 
 Hatenna @ Leftovers

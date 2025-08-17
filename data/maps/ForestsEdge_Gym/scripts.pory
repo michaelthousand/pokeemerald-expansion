@@ -7,12 +7,20 @@ script ForestsEdge_Gym_EventScript_Arwen{
     copyvar(VAR_TEMP_0, VAR_RESULT)
 
     if(var(VAR_TEMP_0) == 0){
+        setvar(VAR_0x8004, TRAINER_ARWEN_1)   // arg0 = trainerId
+        setvar(VAR_0x8005, TRUE)              // arg1 = isDouble
+        callnative(Script_StartVgcPreviewAndSelection)
+    // result now in VAR_RESULT
         trainerbattle_double(TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
         msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
         waitmessage
         setflag(FLAG_ARWEN_1)
     }
     else{
+        setvar(VAR_0x8004, TRAINER_ARWEN_2)   // arg0 = trainerId
+        setvar(VAR_0x8005, TRUE)               // arg1 = isDouble
+        callnative(Script_StartVgcPreviewAndSelection)
+        // result now in VAR_RESULT
         trainerbattle_double(TRAINER_ARWEN_2, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
         msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
         waitmessage
@@ -56,17 +64,6 @@ script ForestsEdge_Gym_EventScript_Orion{
         setflag(FLAG_ORION_1)
     }
 
-    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)){
-        setflag(FLAG_BADGE01_GET)
-        setvar(VAR_LEVEL_CAP, 29)
-        msgbox(GotBadge01, MSGBOX_AUTOCLOSE)
-        waitmessage
-    }
-
-    trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons)
-    msgbox(PostBattle_Orion, MSGBOX_AUTOCLOSE)
-    waitmessage
-    setflag(FLAG_ORION_1)
     if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)){
         setflag(FLAG_BADGE01_GET)
         setvar(VAR_LEVEL_CAP, 29)
