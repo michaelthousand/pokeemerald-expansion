@@ -77,7 +77,7 @@
 #include "constants/weather.h"
 #include "cable_club.h"
 #include "trainer_party_select.h"
-#include "vgc_preview.h"
+
 
 // Simple local LCG using current Random() as entropy
 static inline u32 lcg_next(u32 *s) { *s = *s * 1103515245u + 12345u; return *s; }
@@ -621,58 +621,12 @@ static void CB2_InitBattleInternal(void)
         }
     }
 
-    // --- PLAYER 6→4 TRIM (unconditional) ---
-    {
-        struct Pokemon temp[PARTY_SIZE];
-        u8 n = 0;
-
-        if ((gBattleTypeFlags & BATTLE_TYPE_VGC_PREVIEW) && gVgcPlayerChosenCount > 0)
-        {
-            // Use the order the player selected in the preview
-            n = BuildPlayerBattlePartyFromSelection(temp);
-        }
-        else
-        {
-            // Fallback: first 4 valid mons (alive, non-egg) in party order
-            for (u8 k = 0; k < PARTY_SIZE && n < 4; k++)
-            {
-                u16 species = GetMonData(&gPlayerParty[k], MON_DATA_SPECIES, NULL);
-                if (species == SPECIES_NONE) continue;
-                if (GetMonData(&gPlayerParty[k], MON_DATA_IS_EGG, NULL)) continue;
-                if (GetMonData(&gPlayerParty[k], MON_DATA_HP, NULL) == 0) continue;
-                CopyMon(&temp[n], &gPlayerParty[k], sizeof(struct Pokemon));
-                n++;
-            }
-        }
-
-        if (n > 0)
-        {
-            for (u8 k = 0; k < n; k++)
-                CopyMon(&gPlayerParty[k], &temp[k], sizeof(struct Pokemon));
-            for (u8 k = n; k < PARTY_SIZE; k++)
-                ZeroMonData(&gPlayerParty[k]);
-
-            extern u8 gPlayerPartyCount;
-            gPlayerPartyCount = n;
-        }
-    }
-    // --- END PLAYER 6→4 TRIM ---
+   
 
     gMain.inBattle = TRUE;
     gSaveBlock2Ptr->frontier.disableRecordBattle = FALSE;
 
-    // Safety clamp: ensure slots 4–5 are empty in preview battles
-    if (gBattleTypeFlags & BATTLE_TYPE_VGC_PREVIEW)
-    {
-        u16 sp4 = GetMonData(&gPlayerParty[4], MON_DATA_SPECIES, NULL);
-        if (sp4 != SPECIES_NONE)
-        {
-            for (u8 j = 4; j < PARTY_SIZE; j++)
-                ZeroMonData(&gPlayerParty[j]);
-            extern u8 gPlayerPartyCount;
-            gPlayerPartyCount = 4;
-        }
-    }
+    
 
     for (i = 0; i < PARTY_SIZE; i++)
     {
