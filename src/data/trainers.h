@@ -42195,7 +42195,7 @@ F_TRAINER_FEMALE |
 #line 16884
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16885
-        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .aiFlags = AI_FLAG_SMART_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42362,7 +42362,7 @@ F_TRAINER_FEMALE |
 #line 16953
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16954
-        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .aiFlags = AI_FLAG_SMART_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42464,7 +42464,7 @@ F_TRAINER_FEMALE |
             },
             {
 #line 16996
-            .species = SPECIES_ORICORIO,
+            .species = SPECIES_ORICORIO_POM_POM,
             .gender = TRAINER_MON_RANDOM_GENDER,
 #line 16996
             .heldItem = ITEM_SITRUS_BERRY,
@@ -42527,7 +42527,7 @@ F_TRAINER_FEMALE |
 #line 17022
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 17023
-        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .aiFlags = AI_FLAG_SMART_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42694,7 +42694,7 @@ F_TRAINER_FEMALE |
 #line 17092
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 17093
-        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .aiFlags = AI_FLAG_SMART_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {

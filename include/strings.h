@@ -2508,5 +2508,4 @@ extern const u8 gText_EV_Minus1[];
 extern const u8 gText_EV_SetTo0[];
 extern const u8 gText_EV_SetTo252[];
 
-
 #endif // GUARD_STRINGS_H

@@ -1225,7 +1225,7 @@ const u8 gText_EV_All[] = _("All");
 
 const u8 gText_EV_Plus10[] = _("+10");
 const u8 gText_EV_Minus10[] = _("-10");
-const u8 gText_EV_Plus1[] = _("+!");
+const u8 gText_EV_Plus1[] = _("+1");
 const u8 gText_EV_Minus1[] = _("-1");
 const u8 gText_EV_SetTo0[] = _("Set to 0");
 const u8 gText_EV_SetTo252[] = _("Set to 252");

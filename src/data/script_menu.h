@@ -906,6 +906,8 @@ static const struct MenuAction MultichoiceList_EV_Modes[] =
     {gText_EV_SetTo252},
 };
 
+
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;

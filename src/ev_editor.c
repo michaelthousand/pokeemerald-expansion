@@ -5,6 +5,18 @@
 #include "constants/vars.h"        // VAR_0x8004, VAR_RESULT, etc.
 #include "constants/pokemon.h"     // PARTY_SIZE
 
+
+static void ZeroAllEvs(struct Pokemon *mon)
+{
+    u16 z = 0;
+    SetMonData(mon, MON_DATA_HP_EV,    &z);
+    SetMonData(mon, MON_DATA_ATK_EV,   &z);
+    SetMonData(mon, MON_DATA_DEF_EV,   &z);
+    SetMonData(mon, MON_DATA_SPATK_EV, &z);
+    SetMonData(mon, MON_DATA_SPDEF_EV, &z);
+    SetMonData(mon, MON_DATA_SPEED_EV, &z);
+}
+
 static inline u16 GetEvByIndex(struct Pokemon *mon, u8 idx)
 {
     switch (idx) {
@@ -48,12 +60,28 @@ bool8 EVEditor_Adjust(void)
     u16 stat = VarGet(VAR_0x8005);
     u16 mode = VarGet(VAR_0x8006);
 
-    if (slot >= PARTY_SIZE || stat > 5) {
+    if (slot >= PARTY_SIZE || stat > 6) {
         VarSet(VAR_RESULT, 3); // invalid
         return FALSE;
     }
 
     struct Pokemon *mon = &gPlayerParty[slot];
+
+    
+    // Special-case: "All" selected + "set 0" mode
+    if (stat == 6) {
+        if (mode == 4) { // set 0
+            ZeroAllEvs(mon);
+            CalculateMonStats(mon);
+            VarSet(VAR_RESULT, 0);
+            return FALSE;
+        }
+        // You can extend other modes for "All" here if you want
+        VarSet(VAR_RESULT, 3);
+        return FALSE;
+    }
+
+
     u16 cur   = GetEvByIndex(mon, (u8)stat);
     u16 total = GetTotalEVs(mon);
     u16 newVal = cur;

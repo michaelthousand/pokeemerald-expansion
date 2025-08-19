@@ -2,30 +2,60 @@ mapscripts ForestsEdge_Gym_MapScripts {}
 
 
 
-script ForestsEdge_Gym_EventScript_Arwen{
+script ForestsEdge_Gym_EventScript_Arwen {
+    lock()
+    faceplayer()
+
     random(2)
     copyvar(VAR_TEMP_0, VAR_RESULT)
 
-    if(var(VAR_TEMP_0) == 0){
+
+
+    if (var(VAR_TEMP_0) == 0) {
+        // Fill preview species dynamically (use whatever your AI outputs)
+        setvar(VAR_0x8000, SPECIES_FLETCHINDER)
+        setvar(VAR_0x8001, SPECIES_NOIBAT)
+        setvar(VAR_0x8002, SPECIES_RUFFLET)
+        setvar(VAR_0x8003, SPECIES_GLIGAR)
+        setvar(VAR_0x8004, SPECIES_WINGULL)
+        setvar(VAR_0x8005, SPECIES_YANMA)
+         
+        // Show icon+name preview; press any button to exit
+        callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate()
         trainerbattle_double(TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
-        msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
-        waitmessage
-        setflag(FLAG_ARWEN_1)
-    }
-    else{
+    } else {
+        // Fill preview species dynamically (use whatever your AI outputs)
+        setvar(VAR_0x8000, SPECIES_FLETCHINDER)
+        setvar(VAR_0x8001, SPECIES_ORICORIO_POM_POM)
+        setvar(VAR_0x8002, SPECIES_RUFFLET)
+        setvar(VAR_0x8003, SPECIES_GLIGAR)
+        setvar(VAR_0x8004, SPECIES_WINGULL)
+        setvar(VAR_0x8005, SPECIES_YANMA)
+         
+        // Show icon+name preview; press any button to exit
+        callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate()
         trainerbattle_double(TRAINER_ARWEN_2, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
-        msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
-        waitmessage
-        setflag(FLAG_ARWEN_1)
     }
 
-    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)){
+    msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
+    waitmessage()
+    setflag(FLAG_ARWEN_1)
+    incrementgamestat(GAME_STAT_USED_POKECENTER)
+    special(HealPlayerParty)
+
+    if (flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)) {
         setflag(FLAG_BADGE01_GET)
         setvar(VAR_LEVEL_CAP, 29)
         msgbox(GotBadge01, MSGBOX_AUTOCLOSE)
-        waitmessage
+        waitmessage()
     }
+
+    release()
+    end()
 }
+
 
 text Arwen_Intro{
     "My birds will clip your wings!"
@@ -44,17 +74,37 @@ script ForestsEdge_Gym_EventScript_Orion{
     copyvar(VAR_TEMP_0, VAR_RESULT)
 
     if(var(VAR_TEMP_0) == 0){
+        // Fill preview species dynamically (use whatever your AI outputs)
+        setvar(VAR_0x8000, SPECIES_HATENNA)
+        setvar(VAR_0x8001, SPECIES_GOTHITA)
+        setvar(VAR_0x8002, SPECIES_GIRAFARIG)
+        setvar(VAR_0x8003, SPECIES_SLOWPOKE)
+        setvar(VAR_0x8004, SPECIES_ELGYEM)
+        setvar(VAR_0x8005, SPECIES_MEDITITE)
+         
+        // Show icon+name preview; press any button to exit
+        callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate()
         trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons)
-        msgbox(PostBattle_Orion, MSGBOX_AUTOCLOSE)
-        waitmessage
-        setflag(FLAG_ORION_1)
     }
     else{
+        setvar(VAR_0x8000, SPECIES_HATENNA)
+        setvar(VAR_0x8001, SPECIES_SPOINK)
+        setvar(VAR_0x8002, SPECIES_ELGYEM)
+        setvar(VAR_0x8003, SPECIES_MEDITITE)
+        setvar(VAR_0x8004, SPECIES_GIRAFARIG)
+        setvar(VAR_0x8005, SPECIES_SLOWPOKE)
+        // Show icon+name preview; press any button to exit
+        callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate()
         trainerbattle_double(TRAINER_ORION_2, Orion_Intro, Orion_Outro, Not_Enough_Mons)
-        msgbox(PostBattle_Orion, MSGBOX_AUTOCLOSE)
-        waitmessage
-        setflag(FLAG_ORION_1)
     }
+
+    msgbox(PostBattle_Orion, MSGBOX_AUTOCLOSE)
+    waitmessage
+    setflag(FLAG_ORION_1)
+    incrementgamestat(GAME_STAT_USED_POKECENTER)
+    special(HealPlayerParty)
 
     if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)){
         setflag(FLAG_BADGE01_GET)
@@ -103,6 +153,4 @@ text Trainer_1_Outro{
 text PostBattle_Trainer_1{
     "Good luck getting your first badge"
 }
-
-
 

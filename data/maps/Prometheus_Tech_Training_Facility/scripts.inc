@@ -158,44 +158,47 @@ Prometheus_Tech_Training_Facility_EventScript_EV::
 # 88 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	compare VAR_RESULT, 5
 	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_7
-# 92 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 91 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 6
+	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_8
+# 95 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_2, MSGBOX_DEFAULT
-# 93 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 96 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	waitmessage
-# 94 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 97 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	release
 	end
 
 Prometheus_Tech_Training_Facility_EventScript_EV_1:
-# 98 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 101 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_3, MSGBOX_DEFAULT
-# 99 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 102 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	waitmessage
-# 100 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 103 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	multichoice 20, 0, MULTI_EV_MODES, 0
-# 104 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_16
 # 107 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_17
-# 110 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 2
+	compare VAR_RESULT, 0
 	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_18
-# 113 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 3
+# 110 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 1
 	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_19
-# 116 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 4
+# 113 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 2
 	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_20
-# 119 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 5
+# 116 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 3
 	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_21
-# 123 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 119 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_22
+# 122 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_23
+# 126 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_4, MSGBOX_DEFAULT
-# 124 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 127 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	waitmessage
-# 125 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 128 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	release
 	end
 
@@ -229,77 +232,82 @@ Prometheus_Tech_Training_Facility_EventScript_EV_7:
 	setvar VAR_0x8005, 5
 	goto Prometheus_Tech_Training_Facility_EventScript_EV_1
 
-Prometheus_Tech_Training_Facility_EventScript_EV_15:
-# 129 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+Prometheus_Tech_Training_Facility_EventScript_EV_8:
+# 92 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	setvar VAR_0x8005, 6
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_1
+
+Prometheus_Tech_Training_Facility_EventScript_EV_17:
+# 132 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	callnative EVEditor_Adjust
-# 131 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 134 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_30
-# 135 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_31
-# 139 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	compare VAR_RESULT, 2
 	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_32
-# 144 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 138 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_33
+# 142 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Training_Facility_EventScript_EV_34
+# 147 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_8, MSGBOX_DEFAULT
-# 145 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	waitmessage
-Prometheus_Tech_Training_Facility_EventScript_EV_29:
 # 148 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	waitmessage
+Prometheus_Tech_Training_Facility_EventScript_EV_31:
+# 151 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	release
 	end
 
-Prometheus_Tech_Training_Facility_EventScript_EV_16:
-# 105 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	setvar VAR_0x8006, 0
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_15
-
-Prometheus_Tech_Training_Facility_EventScript_EV_17:
-# 108 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	setvar VAR_0x8006, 1
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_15
-
 Prometheus_Tech_Training_Facility_EventScript_EV_18:
-# 111 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	setvar VAR_0x8006, 2
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_15
+# 108 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	setvar VAR_0x8006, 0
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_17
 
 Prometheus_Tech_Training_Facility_EventScript_EV_19:
-# 114 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	setvar VAR_0x8006, 3
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_15
+# 111 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	setvar VAR_0x8006, 1
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_17
 
 Prometheus_Tech_Training_Facility_EventScript_EV_20:
-# 117 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	setvar VAR_0x8006, 4
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_15
+# 114 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	setvar VAR_0x8006, 2
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_17
 
 Prometheus_Tech_Training_Facility_EventScript_EV_21:
+# 117 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	setvar VAR_0x8006, 3
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_17
+
+Prometheus_Tech_Training_Facility_EventScript_EV_22:
 # 120 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	setvar VAR_0x8006, 4
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_17
+
+Prometheus_Tech_Training_Facility_EventScript_EV_23:
+# 123 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	setvar VAR_0x8006, 5
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_15
-
-Prometheus_Tech_Training_Facility_EventScript_EV_30:
-# 132 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_5, MSGBOX_DEFAULT
-# 133 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	waitmessage
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_29
-
-Prometheus_Tech_Training_Facility_EventScript_EV_31:
-# 136 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_6, MSGBOX_DEFAULT
-# 137 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	waitmessage
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_29
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_17
 
 Prometheus_Tech_Training_Facility_EventScript_EV_32:
-# 140 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_7, MSGBOX_DEFAULT
-# 141 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 135 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_5, MSGBOX_DEFAULT
+# 136 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	waitmessage
-	goto Prometheus_Tech_Training_Facility_EventScript_EV_29
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_31
+
+Prometheus_Tech_Training_Facility_EventScript_EV_33:
+# 139 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_6, MSGBOX_DEFAULT
+# 140 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	waitmessage
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_31
+
+Prometheus_Tech_Training_Facility_EventScript_EV_34:
+# 143 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	msgbox Prometheus_Tech_Training_Facility_EventScript_EV_Text_7, MSGBOX_DEFAULT
+# 144 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+	waitmessage
+	goto Prometheus_Tech_Training_Facility_EventScript_EV_31
 
 
 Prometheus_Tech_Training_Facility_EventScript_Hyper_Text_0:
@@ -347,29 +355,29 @@ Prometheus_Tech_Training_Facility_EventScript_EV_Text_1:
 	.string "Pick a stat to change.$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_2:
-# 92 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 95 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "Never mind then.$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_3:
-# 98 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 101 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "How should I change it?$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_4:
-# 123 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 126 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "Canceled.$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_5:
-# 132 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 135 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "Done! EVs updated and stats recalculated.$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_6:
-# 136 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 139 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "That stat is already at its limit (252).$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_7:
-# 140 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 143 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "Total EVs would exceed 510. Reduce another stat first.$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_8:
-# 144 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
+# 147 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
 	.string "Something went wrong. Try again.$"
