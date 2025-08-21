@@ -1199,3 +1199,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Prometheus_Tech_Lab/scripts.inc"
 
 	.include "data/maps/Prometheus_Tech_Training_Facility/scripts.inc"
+
+	.include "data/maps/NewHope_BattleCenter/scripts.inc"

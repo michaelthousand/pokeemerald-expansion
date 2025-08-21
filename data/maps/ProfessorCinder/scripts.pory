@@ -25,10 +25,8 @@ script StarterFade {
 script Common_GiveStarter {
     copyvar(VAR_STARTER_MON, VAR_TEMP_2)
     setflag(FLAG_SYS_POKEMON_GET)
-
     // Give L5, no item
     givemon(VAR_TEMP_2, 5, ITEM_NONE)
-
 
     if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
         playfanfare(MUS_OBTAIN_ITEM)
@@ -42,7 +40,26 @@ script Common_GiveStarter {
         call(NicknameBoxMon)
     } else {
         msgbox("No more room for Pokemon.")
+        return
     }
+
+    // Ensure UI/audio complete before touching objects/flags
+    waitfanfare
+    closemessage
+
+    // Mark the correct ball as used and remove its object.
+    // (Assumes object event IDs: 1=Grass, 2=Fire, 3=Water — adjust if your map uses different IDs.)
+    if (var(VAR_TEMP_1) == 1) {
+        setflag(STARTER_BALL_ONE)
+        removeobject(1)
+    } elif (var(VAR_TEMP_1) == 2) {
+        setflag(STARTER_BALL_TWO)
+        removeobject(2)
+    } elif (var(VAR_TEMP_1) == 3) {
+        setflag(STARTER_BALL_THREE)
+        removeobject(3)
+    }
+
     // Initialize the cap once
     if (var(VAR_LEVEL_CAP) == 0) {
         call(SetInitialCap)
@@ -77,10 +94,6 @@ script ProfessorCinder_EventScript_PokeballOne {
     if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
         setvar(VAR_TEMP_1, 1)     // Grass slot
         call(ProfessorCinder_PickStarterForSlot)
-        if (flag(FLAG_SYS_POKEMON_GET)) {
-            setflag(STARTER_BALL_ONE)
-            removeobject(1)       // adjust id if needed
-        }
     } else {
         msgbox("Don't take another.")
     }
@@ -91,12 +104,8 @@ script ProfessorCinder_EventScript_PokeballOne {
 script ProfessorCinder_EventScript_PokeballTwo {
     lockall
     if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
-        setvar(VAR_TEMP_1, 2)     // Fire slot
+        setvar(VAR_TEMP_1, 2)     // Grass slot
         call(ProfessorCinder_PickStarterForSlot)
-        if (flag(FLAG_SYS_POKEMON_GET)) {
-            setflag(STARTER_BALL_TWO)
-            removeobject(2)
-        }
     } else {
         msgbox("Don't take another.")
     }
@@ -107,12 +116,8 @@ script ProfessorCinder_EventScript_PokeballTwo {
 script ProfessorCinder_EventScript_PokeballThree {
     lockall
     if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
-        setvar(VAR_TEMP_1, 3)     // Water slot
+        setvar(VAR_TEMP_1, 3)     // Grass slot
         call(ProfessorCinder_PickStarterForSlot)
-        if (flag(FLAG_SYS_POKEMON_GET)) {
-            setflag(STARTER_BALL_THREE)
-            removeobject(3)
-        }
     } else {
         msgbox("Don't take another.")
     }

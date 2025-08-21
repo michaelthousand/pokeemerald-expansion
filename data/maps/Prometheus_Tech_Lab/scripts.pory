@@ -124,156 +124,162 @@ script Prometheus_Tech_Lab_EventScript_Nature {
     faceplayer
 
     msgbox("Do you want an experimental mint to\nchange the nature of your pokemon?", MSGBOX_YESNO)
-    if(var(VAR_RESULT) == YES){
-        msgbox("What stat would you like to raise?")
-
-        goto(MintMenu1)
-
-        MintMenu1:
-            multichoice(20,0, MINT_CHOICE_P1, 0)
-            if (var(VAR_RESULT) == 0){
-                msgbox("What stat should we lower to raise\nattack?", MSGBOX_DEFAULT)
-                waitmessage
-                goto(AttackMints)
-            }
-            elif (var(VAR_RESULT) == 1){
-                msgbox("What stat should we lower to raise\ndefense.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 2){
-                msgbox("What stat should we lower to raise\nsp. attack.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 3){
-                msgbox("What stat should we lower to raise\nsp. defense.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 4){
-                msgbox("What stat should we lower to raise\nspeed.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 5){
-                msgbox("Here's a serious mint", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_SERIOUS_MINT, 1)
-            }
-        
-        AttackMints:
-            multichoice(20,0, MINT_CHOICE_P2, 0)
-            if (var(VAR_RESULT) == 0){
-                msgbox("Here's a lonely mint", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_LONELY_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 1){
-                msgbox("Here's an adamant mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_ADAMANT_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 2){
-                msgbox("Here's a naughty mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_NAUGHTY_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 3){
-                msgbox("Here's a brave mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_BRAVE_MINT, 1)
-            }
-
-        DefenseMints:
-            multichoice(20,0, MINT_CHOICE_P3, 0)
-            if (var(VAR_RESULT) == 0){
-                msgbox("Here's a bold mint", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_BOLD_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 1){
-                msgbox("Here's an impish mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_IMPISH_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 2){
-                msgbox("Here's a lax mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_LAX_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 3){
-                msgbox("Here's a relaxed mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_RELAXED_MINT, 1)
-            }
-
-        SpAttackMints:
-            multichoice(20,0, MINT_CHOICE_P4, 0)
-            if (var(VAR_RESULT) == 0){
-                msgbox("Here's a modest mint", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_MODEST_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 1){
-                msgbox("Here's a mild mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_MILD_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 2){
-                msgbox("Here's a rash mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_RASH_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 3){
-                msgbox("Here's a quiet mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_QUIET_MINT, 1)
-            }
-
-        SpDefenseMints:
-            multichoice(20,0, MINT_CHOICE_P5, 0)
-            if (var(VAR_RESULT) == 0){
-                msgbox("Here's a calm mint", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_CALM_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 1){
-                msgbox("Here's a gentle mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_GENTLE_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 2){
-                msgbox("Here's a careful mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_CAREFUL_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 3){
-                msgbox("Here's a sassy mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_SASSY_MINT, 1)
-            }
-
-        SpeedkMints:
-            multichoice(20,0, MINT_CHOICE_P6, 0)
-            if (var(VAR_RESULT) == 0){
-                msgbox("Here's a timid mint", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_TIMID_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 1){
-                msgbox("Here's an hasty mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_HASTY_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 2){
-                msgbox("Here's a jolly mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_JOLLY_MINT, 1)
-            }
-            elif (var(VAR_RESULT) == 3){
-                msgbox("Here's a naive mint.", MSGBOX_DEFAULT)
-                waitmessage
-                giveitem(ITEM_NAIVE_MINT, 1)
-            }
+    if (var(VAR_RESULT) != YES) {
+        msgbox("Maybe next time.")
+        goto(Done)
     }
 
-    release
-    end
+    msgbox("What stat would you like to raise?")
+    goto(MintMenu1)
+
+    MintMenu1:
+        multichoice(20, 0, MINT_CHOICE_P1, 0)
+        if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+            goto(Done)
+        } elif (var(VAR_RESULT) == 0) { // Attack
+            msgbox("What stat should we lower to raise\nattack?")
+            goto(AttackMints)
+        } elif (var(VAR_RESULT) == 1) { // Defense
+            msgbox("What stat should we lower to raise\ndefense?")
+            goto(DefenseMints)
+        } elif (var(VAR_RESULT) == 2) { // Sp. Atk
+            msgbox("What stat should we lower to raise\nsp. attack?")
+            goto(SpAttackMints)
+        } elif (var(VAR_RESULT) == 3) { // Sp. Def
+            msgbox("What stat should we lower to raise\nsp. defense?")
+            goto(SpDefenseMints)
+        } elif (var(VAR_RESULT) == 4) { // Speed
+            msgbox("What stat should we lower to raise\nspeed?")
+            goto(SpeedMints)
+        } elif (var(VAR_RESULT) == 5) { // Serious (neutral)
+            msgbox("Here's a serious mint", MSGBOX_DEFAULT)
+            giveitem(ITEM_SERIOUS_MINT, 1)
+            goto(Done)
+        } else {
+            goto(Done)
+        }
+
+    AttackMints:
+        multichoice(20, 0, MINT_CHOICE_P2, 0)
+        if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+            goto(Done)
+        } elif (var(VAR_RESULT) == 0) {
+            msgbox("Here's a lonely mint", MSGBOX_DEFAULT)
+            giveitem(ITEM_LONELY_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 1) {
+            msgbox("Here's an adamant mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_ADAMANT_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 2) {
+            msgbox("Here's a naughty mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_NAUGHTY_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 3) {
+            msgbox("Here's a brave mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_BRAVE_MINT, 1)
+            goto(Done)
+        } else {
+            goto(Done)
+        }
+
+    DefenseMints:
+        multichoice(20, 0, MINT_CHOICE_P3, 0)
+        if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+            goto(Done)
+        } elif (var(VAR_RESULT) == 0) {
+            msgbox("Here's a bold mint", MSGBOX_DEFAULT)
+            giveitem(ITEM_BOLD_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 1) {
+            msgbox("Here's an impish mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_IMPISH_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 2) {
+            msgbox("Here's a lax mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_LAX_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 3) {
+            msgbox("Here's a relaxed mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_RELAXED_MINT, 1)
+            goto(Done)
+        } else {
+            goto(Done)
+        }
+
+    SpAttackMints:
+        multichoice(20, 0, MINT_CHOICE_P4, 0)
+        if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+            goto(Done)
+        } elif (var(VAR_RESULT) == 0) {
+            msgbox("Here's a modest mint", MSGBOX_DEFAULT)
+            giveitem(ITEM_MODEST_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 1) {
+            msgbox("Here's a mild mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_MILD_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 2) {
+            msgbox("Here's a rash mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_RASH_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 3) {
+            msgbox("Here's a quiet mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_QUIET_MINT, 1)
+            goto(Done)
+        } else {
+            goto(Done)
+        }
+
+    SpDefenseMints:
+        multichoice(20, 0, MINT_CHOICE_P5, 0)
+        if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+            goto(Done)
+        } elif (var(VAR_RESULT) == 0) {
+            msgbox("Here's a calm mint", MSGBOX_DEFAULT)
+            giveitem(ITEM_CALM_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 1) {
+            msgbox("Here's a gentle mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_GENTLE_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 2) {
+            msgbox("Here's a careful mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_CAREFUL_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 3) {
+            msgbox("Here's a sassy mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_SASSY_MINT, 1)
+            goto(Done)
+        } else {
+            goto(Done)
+        }
+
+    SpeedMints:
+        multichoice(20, 0, MINT_CHOICE_P6, 0)
+        if (var(VAR_RESULT) == MULTI_B_PRESSED) {
+            goto(Done)
+        } elif (var(VAR_RESULT) == 0) {
+            msgbox("Here's a timid mint", MSGBOX_DEFAULT)
+            giveitem(ITEM_TIMID_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 1) {
+            msgbox("Here's a hasty mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_HASTY_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 2) {
+            msgbox("Here's a jolly mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_JOLLY_MINT, 1)
+            goto(Done)
+        } elif (var(VAR_RESULT) == 3) {
+            msgbox("Here's a naive mint.", MSGBOX_DEFAULT)
+            giveitem(ITEM_NAIVE_MINT, 1)
+            goto(Done)
+        } else {
+            goto(Done)
+        }
+
+    Done:
+        release
+        end
 }

@@ -81,8 +81,8 @@
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_UNUSED_0x046    0x46 // Unused Flag
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag
+#define FLAG_BATTLE_CENTER_RULES    0x46 // Unused Flag // used to see if battle center rules need to be explained
+#define FLAG_UNUSED_0x047    0x47 // Unused Flag // used for league headquarters registration
 #define FLAG_ARWEN_1    0x48 // Unused Flag // used for Forest's Edge Flying Gym Leader
 #define FLAG_ORION_1    0x49 // Unused Flag // used for Forest's Edge Psychic Gym Leader
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag // currently used for Kyogre fight

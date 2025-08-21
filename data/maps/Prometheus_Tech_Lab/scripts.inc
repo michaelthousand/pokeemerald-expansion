@@ -279,351 +279,416 @@ Prometheus_Tech_Lab_EventScript_Nature::
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_0, MSGBOX_YESNO
 # 127 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	compare VAR_RESULT, YES
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_2
+	goto_if_ne Prometheus_Tech_Lab_EventScript_Nature_2
 Prometheus_Tech_Lab_EventScript_Nature_1:
-# 277 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+# 132 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_2
+# 133 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto MintMenu1
+# 135 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+MintMenu1:
+# 136 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	multichoice 20, 0, MINT_CHOICE_P1, 0
+# 137 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_5
+# 139 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_6
+# 142 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_7
+# 145 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_8
+# 148 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_9
+# 151 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 4
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_10
+# 154 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 5
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_11
+# 159 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+Prometheus_Tech_Lab_EventScript_Nature_4:
+# 162 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+AttackMints:
+# 163 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	multichoice 20, 0, MINT_CHOICE_P2, 0
+# 164 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_21
+# 166 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_22
+# 170 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_23
+# 174 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_24
+# 178 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_25
+# 183 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+Prometheus_Tech_Lab_EventScript_Nature_20:
+# 186 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+DefenseMints:
+# 187 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	multichoice 20, 0, MINT_CHOICE_P3, 0
+# 188 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_33
+# 190 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_34
+# 194 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_35
+# 198 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_36
+# 202 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_37
+# 207 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+Prometheus_Tech_Lab_EventScript_Nature_32:
+# 210 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+SpAttackMints:
+# 211 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	multichoice 20, 0, MINT_CHOICE_P4, 0
+# 212 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_45
+# 214 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_46
+# 218 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_47
+# 222 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_48
+# 226 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_49
+# 231 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+Prometheus_Tech_Lab_EventScript_Nature_44:
+# 234 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+SpDefenseMints:
+# 235 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	multichoice 20, 0, MINT_CHOICE_P5, 0
+# 236 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_57
+# 238 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_58
+# 242 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_59
+# 246 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_60
+# 250 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_61
+# 255 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+Prometheus_Tech_Lab_EventScript_Nature_56:
+# 258 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+SpeedMints:
+# 259 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	multichoice 20, 0, MINT_CHOICE_P6, 0
+# 260 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, MULTI_B_PRESSED
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_69
+# 262 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_70
+# 266 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 1
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_71
+# 270 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 2
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_72
+# 274 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_73
+# 279 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+Prometheus_Tech_Lab_EventScript_Nature_68:
+# 282 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Done:
+# 283 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	release
 	end
 
 Prometheus_Tech_Lab_EventScript_Nature_2:
 # 128 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_1
-# 130 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	goto MintMenu1
-# 132 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-MintMenu1:
-# 133 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	multichoice 20, 0, MINT_CHOICE_P1, 0
-# 134 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_5
-# 139 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_6
-# 143 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 2
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_7
-# 147 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 3
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_8
-# 151 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 4
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_9
-# 155 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 5
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_10
-Prometheus_Tech_Lab_EventScript_Nature_4:
-# 161 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-AttackMints:
-# 162 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	multichoice 20, 0, MINT_CHOICE_P2, 0
-# 163 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_18
-# 168 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_19
-# 173 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 2
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_20
-# 178 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 3
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_21
-Prometheus_Tech_Lab_EventScript_Nature_17:
-# 184 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-DefenseMints:
-# 185 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	multichoice 20, 0, MINT_CHOICE_P3, 0
-# 186 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_27
-# 191 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_28
-# 196 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 2
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_29
-# 201 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 3
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_30
-Prometheus_Tech_Lab_EventScript_Nature_26:
-# 207 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-SpAttackMints:
-# 208 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	multichoice 20, 0, MINT_CHOICE_P4, 0
-# 209 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_36
-# 214 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_37
-# 219 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 2
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_38
-# 224 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 3
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_39
-Prometheus_Tech_Lab_EventScript_Nature_35:
-# 230 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-SpDefenseMints:
-# 231 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	multichoice 20, 0, MINT_CHOICE_P5, 0
-# 232 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_45
-# 237 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_46
-# 242 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 2
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_47
-# 247 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 3
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_48
-Prometheus_Tech_Lab_EventScript_Nature_44:
-# 253 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-SpeedkMints:
-# 254 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	multichoice 20, 0, MINT_CHOICE_P6, 0
-# 255 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 0
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_53
-# 260 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 1
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_54
-# 265 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 2
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_55
-# 270 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	compare VAR_RESULT, 3
-	goto_if_eq Prometheus_Tech_Lab_EventScript_Nature_56
+# 129 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
 	goto Prometheus_Tech_Lab_EventScript_Nature_1
 
 Prometheus_Tech_Lab_EventScript_Nature_5:
-# 135 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_2, MSGBOX_DEFAULT
-# 136 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 137 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	goto AttackMints
+# 138 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
 	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
 Prometheus_Tech_Lab_EventScript_Nature_6:
 # 140 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_3, MSGBOX_DEFAULT
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_3
 # 141 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+	goto AttackMints
 	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
 Prometheus_Tech_Lab_EventScript_Nature_7:
+# 143 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_4
 # 144 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_4, MSGBOX_DEFAULT
-# 145 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+	goto DefenseMints
 	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
 Prometheus_Tech_Lab_EventScript_Nature_8:
-# 148 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_5, MSGBOX_DEFAULT
-# 149 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+# 146 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_5
+# 147 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto SpAttackMints
 	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
 Prometheus_Tech_Lab_EventScript_Nature_9:
-# 152 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_6, MSGBOX_DEFAULT
-# 153 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+# 149 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_6
+# 150 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto SpDefenseMints
 	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
 Prometheus_Tech_Lab_EventScript_Nature_10:
-# 156 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_7, MSGBOX_DEFAULT
-# 157 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 158 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_SERIOUS_MINT, 1
+# 152 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_7
+# 153 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto SpeedMints
 	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
-Prometheus_Tech_Lab_EventScript_Nature_18:
-# 164 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_11:
+# 155 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_8, MSGBOX_DEFAULT
-# 165 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 166 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_LONELY_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_17
-
-Prometheus_Tech_Lab_EventScript_Nature_19:
-# 169 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_9, MSGBOX_DEFAULT
-# 170 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 171 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_ADAMANT_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_17
-
-Prometheus_Tech_Lab_EventScript_Nature_20:
-# 174 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_10, MSGBOX_DEFAULT
-# 175 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 176 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_NAUGHTY_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_17
+# 156 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_SERIOUS_MINT, 1
+# 157 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_4
 
 Prometheus_Tech_Lab_EventScript_Nature_21:
-# 179 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+# 165 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_20
+
+Prometheus_Tech_Lab_EventScript_Nature_22:
+# 167 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_9, MSGBOX_DEFAULT
+# 168 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_LONELY_MINT, 1
+# 169 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_20
+
+Prometheus_Tech_Lab_EventScript_Nature_23:
+# 171 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_10, MSGBOX_DEFAULT
+# 172 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_ADAMANT_MINT, 1
+# 173 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_20
+
+Prometheus_Tech_Lab_EventScript_Nature_24:
+# 175 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_11, MSGBOX_DEFAULT
-# 180 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 181 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_BRAVE_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_17
+# 176 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_NAUGHTY_MINT, 1
+# 177 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_20
 
-Prometheus_Tech_Lab_EventScript_Nature_27:
-# 187 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_25:
+# 179 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_12, MSGBOX_DEFAULT
-# 188 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+# 180 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_BRAVE_MINT, 1
+# 181 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_20
+
+Prometheus_Tech_Lab_EventScript_Nature_33:
 # 189 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_BOLD_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_26
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_32
 
-Prometheus_Tech_Lab_EventScript_Nature_28:
-# 192 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_34:
+# 191 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_13, MSGBOX_DEFAULT
+# 192 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_BOLD_MINT, 1
 # 193 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 194 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_IMPISH_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_26
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_32
 
-Prometheus_Tech_Lab_EventScript_Nature_29:
-# 197 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_35:
+# 195 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_14, MSGBOX_DEFAULT
-# 198 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 199 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_LAX_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_26
-
-Prometheus_Tech_Lab_EventScript_Nature_30:
-# 202 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_15, MSGBOX_DEFAULT
-# 203 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 204 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_RELAXED_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_26
+# 196 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_IMPISH_MINT, 1
+# 197 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_32
 
 Prometheus_Tech_Lab_EventScript_Nature_36:
-# 210 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_16, MSGBOX_DEFAULT
-# 211 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 212 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_MODEST_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_35
+# 199 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_15, MSGBOX_DEFAULT
+# 200 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_LAX_MINT, 1
+# 201 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_32
 
 Prometheus_Tech_Lab_EventScript_Nature_37:
-# 215 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_17, MSGBOX_DEFAULT
-# 216 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 217 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_MILD_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_35
-
-Prometheus_Tech_Lab_EventScript_Nature_38:
-# 220 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_18, MSGBOX_DEFAULT
-# 221 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 222 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_RASH_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_35
-
-Prometheus_Tech_Lab_EventScript_Nature_39:
-# 225 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_19, MSGBOX_DEFAULT
-# 226 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 227 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_QUIET_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_35
+# 203 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_16, MSGBOX_DEFAULT
+# 204 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_RELAXED_MINT, 1
+# 205 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_32
 
 Prometheus_Tech_Lab_EventScript_Nature_45:
-# 233 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_20, MSGBOX_DEFAULT
-# 234 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 235 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_CALM_MINT, 1
+# 213 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
 	goto Prometheus_Tech_Lab_EventScript_Nature_44
 
 Prometheus_Tech_Lab_EventScript_Nature_46:
-# 238 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_21, MSGBOX_DEFAULT
-# 239 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 240 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_GENTLE_MINT, 1
+# 215 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_17, MSGBOX_DEFAULT
+# 216 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_MODEST_MINT, 1
+# 217 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
 	goto Prometheus_Tech_Lab_EventScript_Nature_44
 
 Prometheus_Tech_Lab_EventScript_Nature_47:
-# 243 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_22, MSGBOX_DEFAULT
-# 244 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 245 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_CAREFUL_MINT, 1
+# 219 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_18, MSGBOX_DEFAULT
+# 220 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_MILD_MINT, 1
+# 221 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
 	goto Prometheus_Tech_Lab_EventScript_Nature_44
 
 Prometheus_Tech_Lab_EventScript_Nature_48:
-# 248 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_23, MSGBOX_DEFAULT
-# 249 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 250 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_SASSY_MINT, 1
+# 223 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_19, MSGBOX_DEFAULT
+# 224 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_RASH_MINT, 1
+# 225 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
 	goto Prometheus_Tech_Lab_EventScript_Nature_44
 
-Prometheus_Tech_Lab_EventScript_Nature_53:
-# 256 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_49:
+# 227 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_20, MSGBOX_DEFAULT
+# 228 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_QUIET_MINT, 1
+# 229 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_44
+
+Prometheus_Tech_Lab_EventScript_Nature_57:
+# 237 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_56
+
+Prometheus_Tech_Lab_EventScript_Nature_58:
+# 239 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_21, MSGBOX_DEFAULT
+# 240 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_CALM_MINT, 1
+# 241 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_56
+
+Prometheus_Tech_Lab_EventScript_Nature_59:
+# 243 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_22, MSGBOX_DEFAULT
+# 244 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_GENTLE_MINT, 1
+# 245 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_56
+
+Prometheus_Tech_Lab_EventScript_Nature_60:
+# 247 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_23, MSGBOX_DEFAULT
+# 248 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_CAREFUL_MINT, 1
+# 249 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_56
+
+Prometheus_Tech_Lab_EventScript_Nature_61:
+# 251 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_24, MSGBOX_DEFAULT
-# 257 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
-# 258 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_TIMID_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_1
+# 252 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_SASSY_MINT, 1
+# 253 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_56
 
-Prometheus_Tech_Lab_EventScript_Nature_54:
+Prometheus_Tech_Lab_EventScript_Nature_69:
 # 261 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_25, MSGBOX_DEFAULT
-# 262 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_68
+
+Prometheus_Tech_Lab_EventScript_Nature_70:
 # 263 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_HASTY_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_1
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_25, MSGBOX_DEFAULT
+# 264 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	giveitem ITEM_TIMID_MINT, 1
+# 265 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_68
 
-Prometheus_Tech_Lab_EventScript_Nature_55:
-# 266 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_26, MSGBOX_DEFAULT
+Prometheus_Tech_Lab_EventScript_Nature_71:
 # 267 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_26, MSGBOX_DEFAULT
 # 268 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	giveitem ITEM_JOLLY_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_1
+	giveitem ITEM_HASTY_MINT, 1
+# 269 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_68
 
-Prometheus_Tech_Lab_EventScript_Nature_56:
+Prometheus_Tech_Lab_EventScript_Nature_72:
 # 271 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_27, MSGBOX_DEFAULT
 # 272 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	waitmessage
+	giveitem ITEM_JOLLY_MINT, 1
 # 273 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_68
+
+Prometheus_Tech_Lab_EventScript_Nature_73:
+# 275 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	msgbox Prometheus_Tech_Lab_EventScript_Nature_Text_28, MSGBOX_DEFAULT
+# 276 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	giveitem ITEM_NAIVE_MINT, 1
-	goto Prometheus_Tech_Lab_EventScript_Nature_1
+# 277 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	goto Done
+	goto Prometheus_Tech_Lab_EventScript_Nature_68
 
 
 Prometheus_Tech_Lab_EventScript_Tera_Text_0:
@@ -712,108 +777,112 @@ Prometheus_Tech_Lab_EventScript_Nature_Text_0:
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_1:
 # 128 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "What stat would you like to raise?$"
+	.string "Maybe next time.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_2:
-# 135 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "What stat should we lower to raise\nattack?$"
+# 132 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "What stat would you like to raise?$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_3:
 # 140 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "What stat should we lower to raise\ndefense.$"
+	.string "What stat should we lower to raise\nattack?$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_4:
-# 144 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "What stat should we lower to raise\nsp. attack.$"
+# 143 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "What stat should we lower to raise\ndefense?$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_5:
-# 148 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "What stat should we lower to raise\nsp. defense.$"
+# 146 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "What stat should we lower to raise\nsp. attack?$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_6:
-# 152 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "What stat should we lower to raise\nspeed.$"
+# 149 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "What stat should we lower to raise\nsp. defense?$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_7:
-# 156 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a serious mint$"
+# 152 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "What stat should we lower to raise\nspeed?$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_8:
-# 164 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a lonely mint$"
+# 155 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a serious mint$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_9:
-# 169 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's an adamant mint.$"
+# 167 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a lonely mint$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_10:
-# 174 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a naughty mint.$"
+# 171 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's an adamant mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_11:
+# 175 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a naughty mint.$"
+
+Prometheus_Tech_Lab_EventScript_Nature_Text_12:
 # 179 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	.string "Here's a brave mint.$"
 
-Prometheus_Tech_Lab_EventScript_Nature_Text_12:
-# 187 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_Text_13:
+# 191 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	.string "Here's a bold mint$"
 
-Prometheus_Tech_Lab_EventScript_Nature_Text_13:
-# 192 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_Text_14:
+# 195 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	.string "Here's an impish mint.$"
 
-Prometheus_Tech_Lab_EventScript_Nature_Text_14:
-# 197 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+Prometheus_Tech_Lab_EventScript_Nature_Text_15:
+# 199 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	.string "Here's a lax mint.$"
 
-Prometheus_Tech_Lab_EventScript_Nature_Text_15:
-# 202 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a relaxed mint.$"
-
 Prometheus_Tech_Lab_EventScript_Nature_Text_16:
-# 210 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a modest mint$"
+# 203 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a relaxed mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_17:
 # 215 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a mild mint.$"
+	.string "Here's a modest mint$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_18:
-# 220 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a rash mint.$"
+# 219 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a mild mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_19:
-# 225 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a quiet mint.$"
+# 223 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a rash mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_20:
-# 233 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a calm mint$"
+# 227 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a quiet mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_21:
-# 238 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a gentle mint.$"
+# 239 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a calm mint$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_22:
 # 243 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a careful mint.$"
+	.string "Here's a gentle mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_23:
-# 248 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a sassy mint.$"
+# 247 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a careful mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_24:
-# 256 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a timid mint$"
+# 251 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a sassy mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_25:
-# 261 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's an hasty mint.$"
+# 263 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a timid mint$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_26:
-# 266 "data/maps/Prometheus_Tech_Lab/scripts.pory"
-	.string "Here's a jolly mint.$"
+# 267 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a hasty mint.$"
 
 Prometheus_Tech_Lab_EventScript_Nature_Text_27:
 # 271 "data/maps/Prometheus_Tech_Lab/scripts.pory"
+	.string "Here's a jolly mint.$"
+
+Prometheus_Tech_Lab_EventScript_Nature_Text_28:
+# 275 "data/maps/Prometheus_Tech_Lab/scripts.pory"
 	.string "Here's a naive mint.$"

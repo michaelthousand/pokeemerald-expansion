@@ -1,14 +1,106 @@
-mapscripts LEAGUE_HEADQUARTERS_MapScripts {}
+mapscripts LEAGUE_HEADQUARTERS_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: LEAGUE_HEADQUARTERS_OnTransition
+}
 
 
+
+script LEAGUE_HEADQUARTERS_OnTransition {
+    removeobject(2)  
+    removeobject(3)  
+    end
+}
+
+
+script LEAGUE_HEADQUARTERS_Registration {
+    lockall
+    faceplayer
+
+    if(flag(FLAG_UNUSED_0x047) == FALSE) {
+        msgbox("Welcome to the Pokemon League\nHeadquarters!", MSGBOX_DEFAULT)
+        msgbox("Would you like to register for the Gym\nChallenge?", MSGBOX_YESNO)
+
+        if (var(VAR_RESULT) == NO) {
+            msgbox("That's fine! Come back whenever you're\nready.", MSGBOX_DEFAULT)
+            releaseall
+            end
+        }
+
+        msgbox("Excellent! One moment, I'll call the\nLeague Chairman over.", MSGBOX_DEFAULT)
+        msgbox("He likes to meet new trainers.", MSGBOX_DEFAULT)
+        addobject(2)
+        applymovement(2, Chairman_WalkIn)
+        waitmovement(0)    
+
+        goto(LEAGUE_HEADQUARTERS_Chairman)
+    }
+    else {
+        msgbox("Thank you for registering!", MSGBOX_DEFAULT)
+        release
+        end
+    }
+
+
+}
+
+movement Chairman_WalkIn {
+    walk_down * 8 
+    walk_left
+}
+
+movement PT_Admin_WalkIn {
+    walk_down * 8
+    walk_left * 2
+}
+
+movement Chairman_MoveOver{
+    walk_right
+    walk_up
+    face_down
+}
+
+movement Chairman_Leave {
+    walk_up * 7
+}
+
+movement PT_Admin_Leave {
+    walk_right * 2
+    walk_up * 8
+}
 
 script LEAGUE_HEADQUARTERS_Chairman{
-    lock
-    faceplayer
-    message("Welcome to the Pokemon League!")
+    msgbox("Ah, a new challenger! Welcome to the\nLeague.", MSGBOX_DEFAULT)
+    msgbox("It’s always an honor to greet aspiring\ntrainers at the start of their journey.", MSGBOX_DEFAULT)
 
-    message("Here's a TM to get you started.")
+    msgbox("Here in the REGION, we use a unique\nsystem for the Gym Challenge.", MSGBOX_DEFAULT)
+    msgbox("Each Gym is led not by one Leader, but by\ntwo.", MSGBOX_DEFAULT)
+    msgbox("To claim a badge, you must defeat both\nLeaders of that Gym.", MSGBOX_DEFAULT)
+    msgbox("Only then will their badge be officially\nrecognized by the League.", MSGBOX_DEFAULT)
+
+    msgbox("But the Gym Challenge isn’t the only path\nfor ambitious trainers.", MSGBOX_DEFAULT)
+    msgbox("The League also hosts a circuit of local\ntournaments, where trainers test their\pskills outside of traditional Gyms.", MSGBOX_DEFAULT)
+    msgbox("And beyond that…", MSGBOX_DEFAULT)
+    msgbox("The upcoming World Championships will\nsoon bring challengers from every region.", MSGBOX_DEFAULT)
+    msgbox("Perhaps, in time, you will be among them.", MSGBOX_DEFAULT)
+
+    msgbox("Before you begin, I’d like you to meet one\nof our partners from Prometheus Tech.", MSGBOX_DEFAULT)
+    
+    applymovement(2, Chairman_MoveOver)
+    addobject(3)
+    applymovement(3, PT_Admin_WalkIn)
+    waitmovement(0) 
+    
+    goto(LEAGUE_HEADQUARTERS_PT_Admin)
+    end
+}
+
+script LEAGUE_HEADQUARTERS_PT_Admin {
+    msgbox("Greetings, trainer. I represent\nPrometheus Tech.", MSGBOX_DEFAULT)
+    msgbox("We proudly support new challengers with\nessential tools and items.", MSGBOX_DEFAULT)
+    msgbox("Here, please accept these to aid your\nGym Challenge.", MSGBOX_DEFAULT)
+
     giveitem(ITEM_TM_PROTECT, 1)
+    msgbox("That TM contains Protect, an\nincredibly helpful move when battling.")
+    msgbox("It's reusable so you can teach it to\nwhoever you want.")
 
     message("And, of course, some items!")
     giveitem(ITEM_AMULET_COIN, 1)
@@ -19,25 +111,31 @@ script LEAGUE_HEADQUARTERS_Chairman{
     giveitem(ITEM_RARE_CANDY, 50)
     giveitem(ITEM_QUICK_BALL, 50)
 
-    message("But most importantly: a Tera Orb")
+    message("But most importantly: a Tera Orb!\pThis will allow you to terastilize your\npokemon!")
     giveitem(ITEM_TERA_ORB, 1)
     setflag(B_FLAG_TERA_ORB_CHARGED)
     setflag(B_FLAG_TERA_ORB_NO_COST)
 
 
-    msgbox("Hopefully these will help going!")
+    msgbox("Hopefully these will help you get\ngoing!")
+    msgbox("Goodbye for now!")
+
+    applymovement(2, Chairman_Leave) 
+    applymovement(3, PT_Admin_Leave)
+    waitmovement(0) 
+    removeobject(2)
+    removeobject(3)
+
+    setflag(FLAG_UNUSED_0x047)
     release
     end
 }
 
-script LEAGUE_HEADQUARTERS_Registration {
-    lock
-    faceplayer
 
-    msgbox("Pick a Pokemon to set its Tera type.")
-
-
-    release
-    end
+script LEAGUEHEADQUARTERS_Trigger_BlockPath{
+    lockall
+    msgbox("That area is restricted!")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    waitmovement(0)
+    releaseall
 }
-

@@ -28,6 +28,8 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
+#include "daycare.h"
+
 /*
  * Move relearner state machine
  * ------------------------
@@ -159,6 +161,44 @@ enum {
 #define TAG_LIST_ARROWS 5425
 #define GFXTAG_UI       5525
 #define PALTAG_UI       5526
+
+// Returns TRUE if 'move' exists in moves[0..count-1].
+static bool8 RelearnerListContains(const u16 *moves, u8 count, u16 move)
+{
+    u8 i;
+    for (i = 0; i < count; i++)
+        if (moves[i] == move)
+            return TRUE;
+    return FALSE;
+}
+
+// Append egg moves for this mon's species into movesBuf, updating *pCount (bounded by maxCount).
+static void AppendEggMovesToRelearnerList(struct Pokemon *mon, u16 *movesBuf, u8 *pCount, u8 maxCount)
+{
+    u16 tmp[64]; // scratch; egg move pools are small
+    u16 species = GetMonData(mon, MON_DATA_SPECIES);
+
+    // Pull egg moves by species (alternatively: GetEggMoves(mon, tmp))
+    u8 n = GetEggMovesBySpecies(species, tmp);
+    u8 i;
+
+    for (i = 0; i < n; i++)
+    {
+        u16 move = tmp[i];
+
+        // Skip if already known or already queued
+        if (MonKnowsMove(mon, move))
+            continue;
+        if (RelearnerListContains(movesBuf, *pCount, move))
+            continue;
+
+        if (*pCount >= maxCount)
+            break;
+
+        movesBuf[*pCount] = move;
+        (*pCount)++;
+    }
+}
 
 static EWRAM_DATA struct
 {
@@ -939,12 +979,24 @@ static void CreateLearnableMovesList(void)
     s32 i;
     u8 nickname[POKEMON_NAME_LENGTH + 1];
 
-    sMoveRelearnerStruct->numMenuChoices = GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearnerStruct->partyMon], sMoveRelearnerStruct->movesToLearn);
+    // Existing: level-up relearnables
+    sMoveRelearnerStruct->numMenuChoices =
+        GetMoveRelearnerMoves(&gPlayerParty[sMoveRelearnerStruct->partyMon],
+                              sMoveRelearnerStruct->movesToLearn);
 
+    // NEW: also append egg moves
+    AppendEggMovesToRelearnerList(
+        &gPlayerParty[sMoveRelearnerStruct->partyMon],
+        sMoveRelearnerStruct->movesToLearn,
+        &sMoveRelearnerStruct->numMenuChoices,
+        MAX_RELEARNER_MOVES
+    );
+
+    // Build menu items from the combined list
     for (i = 0; i < sMoveRelearnerStruct->numMenuChoices; i++)
     {
         sMoveRelearnerStruct->menuItems[i].name = GetMoveName(sMoveRelearnerStruct->movesToLearn[i]);
-        sMoveRelearnerStruct->menuItems[i].id = sMoveRelearnerStruct->movesToLearn[i];
+        sMoveRelearnerStruct->menuItems[i].id   = sMoveRelearnerStruct->movesToLearn[i];
     }
 
     GetMonData(&gPlayerParty[sMoveRelearnerStruct->partyMon], MON_DATA_NICKNAME, nickname);

@@ -15,7 +15,7 @@
   "connections": [
     {
       "map": "MAP_ROUTE1",
-      "offset": 17,
+      "offset": 18,
       "direction": "down"
     }
   ],
@@ -55,6 +55,27 @@
       "elevation": 0,
       "dest_map": "MAP_NEW_HOPE_POKE_MART",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 27,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_LEAGUE_HEADQUARTERS",
+      "dest_warp_id": "1"
+    },
+    {
+      "x": 13,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE_BATTLE_CENTER",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 14,
+      "y": 20,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE_BATTLE_CENTER",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

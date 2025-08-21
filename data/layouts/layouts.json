@@ -4620,6 +4620,16 @@
       "secondary_tileset": "gTileset_BattleFactory",
       "border_filepath": "data/layouts/Prometheus_Tech_Training_Facility/border.bin",
       "blockdata_filepath": "data/layouts/Prometheus_Tech_Training_Facility/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_BATTLE_CENTER",
+      "name": "NewHope_BattleCenter_Layout",
+      "width": 18,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/NewHope_BattleCenter/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_BattleCenter/map.bin"
     }
   ]
 }

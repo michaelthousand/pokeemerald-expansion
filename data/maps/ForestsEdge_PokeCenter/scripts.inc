@@ -3,11 +3,11 @@
 # 2 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
 ForestsEdge_PokeCenter_MapScripts::
 # 3 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
-    map_script MAP_SCRIPT_ON_TRANSITION, ForestsEdge_PokeCenter_OnTransition
+    map_script MAP_SCRIPT_ON_TRANSITION, ForestsEdge_PokemonCenter_OnTransition
 # 4 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
     map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
 
-ForestsEdge_PokeCenter_OnTransition::
+ForestsEdge_PokemonCenter_OnTransition::
 # 9 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
 	setrespawn HEAL_LOCATION_FORESTS_EDGE
 	end

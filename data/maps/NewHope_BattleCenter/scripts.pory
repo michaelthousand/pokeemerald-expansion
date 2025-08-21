@@ -1,0 +1,49 @@
+mapscripts NewHope_BattleCenter_MapScripts {}
+
+
+script NewHope_BattleCenter_EventScript_Rules {
+    lock
+    faceplayer
+
+    if (flag(FLAG_BATTLE_CENTER_RULES) == FALSE) {
+        msgbox("This facility has two main rooms for\ntrainers.", MSGBOX_DEFAULT)
+
+        msgbox("The first is for friendly battles, where\nyou can test your skills without any\pstakes.", MSGBOX_DEFAULT)
+
+        msgbox("The second room is where we host our\nLocal Tournaments.", MSGBOX_DEFAULT)
+        msgbox("Win XX battles there, and you’ll be\ncrowned the victor.", MSGBOX_DEFAULT)
+        msgbox("Winners receive a special prize and, more\nimportantly, points toward Regional\pChampionship qualification.", MSGBOX_DEFAULT)
+
+        msgbox("If you’re looking to prove yourself\noutside of the Gyms, this is the place\pto do it.", MSGBOX_DEFAULT)
+        msgbox("Good luck!", MSGBOX_DEFAULT)
+        setflag(FLAG_BATTLE_CENTER_RULES)
+        release
+        end
+    }
+    else {
+        msgbox("Good luck!", MSGBOX_DEFAULT)
+        release
+        end
+    }
+}
+
+script NewHope_BattleCenter_Trigger_Rules {
+    if (flag(FLAG_BATTLE_CENTER_RULES) == FALSE) {
+        lock
+        faceplayer
+        msgbox("This facility has two main rooms for\ntrainers.", MSGBOX_DEFAULT)
+
+        msgbox("The first is for friendly battles, where\nyou can test your skills without any\pstakes.", MSGBOX_DEFAULT)
+
+        msgbox("The second room is where we host our\nLocal Tournaments.", MSGBOX_DEFAULT)
+        msgbox("Win XX battles there, and you’ll be\ncrowned the victor.", MSGBOX_DEFAULT)
+        msgbox("Winners receive a special prize and, more\nimportantly, points toward Regional\pChampionship qualification.", MSGBOX_DEFAULT)
+
+        msgbox("If you’re looking to prove yourself\noutside of the Gyms, this is the place\pto do it.", MSGBOX_DEFAULT)
+        msgbox("Good luck!", MSGBOX_DEFAULT)
+        setflag(FLAG_BATTLE_CENTER_RULES)
+        release
+        end
+    }
+
+}

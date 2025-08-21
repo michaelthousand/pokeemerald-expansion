@@ -1,6 +1,26 @@
 mapscripts ForestsEdge_Gym_MapScripts {}
 
+script ForestsEdgeGym_EventScript_Rules {
+    lock
+    faceplayer
+    msgbox("Welcome, challenger. Allow me to explai\nhow Gyms work here in the REGION.", MSGBOX_DEFAULT)
 
+    msgbox("Each Gym has two Leaders, and each one\nspecializes in a different type.", MSGBOX_DEFAULT)
+    msgbox("If you pay attention to the junior\ntrainers you face beforehand, you may get a hint about the types you’ll be up against.", MSGBOX_DEFAULT)
+
+    msgbox("Remember: you must defeat both Leaders\nto earn the badge.", MSGBOX_DEFAULT)
+    msgbox("Between their battles, you won’t be\nallowed to change your team.", MSGBOX_DEFAULT)
+    msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
+    msgbox("Earning a badge will also award you points\ntoward qualifying for the Regional Championship.", MSGBOX_DEFAULT)
+    msgbox("You don't have any badges yet so they\nwon't bring their A team.", MSGBOX_DEFAULT)
+    msgbox("But be sure to still bring a balanced\nteam...you’ll need it!", MSGBOX_DEFAULT)
+
+    msgbox("Earning a badge will also award you points\ntoward qualifying for the Regional Championship.", MSGBOX_DEFAULT)
+
+    msgbox("Good luck!", MSGBOX_DEFAULT)
+    release
+    end
+}
 
 script ForestsEdge_Gym_EventScript_Arwen {
     lock()
