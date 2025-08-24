@@ -18,7 +18,7 @@ LEAGUE_HEADQUARTERS_Registration::
 # 16 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	faceplayer
 # 18 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	goto_if_unset FLAG_UNUSED_0x047, LEAGUE_HEADQUARTERS_Registration_1
+	goto_if_unset FLAG_LEAGUE_REG, LEAGUE_HEADQUARTERS_Registration_1
 # 37 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	msgbox LEAGUE_HEADQUARTERS_Registration_Text_5, MSGBOX_DEFAULT
 # 38 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
@@ -243,7 +243,7 @@ LEAGUE_HEADQUARTERS_PT_Admin::
 # 127 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	removeobject 3
 # 129 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	setflag FLAG_UNUSED_0x047
+	setflag FLAG_LEAGUE_REG
 # 130 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	release
 	end

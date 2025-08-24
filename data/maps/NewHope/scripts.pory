@@ -1,0 +1,29 @@
+mapscripts NewHope_MapScripts {}
+
+script NewHope_Trigger_BlockPath{
+    if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE)) && !(flag(FLAG_LEAGUE_REG))) {
+        lockall
+        msgbox("You need a pokemon and to register with\nthe League office.")
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer_Up)
+        waitmovement(0)
+        releaseall
+    }
+    elif (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
+        lockall
+        msgbox("You need a pokemon first.")
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer_Up)
+        waitmovement(0)
+        releaseall
+    }
+    elif (!(flag(FLAG_LEAGUE_REG))) {
+        lockall
+        msgbox("You need to register with the league\nfirst.")
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer_Up)
+        waitmovement(0)
+        releaseall
+    }   
+}
+
+movement StopPlayer_Up{
+    walk_up
+}

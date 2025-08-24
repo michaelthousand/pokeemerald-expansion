@@ -43,9 +43,9 @@
 #define TEMP_FLAGS_END   FLAG_TEMP_1F
 #define NUM_TEMP_FLAGS   (TEMP_FLAGS_END - TEMP_FLAGS_START + 1)
 
-#define FLAG_UNUSED_0x020    0x20 // Unused Flag
-#define FLAG_UNUSED_0x021    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
+#define FLAG_ROUTE1_CHERI_BERRIES    0x20 // Route 1 Cheri Berries
+#define FLAG_ROUTE1_ORAN_BERRIES    0x21 // Route 1 Oran Berries
+#define FLAG_ROUTE1_GRASSY_SEED    0x22 // Route 1 Grassy Seed
 #define FLAG_UNUSED_0x023    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
@@ -81,10 +81,10 @@
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
 #define FLAG_UNUSED_0x045    0x45 // Unused Flag
-#define FLAG_BATTLE_CENTER_RULES    0x46 // Unused Flag // used to see if battle center rules need to be explained
-#define FLAG_UNUSED_0x047    0x47 // Unused Flag // used for league headquarters registration
-#define FLAG_ARWEN_1    0x48 // Unused Flag // used for Forest's Edge Flying Gym Leader
-#define FLAG_ORION_1    0x49 // Unused Flag // used for Forest's Edge Psychic Gym Leader
+#define FLAG_BATTLE_CENTER_RULES    0x46 // battle Center Rules
+#define FLAG_LEAGUE_REG    0x47 // League Registration
+#define FLAG_ARWEN_1    0x48 // First Arwen Battle
+#define FLAG_ORION_1    0x49 // First Orion Battle
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag // currently used for Kyogre fight
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag // currently used for Roxanne test battle
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag // currently used for May test battle

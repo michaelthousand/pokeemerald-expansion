@@ -1,16 +1,25 @@
 mapscripts Route1_MapScripts { }
 
 script Route1_OranBerries{
-    giveitem(ITEM_ORAN_BERRY, 3)
+    giveitem(ITEM_ORAN_BERRY, 2)
+    setflag(FLAG_ROUTE1_ORAN_BERRIES)
     removeobject(1)
+    closemessage
+    end
 }
 
-script Route1_CheriBerries{
+script Route1_CheriBerries {
     giveitem(ITEM_CHERI_BERRY, 2)
+    setflag(FLAG_ROUTE1_CHERI_BERRIES)
     removeobject(2)
+    closemessage
+    end
 }
 
 script Route1_GrassySeed{
     giveitem(ITEM_GRASSY_SEED, 1)
-    removeobject(2)
+    setflag(FLAG_ROUTE1_GRASSY_SEED)
+    removeobject(3)
+    closemessage
+    end
 }

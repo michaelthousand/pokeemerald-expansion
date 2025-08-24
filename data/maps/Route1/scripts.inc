@@ -4,24 +4,36 @@ Route1_MapScripts::
 
 Route1_OranBerries::
 # 4 "data/maps/Route1/scripts.pory"
-	giveitem ITEM_ORAN_BERRY, 3
+	giveitem ITEM_ORAN_BERRY, 2
 # 5 "data/maps/Route1/scripts.pory"
+	setflag FLAG_ROUTE1_ORAN_BERRIES
+# 6 "data/maps/Route1/scripts.pory"
 	removeobject 1
-	return
+# 7 "data/maps/Route1/scripts.pory"
+	closemessage
+	end
 
 
 Route1_CheriBerries::
-# 9 "data/maps/Route1/scripts.pory"
+# 12 "data/maps/Route1/scripts.pory"
 	giveitem ITEM_CHERI_BERRY, 2
-# 10 "data/maps/Route1/scripts.pory"
+# 13 "data/maps/Route1/scripts.pory"
+	setflag FLAG_ROUTE1_CHERI_BERRIES
+# 14 "data/maps/Route1/scripts.pory"
 	removeobject 2
-	return
+# 15 "data/maps/Route1/scripts.pory"
+	closemessage
+	end
 
 
 Route1_GrassySeed::
-# 14 "data/maps/Route1/scripts.pory"
+# 20 "data/maps/Route1/scripts.pory"
 	giveitem ITEM_GRASSY_SEED, 1
-# 15 "data/maps/Route1/scripts.pory"
-	removeobject 2
-	return
+# 21 "data/maps/Route1/scripts.pory"
+	setflag FLAG_ROUTE1_GRASSY_SEED
+# 22 "data/maps/Route1/scripts.pory"
+	removeobject 3
+# 23 "data/maps/Route1/scripts.pory"
+	closemessage
+	end
 

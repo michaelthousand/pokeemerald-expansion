@@ -15,7 +15,7 @@ script LEAGUE_HEADQUARTERS_Registration {
     lockall
     faceplayer
 
-    if(flag(FLAG_UNUSED_0x047) == FALSE) {
+    if(flag(FLAG_LEAGUE_REG) == FALSE) {
         msgbox("Welcome to the Pokemon League\nHeadquarters!", MSGBOX_DEFAULT)
         msgbox("Would you like to register for the Gym\nChallenge?", MSGBOX_YESNO)
 
@@ -126,7 +126,7 @@ script LEAGUE_HEADQUARTERS_PT_Admin {
     removeobject(2)
     removeobject(3)
 
-    setflag(FLAG_UNUSED_0x047)
+    setflag(FLAG_LEAGUE_REG)
     release
     end
 }

@@ -104,8 +104,7 @@
     "Route2",
     "PortValor",
     "ForestsEdge",
-    "Prometheus_Tech_HQ",
-    "NewHope_BattleCenter"
+    "Prometheus_Tech_HQ"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -642,14 +641,20 @@
     "LEAGUE_HEADQUARTERS",
     "ForestsEdge_PC",
     "NewHope_PokemonCenter",
-    "NewHope_PokeMart"
+    "NewHope_PokeMart",
+    "NewHope_BattleCenter",
+    "NewHope_TheosHouse1F",
+    "NewHope_TheosHouse2F"
   ],
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",
-    "ForestsEdge_PokeCenter"
+    "ForestsEdge_PokeCenter",
+    "ForestsEdgeBattleCenter",
+    "ForestsEdge_BattleCenter"
   ],
   "gMapGroup_Prometheus_Tech_Indoor": [
     "Prometheus_Tech_Lab",
-    "Prometheus_Tech_Training_Facility"
+    "Prometheus_Tech_Training_Facility",
+    "PrometheusTech_Shop"
   ]
 }

@@ -22,6 +22,7 @@ mart NewHopeMartItems {
 script NewHope_PokeMart_PT_Employee{
     lock
     faceplayer
+    message("Hello!\nI'm you local representative for\nPrometheus Tech.")
     message("How can I help you?")
     waitmessage
     pokemart(NewHopePTItems)
@@ -33,6 +34,5 @@ script NewHope_PokeMart_PT_Employee{
 mart NewHopePTItems {
     ITEM_LOADED_DICE
     ITEM_MENTAL_HERB
-    ITEM_SAFETY_GOGGLES
     ITEM_THROAT_SPRAY
 }

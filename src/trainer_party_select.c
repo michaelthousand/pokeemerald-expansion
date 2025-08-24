@@ -15,7 +15,7 @@ const struct WeightedPartyMeta gWeightedParties[] = {
     WPM4(TRAINER_ARWEN_1, 5, 20, 30, 40, 60, 90, 100),
     WPM4(TRAINER_ARWEN_2, 5, 20, 30, 40, 60, 90, 100),
     WPM4(TRAINER_ORION_1, 5, 20, 30, 40, 60, 90, 100),
-    WPM4(TRAINER_ORION_2, 5, 20, 30, 40, 60, 90, 100),
+    WPM4(TRAINER_ARWEN_2, 5, 20, 30, 40, 60, 90, 100),
 
 
     // Add more trainers below as needed:

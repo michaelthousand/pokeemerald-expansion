@@ -1,9 +1,7 @@
-raw `
-NewHope_PokemonCenter_MapScripts::
-    map_script MAP_SCRIPT_ON_TRANSITION, NewHope_PokemonCenter_OnTransition
-    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
-
-`
+mapscripts NewHope_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: NewHope_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
 
 script NewHope_PokemonCenter_OnTransition {
     setrespawn(HEAL_LOCATION_NEW_HOPE)

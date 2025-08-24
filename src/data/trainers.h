@@ -42195,7 +42195,7 @@ F_TRAINER_FEMALE |
 #line 16884
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16885
-        .aiFlags = AI_FLAG_SMART_TRAINER,
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42212,7 +42212,7 @@ F_TRAINER_FEMALE |
 #line 16891
             .ability = ABILITY_SPEED_BOOST,
 #line 16888
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42236,7 +42236,7 @@ F_TRAINER_FEMALE |
 #line 16901
             .ability = ABILITY_RAIN_DISH,
 #line 16898
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42260,7 +42260,7 @@ F_TRAINER_FEMALE |
 #line 16911
             .ability = ABILITY_HYPER_CUTTER,
 #line 16908
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42284,7 +42284,7 @@ F_TRAINER_FEMALE |
 #line 16921
             .ability = ABILITY_SHEER_FORCE,
 #line 16918
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42306,7 +42306,7 @@ F_TRAINER_FEMALE |
 #line 16929
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 16928
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42330,7 +42330,7 @@ F_TRAINER_FEMALE |
 #line 16940
             .ability = ABILITY_GALE_WINGS,
 #line 16937
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 16941
@@ -42362,7 +42362,7 @@ F_TRAINER_FEMALE |
 #line 16953
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 16954
-        .aiFlags = AI_FLAG_SMART_TRAINER,
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42379,7 +42379,7 @@ F_TRAINER_FEMALE |
 #line 16960
             .ability = ABILITY_HYPER_CUTTER,
 #line 16957
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42403,7 +42403,7 @@ F_TRAINER_FEMALE |
 #line 16970
             .ability = ABILITY_SHEER_FORCE,
 #line 16967
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42427,7 +42427,7 @@ F_TRAINER_FEMALE |
 #line 16980
             .ability = ABILITY_SPEED_BOOST,
 #line 16977
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42451,7 +42451,7 @@ F_TRAINER_FEMALE |
 #line 16990
             .ability = ABILITY_RAIN_DISH,
 #line 16987
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42473,7 +42473,7 @@ F_TRAINER_FEMALE |
 #line 16998
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 16997
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42497,7 +42497,7 @@ F_TRAINER_FEMALE |
 #line 17009
             .ability = ABILITY_GALE_WINGS,
 #line 17006
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17010
@@ -42527,7 +42527,7 @@ F_TRAINER_FEMALE |
 #line 17022
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 17023
-        .aiFlags = AI_FLAG_SMART_TRAINER,
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42544,7 +42544,7 @@ F_TRAINER_FEMALE |
 #line 17029
             .ability = ABILITY_PURE_POWER,
 #line 17026
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42568,7 +42568,7 @@ F_TRAINER_FEMALE |
 #line 17039
             .ability = ABILITY_ANALYTIC,
 #line 17036
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42592,7 +42592,7 @@ F_TRAINER_FEMALE |
 #line 17049
             .ability = ABILITY_REGENERATOR,
 #line 17046
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42616,7 +42616,7 @@ F_TRAINER_FEMALE |
 #line 17059
             .ability = ABILITY_INNER_FOCUS,
 #line 17056
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42640,7 +42640,7 @@ F_TRAINER_FEMALE |
 #line 17069
             .ability = ABILITY_SHADOW_TAG,
 #line 17066
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42664,7 +42664,7 @@ F_TRAINER_FEMALE |
 #line 17079
             .ability = ABILITY_MAGIC_BOUNCE,
 #line 17076
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17080
@@ -42694,7 +42694,7 @@ F_TRAINER_FEMALE |
 #line 17092
         .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
 #line 17093
-        .aiFlags = AI_FLAG_SMART_TRAINER,
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
         .partySize = 6,
         .party = (const struct TrainerMon[])
         {
@@ -42711,7 +42711,7 @@ F_TRAINER_FEMALE |
 #line 17099
             .ability = ABILITY_REGENERATOR,
 #line 17096
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42735,7 +42735,7 @@ F_TRAINER_FEMALE |
 #line 17109
             .ability = ABILITY_INNER_FOCUS,
 #line 17106
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42759,7 +42759,7 @@ F_TRAINER_FEMALE |
 #line 17119
             .ability = ABILITY_PURE_POWER,
 #line 17116
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42783,7 +42783,7 @@ F_TRAINER_FEMALE |
 #line 17129
             .ability = ABILITY_ANALYTIC,
 #line 17126
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42807,7 +42807,7 @@ F_TRAINER_FEMALE |
 #line 17139
             .ability = ABILITY_OWN_TEMPO,
 #line 17136
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
@@ -42831,7 +42831,7 @@ F_TRAINER_FEMALE |
 #line 17149
             .ability = ABILITY_MAGIC_BOUNCE,
 #line 17146
-            .lvl = 21,
+            .lvl = 5,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17150
@@ -42935,6 +42935,99 @@ F_TRAINER_FEMALE |
                 MOVE_HYPNOSIS,
                 MOVE_PROTECT,
                 MOVE_ICY_WIND,
+            },
+            },
+        },
+    },
+#line 17197
+    [DIFFICULTY_NORMAL][TRAINER_FORESTSEDGE_FRIENDLY_1] =
+    {
+#line 17198
+        .trainerName = _("Steve"),
+#line 17199
+        .trainerClass = TRAINER_CLASS_PKMN_TRAINER_1,
+#line 17200
+        .trainerPic = TRAINER_PIC_BLACK_BELT,
+        .encounterMusic_gender =
+#line 17202
+            TRAINER_ENCOUNTER_MUSIC_MALE,
+#line 17203
+        .battleType = TRAINER_BATTLE_TYPE_DOUBLES,
+#line 17204
+        .aiFlags = AI_FLAG_BASIC_TRAINER,
+        .partySize = 4,
+        .party = (const struct TrainerMon[])
+        {
+            {
+#line 17206
+            .species = SPECIES_PIKACHU,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17208
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 17207
+            .lvl = 17,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17209
+                MOVE_THUNDER_SHOCK,
+                MOVE_FAKE_OUT,
+                MOVE_CHARM,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 17214
+            .species = SPECIES_IVYSAUR,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17216
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 17215
+            .lvl = 17,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17217
+                MOVE_RAZOR_LEAF,
+                MOVE_SLEEP_POWDER,
+                MOVE_LEECH_SEED,
+                MOVE_POISON_POWDER,
+            },
+            },
+            {
+#line 17222
+            .species = SPECIES_PIDGEY,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17224
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 17223
+            .lvl = 17,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17225
+                MOVE_AIR_SLASH,
+                MOVE_SAND_ATTACK,
+                MOVE_DOUBLE_TEAM,
+                MOVE_PROTECT,
+            },
+            },
+            {
+#line 17230
+            .species = SPECIES_WOOPER,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 17232
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 17231
+            .lvl = 17,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 17233
+                MOVE_SLAM,
+                MOVE_MUD_SHOT,
+                MOVE_WATER_GUN,
+                MOVE_PROTECT,
             },
             },
         },

@@ -1,9 +1,9 @@
-raw `
-ForestsEdge_PokeCenter_MapScripts::
-    map_script MAP_SCRIPT_ON_TRANSITION, ForestsEdge_PokemonCenter_OnTransition
-    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+mapscripts ForestsEdge_PokeCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ForestsEdge_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
 
-`
+
 
 script ForestsEdge_PokemonCenter_OnTransition {
     setrespawn(HEAL_LOCATION_FORESTS_EDGE)

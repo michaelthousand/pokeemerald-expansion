@@ -4630,6 +4630,46 @@
       "secondary_tileset": "gTileset_BattleFrontier",
       "border_filepath": "data/layouts/NewHope_BattleCenter/border.bin",
       "blockdata_filepath": "data/layouts/NewHope_BattleCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORESTS_EDGE_BATTLE_CENTER",
+      "name": "ForestsEdgeBattleCenter_Layout",
+      "width": 18,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleFrontier",
+      "border_filepath": "data/layouts/ForestsEdgeBattleCenter/border.bin",
+      "blockdata_filepath": "data/layouts/ForestsEdgeBattleCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_THEOS_HOUSE1F",
+      "name": "NewHope_TheosHouse1F_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/NewHope_TheosHouse1F/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_TheosHouse1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_THEOS_HOUSE2F",
+      "name": "NewHope_TheosHouse2F_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/NewHope_TheosHouse2F/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_TheosHouse2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROMETHEUS_TECH_SHOP",
+      "name": "PrometheusTech_Shop_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/PrometheusTech_Shop/border.bin",
+      "blockdata_filepath": "data/layouts/PrometheusTech_Shop/map.bin"
     }
   ]
 }

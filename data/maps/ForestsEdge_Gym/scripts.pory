@@ -1,8 +1,13 @@
 mapscripts ForestsEdge_Gym_MapScripts {}
 
+
+
+
+
 script ForestsEdgeGym_EventScript_Rules {
     lock
     faceplayer
+
     msgbox("Welcome, challenger. Allow me to explai\nhow Gyms work here in the REGION.", MSGBOX_DEFAULT)
 
     msgbox("Each Gym has two Leaders, and each one\nspecializes in a different type.", MSGBOX_DEFAULT)
@@ -23,58 +28,88 @@ script ForestsEdgeGym_EventScript_Rules {
 }
 
 script ForestsEdge_Gym_EventScript_Arwen {
-    lock()
-    faceplayer()
-
-    random(2)
-    copyvar(VAR_TEMP_0, VAR_RESULT)
-
-
-
-    if (var(VAR_TEMP_0) == 0) {
-        // Fill preview species dynamically (use whatever your AI outputs)
-        setvar(VAR_0x8000, SPECIES_FLETCHINDER)
-        setvar(VAR_0x8001, SPECIES_NOIBAT)
-        setvar(VAR_0x8002, SPECIES_RUFFLET)
-        setvar(VAR_0x8003, SPECIES_GLIGAR)
-        setvar(VAR_0x8004, SPECIES_WINGULL)
-        setvar(VAR_0x8005, SPECIES_YANMA)
-         
-        // Show icon+name preview; press any button to exit
-        callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate()
-        trainerbattle_double(TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
-    } else {
-        // Fill preview species dynamically (use whatever your AI outputs)
-        setvar(VAR_0x8000, SPECIES_FLETCHINDER)
-        setvar(VAR_0x8001, SPECIES_ORICORIO_POM_POM)
-        setvar(VAR_0x8002, SPECIES_RUFFLET)
-        setvar(VAR_0x8003, SPECIES_GLIGAR)
-        setvar(VAR_0x8004, SPECIES_WINGULL)
-        setvar(VAR_0x8005, SPECIES_YANMA)
-         
-        // Show icon+name preview; press any button to exit
-        callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate()
-        trainerbattle_double(TRAINER_ARWEN_2, Arwen_Intro, Arwen_Outro, Not_Enough_Mons)
-    }
-
-    msgbox(PostBattle_Arwen, MSGBOX_AUTOCLOSE)
-    waitmessage()
-    setflag(FLAG_ARWEN_1)
-    incrementgamestat(GAME_STAT_USED_POKECENTER)
-    special(HealPlayerParty)
-
-    if (flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)) {
-        setflag(FLAG_BADGE01_GET)
-        setvar(VAR_LEVEL_CAP, 29)
-        msgbox(GotBadge01, MSGBOX_AUTOCLOSE)
-        waitmessage()
-    }
-
-    release()
-    end()
+    trainerbattle_double(TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Arwen, NO_MUSIC)
+    end
 }
+
+script ForestsEdge_Gym_After_Arwen {
+    special(HealPlayerParty)
+    setflag(FLAG_ARWEN_1)
+    msgbox(PostBattle_Arwen, MSGBOX_DEFAULT)
+    msgbox("Your Pokemon have been healed.", MSGBOX_DEFAULT)
+
+    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)) {
+        setflag(FLAG_BADGE01_GET)
+        msgbox("You earned the Mindwing Badge!", MSGBOX_DEFAULT)
+        setvar(VAR_LEVEL_CAP, 29)
+        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)
+    }
+
+    release
+    end
+}
+
+script ForestsEdge_Gym_EventScript_Orion {
+    trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Orion, NO_MUSIC)
+    end
+}
+
+script ForestsEdge_Gym_After_Orion {
+    special(HealPlayerParty)
+    setflag(FLAG_ORION_1)
+    msgbox(PostBattle_Orion, MSGBOX_DEFAULT)
+
+    msgbox("Your Pokemon have been healed.", MSGBOX_DEFAULT)
+
+    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)) {
+        setflag(FLAG_BADGE01_GET)
+        msgbox("You earned the Mindwing Badge!", MSGBOX_DEFAULT)
+        setvar(VAR_LEVEL_CAP, 29)
+        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)
+    }
+
+    release
+    end
+}
+
+script ForestsEdgeGym_EvenScript_PostBattle {
+
+     msgbox("The PostBattle Fired", MSGBOX_DEFAULT)
+
+    //message(DewfordTown_Gym_Text_ReceivedKnuckleBadge)
+    //waitmessage
+
+    call(Common_EventScript_PlayGymBadgeFanfare)
+    //msgbox(DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT)
+
+    //setflag(FLAG_DEFEATED_DEWFORD_GYM)
+    setflag(FLAG_BADGE01_GET)
+
+    //setvar(VAR_0x8008, 2)
+    //call(Common_EventScript_SetGymTrainers)
+
+    //call(DewfordTown_Gym_EventScript_GiveBulkUp)
+
+    //closemessage
+    //delay(30)
+
+    //playfanfare(MUS_REGISTER_MATCH_CALL)
+    //msgbox(DewfordTown_Gym_Text_RegisteredBrawly, MSGBOX_DEFAULT)
+    //waitfanfare
+    //closemessage
+    //delay(30)
+
+    //setflag(FLAG_ENABLE_BRAWLY_MATCH_CALL)
+    //setvar(VAR_ROXANNE_CALL_STEP_COUNTER, 0)
+    //setflag(FLAG_ENABLE_ROXANNE_FIRST_CALL)
+
+    release
+    end
+}
+
+
+
+
 
 
 text Arwen_Intro{
@@ -89,71 +124,30 @@ text PostBattle_Arwen{
     "You're ready to soar."
 }
 
-script ForestsEdge_Gym_EventScript_Orion{
-    random(2)
-    copyvar(VAR_TEMP_0, VAR_RESULT)
+text Orion_Intro{
+    "Focus your mind and prevail."
+}
 
-    if(var(VAR_TEMP_0) == 0){
-        // Fill preview species dynamically (use whatever your AI outputs)
-        setvar(VAR_0x8000, SPECIES_HATENNA)
-        setvar(VAR_0x8001, SPECIES_GOTHITA)
-        setvar(VAR_0x8002, SPECIES_GIRAFARIG)
-        setvar(VAR_0x8003, SPECIES_SLOWPOKE)
-        setvar(VAR_0x8004, SPECIES_ELGYEM)
-        setvar(VAR_0x8005, SPECIES_MEDITITE)
-         
-        // Show icon+name preview; press any button to exit
-        callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate()
-        trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons)
-    }
-    else{
-        setvar(VAR_0x8000, SPECIES_HATENNA)
-        setvar(VAR_0x8001, SPECIES_SPOINK)
-        setvar(VAR_0x8002, SPECIES_ELGYEM)
-        setvar(VAR_0x8003, SPECIES_MEDITITE)
-        setvar(VAR_0x8004, SPECIES_GIRAFARIG)
-        setvar(VAR_0x8005, SPECIES_SLOWPOKE)
-        // Show icon+name preview; press any button to exit
-        callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate()
-        trainerbattle_double(TRAINER_ORION_2, Orion_Intro, Orion_Outro, Not_Enough_Mons)
-    }
+text Orion_Outro{
+    "Your resolve was stronger."
+}
 
-    msgbox(PostBattle_Orion, MSGBOX_AUTOCLOSE)
-    waitmessage
-    setflag(FLAG_ORION_1)
-    incrementgamestat(GAME_STAT_USED_POKECENTER)
-    special(HealPlayerParty)
+text PostBattle_Orion{
+    "Impressive control of your team."
+}
 
-    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)){
-        setflag(FLAG_BADGE01_GET)
-        setvar(VAR_LEVEL_CAP, 29)
-        msgbox(GotBadge01, MSGBOX_AUTOCLOSE)
-        waitmessage
-    }
-    end
+text Not_Enough_Mons{
+    "You need at least four battle-ready Pokémon."
 }
 
 text GotBadge01{
     "Congrats! You got the Mindwing badge!"
 }
 
-text Orion_Intro{
-    "I already know your every move!"
+text LevelCap29Msg{
+    "Level cap increased to 29."
 }
 
-text Orion_Outro{
-    "I didn't see that coming..."
-}
-
-text PostBattle_Orion{
-    "Congrats on your first badge"
-}
-
-text Not_Enough_Mons{
-    "You're not ready for this fight"
-}
 
 script ForestsEdge_Gym_EventScript_FirstTrainer{
     trainerbattle_double(TRAINER_PSY_FLY_T1, Trainer_1_Intro, Trainer_1_Outro, Not_Enough_Mons)

@@ -1,0 +1,38 @@
+mapscripts PrometheusTech_Shop_MapScripts{}
+
+script PrometheusTech_Shop_RegularEmployee{
+    lock
+    faceplayer
+    message("How can I help you?")
+    waitmessage
+    pokemart(PrometheusTech_StandardShopItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart PrometheusTech_StandardShopItems {
+    ITEM_POKE_BALL
+    ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_LEMONADE
+}
+
+script PrometheusTech_Shop_EggEmployee{
+    lock
+    faceplayer
+    message("Hello!\nI'm you local representative for\nPrometheus Tech.")
+    message("How can I help you?")
+    waitmessage
+    pokemart(PrometheusTech_EggShopItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart PrometheusTech_EggShopItems {
+    ITEM_LOADED_DICE
+    ITEM_MENTAL_HERB
+    ITEM_THROAT_SPRAY
+}

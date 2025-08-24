@@ -41,27 +41,27 @@ NewHope_PokeMart_PT_Employee::
 # 24 "data/maps/NewHope_PokeMart/scripts.pory"
 	faceplayer
 # 25 "data/maps/NewHope_PokeMart/scripts.pory"
-	message NewHope_PokeMart_Employee_Text_0
+	message NewHope_PokeMart_PT_Employee_Text_0
 # 26 "data/maps/NewHope_PokeMart/scripts.pory"
-	waitmessage
+	message NewHope_PokeMart_Employee_Text_0
 # 27 "data/maps/NewHope_PokeMart/scripts.pory"
-	pokemart NewHopePTItems
+	waitmessage
 # 28 "data/maps/NewHope_PokeMart/scripts.pory"
-	msgbox NewHope_PokeMart_Employee_Text_1
+	pokemart NewHopePTItems
 # 29 "data/maps/NewHope_PokeMart/scripts.pory"
+	msgbox NewHope_PokeMart_Employee_Text_1
+# 30 "data/maps/NewHope_PokeMart/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 33 "data/maps/NewHope_PokeMart/scripts.pory"
-NewHopePTItems:
 # 34 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_LOADED_DICE
+NewHopePTItems:
 # 35 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_LOADED_DICE
 # 36 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_SAFETY_GOGGLES
+	.2byte ITEM_MENTAL_HERB
 # 37 "data/maps/NewHope_PokeMart/scripts.pory"
 	.2byte ITEM_THROAT_SPRAY
 	.2byte ITEM_NONE
@@ -73,3 +73,7 @@ NewHope_PokeMart_Employee_Text_0:
 NewHope_PokeMart_Employee_Text_1:
 # 9 "data/maps/NewHope_PokeMart/scripts.pory"
 	.string "Please come again.$"
+
+NewHope_PokeMart_PT_Employee_Text_0:
+# 25 "data/maps/NewHope_PokeMart/scripts.pory"
+	.string "Hello!\nI'm you local representative for\nPrometheus Tech.$"

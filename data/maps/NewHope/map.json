@@ -22,13 +22,6 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 7,
-      "y": 29,
-      "elevation": 0,
-      "dest_map": "MAP_TEST_MAP_A",
-      "dest_warp_id": "4"
-    },
-    {
       "x": 26,
       "y": 11,
       "elevation": 0,
@@ -76,8 +69,61 @@
       "elevation": 0,
       "dest_map": "MAP_NEW_HOPE_BATTLE_CENTER",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE_THEOS_HOUSE1F",
+      "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Trigger_BlockPath"
+    },
+    {
+      "type": "trigger",
+      "x": 41,
+      "y": 43,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Trigger_BlockPath"
+    },
+    {
+      "type": "trigger",
+      "x": 29,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Trigger_BlockPath"
+    },
+    {
+      "type": "trigger",
+      "x": 30,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Trigger_BlockPath"
+    },
+    {
+      "type": "trigger",
+      "x": 31,
+      "y": 41,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Trigger_BlockPath"
+    }
+  ],
   "bg_events": []
 }

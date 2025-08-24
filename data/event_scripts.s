@@ -1201,3 +1201,13 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Prometheus_Tech_Training_Facility/scripts.inc"
 
 	.include "data/maps/NewHope_BattleCenter/scripts.inc"
+
+	.include "data/maps/ForestsEdgeBattleCenter/scripts.inc"
+
+	.include "data/maps/ForestsEdge_BattleCenter/scripts.inc"
+
+	.include "data/maps/NewHope_TheosHouse1F/scripts.inc"
+
+	.include "data/maps/NewHope_TheosHouse2F/scripts.inc"
+
+	.include "data/maps/PrometheusTech_Shop/scripts.inc"

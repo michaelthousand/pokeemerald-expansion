@@ -1,11 +1,10 @@
-# 1 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
-
-# 2 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
 ForestsEdge_PokeCenter_MapScripts::
+# 2 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, ForestsEdge_PokemonCenter_OnTransition
 # 3 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
-    map_script MAP_SCRIPT_ON_TRANSITION, ForestsEdge_PokemonCenter_OnTransition
-# 4 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
-    map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
 
 ForestsEdge_PokemonCenter_OnTransition::
 # 9 "data/maps/ForestsEdge_PokeCenter/scripts.pory"
