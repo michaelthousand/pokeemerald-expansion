@@ -176,15 +176,42 @@ script ForestsEdgeGym_EventScript_Rules {
 
 script ForestsEdge_Gym_EventScript_Morwen {
     if (var(VAR_BADGES) < 2) {
+        // --- AI preview ---
         setvar(VAR_0x8000, SPECIES_SHROOMISH)
         setvar(VAR_0x8001, SPECIES_GLOOM)
         setvar(VAR_0x8002, SPECIES_EKANS)
         setvar(VAR_0x8003, SPECIES_NOCTOWL)
         setvar(VAR_0x8004, SPECIES_QUAGSIRE)
         setvar(VAR_0x8005, SPECIES_WEEPINBELL)
-        callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate()
-        if (var(VAR_LEVEL_CAP) == 21) {
+        // optional: setvar(VAR_0x8006, 50)  // preview level
+        //callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+
+
+        // --- Player picks exactly 4 using vanilla selector ---
+        setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER)
+        setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES)  // doubles path = 4 picks
+        setvar(VAR_0x8004, FRONTIER_LVL_OPEN)                     // or FRONTIER_LVL_50
+        setvar(VAR_0x8005, 4)
+        special(ChoosePartyForBattleFrontier)
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) == 0) {
+            end
+        }
+
+        // Persist & apply the chosen order
+        frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
+        frontier_setpartyorder(4)
+
+        if (var(VAR_BADGES) == 0) {
+            waitstate
             trainerbattle_double(TRAINER_MORWEN_C1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         } else {
             trainerbattle_double(TRAINER_MORWEN_C2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
@@ -225,7 +252,26 @@ script ForestsEdge_Gym_EventScript_Kaelen {
         setvar(VAR_0x8005, SPECIES_GRIMER_ALOLA)
         callnative(Vgc_ScriptShowAiPreviewFromVars)
         waitstate()
-        if (var(VAR_LEVEL_CAP) == 21) {
+
+
+                // --- Player picks exactly 4 using vanilla selector ---
+        setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER)
+        setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES)  // doubles path = 4 picks
+        setvar(VAR_0x8004, FRONTIER_LVL_OPEN)                     // or FRONTIER_LVL_50
+        setvar(VAR_0x8005, 4)
+        special(ChoosePartyForBattleFrontier)
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) == 0) {
+            end
+        }
+
+        // Persist & apply the chosen order
+        frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
+        frontier_setpartyorder(4)
+
+        if (var(VAR_BADGES) == 0)  {
             trainerbattle_double(TRAINER_KAELEN_C1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
         } else {
             trainerbattle_double(TRAINER_KAELEN_C2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
