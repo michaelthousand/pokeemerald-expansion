@@ -80,11 +80,11 @@
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
 #define FLAG_UNUSED_0x043    0x43 // Unused Flag
 #define FLAG_UNUSED_0x044    0x44 // Unused Flag
-#define FLAG_UNUSED_0x045    0x45 // Unused Flag
+#define FLAG_GYM_RULES    0x45 // gym rules explained
 #define FLAG_BATTLE_CENTER_RULES    0x46 // battle Center Rules
 #define FLAG_LEAGUE_REG    0x47 // League Registration
-#define FLAG_ARWEN_1    0x48 // First Arwen Battle
-#define FLAG_ORION_1    0x49 // First Orion Battle
+#define FLAG_MORWEN    0x48 // Hide Morwen
+#define FLAG_KAELEN    0x49 // Hide Kaelen
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag // currently used for Kyogre fight
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag // currently used for Roxanne test battle
 #define FLAG_UNUSED_0x04C    0x4C // Unused Flag // currently used for May test battle

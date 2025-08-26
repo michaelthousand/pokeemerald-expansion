@@ -141,8 +141,8 @@
     {
       "id": "HEAL_LOCATION_FORESTS_EDGE",
       "map": "MAP_FORESTS_EDGE",
-      "x": 16,
-      "y": 5
+      "x": 25,
+      "y": 8
     },
     {
       "id": "HEAL_LOCATION_LEAGUE_HEADQUARTERS",

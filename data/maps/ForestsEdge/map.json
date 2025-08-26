@@ -17,6 +17,11 @@
       "map": "MAP_ROUTE2",
       "offset": -11,
       "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE3",
+      "offset": 20,
+      "direction": "down"
     }
   ],
   "object_events": [],
@@ -29,8 +34,8 @@
       "dest_warp_id": "0"
     },
     {
-      "x": 16,
-      "y": 4,
+      "x": 25,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_FORESTS_EDGE_POKE_CENTER",
       "dest_warp_id": "1"

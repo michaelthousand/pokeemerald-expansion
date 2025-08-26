@@ -7,15 +7,15 @@
 // Add one line per trainer that should use the 4-of-6 selector.
 // -----------------------------
 
-// Example: your “Arwen” trainer from earlier threads
+
 // Party order note: aceIndex is the *slot* in the trainer’s defined 6-mon party.
 const struct WeightedPartyMeta gWeightedParties[] = {
     // Weights are *relative*. 100/90/60/40/30/20 is exactly your scheme.
     // Ace locked (always brought) + 3 weighted draws.
-    WPM4(TRAINER_ARWEN_1, 5, 20, 30, 40, 60, 90, 100),
-    WPM4(TRAINER_ARWEN_2, 5, 20, 30, 40, 60, 90, 100),
-    WPM4(TRAINER_ORION_1, 5, 20, 30, 40, 60, 90, 100),
-    WPM4(TRAINER_ARWEN_2, 5, 20, 30, 40, 60, 90, 100),
+    WPM4(TRAINER_MORWEN_C1, 5, 20, 30, 40, 60, 90, 100),
+    WPM4(TRAINER_MORWEN_C2, 5, 20, 30, 40, 60, 90, 100),
+    WPM4(TRAINER_KAELEN_C1, 5, 20, 30, 40, 60, 90, 100),
+    WPM4(TRAINER_KAELEN_C2, 5, 20, 30, 40, 60, 90, 100),
 
 
     // Add more trainers below as needed:
@@ -24,7 +24,7 @@ const struct WeightedPartyMeta gWeightedParties[] = {
 
     // If you want a “full-power rematch” that brings all 6, you can keep one
     // metadata entry and just set selectCount=6 (no script duplication).
-    // WPMX(TRAINER_ARWEN_REMATCH, 6, 0, WPM_FLAGS_DEFAULT, 100,100,100,100,100,100),
+    // WPMX(TRAINER_MORWEN_REMATCH, 6, 0, WPM_FLAGS_DEFAULT, 100,100,100,100,100,100),
 };
 
 const u16 gWeightedPartiesCount = ARRAY_COUNT(gWeightedParties);

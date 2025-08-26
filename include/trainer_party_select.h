@@ -12,7 +12,7 @@
 // If you ever want “no guaranteed ace,” clear LOCK_ACE and just weight it high.
 
 struct WeightedPartyMeta {
-    u16 trainerId;           // e.g., TRAINER_ARWEN_1
+    u16 trainerId;           // e.g., TRAINER_MORWEN_C1
     u8  selectCount;         // usually 4 (bring 4 of 6)
     u8  aceIndex;            // 0..5 (index in party list)
     u8  weights[PARTY_SIZE]; // 6 entries; 0 weight => never picked (unless LOCK_ACE)

@@ -1,138 +1,365 @@
-mapscripts ForestsEdge_Gym_MapScripts {}
+mapscripts ForestsEdge_Gym_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: ForestsEdge_Gym_OnTransition
+}
+
+script ForestsEdge_Gym_OnTransition {
+    setflag(FLAG_MORWEN)
+    setflag(FLAG_KAELEN)
+    end
+}
 
 
+script ForestsEdge_Gym_Trigger_Right {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Enter_Gym_Right)
+    waitmovement(0)
+    delay(180)
+    clearflag(FLAG_MORWEN)
+    addobject(2)
+    applymovement(2, Morwen_Enter)
+    waitmovement(0)
+    delay(60)
+    goto(ForestsEdge_Gym_EventScript_Morwen)
+}
 
+movement Enter_Gym_Right {
+    walk_up * 5
+    walk_right * 4
+    walk_up * 6
+    walk_left
+}
+
+script ForestsEdge_Gym_Trigger_Left {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Enter_Gym_Left)
+    waitmovement(0)
+    delay(180)
+    clearflag(FLAG_MORWEN)
+    addobject(2)
+    applymovement(2, Morwen_Enter)
+    waitmovement(0)
+    delay(60)
+    goto(ForestsEdge_Gym_EventScript_Morwen)
+}
+
+movement Enter_Gym_Left {
+    walk_up * 5
+    walk_right * 5
+    walk_up * 6
+    walk_left
+}
+
+script ForestsEdge_Gym_Trigger_One {
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_One)
+            goto(ForestsEdgeGym_EventScript_Rules)
+        }
+}
+
+script ForestsEdge_Gym_Trigger_Two {
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Two)
+            goto(ForestsEdgeGym_EventScript_Rules)
+        }
+}
+
+script ForestsEdge_Gym_Trigger_Three {
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Three)
+            goto(ForestsEdgeGym_EventScript_Rules)
+        }
+}
+
+script ForestsEdge_Gym_Trigger_Four {
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Four)
+            goto(ForestsEdgeGym_EventScript_Rules)
+        }
+}
+
+movement Gym_Rules_One {
+    walk_down * 2
+    walk_left * 3
+    face_up
+}
+
+movement Gym_Rules_Two {
+    walk_down * 2
+    walk_left * 4
+    face_up
+}
+
+movement Gym_Rules_Three {
+    walk_down * 2
+    walk_left * 5
+    face_up
+}
+
+movement Gym_Rules_Four {
+    walk_down * 2
+    walk_left * 6
+    face_up
+}
+
+movement Morwen_Enter {
+    walk_down
+    walk_left * 9
+    walk_down * 2
+    walk_right
+}
+
+movement Morwen_Exit {
+    walk_left
+    walk_up * 2
+    walk_right * 9
+    walk_up
+}
+
+movement Kaelen_Enter {
+    walk_down * 3
+    walk_right
+}
+
+movement Kaelen_Exit {
+    walk_left
+    walk_up * 3
+}
 
 
 script ForestsEdgeGym_EventScript_Rules {
-    lock
-    faceplayer
+    if (!(flag(FLAG_GYM_RULES))) {
+        lockall
+        faceplayer
 
-    msgbox("Welcome, challenger. Allow me to explai\nhow Gyms work here in the REGION.", MSGBOX_DEFAULT)
+        msgbox("Welcome, challenger. Allow me to explain\nhow Gyms work here in the REGION.", MSGBOX_DEFAULT)
 
-    msgbox("Each Gym has two Leaders, and each one\nspecializes in a different type.", MSGBOX_DEFAULT)
-    msgbox("If you pay attention to the junior\ntrainers you face beforehand, you may get a hint about the types you’ll be up against.", MSGBOX_DEFAULT)
+        msgbox("Each Gym has two Leaders, and each one\nspecializes in a different styles.", MSGBOX_DEFAULT)
+        msgbox("There are no junior trainers in our gyms.", MSGBOX_DEFAULT)
 
-    msgbox("Remember: you must defeat both Leaders\nto earn the badge.", MSGBOX_DEFAULT)
-    msgbox("Between their battles, you won’t be\nallowed to change your team.", MSGBOX_DEFAULT)
-    msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
-    msgbox("Earning a badge will also award you points\ntoward qualifying for the Regional Championship.", MSGBOX_DEFAULT)
-    msgbox("You don't have any badges yet so they\nwon't bring their A team.", MSGBOX_DEFAULT)
-    msgbox("But be sure to still bring a balanced\nteam...you’ll need it!", MSGBOX_DEFAULT)
+        msgbox("Remember: you must defeat both Leaders\nto earn the badge.", MSGBOX_DEFAULT)
+        msgbox("Between their battles, you won’t be\nallowed to change your team.", MSGBOX_DEFAULT)
+        msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
 
-    msgbox("Earning a badge will also award you points\ntoward qualifying for the Regional Championship.", MSGBOX_DEFAULT)
+        msgbox("Earning a badge will also award you points\ntoward qualifying for the Regional Championship.", MSGBOX_DEFAULT)
+        msgbox("Your first opponent is Morwen.\pShe specializes in sleep and paralysis.", MSGBOX_DEFAULT)
+        msgbox("Your second opponent is Kaelen.\pHe specializes in poison and burns.", MSGBOX_DEFAULT)
+        msgbox("You have 0 badges so you are in Tier C.\pYour opponent's will not bring their best\nteams.", MSGBOX_DEFAULT)
+        msgbox("But be sure to still bring a balanced\nteam...you’ll need it!", MSGBOX_DEFAULT)
 
-    msgbox("Good luck!", MSGBOX_DEFAULT)
-    release
-    end
-}
 
-script ForestsEdge_Gym_EventScript_Arwen {
-    trainerbattle_double(TRAINER_ARWEN_1, Arwen_Intro, Arwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Arwen, NO_MUSIC)
-    end
-}
+        msgbox("Good luck!", MSGBOX_DEFAULT)
+        setflag(FLAG_GYM_RULES)
+    } else {
+        msgbox("Welcome, challenger, to the Forest's Edge\nGym!", MSGBOX_DEFAULT)
+        msgbox("Your first opponent is Morwen.\pShe specializes in sleep and paralysis.", MSGBOX_DEFAULT)
+        msgbox("Your second opponent is Kaelen.\pHe specializes in poison and burns.", MSGBOX_DEFAULT)
+        // ADD MESSAGE BOX ABOUT TIER
+        if (var(VAR_BADGES) < 2) {
+            msgbox("You are in Tier C.\pYour opponent's will not bring their best\nteams.", MSGBOX_DEFAULT)
+        } elif (var(VAR_BADGES) < 6) {
+            msgbox("You are in Tier B.\pYour opponent's will not bring their best\nteams...\pbut they will step up their game.", MSGBOX_DEFAULT)
+        } elif (var(VAR_BADGES) > 5) {
+            msgbox("You are in Tier A.\pYour opponent's will not pull any punches.", MSGBOX_DEFAULT)
+        }
 
-script ForestsEdge_Gym_After_Arwen {
-    special(HealPlayerParty)
-    setflag(FLAG_ARWEN_1)
-    msgbox(PostBattle_Arwen, MSGBOX_DEFAULT)
-    msgbox("Your Pokemon have been healed.", MSGBOX_DEFAULT)
-
-    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)) {
-        setflag(FLAG_BADGE01_GET)
-        msgbox("You earned the Mindwing Badge!", MSGBOX_DEFAULT)
-        setvar(VAR_LEVEL_CAP, 29)
-        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)
+        msgbox("Good luck!", MSGBOX_DEFAULT)
     }
 
-    release
+    releaseall
     end
 }
 
-script ForestsEdge_Gym_EventScript_Orion {
-    trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Orion, NO_MUSIC)
-    end
+
+script ForestsEdge_Gym_EventScript_Morwen {
+    if (var(VAR_BADGES) < 2) {
+        setvar(VAR_0x8000, SPECIES_SHROOMISH)
+        setvar(VAR_0x8001, SPECIES_GLOOM)
+        setvar(VAR_0x8002, SPECIES_EKANS)
+        setvar(VAR_0x8003, SPECIES_NOCTOWL)
+        setvar(VAR_0x8004, SPECIES_QUAGSIRE)
+        setvar(VAR_0x8005, SPECIES_WEEPINBELL)
+        callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate()
+        if (var(VAR_LEVEL_CAP) == 21) {
+            trainerbattle_double(TRAINER_MORWEN_C1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        } else {
+            trainerbattle_double(TRAINER_MORWEN_C2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        }
+    }
+    
+    // add rest of tiers
+
 }
 
-script ForestsEdge_Gym_After_Orion {
+script ForestsEdge_Gym_After_Morwen {
     special(HealPlayerParty)
-    setflag(FLAG_ORION_1)
-    msgbox(PostBattle_Orion, MSGBOX_DEFAULT)
+    setflag(FLAG_MORWEN)
+    msgbox(PostBattle_Morwen, MSGBOX_DEFAULT)
+    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
+    // ADD ITEM OR TM
 
-    msgbox("Your Pokemon have been healed.", MSGBOX_DEFAULT)
+    applymovement(2, Morwen_Exit)
+    waitmovement(0)
+    setflag(FLAG_MORWEN)
+    removeobject(2)
+    delay(150)
+    clearflag(FLAG_KAELEN)
+    addobject(1)
+    delay(60)
+    applymovement(1, Kaelen_Enter)
+    waitmovement(0)
+    goto(ForestsEdge_Gym_EventScript_Kaelen)
+}
 
-    if(flag(FLAG_ARWEN_1) && flag(FLAG_ORION_1)) {
-        setflag(FLAG_BADGE01_GET)
-        msgbox("You earned the Mindwing Badge!", MSGBOX_DEFAULT)
-        setvar(VAR_LEVEL_CAP, 29)
-        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)
+script ForestsEdge_Gym_EventScript_Kaelen {
+    if (var(VAR_BADGES) < 2) {
+        setvar(VAR_0x8000, SPECIES_HOUNDOUR)
+        setvar(VAR_0x8001, SPECIES_KOFFING)
+        setvar(VAR_0x8002, SPECIES_SLUGMA)
+        setvar(VAR_0x8003, SPECIES_NIDORINA)
+        setvar(VAR_0x8004, SPECIES_ZUBAT)
+        setvar(VAR_0x8005, SPECIES_GRIMER_ALOLA)
+        callnative(Vgc_ScriptShowAiPreviewFromVars)
+        waitstate()
+        if (var(VAR_LEVEL_CAP) == 21) {
+            trainerbattle_double(TRAINER_KAELEN_C1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        } else {
+            trainerbattle_double(TRAINER_KAELEN_C2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        }
     }
 
-    release
+    // add rest of tiers
+
+}
+
+script ForestsEdge_Gym_After_Kaelen {
+    special(HealPlayerParty)
+    setflag(FLAG_KAELEN)
+    msgbox(PostBattle_Kaelen, MSGBOX_DEFAULT)
+    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
+    // ADD ITEM OR TM
+
+    // ADD BADGE CHECK AND AWARD BADGE
+    if (!(flag(FLAG_BADGE01_GET))) {
+        setflag(FLAG_BADGE01_GET)
+
+    } elif (!(flag(FLAG_BADGE02_GET))) {
+        setflag(FLAG_BADGE02_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 29)
+        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)  
+    } elif (!(flag(FLAG_BADGE03_GET))) {
+        setflag(FLAG_BADGE03_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 41)
+        msgbox("Level cap increased to 41.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE04_GET))) {
+        setflag(FLAG_BADGE04_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 49)
+        msgbox("Level cap increased to 49.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE05_GET))) {
+        setflag(FLAG_BADGE05_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 28)
+        msgbox("Level cap increased to 58.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE06_GET))) {
+        setflag(FLAG_BADGE06_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 71)
+        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE07_GET))) {
+        setflag(FLAG_BADGE07_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 78)
+        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE08_GET))) {
+        setflag(FLAG_BADGE08_GET)
+        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 85)
+        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
+    }
+
+    applymovement(1, Kaelen_Exit)
+    waitmovement(0)
+    setflag(FLAG_KAELEN)
+    releaseall
     end
 }
 
-script ForestsEdgeGym_EvenScript_PostBattle {
 
-     msgbox("The PostBattle Fired", MSGBOX_DEFAULT)
+//script ForestsEdge_Gym_EventScript_Orion {
+//    if (!(flag(FLAG_ORION_1))) {
+//        random(2)
+//        copyvar(VAR_TEMP_0, VAR_RESULT)
 
-    //message(DewfordTown_Gym_Text_ReceivedKnuckleBadge)
-    //waitmessage
+//        if (var(VAR_TEMP_0) == 0){
+//            setvar(VAR_0x8000, SPECIES_HATENNA)
+//            setvar(VAR_0x8001, SPECIES_GOTHITA)
+//            setvar(VAR_0x8002, SPECIES_GIRAFARIG)
+//            setvar(VAR_0x8003, SPECIES_SLOWPOKE)
+//            setvar(VAR_0x8004, SPECIES_ELGYEM)
+//            setvar(VAR_0x8005, SPECIES_MEDITITE)
+//            callnative(Vgc_ScriptShowAiPreviewFromVars)
+//            waitstate()
+//            trainerbattle_double(TRAINER_ORION_1, Orion_Intro, Orion_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Orion, NO_MUSIC)
+//        } else {
+//            setvar(VAR_0x8000, SPECIES_HATENNA)
+//            setvar(VAR_0x8001, SPECIES_SPOINK)
+//            setvar(VAR_0x8002, SPECIES_GIRAFARIG)
+//            setvar(VAR_0x8003, SPECIES_SLOWPOKE)
+//            setvar(VAR_0x8004, SPECIES_ELGYEM)
+//            setvar(VAR_0x8005, SPECIES_MEDITITE)
+//            callnative(Vgc_ScriptShowAiPreviewFromVars)
+//            waitstate()
+//            trainerbattle_double(TRAINER_ORION_2, Orion_Intro, Orion_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Orion, NO_MUSIC)
+//        }
+//    } else {
+//        msgbox(PostBattle_Orion, MSGBOX_DEFAULT)
+//    }
+    
+//    end
+//}
 
-    call(Common_EventScript_PlayGymBadgeFanfare)
-    //msgbox(DewfordTown_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT)
 
-    //setflag(FLAG_DEFEATED_DEWFORD_GYM)
-    setflag(FLAG_BADGE01_GET)
 
-    //setvar(VAR_0x8008, 2)
-    //call(Common_EventScript_SetGymTrainers)
 
-    //call(DewfordTown_Gym_EventScript_GiveBulkUp)
 
-    //closemessage
-    //delay(30)
 
-    //playfanfare(MUS_REGISTER_MATCH_CALL)
-    //msgbox(DewfordTown_Gym_Text_RegisteredBrawly, MSGBOX_DEFAULT)
-    //waitfanfare
-    //closemessage
-    //delay(30)
 
-    //setflag(FLAG_ENABLE_BRAWLY_MATCH_CALL)
-    //setvar(VAR_ROXANNE_CALL_STEP_COUNTER, 0)
-    //setflag(FLAG_ENABLE_ROXANNE_FIRST_CALL)
 
-    release
-    end
+text Morwen_Intro{
+    "How can you win if you can't move?"
 }
 
-
-
-
-
-
-text Arwen_Intro{
-    "My birds will clip your wings!"
+text Morwen_Outro{
+    "Now I'm the one paralyzed."
 }
 
-text Arwen_Outro{
-    "Oh no! My wings were clipped!"
+text PostBattle_Morwen{
+    "Good luck against Kaelen."
 }
 
-text PostBattle_Arwen{
-    "You're ready to soar."
+text Kaelen_Intro{
+    "Hope you brought some antidote."
 }
 
-text Orion_Intro{
-    "Focus your mind and prevail."
+text Kaelen_Outro{
+    "Ouch! I'm burned!"
 }
 
-text Orion_Outro{
-    "Your resolve was stronger."
-}
-
-text PostBattle_Orion{
+text PostBattle_Kaelen{
     "Impressive control of your team."
 }
 
@@ -141,30 +368,9 @@ text Not_Enough_Mons{
 }
 
 text GotBadge01{
-    "Congrats! You got the Mindwing badge!"
+    "Congrats! You got the Blight badge!"
 }
 
 text LevelCap29Msg{
     "Level cap increased to 29."
 }
-
-
-script ForestsEdge_Gym_EventScript_FirstTrainer{
-    trainerbattle_double(TRAINER_PSY_FLY_T1, Trainer_1_Intro, Trainer_1_Outro, Not_Enough_Mons)
-    msgbox(PostBattle_Trainer_1, MSGBOX_AUTOCLOSE)
-    waitmessage
-    end
-}
-
-text Trainer_1_Intro{
-    "Let's see if you're ready!"
-}
-
-text Trainer_1_Outro{
-    "You are certainly ready"
-}
-
-text PostBattle_Trainer_1{
-    "Good luck getting your first badge"
-}
-

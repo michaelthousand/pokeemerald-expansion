@@ -7446,7 +7446,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POWER_WEIGHT] =
     {
         .name = _("Power Weight"),
-        .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
+        .price = (I_PRICE >= GEN_9) ? 3000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
         .description = COMPOUND_STRING(
@@ -7465,7 +7465,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POWER_BRACER] =
     {
         .name = _("Power Bracer"),
-        .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
+        .price = (I_PRICE >= GEN_9) ? 3000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
         .description = COMPOUND_STRING(
@@ -7484,7 +7484,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POWER_BELT] =
     {
         .name = _("Power Belt"),
-        .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
+        .price = (I_PRICE >= GEN_9) ? 3000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
         .description = COMPOUND_STRING(
@@ -7504,7 +7504,7 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Power Lens"),
         .pluralName = _("Power Lenses"),
-        .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
+        .price = (I_PRICE >= GEN_9) ? 3000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
         .description = COMPOUND_STRING(
@@ -7523,7 +7523,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POWER_BAND] =
     {
         .name = _("Power Band"),
-        .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
+        .price = (I_PRICE >= GEN_9) ? 3000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
         .description = COMPOUND_STRING(
@@ -7542,7 +7542,7 @@ const struct Item gItemsInfo[] =
     [ITEM_POWER_ANKLET] =
     {
         .name = _("Power Anklet"),
-        .price = (I_PRICE >= GEN_9) ? 10000 : 3000,
+        .price = (I_PRICE >= GEN_9) ? 3000 : 3000,
         .holdEffect = HOLD_EFFECT_POWER_ITEM,
         .holdEffectParam = POWER_ITEM_BOOST,
         .description = COMPOUND_STRING(

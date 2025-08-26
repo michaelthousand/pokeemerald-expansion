@@ -858,10 +858,10 @@
 #define TRAINER_LEAF                        852
 #define TRAINER_BRENDAN_PLACEHOLDER         853
 #define TRAINER_MAY_PLACEHOLDER             854
-#define TRAINER_ORION_1                     855
-#define TRAINER_ORION_2                     856
-#define TRAINER_ARWEN_1                     857
-#define TRAINER_ARWEN_2                     858
+#define TRAINER_KAELEN_C1                   855
+#define TRAINER_KAELEN_C2                   856
+#define TRAINER_MORWEN_C1                   857
+#define TRAINER_MORWEN_C2                   858
 #define TRAINER_PSY_FLY_T1                  859
 #define TRAINER_FORESTSEDGE_FRIENDLY_1      860
 

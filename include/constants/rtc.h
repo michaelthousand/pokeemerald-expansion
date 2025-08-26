@@ -91,6 +91,6 @@ enum TimeOfDay
     TIMES_OF_DAY_COUNT,
 };
 
-#define TIME_OF_DAY_DEFAULT    0
+#define TIME_OF_DAY_DEFAULT    TIME_DAY
 
 #endif // GUARD_CONSTANTS_RTC_H

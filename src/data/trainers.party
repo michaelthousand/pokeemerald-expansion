@@ -16875,8 +16875,84 @@ Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 
-=== TRAINER_ARWEN_1 ===
-Name: Arwen
+=== TRAINER_MORWEN_C1 ===
+Name: Morwen
+Class: Leader
+Pic: Leader Flannery
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Noctowl @ Sitrus Berry
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 220 HP / 0 Atk / 0 Def / 236 SpA / 44 SpD / 4 Spe
+Ability: Tinted Lens
+Nature: Modest
+- Air Slash
+- Psybeam
+- Dream Eater
+- Protect
+
+Shroomish @ Eviolite
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+Ability: Effect Spore
+Nature: Calm
+- Stun Spore
+- Mega Drain
+- Helping Hand
+- Protect
+
+Weepinbell @ Focus Sash
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 16 Atk / 240 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Chlorophyll
+Nature: Impish
+- Stun Spore
+- Sleep Powder
+- Trailblaze
+- Protect
+
+Quagsire @ Leftovers
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 16 Atk / 244 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Unaware
+Nature: Impish
+Tera Type: Water
+- Liquidation
+- High Horsepower
+- Haze
+- Protect
+
+Ekans @ Rocky Helmet
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 236 Atk / 0 Def / 0 SpA / 16 SpD / 8 Spe
+Nature: Adamant
+- Poison Fang
+- Glare
+- Snarl
+- Protect
+
+Gloom @ Black Sludge
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Ability: Chlorophyll
+Nature: Timid
+Tera Type: Fairy
+- Energy Ball
+- Sleep Powder
+- Leech Seed
+- Protect
+
+=== TRAINER_MORWEN_C2 ===
+Name: Morwen
 Class: Leader
 Pic: Leader Flannery
 Gender: Female
@@ -16884,28 +16960,8 @@ Music: Female
 Double Battle: Yes
 AI: Basic Trainer
 
-Yanma @ Focus Sash
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 8 HP / 0 Atk / 0 Def / 248 SpA / 12 SpD / 240 Spe
-Ability: Speed Boost
-- Air Cutter
-- Struggle Bug
-- Tailwind
-- Detect
-
-Wingull @ Sharp Beak
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
-Ability: Rain Dish
-- Wing Attack
-- Tailwind
-- Helping Hand
-- Protect
-
 Gligar @ Oran Berry
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 232 Atk / 0 Def / 0 SpA / 24 SpD / 248 Spe
 Ability: Hyper Cutter
@@ -16915,56 +16971,7 @@ Ability: Hyper Cutter
 - Protect
 
 Rufflet @ Leftovers
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
-Ability: Sheer Force
-- Wing Attack
-- Tailwind
-- Helping Hand
-- Protect
-
-Noibat @ Sitrus Berry
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
-- Bite
-- Wing Attack
-- Dragon Claw
-- Protect
-
-Fletchinder @ Eviolite
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-Ability: Gale Wings
-Tera Type: Rock
-- Flare Blitz
-- Brave Bird
-- Tailwind
-- Protect
-
-=== TRAINER_ARWEN_2 ===
-Name: Arwen
-Class: Leader
-Pic: Leader Flannery
-Gender: Female
-Music: Female
-Double Battle: Yes
-AI: Basic Trainer
-
-Gligar @ Oran Berry
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 232 Atk / 0 Def / 0 SpA / 24 SpD / 248 Spe
-Ability: Hyper Cutter
-- Fury Cutter
-- Knock Off
-- Aerial Ace
-- Protect
-
-Rufflet @ Leftovers
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
 Ability: Sheer Force
@@ -16974,7 +16981,7 @@ Ability: Sheer Force
 - Protect
 
 Yanma @ Focus Sash
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 8 HP / 0 Atk / 0 Def / 248 SpA / 12 SpD / 240 Spe
 Ability: Speed Boost
@@ -16984,7 +16991,7 @@ Ability: Speed Boost
 - Detect
 
 Wingull @ Sharp Beak
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
 Ability: Rain Dish
@@ -16994,7 +17001,7 @@ Ability: Rain Dish
 - Protect
 
 Oricorio Pom-Pom @ Sitrus Berry
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
 - Bite
@@ -17003,7 +17010,7 @@ EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
 - Protect
 
 Fletchinder @ Eviolite
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Gale Wings
@@ -17013,8 +17020,85 @@ Tera Type: Rock
 - Tailwind
 - Protect
 
-=== TRAINER_ORION_1 ===
-Name: Orion
+=== TRAINER_KAELEN_C1 ===
+Name: Kaelen
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Smart Trainer
+
+Nidorina @ Black Sludge
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 28 Atk / 236 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Poison Point
+Nature: Impish
+- Poison Fang
+- Venom Drench
+- Iron Tail
+- Protect
+
+Zubat @ Rocky Helmet
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 12 Atk / 0 Def / 0 SpA / 244 SpD / 8 Spe
+Ability: Inner Focus
+Nature: Careful
+- Brave Bird
+- Poison Fang
+- Venom Drench
+- Protect
+
+Grimer-Alola @ Sitrus Berry
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 20 Atk / 0 Def / 0 SpA / 240 SpD / 0 Spe
+Ability: Power of Alchemy
+Nature: Careful
+- Poison Gas
+- Minimize
+- Gunk Shot
+- Protect
+
+Slugma @ Charcoal
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 4 SpA / 244 SpD / 4 Spe
+Ability: Flame Body
+Nature: Calm
+- Will-O-Wisp
+- Sunny Day
+- Heat Wave
+- Protect
+
+Koffing @ Eviolite
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 8 SpA / 240 SpD / 16 Spe
+Ability: Neutralizing Gas
+Nature: Calm
+Tera Type: Steel
+- Sludge
+- Will-O-Wisp
+- Taunt
+- Protect
+
+Houndour @ Focus Sash
+Level: 5
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 8 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Unnerve
+Nature: Jolly
+Tera Type: Dark
+- Flame Charge
+- Crunch
+- Will-O-Wisp
+- Protect
+
+=== TRAINER_KAELEN_C2 ===
+Name: Kaelen
 Class: Leader
 Pic: Leader Brawly
 Gender: Male
@@ -17022,28 +17106,8 @@ Music: Male
 Double Battle: Yes
 AI: Basic Trainer
 
-Meditite @ Assault Vest
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 248 HP / 244 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
-Ability: Pure Power
-- Zen Headbutt
-- Force Palm
-- Facade
-- Rock Slide
-
-Elgyem @ Rocky Helmet
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
-Ability: Analytic
-- Psybeam
-- Destiny Bond
-- Trick Room
-- Protect
-
 Slowpoke @ Eviolite
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 0 HP / 0 Atk / 248 Def / 12 SpA / 248 SpD / 0 Spe
 Ability: Regenerator
@@ -17053,57 +17117,7 @@ Ability: Regenerator
 - Protect
 
 Girafarig @ Throat Spray
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
-Ability: Inner Focus
-- Psybeam
-- Hyper Voice
-- Trick Room
-- Protect
-
-Gothita @ Sitrus Berry
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 252 SpD / 0 Spe
-Ability: Shadow Tag
-- Psyshock
-- Foul Play
-- Shadow Ball
-- Protect
-
-Hatenna @ Leftovers
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 244 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 0 Spe
-Ability: Magic Bounce
-Tera Type: TYPE_FAIRY
-- Psybeam
-- Psychic Terrain
-- Trick Room
-- Protect
-
-=== TRAINER_ORION_2 ===
-Name: Orion
-Class: Leader
-Pic: Leader Brawly
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Basic Trainer
-
-Slowpoke @ Eviolite
-Level: 5
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 0 HP / 0 Atk / 248 Def / 12 SpA / 248 SpD / 0 Spe
-Ability: Regenerator
-- Water Pulse
-- Confusion
-- Yawn
-- Protect
-
-Girafarig @ Throat Spray
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
 Ability: Inner Focus
@@ -17113,7 +17127,7 @@ Ability: Inner Focus
 - Protect
 
 Meditite @ Assault Vest
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
 Ability: Pure Power
@@ -17123,7 +17137,7 @@ Ability: Pure Power
 - Rock Slide
 
 Elgyem @ Rocky Helmet
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
 Ability: Analytic
@@ -17133,7 +17147,7 @@ Ability: Analytic
 - Protect
 
 Spoink @ Twisted Spoon
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 236 HP / 0 Atk / 0 Def / 24 SpA / 248 SpD / 0 Spe
 Ability: Own Tempo
@@ -17143,7 +17157,7 @@ Ability: Own Tempo
 - Protect
 
 Hatenna @ Leftovers
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
 EVs: 244 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 0 Spe
 Ability: Magic Bounce

@@ -104,7 +104,9 @@
     "Route2",
     "PortValor",
     "ForestsEdge",
-    "Prometheus_Tech_HQ"
+    "Prometheus_Tech_HQ",
+    "Route3",
+    "OldStoneCave1F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -644,7 +646,8 @@
     "NewHope_PokeMart",
     "NewHope_BattleCenter",
     "NewHope_TheosHouse1F",
-    "NewHope_TheosHouse2F"
+    "NewHope_TheosHouse2F",
+    "NerwHope_Gym"
   ],
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",

@@ -12,17 +12,19 @@ script PrometheusTech_Shop_RegularEmployee{
 }
 
 mart PrometheusTech_StandardShopItems {
-    ITEM_POKE_BALL
-    ITEM_POTION
-    ITEM_ANTIDOTE
-    ITEM_PARALYZE_HEAL
-    ITEM_LEMONADE
+    ITEM_POWER_WEIGHT
+    ITEM_POWER_BRACER
+    ITEM_POWER_BELT
+    ITEM_POWER_LENS
+    ITEM_POWER_BAND
+    ITEM_POWER_ANKLET
+    ITEM_MACHO_BRACE
 }
 
 script PrometheusTech_Shop_EggEmployee{
     lock
     faceplayer
-    message("Hello!\nI'm you local representative for\nPrometheus Tech.")
+    message("Hello!\nI am the egg merchant.")
     message("How can I help you?")
     waitmessage
     pokemart(PrometheusTech_EggShopItems)
