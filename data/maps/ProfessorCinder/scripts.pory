@@ -7,6 +7,47 @@ script SetInitialCap {
     end
 }
 
+// ADD TRIGGER SCRIPTING TO START CONVERSATION
+
+script ProfessorCinder_Intro {
+    if (!(flag(TALKED_TO_CINDER))){
+        lockall
+        faceplayer
+        msgbox("Ah! There you are!\pYour mother said you'd be stopping\nby!", MSGBOX_DEFAULT)
+
+        msgbox("How long has it been since I've seen you?\n10 years perhaps?", MSGBOX_DEFAULT)
+        msgbox("My investigations of mythical Pokemon\nhave had me travelling for years.", MSGBOX_DEFAULT)
+        msgbox("You look just like your father, you know.\nYes, the Champion himself! We were close\pfriends once, back before…\pwell, before our duties pulled us both\naway.", MSGBOX_DEFAULT)
+        delay(60)
+        msgbox("Oh! Right, right, that’s why you’re here.\nI promised your father I’d help get you\pstarted on your journey.", MSGBOX_DEFAULT)
+        msgbox("Which region would you like your Pokemon\nto be from?", MSGBOX_DEFAULT)
+        closemessage
+        call(ProfessorCinder_EventScript_Professor)
+    }
+    faceplayer
+    msgbox("Good luck on your journey!", MSGBOX_DEFAULT)
+    closemessage
+}
+
+script ProfessorCinder_Outro {
+    msgbox("Excellent choice! That Pokémon will serve\nyou well. But remember, strength\pcomes from more than just battling.\nTake the time to know your partner.", MSGBOX_DEFAULT)
+
+    // Give Pokédex
+    msgbox("Now then, I have something else for you.\nThis is a Pokédex.\nIt will record data on every Pokémon you encounter.", MSGBOX_DEFAULT)
+    //giveitem(ITEM_POKEDEX, 1)
+
+    
+    msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this Pokédex,\nyou’ll be helping me understand how they’ve adapted.", MSGBOX_DEFAULT)
+
+    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have all sorts\pof tools and technology to help\ntrainers!", MSGBOX_DEFAULT)
+
+    msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle trouble await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
+
+    setflag(TALKED_TO_CINDER)
+    releaseall
+    end
+}
+
 
 // ---------- Defaults / tiny helpers ----------
 script ProfessorCinder_EventScript_BallDefault {
@@ -33,11 +74,13 @@ script Common_GiveStarter {
         msgbox("Received your Pokemon!")
         special(HealPlayerParty)
         call(NicknamePartyMon)
+        call(ProfessorCinder_Outro)
     } elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
         playfanfare(MUS_OBTAIN_ITEM)
         msgbox("Your Pokemon was sent to your PC.")
         special(HealPlayerParty)
         call(NicknameBoxMon)
+        call(ProfessorCinder_Outro)
     } else {
         msgbox("No more room for Pokemon.")
         return
@@ -80,8 +123,7 @@ script ProfessorCinder_EventScript_Professor {
         // Direct map (Kanto=0, Johto=1, Hoenn=2, ... Paldea=8)
         copyvar(STARTER_REGION, VAR_RESULT)
 
-        msgbox("Choose your Pokemon wisely.")
-        release
+        msgbox("Choose your Pokemon wisely.", MSGBOX_AUTOCLOSE)
     } else {
         msgbox("Take care of your Pokemon.", MSGBOX_NPC)
     }

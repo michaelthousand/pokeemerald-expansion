@@ -3,18 +3,18 @@ TestMapA_MapScripts::
     map_script MAP_SCRIPT_ON_TRANSITION, TestMapA_OnTransition
 
 TestMapA_OnTransition:
-    call_if_unset FLAG_UNUSED_0x04C, TestMapA_EventScript_SetupTestBattle
+    call_if_unset TALKED_TO_CINDER, TestMapA_EventScript_SetupTestBattle
 
 `
 
 script TestMapA_EventScript_SetupTestBattle{
     if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
-        setflag(FLAG_UNUSED_0x04C)
+        setflag(TALKED_TO_CINDER)
         setvar(TESTMAPA_STATE, 0)
     }
     else{
         if(var(TESTMAPA_STATE) == 0){
-            clearflag(FLAG_UNUSED_0x04C)
+            clearflag(TALKED_TO_CINDER)
         }
     }
 }
@@ -33,7 +33,7 @@ script MayBattleOver{
     applymovement(1, MayLeave)
     waitmovement(0)
     removeobject(1)
-    setflag(FLAG_UNUSED_0x04C)
+    setflag(TALKED_TO_CINDER)
     setvar(TESTMAPA_STATE, 1)
     waitmessage
     releaseall

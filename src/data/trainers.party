@@ -16885,7 +16885,7 @@ Double Battle: Yes
 AI: Smart Trainer
 
 Noctowl @ Sitrus Berry
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 220 HP / 0 Atk / 0 Def / 236 SpA / 44 SpD / 4 Spe
 Ability: Tinted Lens
@@ -16896,7 +16896,7 @@ Nature: Modest
 - Protect
 
 Shroomish @ Eviolite
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
 Ability: Effect Spore
@@ -16907,7 +16907,7 @@ Nature: Calm
 - Protect
 
 Weepinbell @ Focus Sash
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 16 Atk / 240 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Chlorophyll
@@ -16918,7 +16918,7 @@ Nature: Impish
 - Protect
 
 Quagsire @ Leftovers
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 16 Atk / 244 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Unaware
@@ -16930,7 +16930,7 @@ Tera Type: Water
 - Protect
 
 Ekans @ Rocky Helmet
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 236 Atk / 0 Def / 0 SpA / 16 SpD / 8 Spe
 Nature: Adamant
@@ -16940,7 +16940,7 @@ Nature: Adamant
 - Protect
 
 Gloom @ Black Sludge
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
 Ability: Chlorophyll
@@ -17030,7 +17030,7 @@ Double Battle: Yes
 AI: Smart Trainer
 
 Nidorina @ Black Sludge
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 28 Atk / 236 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Poison Point
@@ -17041,7 +17041,7 @@ Nature: Impish
 - Protect
 
 Zubat @ Rocky Helmet
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 12 Atk / 0 Def / 0 SpA / 244 SpD / 8 Spe
 Ability: Inner Focus
@@ -17052,7 +17052,7 @@ Nature: Careful
 - Protect
 
 Grimer-Alola @ Sitrus Berry
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 248 HP / 20 Atk / 0 Def / 0 SpA / 240 SpD / 0 Spe
 Ability: Power of Alchemy
@@ -17063,7 +17063,7 @@ Nature: Careful
 - Protect
 
 Slugma @ Charcoal
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 0 Atk / 0 Def / 4 SpA / 244 SpD / 4 Spe
 Ability: Flame Body
@@ -17074,7 +17074,7 @@ Nature: Calm
 - Protect
 
 Koffing @ Eviolite
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 0 Atk / 0 Def / 8 SpA / 240 SpD / 16 Spe
 Ability: Neutralizing Gas
@@ -17086,7 +17086,7 @@ Tera Type: Steel
 - Protect
 
 Houndour @ Focus Sash
-Level: 5
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 240 HP / 8 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Unnerve

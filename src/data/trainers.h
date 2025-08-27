@@ -42212,7 +42212,7 @@ F_TRAINER_FEMALE |
 #line 16891
             .ability = ABILITY_TINTED_LENS,
 #line 16888
-            .lvl = 5,
+            .lvl = 21,
 #line 16892
             .nature = NATURE_MODEST,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42237,7 +42237,7 @@ F_TRAINER_FEMALE |
 #line 16902
             .ability = ABILITY_EFFECT_SPORE,
 #line 16899
-            .lvl = 5,
+            .lvl = 21,
 #line 16903
             .nature = NATURE_CALM,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42262,7 +42262,7 @@ F_TRAINER_FEMALE |
 #line 16913
             .ability = ABILITY_CHLOROPHYLL,
 #line 16910
-            .lvl = 5,
+            .lvl = 21,
 #line 16914
             .nature = NATURE_IMPISH,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42287,7 +42287,7 @@ F_TRAINER_FEMALE |
 #line 16924
             .ability = ABILITY_UNAWARE,
 #line 16921
-            .lvl = 5,
+            .lvl = 21,
 #line 16925
             .nature = NATURE_IMPISH,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42312,7 +42312,7 @@ F_TRAINER_FEMALE |
 #line 16934
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 16933
-            .lvl = 5,
+            .lvl = 21,
 #line 16936
             .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42337,7 +42337,7 @@ F_TRAINER_FEMALE |
 #line 16946
             .ability = ABILITY_CHLOROPHYLL,
 #line 16943
-            .lvl = 5,
+            .lvl = 21,
 #line 16947
             .nature = NATURE_TIMID,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42552,7 +42552,7 @@ F_TRAINER_FEMALE |
 #line 17036
             .ability = ABILITY_POISON_POINT,
 #line 17033
-            .lvl = 5,
+            .lvl = 21,
 #line 17037
             .nature = NATURE_IMPISH,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42577,7 +42577,7 @@ F_TRAINER_FEMALE |
 #line 17047
             .ability = ABILITY_INNER_FOCUS,
 #line 17044
-            .lvl = 5,
+            .lvl = 21,
 #line 17048
             .nature = NATURE_CAREFUL,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42602,7 +42602,7 @@ F_TRAINER_FEMALE |
 #line 17058
             .ability = ABILITY_POWER_OF_ALCHEMY,
 #line 17055
-            .lvl = 5,
+            .lvl = 21,
 #line 17059
             .nature = NATURE_CAREFUL,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42627,7 +42627,7 @@ F_TRAINER_FEMALE |
 #line 17069
             .ability = ABILITY_FLAME_BODY,
 #line 17066
-            .lvl = 5,
+            .lvl = 21,
 #line 17070
             .nature = NATURE_CALM,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42652,7 +42652,7 @@ F_TRAINER_FEMALE |
 #line 17080
             .ability = ABILITY_NEUTRALIZING_GAS,
 #line 17077
-            .lvl = 5,
+            .lvl = 21,
 #line 17081
             .nature = NATURE_CALM,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
@@ -42679,7 +42679,7 @@ F_TRAINER_FEMALE |
 #line 17092
             .ability = ABILITY_UNNERVE,
 #line 17089
-            .lvl = 5,
+            .lvl = 21,
 #line 17093
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,

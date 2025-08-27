@@ -31,7 +31,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "7",
       "script": "TestMapA_EventScript_MayTestBattle",
-      "flag": "FLAG_UNUSED_0x04C"
+      "flag": "TALKED_TO_CINDER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_KYOGRE_FRONT",

@@ -87,7 +87,7 @@
 #define FLAG_KAELEN    0x49 // Hide Kaelen
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag // currently used for Kyogre fight
 #define FLAG_UNUSED_0x04B    0x4B // Unused Flag // currently used for Roxanne test battle
-#define FLAG_UNUSED_0x04C    0x4C // Unused Flag // currently used for May test battle
+#define TALKED_TO_CINDER    0x4C // Unused Flag // marks if player spoke to Cinder for the first time
 #define STARTER_BALL_THREE    0x4D // Unused Flag // currently used for test lab pokeball 3
 #define STARTER_BALL_TWO    0x4E // Unused Flag // currently used for test lab pokeball 2
 #define STARTER_BALL_ONE    0x4F // Unused Flag // currently used for test lab pokeball 1

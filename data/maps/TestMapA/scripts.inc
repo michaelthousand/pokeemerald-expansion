@@ -9,7 +9,7 @@ TestMapA_MapScripts::
 # 5 "data/maps/TestMapA/scripts.pory"
 TestMapA_OnTransition:
 # 6 "data/maps/TestMapA/scripts.pory"
-    call_if_unset FLAG_UNUSED_0x04C, TestMapA_EventScript_SetupTestBattle
+    call_if_unset TALKED_TO_CINDER, TestMapA_EventScript_SetupTestBattle
 
 TestMapA_EventScript_SetupTestBattle::
 # 11 "data/maps/TestMapA/scripts.pory"
@@ -22,7 +22,7 @@ TestMapA_EventScript_SetupTestBattle_2:
 
 TestMapA_EventScript_SetupTestBattle_1:
 # 12 "data/maps/TestMapA/scripts.pory"
-	setflag FLAG_UNUSED_0x04C
+	setflag TALKED_TO_CINDER
 # 13 "data/maps/TestMapA/scripts.pory"
 	setvar TESTMAPA_STATE, 0
 	return
@@ -39,7 +39,7 @@ TestMapA_EventScript_SetupTestBattle_5:
 
 TestMapA_EventScript_SetupTestBattle_8:
 # 17 "data/maps/TestMapA/scripts.pory"
-	clearflag FLAG_UNUSED_0x04C
+	clearflag TALKED_TO_CINDER
 	return
 
 
@@ -63,7 +63,7 @@ MayBattleOver::
 # 35 "data/maps/TestMapA/scripts.pory"
 	removeobject 1
 # 36 "data/maps/TestMapA/scripts.pory"
-	setflag FLAG_UNUSED_0x04C
+	setflag TALKED_TO_CINDER
 # 37 "data/maps/TestMapA/scripts.pory"
 	setvar TESTMAPA_STATE, 1
 # 38 "data/maps/TestMapA/scripts.pory"

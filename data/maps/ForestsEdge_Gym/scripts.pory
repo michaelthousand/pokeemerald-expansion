@@ -350,49 +350,52 @@ script ForestsEdge_Gym_After_Kaelen {
 
     if (!(flag(FLAG_BADGE01_GET))) {
         setflag(FLAG_BADGE01_GET)
-
+        addvar(VAR_BADGES, 1)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
+        setvar(VAR_LEVEL_CAP, 29)
+        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE02_GET))) {
         setflag(FLAG_BADGE02_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 29)
-        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)  
+        setvar(VAR_LEVEL_CAP, 41)
+        msgbox("Level cap increased to 41.", MSGBOX_DEFAULT)  
     } elif (!(flag(FLAG_BADGE03_GET))) {
         setflag(FLAG_BADGE03_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 41)
-        msgbox("Level cap increased to 41.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 49)
+        msgbox("Level cap increased to 49.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE04_GET))) {
         setflag(FLAG_BADGE04_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 49)
-        msgbox("Level cap increased to 49.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 56)
+        msgbox("Level cap increased to 56.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE05_GET))) {
         setflag(FLAG_BADGE05_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 28)
-        msgbox("Level cap increased to 58.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 71)
+        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE06_GET))) {
         setflag(FLAG_BADGE06_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 71)
-        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 78)
+        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE07_GET))) {
         setflag(FLAG_BADGE07_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 78)
-        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 85)
+        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE08_GET))) {
         setflag(FLAG_BADGE08_GET)
         msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 85)
-        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 90)
+        msgbox("Level cap increased to 90.", MSGBOX_DEFAULT) 
     }
 
     applymovement(1, Kaelen_Exit)

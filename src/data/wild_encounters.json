@@ -11777,63 +11777,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_SHROOMISH"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_HOPPIP"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_MANKEY"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_FOONGUS"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_HERACROSS"
               },
               {
-                "min_level": 9,
-                "max_level": 10,
+                "min_level": 12,
+                "max_level": 14,
                 "species": "SPECIES_SHROOMISH"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_TEDDIURSA"
               },
               {
-                "min_level": 9,
-                "max_level": 10,
+                "min_level": 12,
+                "max_level": 14,
                 "species": "SPECIES_MANKEY"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_SCYTHER"
               },
               {
-                "min_level": 9,
-                "max_level": 10,
+                "min_level": 12,
+                "max_level": 14,
                 "species": "SPECIES_FOONGUS"
               },
               {
-                "min_level": 7,
-                "max_level": 9,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_TOEDSCOOL"
               },
               {
-                "min_level": 7,
-                "max_level": 9,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_HAWLUCHA"
               }
             ]
@@ -11847,63 +11847,63 @@
             "encounter_rate": 10,
             "mons": [
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_SHROOMISH"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_ROOKIDEE"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_MURKROW"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_FOONGUS"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_HERACROSS"
               },
               {
-                "min_level": 9,
-                "max_level": 10,
+                "min_level": 12,
+                "max_level": 14,
                 "species": "SPECIES_SHROOMISH"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_TEDDIURSA"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_MANKEY"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_SCYTHER"
               },
               {
-                "min_level": 7,
-                "max_level": 8,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_GASTLY"
               },
               {
-                "min_level": 7,
-                "max_level": 9,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_TOEDSCOOL"
               },
               {
-                "min_level": 7,
-                "max_level": 9,
+                "min_level": 10,
+                "max_level": 12,
                 "species": "SPECIES_HAWLUCHA"
               }
             ]
