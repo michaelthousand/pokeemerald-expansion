@@ -52,7 +52,7 @@
 #include "constants/rgb.h"
 #include "constants/songs.h"
 
-
+bool8 gVgcSummaryHideDetails = FALSE;
 
 // Screen titles (upper left)
 #define PSS_LABEL_WINDOW_POKEMON_INFO_TITLE 0
@@ -1709,6 +1709,26 @@ static void Task_HandleInput(u8 taskId)
 {
     if (MenuHelpers_ShouldWaitForLinkRecv() != TRUE && !gPaletteFade.active)
     {
+        if (gVgcSummaryHideDetails)
+        {
+            // Allow up/down to cycle the 6 preview mons; block page changes and A actions.
+            if (JOY_NEW(DPAD_UP))
+            {
+                ChangeSummaryPokemon(taskId, -1);
+            }
+            else if (JOY_NEW(DPAD_DOWN))
+            {
+                ChangeSummaryPokemon(taskId, 1);
+            }
+            else if (JOY_NEW(B_BUTTON))
+            {
+                StopPokemonAnimations();
+                PlaySE(SE_SELECT);
+                BeginCloseSummaryScreen(taskId);
+            }
+            return; // Skip the normal handler so A/LEFT/RIGHT/etc. do nothing
+        }
+
         if (JOY_NEW(DPAD_UP))
         {
             ChangeSummaryPokemon(taskId, -1);
@@ -1976,7 +1996,7 @@ static void Task_ChangeSummaryMon(u8 taskId)
         sMonSummaryScreen->switchCounter = 0;
         break;
     case 4:
-        if (P_SUMMARY_SCREEN_RENAME && sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO)
+        if (P_SUMMARY_SCREEN_RENAME && sMonSummaryScreen->currPageIndex == PSS_PAGE_INFO && !gVgcSummaryHideDetails)
             ShowUtilityPrompt(SUMMARY_MODE_NORMAL);
         if (ShouldShowIvEvPrompt() && sMonSummaryScreen->currPageIndex == PSS_PAGE_SKILLS)
         {
@@ -3231,7 +3251,7 @@ static void PrintPageNamesAndStats(void)
     PrintTextOnWindow(PSS_LABEL_WINDOW_BATTLE_MOVES_TITLE, gText_BattleMoves, 2, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_CONTEST_MOVES_TITLE, gText_ContestMoves, 2, 1, 0, 1);
 
-    ShowUtilityPrompt(SUMMARY_MODE_NORMAL);
+    if (!gVgcSummaryHideDetails) ShowUtilityPrompt(SUMMARY_MODE_NORMAL);
 
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_RENTAL, gText_RentalPkmn, 0, 1, 0, 1);
     PrintTextOnWindow(PSS_LABEL_WINDOW_POKEMON_INFO_TYPE, gText_TypeSlash, 0, 1, 0, 0);
@@ -3422,6 +3442,13 @@ static void PrintInfoPageText(void)
     }
     else
     {
+        if (gVgcSummaryHideDetails)
+        {
+            // Preview mode: don’t print OT/ID/Ability/Nature memo.
+            // (Portrait name/species/level still render elsewhere.)
+            return;
+        }
+
         PrintMonOTName();
         PrintMonOTID();
         PrintMonAbilityName();
@@ -3433,6 +3460,7 @@ static void PrintInfoPageText(void)
 
 static void Task_PrintInfoPage(u8 taskId)
 {
+    if (gVgcSummaryHideDetails) { DestroyTask(taskId); return; }
     s16 *data = gTasks[taskId].data;
     switch (data[0])
     {
@@ -3686,9 +3714,16 @@ static void PrintEggMemo(void)
 
 static void PrintSkillsPageText(void)
 {
+    if (gVgcSummaryHideDetails)
+    {
+        // Don’t print held item, ribbons, stats, or EXP during preview.
+        // (Labels remain; numbers/values are blank.)
+        return;
+    }
+
     PrintHeldItemName();
     PrintRibbonCount();
-    if(ShouldShowIvEvPrompt())
+    if (ShouldShowIvEvPrompt())
         ShowUtilityPrompt(SUMMARY_SKILLS_MODE_STATS);
     BufferLeftColumnStats();
     PrintLeftColumnStats();
@@ -3699,6 +3734,7 @@ static void PrintSkillsPageText(void)
 
 static void Task_PrintSkillsPage(u8 taskId)
 {
+    if (gVgcSummaryHideDetails) { DestroyTask(taskId); return; }
     s16 *data = gTasks[taskId].data;
 
     switch (data[0])

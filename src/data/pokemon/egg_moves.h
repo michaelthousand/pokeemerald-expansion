@@ -5263,6 +5263,7 @@ static const u16 sLittenEggMoveLearnset[] = {
     MOVE_REVENGE,
     MOVE_HEAT_WAVE,
     MOVE_POWER_TRIP,
+    MOVE_PARTING_SHOT,
     MOVE_UNAVAILABLE,
 };
 #endif //P_FAMILY_LITTEN

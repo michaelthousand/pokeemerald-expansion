@@ -61,33 +61,57 @@ static void AssertValidWPM(const struct WeightedPartyMeta *m)
 #endif
 
 
+// AI preview (minimal)
 #include "pokemon.h"
 #include "pokemon_summary_screen.h"  // ShowPokemonSummaryScreen(...)
 #include "script.h"                  // ScriptContext_Stop, gSpecialVar_Result
 #include "overworld.h"               // CB2_ReturnToFieldContinueScriptPlayMapMusic
-#include "event_data.h"              // VarGet/VarSet
+#include "event_data.h"              // VarGet
 #include "constants/vars.h"          // VAR_0x8000.. etc.
 #include "constants/species.h"
 #include "constants/items.h"
+#include "constants/moves.h"  
 
 #define PREVIEW_MAX 6
+
+extern bool8 gVgcSummaryHideDetails;
+
 
 static struct Pokemon sVgcPreviewParty[PREVIEW_MAX];
 static u8 sVgcPreviewCount;
 
 static void Vgc_CB2_ReturnFromPreview(void);
 
+static void Vgc_ClearMonMoves(struct Pokemon *mon)
+{
+    u16 noneMove = MOVE_NONE;
+    u8  zeroPP   = 0;
+    u8  zeroPPB  = 0; // PP Ups bitfield
+
+    // Wipe all 4 moves
+    SetMonData(mon, MON_DATA_MOVE1, &noneMove);
+    SetMonData(mon, MON_DATA_MOVE2, &noneMove);
+    SetMonData(mon, MON_DATA_MOVE3, &noneMove);
+    SetMonData(mon, MON_DATA_MOVE4, &noneMove);
+
+    // Wipe PP and PP Bonuses
+    SetMonData(mon, MON_DATA_PP1, &zeroPP);
+    SetMonData(mon, MON_DATA_PP2, &zeroPP);
+    SetMonData(mon, MON_DATA_PP3, &zeroPP);
+    SetMonData(mon, MON_DATA_PP4, &zeroPP);
+    SetMonData(mon, MON_DATA_PP_BONUSES, &zeroPPB);  // <-- plural
+}
+
 static void Vgc_BuildPreviewFromVars(void)
 {
     sVgcPreviewCount = 0;
 
-    // Species come from VAR_0x8000..VAR_0x8005 (as you’re already doing)
     const u16 varIds[PREVIEW_MAX] = {
         VAR_0x8000, VAR_0x8001, VAR_0x8002,
         VAR_0x8003, VAR_0x8004, VAR_0x8005
     };
 
-    // Default preview level (you can change this). Optional override: VAR_0x8006
+    // Default preview level (optional override via VAR_0x8006: 1–100)
     u8 level = 50;
     u16 maybeLevel = VarGet(VAR_0x8006);
     if (maybeLevel >= 1 && maybeLevel <= 100)
@@ -98,46 +122,41 @@ static void Vgc_BuildPreviewFromVars(void)
         u16 species = VarGet(varIds[i]);
         if (species > SPECIES_NONE && species < NUM_SPECIES)
         {
+            // Create a plain mon, then sanitize details
             CreateMon(&sVgcPreviewParty[sVgcPreviewCount], species, level,
-                      /*fixedIV*/32, /*otIdType*/TRUE, /*personality*/0, OT_ID_PLAYER_ID, 0);
+                      /*fixedIV*/32, /*otIdType*/TRUE, /*personality*/0,
+                      OT_ID_PLAYER_ID, 0);
 
-            // Optional: hide moves/items so you don’t leak info across tabs
-            // ClearMonMoves(&sVgcPreviewParty[sVgcPreviewCount]);
-            // u16 none = ITEM_NONE;
-            // SetMonData(&sVgcPreviewParty[sVgcPreviewCount], MON_DATA_HELD_ITEM, &none);
+            Vgc_ClearMonMoves(&sVgcPreviewParty[sVgcPreviewCount]);       // hide moves
+            u16 none = ITEM_NONE;
+            SetMonData(&sVgcPreviewParty[sVgcPreviewCount], MON_DATA_HELD_ITEM, &none); // hide item
 
             sVgcPreviewCount++;
         }
     }
 }
 
+
 // Special: opens the Summary Screen and blocks the script until closed.
-// Register this in your specials table as:  StartVgcSummaryPreviewFromVars
+// Add to specials table:  SPECIAL(StartVgcSummaryPreviewFromVars)
 void StartVgcSummaryPreviewFromVars(void)
 {
     Vgc_BuildPreviewFromVars();
-
-    if (sVgcPreviewCount == 0)
-    {
-        gSpecialVar_Result = FALSE;    // nothing to show; script should not waitstate
-        return;
-    }
-
+    if (sVgcPreviewCount == 0) { gSpecialVar_Result = FALSE; return; }
     gSpecialVar_Result = TRUE;
 
-    // Your branch’s header shows this signature: (mode, mons, first, last, cb)
-    ShowPokemonSummaryScreen(
-        /*mode*/ 0,                    // normal
-        /*mons*/ sVgcPreviewParty,
-        /*first*/ 0,
-        /*last*/ sVgcPreviewCount - 1,
-        /*cb*/   Vgc_CB2_ReturnFromPreview
-    );
+    gVgcSummaryHideDetails = TRUE;  // <— turn on hide + input lock
 
-    ScriptContext_Stop();              // let script `waitstate` until we return
+    ShowPokemonSummaryScreen(
+        SUMMARY_MODE_NORMAL,          // use the enum for clarity
+        sVgcPreviewParty, 0, sVgcPreviewCount - 1,
+        Vgc_CB2_ReturnFromPreview
+    );
+    ScriptContext_Stop();
 }
 
 static void Vgc_CB2_ReturnFromPreview(void)
 {
+    gVgcSummaryHideDetails = FALSE;   // <— restore normal behavior
     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }

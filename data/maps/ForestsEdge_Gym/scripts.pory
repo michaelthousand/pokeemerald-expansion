@@ -183,15 +183,22 @@ script ForestsEdge_Gym_EventScript_Morwen {
         setvar(VAR_0x8003, SPECIES_NOCTOWL)
         setvar(VAR_0x8004, SPECIES_QUAGSIRE)
         setvar(VAR_0x8005, SPECIES_WEEPINBELL)
-        // optional: setvar(VAR_0x8006, 50)  // preview level
-        //callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate
+        if (var(VAR_BADGES) == 0){
+            setvar(VAR_0x8006, 21)  // preview level
+        } else {
+            setvar(VAR_0x8006, 29)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready.", MSGBOX_DEFAULT)
 
         special(StartVgcSummaryPreviewFromVars)
         compare(VAR_RESULT, TRUE)
         waitstate
 
+        // ADD A YES_NO - give the option to battle and have them exit the arena if not
 
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
 
         // --- Player picks exactly 4 using vanilla selector ---
         setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER)
