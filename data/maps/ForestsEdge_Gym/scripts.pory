@@ -81,6 +81,13 @@ script ForestsEdge_Gym_Trigger_Four {
         }
 }
 
+movement Exit_Gym {
+    walk_right
+    walk_down *6
+    walk_left * 5
+    walk_down * 8
+}
+
 movement Gym_Rules_One {
     walk_down * 2
     walk_left * 3
@@ -190,15 +197,23 @@ script ForestsEdge_Gym_EventScript_Morwen {
         }
 
         msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
-        msgbox("Press B when ready.", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
 
         special(StartVgcSummaryPreviewFromVars)
         compare(VAR_RESULT, TRUE)
         waitstate
 
-        // ADD A YES_NO - give the option to battle and have them exit the arena if not
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
 
         msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
 
         // --- Player picks exactly 4 using vanilla selector ---
         setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER)
@@ -210,6 +225,8 @@ script ForestsEdge_Gym_EventScript_Morwen {
 
         // If the player canceled, bail early
         if (var(VAR_RESULT) == 0) {
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
             end
         }
 
@@ -218,7 +235,6 @@ script ForestsEdge_Gym_EventScript_Morwen {
         frontier_setpartyorder(4)
 
         if (var(VAR_BADGES) == 0) {
-            waitstate
             trainerbattle_double(TRAINER_MORWEN_C1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         } else {
             trainerbattle_double(TRAINER_MORWEN_C2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
@@ -231,21 +247,29 @@ script ForestsEdge_Gym_EventScript_Morwen {
 
 script ForestsEdge_Gym_After_Morwen {
     special(HealPlayerParty)
-    setflag(FLAG_MORWEN)
-    msgbox(PostBattle_Morwen, MSGBOX_DEFAULT)
     msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
-    // ADD ITEM OR TM
+
+    giveitem(ITEM_TM_REST, 1)
+    msgbox("That TM contains Rest.", MSGBOX_AUTOCLOSE)
+    msgbox("Now you can use sleep to your advantage.", MSGBOX_AUTOCLOSE)
+
+    setflag(FLAG_MORWEN)
+    msgbox(PostBattle_Morwen, MSGBOX_AUTOCLOSE)
+
+    special(Vgc_RestorePartyBackup) 
 
     applymovement(2, Morwen_Exit)
     waitmovement(0)
     setflag(FLAG_MORWEN)
     removeobject(2)
+
     delay(150)
     clearflag(FLAG_KAELEN)
     addobject(1)
     delay(60)
     applymovement(1, Kaelen_Enter)
     waitmovement(0)
+
     goto(ForestsEdge_Gym_EventScript_Kaelen)
 }
 
@@ -257,11 +281,31 @@ script ForestsEdge_Gym_EventScript_Kaelen {
         setvar(VAR_0x8003, SPECIES_NIDORINA)
         setvar(VAR_0x8004, SPECIES_ZUBAT)
         setvar(VAR_0x8005, SPECIES_GRIMER_ALOLA)
-        callnative(Vgc_ScriptShowAiPreviewFromVars)
-        waitstate()
+        if (var(VAR_BADGES) == 0){
+            setvar(VAR_0x8006, 21)  // preview level
+        } else {
+            setvar(VAR_0x8006, 29)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
 
 
-                // --- Player picks exactly 4 using vanilla selector ---
+        // --- Player picks exactly 4 using vanilla selector ---
         setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER)
         setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES)  // doubles path = 4 picks
         setvar(VAR_0x8004, FRONTIER_LVL_OPEN)                     // or FRONTIER_LVL_50
@@ -271,6 +315,8 @@ script ForestsEdge_Gym_EventScript_Kaelen {
 
         // If the player canceled, bail early
         if (var(VAR_RESULT) == 0) {
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
             end
         }
 
@@ -291,54 +337,59 @@ script ForestsEdge_Gym_EventScript_Kaelen {
 
 script ForestsEdge_Gym_After_Kaelen {
     special(HealPlayerParty)
-    setflag(FLAG_KAELEN)
-    msgbox(PostBattle_Kaelen, MSGBOX_DEFAULT)
-    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
-    // ADD ITEM OR TM
+    special(Vgc_RestorePartyBackup)
 
-    // ADD BADGE CHECK AND AWARD BADGE
+     msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
+
+    giveitem(ITEM_TM_TOXIC, 1)
+    msgbox("That TM contains Toxic.", MSGBOX_AUTOCLOSE)
+    msgbox("Have fun poisoning your opponents.", MSGBOX_AUTOCLOSE)
+
+    setflag(FLAG_KAELEN)
+    msgbox(PostBattle_Kaelen, MSGBOX_AUTOCLOSE)
+
     if (!(flag(FLAG_BADGE01_GET))) {
         setflag(FLAG_BADGE01_GET)
 
     } elif (!(flag(FLAG_BADGE02_GET))) {
         setflag(FLAG_BADGE02_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 29)
         msgbox("Level cap increased to 29.", MSGBOX_DEFAULT)  
     } elif (!(flag(FLAG_BADGE03_GET))) {
         setflag(FLAG_BADGE03_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 41)
         msgbox("Level cap increased to 41.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE04_GET))) {
         setflag(FLAG_BADGE04_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 49)
         msgbox("Level cap increased to 49.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE05_GET))) {
         setflag(FLAG_BADGE05_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 28)
         msgbox("Level cap increased to 58.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE06_GET))) {
         setflag(FLAG_BADGE06_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 71)
         msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE07_GET))) {
         setflag(FLAG_BADGE07_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 78)
         msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE08_GET))) {
         setflag(FLAG_BADGE08_GET)
-        msgbox("You got the XXX Badge!", MSGBOX_DEFAULT)
+        msgbox("You got the Venom Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
         setvar(VAR_LEVEL_CAP, 85)
         msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
@@ -347,6 +398,8 @@ script ForestsEdge_Gym_After_Kaelen {
     applymovement(1, Kaelen_Exit)
     waitmovement(0)
     setflag(FLAG_KAELEN)
+    applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+    waitmovement(0)
     releaseall
     end
 }
@@ -413,7 +466,7 @@ text Kaelen_Outro{
 }
 
 text PostBattle_Kaelen{
-    "Impressive control of your team."
+    "Good luck with the rest of the gyms."
 }
 
 text Not_Enough_Mons{

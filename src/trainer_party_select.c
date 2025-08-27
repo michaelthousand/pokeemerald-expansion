@@ -160,3 +160,24 @@ static void Vgc_CB2_ReturnFromPreview(void)
     gVgcSummaryHideDetails = FALSE;   // <— restore normal behavior
     SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
 }
+
+
+// Restore player party after battle
+extern struct Pokemon gPlayerParty[PARTY_SIZE];
+
+static struct Pokemon sVgcPartyBackup[PARTY_SIZE];
+static bool8 sVgcHasBackup = FALSE;
+
+void Vgc_SavePartyBackup(void)
+{
+    memcpy(sVgcPartyBackup, gPlayerParty, sizeof(sVgcPartyBackup));
+    sVgcHasBackup = TRUE;
+    gSpecialVar_Result = TRUE;
+}
+
+void Vgc_RestorePartyBackup(void)
+{
+    if (!sVgcHasBackup) { gSpecialVar_Result = FALSE; return; }
+    memcpy(gPlayerParty, sVgcPartyBackup, sizeof(sVgcPartyBackup));
+    gSpecialVar_Result = TRUE;
+}

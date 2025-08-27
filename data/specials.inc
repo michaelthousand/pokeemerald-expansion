@@ -16,6 +16,8 @@
 		.align 2
 gSpecials::
 	def_special StartVgcSummaryPreviewFromVars
+	def_special Vgc_SavePartyBackup
+	def_special Vgc_RestorePartyBackup
 	def_special HealPlayerParty
 	def_special SetCableClubWarp
 	def_special DoCableClubWarp
