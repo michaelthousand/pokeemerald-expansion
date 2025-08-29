@@ -2,6 +2,10 @@ mapscripts LEAGUE_HEADQUARTERS_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: LEAGUE_HEADQUARTERS_OnTransition
 }
 
+script SetInitialCap {
+    setvar(VAR_LEVEL_CAP, 21)
+    end
+}
 
 
 script LEAGUE_HEADQUARTERS_OnTransition {
@@ -27,6 +31,12 @@ script LEAGUE_HEADQUARTERS_Registration {
 
         msgbox("Excellent! One moment, I'll call the\nLeague Chairman over.", MSGBOX_DEFAULT)
         msgbox("He likes to meet new trainers.", MSGBOX_DEFAULT)
+
+        // Initialize the cap once
+        if (var(VAR_LEVEL_CAP) == 0) {
+            call(SetInitialCap)
+        }
+
         addobject(2)
         applymovement(2, Chairman_WalkIn)
         waitmovement(0)    

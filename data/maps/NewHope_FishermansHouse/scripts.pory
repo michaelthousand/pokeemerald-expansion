@@ -1,0 +1,15 @@
+mapscripts NewHope_FishermansHouse_MapScripts {}
+
+script NewHope_FishermansHouse_EventScript_OldRod {
+    lockall
+    faceplayer
+    if (!(flag(FLAG_RECEIVED_OLD_ROD))) {
+        msgbox("I'm done with fishing.\pHave this.", MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_OLD_ROD, 1)
+        setflag(FLAG_RECEIVED_OLD_ROD)
+    } else {
+        msgbox("Have fun catching Magikarp.", MSGBOX_AUTOCLOSE)
+    }
+    releaseall
+    end
+}

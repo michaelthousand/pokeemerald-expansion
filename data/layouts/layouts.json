@@ -4700,6 +4700,36 @@
       "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/NerwHope_Gym/border.bin",
       "blockdata_filepath": "data/layouts/NerwHope_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE4",
+      "name": "Route4_Layout",
+      "width": 56,
+      "height": 45,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/Route4/border.bin",
+      "blockdata_filepath": "data/layouts/Route4/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_GYM",
+      "name": "NewHope_Gym_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/NewHope_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_FISHERMANS_HOUSE",
+      "name": "NewHope_FishermansHouse_Layout",
+      "width": 12,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/NewHope_FishermansHouse/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_FishermansHouse/map.bin"
     }
   ]
 }

@@ -14,14 +14,8 @@ script ForestsEdge_PokemonCenter_OnTransition {
 script ForestsEdge_PokeCenter_Heal {
     lock
     faceplayer
-    msgbox("Would you like to heal your party?", MSGBOX_YESNO)
-    if (var(VAR_RESULT) == YES) {
-        incrementgamestat(GAME_STAT_USED_POKECENTER)
-        special(HealPlayerParty)
-        msgbox("Please come again.", MSGBOX_NPC)
-    } else {
-        msgbox("Have a nice day.", MSGBOX_NPC)
-    }
+    // Use the common nurse flow, it handles fades/text/etc.
+    call(Common_EventScript_PkmnCenterNurse)
     release
     end
 }

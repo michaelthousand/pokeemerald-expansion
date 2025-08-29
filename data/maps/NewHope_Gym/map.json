@@ -1,7 +1,7 @@
 {
-  "id": "MAP_NERW_HOPE_GYM",
-  "name": "NerwHope_Gym",
-  "layout": "LAYOUT_NERW_HOPE_GYM",
+  "id": "MAP_NEW_HOPE_GYM",
+  "name": "NewHope_Gym",
+  "layout": "LAYOUT_NEW_HOPE_GYM",
   "music": "MUS_DUMMY",
   "region_map_section": "MAPSEC_ABANDONED_SHIP",
   "requires_flash": false,
@@ -14,7 +14,22 @@
   "battle_scene": "MAP_BATTLE_SCENE_GYM",
   "connections": null,
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE",
+      "dest_warp_id": "8"
+    },
+    {
+      "x": 10,
+      "y": 28,
+      "elevation": 0,
+      "dest_map": "MAP_NEW_HOPE",
+      "dest_warp_id": "8"
+    }
+  ],
   "coord_events": [],
   "bg_events": []
 }

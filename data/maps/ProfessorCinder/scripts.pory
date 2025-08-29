@@ -2,22 +2,44 @@ mapscripts ProfessorCinder_MapScripts {
     MAP_SCRIPT_ON_TRANSITION: ProfessorCinder_EventScript_BallDefault
 }
 
-script SetInitialCap {
-    setvar(VAR_LEVEL_CAP, 21)
+script ProfessorCinder_EventScript_Tech {
+    lockall
+    faceplayer
+    msgbox("This simply cannot be.", MSGBOX_DEFAULT)
+    msgbox("How coudl there be so much power\nemanating from a place like that?", MSGBOX_DEFAULT)
+    closemessage
+    releaseall
     end
 }
 
-// ADD TRIGGER SCRIPTING TO START CONVERSATION
+script ProfessorCinder_Triggers {
+    if (!(flag(TALKED_TO_CINDER))){
+        lockall
+        faceplayer
+        setflag(TALKED_TO_CINDER)
+        msgbox("Ah! There you are!\pYour mother said you'd be stopping by!", MSGBOX_DEFAULT)
+
+        msgbox("How long has it been since I've seen you?\n10 years perhaps?", MSGBOX_DEFAULT)
+        msgbox("My investigations of mythical Pokemon\nhave had me travelling for years.", MSGBOX_DEFAULT)
+        msgbox("You look just like your father, you know.\nYes, the Champion himself! We were close\pfriends once, back before…\pWell, before our duties pulled us both\naway.", MSGBOX_DEFAULT)
+        delay(60)
+        msgbox("Oh! Right, right, that’s why you’re here.\nI promised your father I’d help get you\pstarted on your journey.", MSGBOX_DEFAULT)
+        msgbox("Which region would you like your Pokemon\nto be from?", MSGBOX_DEFAULT)
+        closemessage
+        call(ProfessorCinder_EventScript_Professor)
+    }
+}
 
 script ProfessorCinder_Intro {
     if (!(flag(TALKED_TO_CINDER))){
         lockall
         faceplayer
-        msgbox("Ah! There you are!\pYour mother said you'd be stopping\nby!", MSGBOX_DEFAULT)
+        setflag(TALKED_TO_CINDER)
+        msgbox("Ah! There you are!\pYour mother said you'd be stopping by!", MSGBOX_DEFAULT)
 
         msgbox("How long has it been since I've seen you?\n10 years perhaps?", MSGBOX_DEFAULT)
         msgbox("My investigations of mythical Pokemon\nhave had me travelling for years.", MSGBOX_DEFAULT)
-        msgbox("You look just like your father, you know.\nYes, the Champion himself! We were close\pfriends once, back before…\pwell, before our duties pulled us both\naway.", MSGBOX_DEFAULT)
+        msgbox("You look just like your father, you know.\nYes, the Champion himself! We were close\pfriends once, back before…\pWell, before our duties pulled us both\naway.", MSGBOX_DEFAULT)
         delay(60)
         msgbox("Oh! Right, right, that’s why you’re here.\nI promised your father I’d help get you\pstarted on your journey.", MSGBOX_DEFAULT)
         msgbox("Which region would you like your Pokemon\nto be from?", MSGBOX_DEFAULT)
@@ -37,13 +59,20 @@ script ProfessorCinder_Outro {
     //giveitem(ITEM_POKEDEX, 1)
 
     
-    msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this Pokédex,\nyou’ll be helping me understand how they’ve adapted.", MSGBOX_DEFAULT)
+    msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this\nPokédex, you’ll be helping me understand\phow they’ve adapted.", MSGBOX_DEFAULT)
 
-    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have all sorts\pof tools and technology to help\ntrainers!", MSGBOX_DEFAULT)
+    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have\pall sorts of tools and technology\nto help trainers!", MSGBOX_DEFAULT)
 
-    msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle trouble await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
+    msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle danger await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
 
-    setflag(TALKED_TO_CINDER)
+    
+    if (var(VAR_TEMP_1) == 1) {
+        removeobject(1)
+    } elif (var(VAR_TEMP_1) == 2) {
+        removeobject(2)
+    } elif (var(VAR_TEMP_1) == 3) {
+        removeobject(3)
+    }
     releaseall
     end
 }
@@ -90,24 +119,8 @@ script Common_GiveStarter {
     waitfanfare
     closemessage
 
-    // Mark the correct ball as used and remove its object.
-    // (Assumes object event IDs: 1=Grass, 2=Fire, 3=Water — adjust if your map uses different IDs.)
-    if (var(VAR_TEMP_1) == 1) {
-        setflag(STARTER_BALL_ONE)
-        removeobject(1)
-    } elif (var(VAR_TEMP_1) == 2) {
-        setflag(STARTER_BALL_TWO)
-        removeobject(2)
-    } elif (var(VAR_TEMP_1) == 3) {
-        setflag(STARTER_BALL_THREE)
-        removeobject(3)
-    }
-
-    // Initialize the cap once
-    if (var(VAR_LEVEL_CAP) == 0) {
-        call(SetInitialCap)
-    }
-    return
+    
+    
 }
 
 // ---------- Professor: pick region (0..8) ----------

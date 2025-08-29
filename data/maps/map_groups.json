@@ -106,7 +106,8 @@
     "ForestsEdge",
     "Prometheus_Tech_HQ",
     "Route3",
-    "OldStoneCave1F"
+    "OldStoneCave1F",
+    "Route4"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -647,7 +648,9 @@
     "NewHope_BattleCenter",
     "NewHope_TheosHouse1F",
     "NewHope_TheosHouse2F",
-    "NerwHope_Gym"
+    "NerwHope_Gym",
+    "NewHope_Gym",
+    "NewHope_FishermansHouse"
   ],
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",

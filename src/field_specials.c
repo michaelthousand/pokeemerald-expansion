@@ -4361,3 +4361,98 @@ void GetCodeFeedback(void)
     else
         gSpecialVar_Result = 0;
 }
+
+// ====== START MINE ======
+
+static void CB2_Vgc_ReturnFromChoosePartyOfFour(void);
+
+void Vgc_ChoosePartyOfFour(void)
+{
+    // How many must be picked (min == max for this UI)
+    gSpecialVar_0x8005 = 4;
+
+    // Clear any stale selection from a previous use
+    ClearSelectedPartyOrder();  // vanilla helper
+
+    // When the UI exits, control returns here:
+    gMain.savedCallback = CB2_Vgc_ReturnFromChoosePartyOfFour;
+
+    // Launch the chooser. The parameter is unused by vanilla, the count
+    // actually comes from gSpecialVar_0x8005 (see GetMax/MinBattleEntries).
+    InitChooseHalfPartyForBattle(0);
+}
+
+// After the player confirms/cancels, the party menu calls this.
+void CB2_Vgc_ReturnFromChoosePartyOfFour(void)
+{
+    // Success if the first slot is nonzero (player confirmed 4 picks).
+    // On cancel, vanilla leaves the array zeroed.
+    if (gSelectedOrderFromParty[0] != 0)
+    {
+        // Make results easy to use from scripts:
+        //  - VAR_RESULT = 0 means success
+        //  - VAR_0x8000..VAR_0x8003 = selected party slots (0-based)
+        VarSet(VAR_RESULT, 0);
+        VarSet(VAR_0x8000, (gSelectedOrderFromParty[0] - 1));
+        VarSet(VAR_0x8001, (gSelectedOrderFromParty[1] - 1));
+        VarSet(VAR_0x8002, (gSelectedOrderFromParty[2] - 1));
+        VarSet(VAR_0x8003, (gSelectedOrderFromParty[3] - 1));
+    }
+    else
+    {
+        // Cancel
+        VarSet(VAR_RESULT, 1);
+        VarSet(VAR_0x8000, 0xFFFF);
+        VarSet(VAR_0x8001, 0xFFFF);
+        VarSet(VAR_0x8002, 0xFFFF);
+        VarSet(VAR_0x8003, 0xFFFF);
+    }
+
+    // Return cleanly to the field/script.
+    SetMainCallback2(CB2_ReturnToFieldContinueScriptPlayMapMusic);
+    ScriptContext_Enable();
+}
+
+void Vgc_BuildPartyFrom4Indices(void)
+{
+    u8 picks[4];
+    struct Pokemon tmp[PARTY_SIZE];
+    u8 out = 0;
+
+    // Preferred: VARs set by your Vgc_ChoosePartyOfFour callback
+    picks[0] = gSpecialVar_0x8000;
+    picks[1] = gSpecialVar_0x8001;
+    picks[2] = gSpecialVar_0x8002;
+    picks[3] = gSpecialVar_0x8003;
+
+    // If callback wasn’t used or VARs were cleared, fall back to party menu buffer (1-based -> 0-based)
+    if (picks[0] >= PARTY_SIZE)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            u8 sel = gSelectedOrderFromParty[i];   // 1-based in party menu
+            picks[i] = (sel == 0) ? 0xFF : (sel - 1);
+        }
+    }
+
+    // Copy chosen mons to tmp in order
+    for (int i = 0; i < 4; i++)
+    {
+        u8 idx = picks[i];
+        if (idx < PARTY_SIZE)
+        {
+            tmp[out] = gPlayerParty[idx];
+            out++;
+        }
+    }
+
+    // Clear full party, then copy back the chosen 1..out to front
+    CpuFill16(0, gPlayerParty, sizeof(gPlayerParty));
+    if (out)
+        CpuCopy16(tmp, gPlayerParty, out * sizeof(struct Pokemon));
+
+    // Normalize party count
+    CalculatePlayerPartyCount();
+}
+
+// ====== END MINE ======

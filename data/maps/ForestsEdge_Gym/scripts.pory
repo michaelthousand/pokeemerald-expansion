@@ -142,14 +142,18 @@ script ForestsEdgeGym_EventScript_Rules {
         lockall
         faceplayer
 
-        msgbox("Welcome, challenger. Allow me to explain\nhow Gyms work here in the REGION.", MSGBOX_DEFAULT)
+        msgbox("Welcome, challenger. Allow me to explain\nhow Gyms work here in Valora.", MSGBOX_DEFAULT)
 
         msgbox("Each Gym has two Leaders, and each one\nspecializes in a different styles.", MSGBOX_DEFAULT)
         msgbox("There are no junior trainers in our gyms.", MSGBOX_DEFAULT)
+        msgbox("You must defeat both Leaders to earn\na badge.", MSGBOX_DEFAULT)
 
-        msgbox("Remember: you must defeat both Leaders\nto earn the badge.", MSGBOX_DEFAULT)
-        msgbox("Between their battles, you won’t be\nallowed to change your team.", MSGBOX_DEFAULT)
+        msgbox("Battles are 4v4 double battles./pYou will have a chance to see your opponent's\nPokemon before selecting from your\pown party.", MSGBOX_DEFAULT)
+        msgbox("You can cancel the battle only before the\nfirst gym leader to return to the\plobby and change your team.", MSGBOX_DEFAULT)
+        msgbox("There's a computer to your left for this very purpose.", MSGBOX_DEFAULT)
+        msgbox("Between their battles, you won’t be\nallowed to change your party Pokemon.", MSGBOX_DEFAULT)
         msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
+        msgbox("And, as I mentioned, you will\nhave a chance to select differnt Pokemon\pfrom your party for the second battle.", MSGBOX_DEFAULT)
 
         msgbox("Earning a badge will also award you points\ntoward qualifying for the Regional Championship.", MSGBOX_DEFAULT)
         msgbox("Your first opponent is Morwen.\pShe specializes in sleep and paralysis.", MSGBOX_DEFAULT)
@@ -214,26 +218,25 @@ script ForestsEdge_Gym_EventScript_Morwen {
         msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
 
         special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
 
-        // --- Player picks exactly 4 using vanilla selector ---
-        setvar(VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER)
-        setvar(VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES)  // doubles path = 4 picks
-        setvar(VAR_0x8004, FRONTIER_LVL_OPEN)                     // or FRONTIER_LVL_50
-        setvar(VAR_0x8005, 4)
-        special(ChoosePartyForBattleFrontier)
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
         waitstate
 
         // If the player canceled, bail early
-        if (var(VAR_RESULT) == 0) {
+        if (var(VAR_RESULT) != 0) {
+            special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
             applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
             waitmovement(0)
             end
         }
 
-        // Persist & apply the chosen order
-        frontier_set(FRONTIER_DATA_SELECTED_MON_ORDER)
-        frontier_setpartyorder(4)
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
 
+        // Now start the actual fight
         if (var(VAR_BADGES) == 0) {
             trainerbattle_double(TRAINER_MORWEN_C1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         } else {
@@ -257,6 +260,7 @@ script ForestsEdge_Gym_After_Morwen {
     msgbox(PostBattle_Morwen, MSGBOX_AUTOCLOSE)
 
     special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
 
     applymovement(2, Morwen_Exit)
     waitmovement(0)
@@ -297,6 +301,8 @@ script ForestsEdge_Gym_EventScript_Kaelen {
         msgbox("Are you ready to battle?", MSGBOX_YESNO)
         if (var(VAR_RESULT) == NO) {
             closemessage
+            special(Vgc_RestorePartyBackup) 
+            clearflag(FLAG_VGC_PENDING_RESTORE)
             applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
             waitmovement(0)
             end
@@ -337,7 +343,9 @@ script ForestsEdge_Gym_EventScript_Kaelen {
 
 script ForestsEdge_Gym_After_Kaelen {
     special(HealPlayerParty)
-    special(Vgc_RestorePartyBackup)
+    special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
+
 
      msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
 

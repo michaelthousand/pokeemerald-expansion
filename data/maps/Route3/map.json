@@ -20,7 +20,15 @@
     }
   ],
   "object_events": [],
-  "warp_events": [],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 17,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_STONE_CAVE1F",
+      "dest_warp_id": "0"
+    }
+  ],
   "coord_events": [
     {
       "type": "trigger",

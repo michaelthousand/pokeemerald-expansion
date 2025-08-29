@@ -86,11 +86,11 @@
 #define FLAG_MORWEN    0x48 // Hide Morwen
 #define FLAG_KAELEN    0x49 // Hide Kaelen
 #define FLAG_UNUSED_0x04A    0x4A // Unused Flag // currently used for Kyogre fight
-#define FLAG_UNUSED_0x04B    0x4B // Unused Flag // currently used for Roxanne test battle
-#define TALKED_TO_CINDER    0x4C // Unused Flag // marks if player spoke to Cinder for the first time
-#define STARTER_BALL_THREE    0x4D // Unused Flag // currently used for test lab pokeball 3
-#define STARTER_BALL_TWO    0x4E // Unused Flag // currently used for test lab pokeball 2
-#define STARTER_BALL_ONE    0x4F // Unused Flag // currently used for test lab pokeball 1
+#define FLAG_VGC_PENDING_RESTORE     0x4B // Marks if party needs to be restored
+#define TALKED_TO_CINDER    0x4C // marks if player spoke to Cinder for the first time
+#define STARTER_BALL_THREE    0x4D // used for test lab pokeball 3
+#define STARTER_BALL_TWO    0x4E // used for test lab pokeball 2
+#define STARTER_BALL_ONE    0x4F // used for test lab pokeball 1
 
 // Scripts
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA_STILL  0x50

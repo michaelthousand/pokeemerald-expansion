@@ -401,26 +401,26 @@ Kaelen_Exit:
 ForestsEdgeGym_EventScript_Rules::
 # 141 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_GYM_RULES, ForestsEdgeGym_EventScript_Rules_2
-# 164 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_12, MSGBOX_DEFAULT
-# 165 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_7, MSGBOX_DEFAULT
-# 166 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_8, MSGBOX_DEFAULT
 # 168 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_16, MSGBOX_DEFAULT
+# 169 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_11, MSGBOX_DEFAULT
+# 170 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_12, MSGBOX_DEFAULT
+# 172 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt ForestsEdgeGym_EventScript_Rules_6
-# 170 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 174 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 6
 	goto_if_lt ForestsEdgeGym_EventScript_Rules_7
-# 172 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 176 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 5
 	goto_if_gt ForestsEdgeGym_EventScript_Rules_8
 ForestsEdgeGym_EventScript_Rules_5:
-# 176 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_11, MSGBOX_DEFAULT
+# 180 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_15, MSGBOX_DEFAULT
 ForestsEdgeGym_EventScript_Rules_1:
-# 179 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 183 "data/maps/ForestsEdge_Gym/scripts.pory"
 	releaseall
 	end
 
@@ -435,434 +435,446 @@ ForestsEdgeGym_EventScript_Rules_2:
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_1, MSGBOX_DEFAULT
 # 148 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_2, MSGBOX_DEFAULT
-# 150 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 149 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_3, MSGBOX_DEFAULT
 # 151 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_4, MSGBOX_DEFAULT
 # 152 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_5, MSGBOX_DEFAULT
-# 154 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 153 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_6, MSGBOX_DEFAULT
-# 155 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 154 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_7, MSGBOX_DEFAULT
-# 156 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 155 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_8, MSGBOX_DEFAULT
-# 157 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 156 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_9, MSGBOX_DEFAULT
 # 158 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_10, MSGBOX_DEFAULT
-# 161 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 159 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdgeGym_EventScript_Rules_Text_11, MSGBOX_DEFAULT
+# 160 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_12, MSGBOX_DEFAULT
+# 161 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_13, MSGBOX_DEFAULT
 # 162 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_14, MSGBOX_DEFAULT
+# 165 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_15, MSGBOX_DEFAULT
+# 166 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_GYM_RULES
 	goto ForestsEdgeGym_EventScript_Rules_1
 
 ForestsEdgeGym_EventScript_Rules_6:
-# 169 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_13, MSGBOX_DEFAULT
+# 173 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_17, MSGBOX_DEFAULT
 	goto ForestsEdgeGym_EventScript_Rules_5
 
 ForestsEdgeGym_EventScript_Rules_7:
-# 171 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_14, MSGBOX_DEFAULT
+# 175 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_18, MSGBOX_DEFAULT
 	goto ForestsEdgeGym_EventScript_Rules_5
 
 ForestsEdgeGym_EventScript_Rules_8:
-# 173 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdgeGym_EventScript_Rules_Text_15, MSGBOX_DEFAULT
+# 177 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdgeGym_EventScript_Rules_Text_19, MSGBOX_DEFAULT
 	goto ForestsEdgeGym_EventScript_Rules_5
 
 
 ForestsEdge_Gym_EventScript_Morwen::
-# 185 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 189 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt ForestsEdge_Gym_EventScript_Morwen_1
 	return
 
 ForestsEdge_Gym_EventScript_Morwen_1:
-# 187 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8000, SPECIES_SHROOMISH
-# 188 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8001, SPECIES_GLOOM
-# 189 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8002, SPECIES_EKANS
-# 190 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8003, SPECIES_NOCTOWL
 # 191 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8004, SPECIES_QUAGSIRE
+	setvar VAR_0x8000, SPECIES_SHROOMISH
 # 192 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8005, SPECIES_WEEPINBELL
+	setvar VAR_0x8001, SPECIES_GLOOM
 # 193 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8002, SPECIES_EKANS
+# 194 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8003, SPECIES_NOCTOWL
+# 195 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8004, SPECIES_QUAGSIRE
+# 196 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8005, SPECIES_WEEPINBELL
+# 197 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 0
 	goto_if_eq ForestsEdge_Gym_EventScript_Morwen_4
-# 196 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 200 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_0x8006, 29
 ForestsEdge_Gym_EventScript_Morwen_3:
-# 199 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_0, MSGBOX_DEFAULT
-# 200 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_1, MSGBOX_DEFAULT
-# 202 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special StartVgcSummaryPreviewFromVars
 # 203 "data/maps/ForestsEdge_Gym/scripts.pory"
-	compare VAR_RESULT, TRUE
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_0, MSGBOX_DEFAULT
 # 204 "data/maps/ForestsEdge_Gym/scripts.pory"
-	waitstate
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_1, MSGBOX_DEFAULT
 # 206 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_2, MSGBOX_YESNO
+	special StartVgcSummaryPreviewFromVars
 # 207 "data/maps/ForestsEdge_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 208 "data/maps/ForestsEdge_Gym/scripts.pory"
+	waitstate
+# 210 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_2, MSGBOX_YESNO
+# 211 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq ForestsEdge_Gym_EventScript_Morwen_8
-# 214 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 218 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_3, MSGBOX_DEFAULT
-# 216 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special Vgc_SavePartyBackup
-# 219 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
 # 220 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES
+	special Vgc_SavePartyBackup
 # 221 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8004, FRONTIER_LVL_OPEN
-# 222 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8005, 4
-# 223 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special ChoosePartyForBattleFrontier
+	setflag FLAG_VGC_PENDING_RESTORE
 # 224 "data/maps/ForestsEdge_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 225 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitstate
-# 227 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 228 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq ForestsEdge_Gym_EventScript_Morwen_11
-# 234 "data/maps/ForestsEdge_Gym/scripts.pory"
-	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-# 235 "data/maps/ForestsEdge_Gym/scripts.pory"
-	frontier_setpartyorder 4
+	goto_if_ne ForestsEdge_Gym_EventScript_Morwen_11
 # 237 "data/maps/ForestsEdge_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 240 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 0
 	goto_if_eq ForestsEdge_Gym_EventScript_Morwen_13
-# 240 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 243 "data/maps/ForestsEdge_Gym/scripts.pory"
 	trainerbattle_double TRAINER_MORWEN_C2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC
 	return
 
 ForestsEdge_Gym_EventScript_Morwen_4:
-# 194 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 198 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_0x8006, 21
 	goto ForestsEdge_Gym_EventScript_Morwen_3
 
 ForestsEdge_Gym_EventScript_Morwen_8:
-# 208 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 212 "data/maps/ForestsEdge_Gym/scripts.pory"
 	closemessage
-# 209 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 213 "data/maps/ForestsEdge_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 210 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 214 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
 	end
 
 ForestsEdge_Gym_EventScript_Morwen_11:
-# 228 "data/maps/ForestsEdge_Gym/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
 # 229 "data/maps/ForestsEdge_Gym/scripts.pory"
+	special Vgc_RestorePartyBackup
+# 230 "data/maps/ForestsEdge_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 231 "data/maps/ForestsEdge_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 232 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
 	end
 
 ForestsEdge_Gym_EventScript_Morwen_13:
-# 238 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 241 "data/maps/ForestsEdge_Gym/scripts.pory"
 	trainerbattle_double TRAINER_MORWEN_C1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC
 	return
 
 
 ForestsEdge_Gym_After_Morwen::
-# 249 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special HealPlayerParty
-# 250 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_After_Morwen_Text_0, MSGBOX_AUTOCLOSE
 # 252 "data/maps/ForestsEdge_Gym/scripts.pory"
-	giveitem ITEM_TM_REST, 1
+	special HealPlayerParty
 # 253 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_After_Morwen_Text_1, MSGBOX_AUTOCLOSE
-# 254 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_After_Morwen_Text_2, MSGBOX_AUTOCLOSE
+	msgbox ForestsEdge_Gym_After_Morwen_Text_0, MSGBOX_AUTOCLOSE
+# 255 "data/maps/ForestsEdge_Gym/scripts.pory"
+	giveitem ITEM_TM_REST, 1
 # 256 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setflag FLAG_MORWEN
+	msgbox ForestsEdge_Gym_After_Morwen_Text_1, MSGBOX_AUTOCLOSE
 # 257 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox PostBattle_Morwen, MSGBOX_AUTOCLOSE
+	msgbox ForestsEdge_Gym_After_Morwen_Text_2, MSGBOX_AUTOCLOSE
 # 259 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special Vgc_RestorePartyBackup
-# 261 "data/maps/ForestsEdge_Gym/scripts.pory"
-	applymovement 2, Morwen_Exit
-# 262 "data/maps/ForestsEdge_Gym/scripts.pory"
-	waitmovement 0
-# 263 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_MORWEN
-# 264 "data/maps/ForestsEdge_Gym/scripts.pory"
-	removeobject 2
+# 260 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox PostBattle_Morwen, MSGBOX_AUTOCLOSE
+# 262 "data/maps/ForestsEdge_Gym/scripts.pory"
+	special Vgc_RestorePartyBackup
+# 263 "data/maps/ForestsEdge_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 265 "data/maps/ForestsEdge_Gym/scripts.pory"
+	applymovement 2, Morwen_Exit
 # 266 "data/maps/ForestsEdge_Gym/scripts.pory"
-	delay 150
-# 267 "data/maps/ForestsEdge_Gym/scripts.pory"
-	clearflag FLAG_KAELEN
-# 268 "data/maps/ForestsEdge_Gym/scripts.pory"
-	addobject 1
-# 269 "data/maps/ForestsEdge_Gym/scripts.pory"
-	delay 60
-# 270 "data/maps/ForestsEdge_Gym/scripts.pory"
-	applymovement 1, Kaelen_Enter
-# 271 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
+# 267 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setflag FLAG_MORWEN
+# 268 "data/maps/ForestsEdge_Gym/scripts.pory"
+	removeobject 2
+# 270 "data/maps/ForestsEdge_Gym/scripts.pory"
+	delay 150
+# 271 "data/maps/ForestsEdge_Gym/scripts.pory"
+	clearflag FLAG_KAELEN
+# 272 "data/maps/ForestsEdge_Gym/scripts.pory"
+	addobject 1
 # 273 "data/maps/ForestsEdge_Gym/scripts.pory"
+	delay 60
+# 274 "data/maps/ForestsEdge_Gym/scripts.pory"
+	applymovement 1, Kaelen_Enter
+# 275 "data/maps/ForestsEdge_Gym/scripts.pory"
+	waitmovement 0
+# 277 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto ForestsEdge_Gym_EventScript_Kaelen
 	return
 
 
 ForestsEdge_Gym_EventScript_Kaelen::
-# 277 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 281 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt ForestsEdge_Gym_EventScript_Kaelen_1
 	return
 
 ForestsEdge_Gym_EventScript_Kaelen_1:
-# 278 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8000, SPECIES_HOUNDOUR
-# 279 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8001, SPECIES_KOFFING
-# 280 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8002, SPECIES_SLUGMA
-# 281 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8003, SPECIES_NIDORINA
 # 282 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8004, SPECIES_ZUBAT
+	setvar VAR_0x8000, SPECIES_HOUNDOUR
 # 283 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8005, SPECIES_GRIMER_ALOLA
+	setvar VAR_0x8001, SPECIES_KOFFING
 # 284 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8002, SPECIES_SLUGMA
+# 285 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8003, SPECIES_NIDORINA
+# 286 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8004, SPECIES_ZUBAT
+# 287 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8005, SPECIES_GRIMER_ALOLA
+# 288 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 0
 	goto_if_eq ForestsEdge_Gym_EventScript_Kaelen_4
-# 287 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 291 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_0x8006, 29
 ForestsEdge_Gym_EventScript_Kaelen_3:
-# 290 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_0, MSGBOX_DEFAULT
-# 291 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_1, MSGBOX_DEFAULT
-# 293 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special StartVgcSummaryPreviewFromVars
 # 294 "data/maps/ForestsEdge_Gym/scripts.pory"
-	compare VAR_RESULT, TRUE
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_0, MSGBOX_DEFAULT
 # 295 "data/maps/ForestsEdge_Gym/scripts.pory"
-	waitstate
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_1, MSGBOX_DEFAULT
 # 297 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_2, MSGBOX_YESNO
+	special StartVgcSummaryPreviewFromVars
 # 298 "data/maps/ForestsEdge_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 299 "data/maps/ForestsEdge_Gym/scripts.pory"
+	waitstate
+# 301 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_2, MSGBOX_YESNO
+# 302 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq ForestsEdge_Gym_EventScript_Kaelen_8
-# 305 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_3, MSGBOX_DEFAULT
-# 309 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
-# 310 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES
 # 311 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8004, FRONTIER_LVL_OPEN
-# 312 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_0x8005, 4
-# 313 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special ChoosePartyForBattleFrontier
-# 314 "data/maps/ForestsEdge_Gym/scripts.pory"
-	waitstate
+	msgbox ForestsEdge_Gym_EventScript_Morwen_Text_3, MSGBOX_DEFAULT
+# 315 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_FRONTIER_FACILITY, FRONTIER_FACILITY_TOWER
+# 316 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_FRONTIER_BATTLE_MODE, FRONTIER_MODE_DOUBLES
 # 317 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8004, FRONTIER_LVL_OPEN
+# 318 "data/maps/ForestsEdge_Gym/scripts.pory"
+	setvar VAR_0x8005, 4
+# 319 "data/maps/ForestsEdge_Gym/scripts.pory"
+	special ChoosePartyForBattleFrontier
+# 320 "data/maps/ForestsEdge_Gym/scripts.pory"
+	waitstate
+# 323 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq ForestsEdge_Gym_EventScript_Kaelen_11
-# 324 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 330 "data/maps/ForestsEdge_Gym/scripts.pory"
 	frontier_set FRONTIER_DATA_SELECTED_MON_ORDER
-# 325 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 331 "data/maps/ForestsEdge_Gym/scripts.pory"
 	frontier_setpartyorder 4
-# 327 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 333 "data/maps/ForestsEdge_Gym/scripts.pory"
 	compare VAR_BADGES, 0
 	goto_if_eq ForestsEdge_Gym_EventScript_Kaelen_13
-# 330 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 336 "data/maps/ForestsEdge_Gym/scripts.pory"
 	trainerbattle_double TRAINER_KAELEN_C2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC
 	return
 
 ForestsEdge_Gym_EventScript_Kaelen_4:
-# 285 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 289 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_0x8006, 21
 	goto ForestsEdge_Gym_EventScript_Kaelen_3
 
 ForestsEdge_Gym_EventScript_Kaelen_8:
-# 299 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 303 "data/maps/ForestsEdge_Gym/scripts.pory"
 	closemessage
-# 300 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 304 "data/maps/ForestsEdge_Gym/scripts.pory"
+	special Vgc_RestorePartyBackup
+# 305 "data/maps/ForestsEdge_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 306 "data/maps/ForestsEdge_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 301 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 307 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
 	end
 
 ForestsEdge_Gym_EventScript_Kaelen_11:
-# 318 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 324 "data/maps/ForestsEdge_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 319 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 325 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
 	end
 
 ForestsEdge_Gym_EventScript_Kaelen_13:
-# 328 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 334 "data/maps/ForestsEdge_Gym/scripts.pory"
 	trainerbattle_double TRAINER_KAELEN_C1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC
 	return
 
 
 ForestsEdge_Gym_After_Kaelen::
-# 339 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special HealPlayerParty
-# 340 "data/maps/ForestsEdge_Gym/scripts.pory"
-	special Vgc_RestorePartyBackup
-# 342 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_After_Morwen_Text_0, MSGBOX_AUTOCLOSE
-# 344 "data/maps/ForestsEdge_Gym/scripts.pory"
-	giveitem ITEM_TM_TOXIC, 1
 # 345 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox ForestsEdge_Gym_After_Kaelen_Text_0, MSGBOX_AUTOCLOSE
+	special HealPlayerParty
 # 346 "data/maps/ForestsEdge_Gym/scripts.pory"
+	special Vgc_RestorePartyBackup
+# 347 "data/maps/ForestsEdge_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 350 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdge_Gym_After_Morwen_Text_0, MSGBOX_AUTOCLOSE
+# 352 "data/maps/ForestsEdge_Gym/scripts.pory"
+	giveitem ITEM_TM_TOXIC, 1
+# 353 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox ForestsEdge_Gym_After_Kaelen_Text_0, MSGBOX_AUTOCLOSE
+# 354 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_1, MSGBOX_AUTOCLOSE
-# 348 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 356 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_KAELEN
-# 349 "data/maps/ForestsEdge_Gym/scripts.pory"
-	msgbox PostBattle_Kaelen, MSGBOX_AUTOCLOSE
-# 351 "data/maps/ForestsEdge_Gym/scripts.pory"
-	goto_if_unset FLAG_BADGE01_GET, ForestsEdge_Gym_After_Kaelen_2
 # 357 "data/maps/ForestsEdge_Gym/scripts.pory"
+	msgbox PostBattle_Kaelen, MSGBOX_AUTOCLOSE
+# 359 "data/maps/ForestsEdge_Gym/scripts.pory"
+	goto_if_unset FLAG_BADGE01_GET, ForestsEdge_Gym_After_Kaelen_2
+# 365 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE02_GET, ForestsEdge_Gym_After_Kaelen_3
-# 363 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 371 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE03_GET, ForestsEdge_Gym_After_Kaelen_4
-# 369 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 377 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE04_GET, ForestsEdge_Gym_After_Kaelen_5
-# 375 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 383 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE05_GET, ForestsEdge_Gym_After_Kaelen_6
-# 381 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 389 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE06_GET, ForestsEdge_Gym_After_Kaelen_7
-# 387 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 395 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE07_GET, ForestsEdge_Gym_After_Kaelen_8
-# 393 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 401 "data/maps/ForestsEdge_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE08_GET, ForestsEdge_Gym_After_Kaelen_9
 ForestsEdge_Gym_After_Kaelen_1:
-# 401 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 409 "data/maps/ForestsEdge_Gym/scripts.pory"
 	applymovement 1, Kaelen_Exit
-# 402 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 410 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
-# 403 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 411 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_KAELEN
-# 404 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 412 "data/maps/ForestsEdge_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 405 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 413 "data/maps/ForestsEdge_Gym/scripts.pory"
 	waitmovement 0
-# 406 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 414 "data/maps/ForestsEdge_Gym/scripts.pory"
 	releaseall
 	end
 
 ForestsEdge_Gym_After_Kaelen_2:
-# 352 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 360 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 353 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 361 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 354 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 362 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 355 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 363 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 29
-# 356 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 364 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_3, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_3:
-# 358 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 366 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE02_GET
-# 359 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 367 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 360 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 368 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 361 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 369 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 41
-# 362 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 370 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_4, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_4:
-# 364 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 372 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE03_GET
-# 365 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 373 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 366 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 374 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 367 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 375 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 49
-# 368 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 376 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_5, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_5:
-# 370 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 378 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE04_GET
-# 371 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 379 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 372 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 380 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 373 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 381 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 56
-# 374 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 382 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_6, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_6:
-# 376 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 384 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE05_GET
-# 377 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 385 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 378 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 386 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 379 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 387 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 71
-# 380 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 388 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_7, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_7:
-# 382 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 390 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE06_GET
-# 383 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 391 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 384 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 392 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 385 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 393 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 78
-# 386 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 394 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_8, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_8:
-# 388 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 396 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE07_GET
-# 389 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 397 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 390 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 398 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 391 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 399 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 85
-# 392 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 400 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_9, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 ForestsEdge_Gym_After_Kaelen_9:
-# 394 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 402 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setflag FLAG_BADGE08_GET
-# 395 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 403 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_2, MSGBOX_DEFAULT
-# 396 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 404 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 397 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 405 "data/maps/ForestsEdge_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 90
-# 398 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 406 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_10, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
 
 
 ForestsEdgeGym_EventScript_Rules_Text_0:
 # 145 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Welcome, challenger. Allow me to explain\nhow Gyms work here in the REGION.$"
+	.string "Welcome, challenger. Allow me to explain\nhow Gyms work here in Valora.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_1:
 # 147 "data/maps/ForestsEdge_Gym/scripts.pory"
@@ -873,161 +885,177 @@ ForestsEdgeGym_EventScript_Rules_Text_2:
 	.string "There are no junior trainers in our gyms.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_3:
-# 150 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Remember: you must defeat both Leaders\nto earn the badge.$"
+# 149 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "You must defeat both Leaders to earn\na badge.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_4:
 # 151 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Between their battles, you won’t be\nallowed to change your team.$"
+	.string "Battles are 4v4 double battles./pYou will have a chance to see your opponent's\nPokemon before selecting from your\pown party.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_5:
 # 152 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "However, your Pokémon will be fully\nhealed before facing the second Leader.$"
+	.string "You can cancel the battle only before the\nfirst gym leader to return to the\plobby and change your team.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_6:
-# 154 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Earning a badge will also award you points\ntoward qualifying for the Regional Championship.$"
+# 153 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "There's a computer to your left for this very purpose.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_7:
-# 155 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Your first opponent is Morwen.\pShe specializes in sleep and paralysis.$"
+# 154 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "Between their battles, you won’t be\nallowed to change your party Pokemon.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_8:
-# 156 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Your second opponent is Kaelen.\pHe specializes in poison and burns.$"
+# 155 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "However, your Pokémon will be fully\nhealed before facing the second Leader.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_9:
-# 157 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "You have 0 badges so you are in Tier C.\pYour opponent's will not bring their best\nteams.$"
+# 156 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "And, as I mentioned, you will\nhave a chance to select differnt Pokemon\pfrom your party for the second battle.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_10:
 # 158 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "But be sure to still bring a balanced\nteam...you’ll need it!$"
+	.string "Earning a badge will also award you points\ntoward qualifying for the Regional Championship.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_11:
-# 161 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Good luck!$"
+# 159 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "Your first opponent is Morwen.\pShe specializes in sleep and paralysis.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_12:
-# 164 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Welcome, challenger, to the Forest's Edge\nGym!$"
+# 160 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "Your second opponent is Kaelen.\pHe specializes in poison and burns.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_13:
-# 169 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "You are in Tier C.\pYour opponent's will not bring their best\nteams.$"
+# 161 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "You have 0 badges so you are in Tier C.\pYour opponent's will not bring their best\nteams.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_14:
-# 171 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "You are in Tier B.\pYour opponent's will not bring their best\nteams...\pbut they will step up their game.$"
+# 162 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "But be sure to still bring a balanced\nteam...you’ll need it!$"
 
 ForestsEdgeGym_EventScript_Rules_Text_15:
+# 165 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "Good luck!$"
+
+ForestsEdgeGym_EventScript_Rules_Text_16:
+# 168 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "Welcome, challenger, to the Forest's Edge\nGym!$"
+
+ForestsEdgeGym_EventScript_Rules_Text_17:
 # 173 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "You are in Tier C.\pYour opponent's will not bring their best\nteams.$"
+
+ForestsEdgeGym_EventScript_Rules_Text_18:
+# 175 "data/maps/ForestsEdge_Gym/scripts.pory"
+	.string "You are in Tier B.\pYour opponent's will not bring their best\nteams...\pbut they will step up their game.$"
+
+ForestsEdgeGym_EventScript_Rules_Text_19:
+# 177 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "You are in Tier A.\pYour opponent's will not pull any punches.$"
 
 ForestsEdge_Gym_EventScript_Morwen_Text_0:
-# 199 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 203 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Previewing opponent's team...$"
 
 ForestsEdge_Gym_EventScript_Morwen_Text_1:
-# 200 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 204 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Press B when ready to battle.$"
 
 ForestsEdge_Gym_EventScript_Morwen_Text_2:
-# 206 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 210 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Are you ready to battle?$"
 
 ForestsEdge_Gym_EventScript_Morwen_Text_3:
-# 214 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 218 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Choose your pokemon.$"
 
 ForestsEdge_Gym_After_Morwen_Text_0:
-# 250 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 253 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Your Pokemon have been healed.$"
 
 ForestsEdge_Gym_After_Morwen_Text_1:
-# 253 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 256 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "That TM contains Rest.$"
 
 ForestsEdge_Gym_After_Morwen_Text_2:
-# 254 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 257 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Now you can use sleep to your advantage.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_0:
-# 345 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 353 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "That TM contains Toxic.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_1:
-# 346 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 354 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Have fun poisoning your opponents.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_2:
-# 354 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 362 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "You got the Venom Badge!$"
 
 ForestsEdge_Gym_After_Kaelen_Text_3:
-# 356 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 364 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 29.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_4:
-# 362 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 370 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 41.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_5:
-# 368 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 376 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 49.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_6:
-# 374 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 382 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 56.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_7:
-# 380 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 388 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 71.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_8:
-# 386 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 394 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 78.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_9:
-# 392 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 400 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 85.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_10:
-# 398 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 406 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 90.$"
 
 Morwen_Intro::
-# 451 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 459 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "How can you win if you can't move?$"
 
 Morwen_Outro::
-# 455 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 463 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Now I'm the one paralyzed.$"
 
 PostBattle_Morwen::
-# 459 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 467 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Good luck against Kaelen.$"
 
 Kaelen_Intro::
-# 463 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 471 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Hope you brought some antidote.$"
 
 Kaelen_Outro::
-# 467 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 475 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Ouch! I'm burned!$"
 
 PostBattle_Kaelen::
-# 471 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 479 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Good luck with the rest of the gyms.$"
 
 Not_Enough_Mons::
-# 475 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 483 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "You need at least four battle-ready Pokémon.$"
 
 GotBadge01::
-# 479 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 487 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Congrats! You got the Blight badge!$"
 
 LevelCap29Msg::
-# 483 "data/maps/ForestsEdge_Gym/scripts.pory"
+# 491 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 29.$"
