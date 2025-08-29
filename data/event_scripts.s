@@ -1217,3 +1217,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/OldStoneCave1F/scripts.inc"
 
 	.include "data/maps/NerwHope_Gym/scripts.inc"
+
+	.include "data/maps/Route4/scripts.inc"
+
+	.include "data/maps/NewHope_Gym/scripts.inc"
+
+	.include "data/maps/NewHope_FishermansHouse/scripts.inc"
