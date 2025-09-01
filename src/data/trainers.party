@@ -16958,66 +16958,73 @@ Pic: Leader Flannery
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Gligar @ Oran Berry
-Level: 21
+Noctowl @ Sitrus Berry
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 232 Atk / 0 Def / 0 SpA / 24 SpD / 248 Spe
-Ability: Hyper Cutter
-- Fury Cutter
-- Knock Off
-- Aerial Ace
+EVs: 220 HP / 0 Atk / 0 Def / 236 SpA / 44 SpD / 4 Spe
+Ability: Tinted Lens
+Nature: Modest
+- Air Slash
+- Extrasensory
+- Dream Eater
 - Protect
 
-Rufflet @ Leftovers
-Level: 21
+Shroomish @ Eviolite
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
-Ability: Sheer Force
-- Wing Attack
-- Tailwind
+EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
+Ability: Effect Spore
+Nature: Calm
+- Stun Spore
+- Giga Drain
 - Helping Hand
 - Protect
 
-Yanma @ Focus Sash
-Level: 21
+Weepinbell @ Focus Sash
+Level: 2
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 8 HP / 0 Atk / 0 Def / 248 SpA / 12 SpD / 240 Spe
-Ability: Speed Boost
-- Air Cutter
-- Struggle Bug
-- Tailwind
-- Detect
-
-Wingull @ Sharp Beak
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 240 HP / 36 Atk / 0 Def / 0 SpA / 232 SpD / 0 Spe
-Ability: Rain Dish
-- Wing Attack
-- Tailwind
-- Helping Hand
+EVs: 252 HP / 16 Atk / 240 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Chlorophyll
+Nature: Impish
+- Stun Spore
+- Sleep Powder
+- Trailblaze
 - Protect
 
-Oricorio Pom-Pom @ Sitrus Berry
-Level: 21
+Quagsire @ Leftovers
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 216 HP / 236 Atk / 0 Def / 0 SpA / 56 SpD / 0 Spe
-- Bite
-- Wing Attack
-- Dragon Claw
+EVs: 240 HP / 16 Atk / 244 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Unaware
+Nature: Impish
+Tera Type: Water
+- Aqua Tail
+- High Horsepower
+- Yawn
 - Protect
 
-Fletchinder @ Eviolite
-Level: 21
+Ekans @ Rocky Helmet
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-Ability: Gale Wings
-Tera Type: Rock
-- Flare Blitz
-- Brave Bird
-- Tailwind
+EVs: 244 HP / 236 Atk / 0 Def / 0 SpA / 16 SpD / 8 Spe
+Nature: Adamant
+- Poison Fang
+- Glare
+- Snarl
+- Protect
+
+Gloom @ Black Sludge
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Ability: Chlorophyll
+Nature: Timid
+Tera Type: Fairy
+- Energy Ball
+- Sleep Powder
+- Leech Seed
 - Protect
 
 === TRAINER_KAELEN_C1 ===
@@ -17104,147 +17111,381 @@ Pic: Leader Brawly
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Basic Trainer
+AI: Smart Trainer
 
-Slowpoke @ Eviolite
+Nidorina @ Black Sludge
 Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 0 HP / 0 Atk / 248 Def / 12 SpA / 248 SpD / 0 Spe
-Ability: Regenerator
-- Water Pulse
-- Confusion
-- Yawn
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 28 Atk / 236 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Poison Point
+Nature: Impish
+- Poison Fang
+- Venom Drench
+- Toxic Spikes
 - Protect
 
-Girafarig @ Throat Spray
+Zubat @ Rocky Helmet
 Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 252 HP / 0 Atk / 4 Def / 252 SpA / 0 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 12 Atk / 0 Def / 0 SpA / 244 SpD / 8 Spe
 Ability: Inner Focus
-- Psybeam
-- Hyper Voice
-- Trick Room
+Nature: Careful
+- Brave Bird
+- Poison Fang
+- Venom Drench
 - Protect
 
-Meditite @ Assault Vest
+Grimer-Alola @ Sitrus Berry
 Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
-Ability: Pure Power
-- Zen Headbutt
-- Force Palm
-- Facade
-- Rock Slide
-
-Elgyem @ Rocky Helmet
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 236 HP / 0 Atk / 0 Def / 36 SpA / 236 SpD / 0 Spe
-Ability: Analytic
-- Psybeam
-- Destiny Bond
-- Trick Room
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 232 HP / 24 Atk / 0 Def / 0 SpA / 22 SpD / 0 Spe
+Ability: Power of Alchemy
+Nature: Careful
+- Poison Gas
+- Minimize
+- Knock Off
 - Protect
 
-Spoink @ Twisted Spoon
+Slugma @ Charcoal
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 4 SpA / 244 SpD / 4 Spe
+Ability: Flame Body
+Nature: Calm
+- Will-O-Wisp
+- Sunny Day
+- Heat Wave
+- Protect
+
+Koffing @ Eviolite
+Level: 2
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 8 SpA / 240 SpD / 16 Spe
+Ability: Neutralizing Gas
+Nature: Calm
+Tera Type: Steel
+- Sludge
+- Will-O-Wisp
+- Taunt
+- Protect
+
+Houndour @ Focus Sash
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 8 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Unnerve
+Nature: Jolly
+Tera Type: Dark
+- Flame Charge
+- Crunch
+- Will-O-Wisp
+- Protect
+
+=== TRAINER_FREYA_C1 ===
+Name: Freya
+Class: Leader
+Pic: Salon Maiden Anabel
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Wattrel @ Choice Scarf
 Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 236 HP / 0 Atk / 0 Def / 24 SpA / 248 SpD / 0 Spe
-Ability: Own Tempo
-- Expanding Force
-- Thunder Wave
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 236 SpA / 20 SpD / 252 Spe
+Ability: Competitive
+Nature: Timid
+- Thunderbolt
+- Hurricane
+- Volt Switch
+- Swift
+
+Espeon @ Life Orb
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 20 HP / 0 Atk / 0 Def / 248 SpA / 0 SpD / 236 Spe
+Ability: Magic Bounce
+Nature: Timid
+- Confusion
+- Shadow Ball
+- Calm Mind
+- Protect
+
+Scraggy @ Assault Vest
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 248 Atk / 0 Def / 0 SpA / 0 SpD / 20 Spe
+Ability: Moxie
+Nature: Adamant
+Tera Type: TYPE_STEEL
+- Fake Out
+- Knock Off
+- Drain Punch
+- Throat Chop
+
+Kirlia @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 24 SpA / 236 SpD / 0 Spe
+Ability: Trace
+Nature: Calm
+- Alluring Voice
+- Psybeam
 - Encore
 - Protect
 
-Hatenna @ Leftovers
+Pawniard @ Eviolite
 Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 0 Spe
-EVs: 244 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 0 Spe
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 248 Atk / 0 Def / 0 SpA / 0 SpD / 20 Spe
+Ability: Defiant
+Nature: Adamant
+- Sucker Punch
+- Iron Head
+- Swords Dance
+- Protect
+
+Prinplup @ Leftovers
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 16 Atk / 0 Def / 0 SpA / 244 SpD / 0 Spe
+Ability: Competitive
+Nature: Sassy
+Tera Type: TYPE_WATER
+- Surf
+- Ice Beam
+- Rain Dance
+- Protect
+
+=== TRAINER_FREYA_C2 ===
+Name: Freya
+Class: Leader
+Pic: Salon Maiden Anabel
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Wattrel @ Choice Scarf
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 236 SpA / 20 SpD / 252 Spe
+Ability: Competitive
+Nature: Timid
+- Thunderbolt
+- Hurricane
+- Volt Switch
+- Swift
+
+Espeon @ Life Orb
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 20 HP / 0 Atk / 0 Def / 248 SpA / 0 SpD / 236 Spe
 Ability: Magic Bounce
-Tera Type: TYPE_FAIRY
+Nature: Timid
 - Psybeam
-- Psychic Terrain
-- Trick Room
+- Shadow Ball
+- Calm Mind
 - Protect
 
-=== TRAINER_PSY_FLY_T1 ===
-Name: PSY FLY 1
-Class: Pkmn Trainer 1
-Pic: Hiker
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Basic Trainer
-
-Natu
-Level: 16
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Protect
-- Confuse Ray
-- Peck
-- Double Team
-
-Woobat
-Level: 16
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Air Cutter
-- Confusion
-- Protect
-- Thunder Wave
-
-Staravia
-Level: 17
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Double Team
-- Wing Attack
-- Protect
-- Facade
-
-Sigilyph
-Level: 19
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Air Cutter
-- Hypnosis
-- Protect
-- Icy Wind
-
-=== TRAINER_FORESTSEDGE_FRIENDLY_1 ===
-Name: Steve
-Class: Pkmn Trainer 1
-Pic: Black Belt
-Gender: Male
-Music: Male
-Double Battle: Yes
-AI: Basic Trainer
-
-Pikachu
-Level: 17
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Thunder Shock
+Scraggy @ Assault Vest
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 248 Atk / 0 Def / 0 SpA / 0 SpD / 20 Spe
+Ability: Moxie
+Nature: Adamant
+Tera Type: TYPE_STEEL
 - Fake Out
-- Charm
+- Knock Off
+- Drain Punch
+- Throat Chop
+
+Kirlia @ Focus Sash
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 24 SpA / 236 SpD / 0 Spe
+Ability: Trace
+Nature: Calm
+- Alluring Voice
+- Psybeam
+- Encore
 - Protect
 
-Ivysaur
-Level: 17
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Razor Leaf
-- Sleep Powder
-- Leech Seed
-- Poison Powder
-
-Pidgey
-Level: 17
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Air Slash
-- Sand Attack
-- Double Team
+Pawniard @ Eviolite
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 248 Atk / 0 Def / 0 SpA / 0 SpD / 20 Spe
+Ability: Defiant
+Nature: Adamant
+- Sucker Punch
+- Iron Head
+- Swords Dance
 - Protect
 
-Wooper
-Level: 17
-IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
-- Slam
-- Mud Shot
-- Water Gun
+Prinplup @ Leftovers
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 16 Atk / 0 Def / 0 SpA / 244 SpD / 0 Spe
+Ability: Competitive
+Nature: Sassy
+Tera Type: TYPE_WATER
+- Surf
+- Ice Beam
+- Rain Dance
+- Protect
+
+
+=== TRAINER_RONAN_C1 ===
+Name: Juan
+Class: Leader
+Pic: Leader Juan
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Houndour @ Charcoal
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 12 HP / 244 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Unnerve
+Nature: Jolly
+- Flame Charge
+- Crunch
+- Sucker Punch
+- Protect
+
+Mightyena @ Choice Band
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 16 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Intimidate
+Nature: Naive
+- Snarl
+- Crunch
+- Super Fang
+- Protect
+
+Snubbull @ Eviolite
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 248 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
+Ability: Intimidate
+Nature: Adamant
+- Play Rough
+- Stomping Tantrum
+- Temper Flare
+- Protect
+
+Staravia @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 8 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 248 Spe
+Ability: Intimidate
+Nature: Jolly
+Tera Type: TYPE_FLYING
+- Brave Bird
+- Tailwind
+- U-Turn
+- Protect
+
+Sandile @ Rocky Helmet
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 236 Atk / 0 Def / 16 SpA / 0 SpD / 12 Spe
+Ability: Intimidate
+Nature: Lonely
+- Snarl
+- Bite
+- Stomping Tantrum
+- Stone Edge
+
+Growlithe @ Sitrus Berry
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 24 Atk / 0 Def / 0 SpA / 240 SpD / 8 Spe
+Ability: Intimidate
+Nature: Gentle
+Tera Type: TYPE_FIRE
+- Bite
+- Flamethrower
+- Agility
+- Protect
+
+=== TRAINER_RONAN_C2 ===
+Name: Juan
+Class: Leader
+Pic: Leader Juan
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Houndour @ Charcoal
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 12 HP / 244 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Unnerve
+Nature: Jolly
+- Flame Charge
+- Crunch
+- Sucker Punch
+- Protect
+
+Mightyena @ Choice Band
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 16 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Intimidate
+Nature: Naive
+- Snarl
+- Crunch
+- Super Fang
+- Protect
+
+Snubbull @ Eviolite
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 248 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
+Ability: Intimidate
+Nature: Adamant
+- Play Rough
+- Stomping Tantrum
+- Roar
+- Protect
+
+Staravia @ Focus Sash
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 8 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 248 Spe
+Ability: Intimidate
+Nature: Jolly
+Tera Type: TYPE_FLYING
+- Brave Bird
+- Tailwind
+- U-Turn
+- Protect
+
+Sandile @ Rocky Helmet
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 236 Atk / 0 Def / 16 SpA / 0 SpD / 12 Spe
+Ability: Intimidate
+Nature: Lonely
+- Snarl
+- Crunch
+- Stomping Tantrum
+- Stone Edge
+
+Growlithe @ Sitrus Berry
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 24 Atk / 0 Def / 0 SpA / 240 SpD / 8 Spe
+Ability: Intimidate
+Nature: Gentle
+Tera Type: TYPE_FIRE
+- Bite
+- Flamethrower
+- Agility
 - Protect

@@ -78,51 +78,14 @@
 #include "cable_club.h"
 #include "trainer_party_select.h"
 
+// Forward declaration for the local helper defined later in this file.
+struct Trainer; // (only if not already visible here)
+static u8 BuildTrainerPartyToBuffer(const struct Trainer *trainer,
+                                    struct Pokemon *out, u8 maxCount, u32 battleTypeFlags);
+
 
 // Simple local LCG using current Random() as entropy
 static inline u32 lcg_next(u32 *s) { *s = *s * 1103515245u + 12345u; return *s; }
-
-
-static void SelectTrainerPartyIndices(const struct WeightedPartyMeta *meta, u8 outIndices[PARTY_SIZE])
-{
-    // Seed local RNG from the current global RNG + trainer selection context
-    u32 s = (Random() << 16) ^ Random();
-
-    u8 poolIdx[PARTY_SIZE], poolW[PARTY_SIZE];
-    u8 n = 0, k = 0;
-
-    if (meta->flags & AI_BRING_LOCK_ACE)
-        outIndices[k++] = meta->aceIndex;
-
-    for (u8 i = 0; i < PARTY_SIZE; i++) {
-        if ((meta->flags & AI_BRING_LOCK_ACE) && i == meta->aceIndex)
-            continue;
-        poolIdx[n] = i;
-        poolW[n]   = meta->weights[i];
-        n++;
-    }
-
-    while (k < meta->selectCount && n > 0) {
-        u32 total = 0; for (u8 i = 0; i < n; i++) total += poolW[i];
-        if (total == 0) break;
-
-        // use local RNG instead of global Random()
-        u32 r = (lcg_next(&s) >> 1) % total;
-
-        for (u8 i = 0; i < n; i++) {
-            if (r < poolW[i]) {
-                outIndices[k++] = poolIdx[i];
-                for (u8 j = i + 1; j < n; j++) { poolIdx[j-1] = poolIdx[j]; poolW[j-1] = poolW[j]; }
-                n--;
-                break;
-            }
-            r -= poolW[i];
-        }
-    }
-
-    for (; k < meta->selectCount; k++)
-        outIndices[k] = (k < PARTY_SIZE) ? k : 0;
-}
 
 
 
@@ -611,14 +574,26 @@ static void CB2_InitBattleInternal(void)
 
     if (!DEBUG_OVERWORLD_MENU || (DEBUG_OVERWORLD_MENU && !gIsDebugBattle))
     {
-        if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED)))
+        if (!DEBUG_OVERWORLD_MENU || (DEBUG_OVERWORLD_MENU && !gIsDebugBattle))
         {
-            CreateNPCTrainerParty(&gEnemyParty[0], TRAINER_BATTLE_PARAM.opponentA, TRUE);
-            if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS && !BATTLE_TWO_VS_ONE_OPPONENT)
-                CreateNPCTrainerParty(&gEnemyParty[PARTY_SIZE / 2], TRAINER_BATTLE_PARAM.opponentB, FALSE);
-            SetWildMonHeldItem();
-            CalculateEnemyPartyCount();
+            if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK | BATTLE_TYPE_RECORDED)))
+            {
+                if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+                {
+                    CreateNPCTrainerParty(&gEnemyParty[0], TRAINER_BATTLE_PARAM.opponentA, TRUE);
+                    if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS && !BATTLE_TWO_VS_ONE_OPPONENT)
+                        CreateNPCTrainerParty(&gEnemyParty[PARTY_SIZE / 2], TRAINER_BATTLE_PARAM.opponentB, FALSE);
+                    CalculateEnemyPartyCount();
+                }
+                else
+                {
+                    // Wild battle: do NOT touch trainer-party builder
+                    SetWildMonHeldItem();
+                    CalculateEnemyPartyCount();
+                }
+            }
         }
+
     }
 
    
@@ -2084,54 +2059,201 @@ u8 CreateNPCTrainerPartyFromTrainer(struct Pokemon *party, const struct Trainer 
 
 static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 firstTrainer)
 {
-    const struct WeightedPartyMeta *meta = FindWeightedPartyMeta(trainerNum);
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
 
-    // If no weighted config, just do vanilla (via public 4-arg name/shim)
-    if (meta == NULL || !(meta->flags & AI_BRING_USE_WEIGHTS))
-        return CreateNPCTrainerPartyFromTrainer(party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+    const struct WeightedPartyMeta *meta = FindWeightedPartyMeta(trainerNum);
+    if (meta == NULL || !(meta->flags & AI_BRING_USE_WEIGHTS)) {
+        return CreateNPCTrainerPartyFromTrainer(
+            party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+    }
 
-    // 1) Build full party (up to 6) into a temp buffer using VANILLA
     struct Pokemon temp[PARTY_SIZE];
     for (u8 i = 0; i < PARTY_SIZE; i++) ZeroMonData(&temp[i]);
-    u8 builtCount = CreateNPCTrainerPartyFromTrainer_Vanilla(
-        temp, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+
+    u8 builtCount = BuildTrainerPartyToBuffer(GetTrainerStructFromId(trainerNum),
+                                              temp, PARTY_SIZE, gBattleTypeFlags);
     if (builtCount > PARTY_SIZE) builtCount = PARTY_SIZE;
 
-    // 2) Choose which to bring
-    u8 chosen[PARTY_SIZE] = {0};
-    SelectTrainerPartyIndices(meta, chosen);
+    u8 idxs[PARTY_SIZE];
+    u8 bringCount = SelectWeightedPartyForTrainer(trainerNum, idxs);
+    if (bringCount == 0) {
+        return CreateNPCTrainerPartyFromTrainer(
+            party, GetTrainerStructFromId(trainerNum), firstTrainer, gBattleTypeFlags);
+    }
+    if (bringCount > builtCount)
+        bringCount = builtCount;
 
-    #if defined(BUILD_DEBUG) || defined(UG_DEBUG)
-    // Prints trainer id and the selected party slots
-    DebugPrintf("Trainer %d bring: %d %d %d %d",
-        trainerNum, chosen[0], chosen[1], chosen[2], chosen[3]);
-#endif
-
-    // 3) Cap to what actually exists
-    u8 bringCount = meta->selectCount;
-    if (bringCount > builtCount) bringCount = builtCount;
-
-    // Ensure ace is in the back (so it won't lead)
+    // Optional: push ace to the back so it won’t lead
     for (u8 i = 0; i < bringCount; i++) {
-        if (chosen[i] == meta->aceIndex) {
-            u8 tmp = chosen[i];
-            chosen[i] = chosen[bringCount - 1];
-            chosen[bringCount - 1] = tmp;
+        if (idxs[i] == meta->aceIndex) {
+            u8 t = idxs[i];
+            idxs[i] = idxs[bringCount - 1];
+            idxs[bringCount - 1] = t;
             break;
         }
     }
 
-
-    // 4) Copy chosen into live party; clear the rest
-    for (u8 i = 0; i < bringCount; i++)
-        CopyMon(&party[i], &temp[chosen[i]], sizeof(struct Pokemon));
-    for (u8 i = bringCount; i < PARTY_SIZE; i++)
+    // 3) Wipe destination first, then copy picks
+    for (u8 i = 0; i < PARTY_SIZE; i++)
         ZeroMonData(&party[i]);
+    for (u8 i = 0; i < bringCount; i++)
+        CopyMon(&party[i], &temp[idxs[i]], sizeof(struct Pokemon));
+
+#if defined(BUILD_DEBUG) || defined(UG_DEBUG)
+    DebugPrintf("Trainer %d bring (%d): %d %d %d %d",
+                trainerNum, bringCount,
+                idxs[0], idxs[1], idxs[2], idxs[3]);
+#endif
 
     return bringCount;
 }
+
+
+static u8 BuildTrainerPartyToBuffer(const struct Trainer *trainer,
+                                    struct Pokemon *out, u8 maxCount, u32 battleTypeFlags)
+{
+    u8 monsCount;
+    if (battleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS)
+        monsCount = (trainer->partySize > PARTY_SIZE / 2) ? (PARTY_SIZE / 2) : trainer->partySize;
+    else
+        monsCount = trainer->partySize;
+
+    if (monsCount > maxCount)
+        monsCount = maxCount;
+
+    u32 monIndices[PARTY_SIZE]; // safe upper bound
+    DoTrainerPartyPool(trainer, monIndices, monsCount, battleTypeFlags);
+
+    for (u8 i = 0; i < monsCount; i++)
+    {
+        const u32 monIndex = monIndices[i];
+        const struct TrainerMon *pd = &trainer->party[monIndex];
+
+        // Personality, OT, gender & nature (copy from your _Vanilla)
+        u32 personalityValue;
+        u32 personalityHash = GeneratePartyHash(trainer, i);
+        u32 otIdType = OT_ID_RANDOM_NO_SHINY;
+        u32 fixedOtId = 0;
+        u32 abilityNum = 0;
+        s32 ball = -1;
+
+        if (trainer->battleType != TRAINER_BATTLE_TYPE_SINGLES)
+            personalityValue = 0x80;
+        else if (trainer->encounterMusic_gender & F_TRAINER_FEMALE)
+            personalityValue = 0x78;
+        else
+            personalityValue = 0x88;
+
+        personalityValue += (personalityHash << 8);
+
+        if (pd->gender == TRAINER_MON_MALE)
+            personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_MALE, pd->species);
+        else if (pd->gender == TRAINER_MON_FEMALE)
+            personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender(MON_FEMALE, pd->species);
+        else if (pd->gender == TRAINER_MON_RANDOM_GENDER)
+            personalityValue = (personalityValue & 0xFFFFFF00) | GeneratePersonalityForGender((Random() & 1) ? MON_MALE : MON_FEMALE, pd->species);
+
+        ModifyPersonalityForNature(&personalityValue, pd->nature);
+
+        if (pd->isShiny)
+        {
+            otIdType = OT_ID_PRESET;
+            fixedOtId = HIHALF(personalityValue) ^ LOHALF(personalityValue);
+        }
+
+        CreateMon(&out[i], pd->species, pd->lvl, 0, TRUE, personalityValue, otIdType, fixedOtId);
+
+        // Held item
+        SetMonData(&out[i], MON_DATA_HELD_ITEM, &pd->heldItem);
+
+        // Moves (your helper)
+        CustomTrainerPartyAssignMoves(&out[i], pd);
+
+        // IVs
+        SetMonData(&out[i], MON_DATA_IVS, &(pd->iv));
+
+        // EVs (if present)
+        if (pd->ev != NULL)
+        {
+            SetMonData(&out[i], MON_DATA_HP_EV,    &(pd->ev[0]));
+            SetMonData(&out[i], MON_DATA_ATK_EV,   &(pd->ev[1]));
+            SetMonData(&out[i], MON_DATA_DEF_EV,   &(pd->ev[2]));
+            SetMonData(&out[i], MON_DATA_SPATK_EV, &(pd->ev[3]));
+            SetMonData(&out[i], MON_DATA_SPDEF_EV, &(pd->ev[4]));
+            SetMonData(&out[i], MON_DATA_SPEED_EV, &(pd->ev[5]));
+        }
+
+        // Ability selection (same as your code)
+        if (pd->ability != ABILITY_NONE)
+        {
+            const struct SpeciesInfo *si = &gSpeciesInfo[pd->species];
+            u32 maxAbilityNum = ARRAY_COUNT(si->abilities);
+            abilityNum = 0;
+            for (u32 a = 0; a < maxAbilityNum; ++a)
+                if (si->abilities[a] == pd->ability) { abilityNum = a; break; }
+        }
+        else if (B_TRAINER_MON_RANDOM_ABILITY)
+        {
+            const struct SpeciesInfo *si = &gSpeciesInfo[pd->species];
+            abilityNum = personalityHash % 3;
+            while (si->abilities[abilityNum] == ABILITY_NONE)
+                abilityNum--;
+        }
+        SetMonData(&out[i], MON_DATA_ABILITY_NUM, &abilityNum);
+
+        // Friendship
+        SetMonData(&out[i], MON_DATA_FRIENDSHIP, &(pd->friendship));
+
+        // Ball
+        if (pd->ball != ITEM_NONE)
+        {
+            ball = pd->ball;
+            SetMonData(&out[i], MON_DATA_POKEBALL, &ball);
+        }
+
+        // Nickname
+        if (pd->nickname != NULL)
+            SetMonData(&out[i], MON_DATA_NICKNAME, pd->nickname);
+
+        // Shiny flag
+        if (pd->isShiny)
+        {
+            u32 isShiny = TRUE;
+            SetMonData(&out[i], MON_DATA_IS_SHINY, &isShiny);
+        }
+
+        // Dynamax / Gigantamax / Tera **(no writes to gBattleStruct here)**
+        if (pd->dynamaxLevel > 0)
+        {
+            u32 dlvl = pd->dynamaxLevel;
+            SetMonData(&out[i], MON_DATA_DYNAMAX_LEVEL, &dlvl);
+            // If you need the global bits, set them later when the engine consumes `out[]`.
+        }
+        if (pd->gigantamaxFactor)
+        {
+            u32 gf = pd->gigantamaxFactor;
+            SetMonData(&out[i], MON_DATA_GIGANTAMAX_FACTOR, &gf);
+        }
+        if (pd->teraType > 0)
+        {
+            u32 tt = pd->teraType;
+            SetMonData(&out[i], MON_DATA_TERA_TYPE, &tt);
+        }
+
+        CalculateMonStats(&out[i]);
+
+        // Optional: ball by class fallback (don’t read gTrainerClasses if that’s global-only)
+        if (B_TRAINER_CLASS_POKE_BALLS >= GEN_7 && ball == -1)
+        {
+            s32 forced = ITEM_POKE_BALL;  // keep simple in pure build
+            SetMonData(&out[i], MON_DATA_POKEBALL, &forced);
+        }
+    }
+
+    return monsCount;
+}
+
 
 void CreateTrainerPartyForPlayer(void)
 {

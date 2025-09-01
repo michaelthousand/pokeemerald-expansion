@@ -15,6 +15,8 @@
 .set __special__, 0
 		.align 2
 gSpecials::
+	def_special WeightedSelector_On
+	def_special WeightedSelector_Off
 	def_special Vgc_ChoosePartyOfFour
 	def_special StartVgcSummaryPreviewFromVars
 	def_special Vgc_SavePartyBackup

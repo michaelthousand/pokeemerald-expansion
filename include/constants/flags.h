@@ -78,8 +78,8 @@
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
 #define FLAG_UNUSED_0x041    0x41 // Unused Flag
 #define FLAG_UNUSED_0x042    0x42 // Unused Flag
-#define FLAG_UNUSED_0x043    0x43 // Unused Flag
-#define FLAG_UNUSED_0x044    0x44 // Unused Flag
+#define FLAG_FREYA    0x43 // Hide Freya
+#define FLAG_RONAN    0x44 // Hide Ronan
 #define FLAG_GYM_RULES    0x45 // gym rules explained
 #define FLAG_BATTLE_CENTER_RULES    0x46 // battle Center Rules
 #define FLAG_LEAGUE_REG    0x47 // League Registration

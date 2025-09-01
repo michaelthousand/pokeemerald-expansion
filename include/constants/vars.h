@@ -132,14 +132,14 @@
 #define VAR_ROUTE117_STATE                               0x4070 // Unused Var
 #define VAR_ROUTE118_STATE                               0x4071
 #define VAR_ROUTE119_STATE                               0x4072
-#define VAR_ROUTE120_STATE                               0x4073 // Unused Var
+#define VAR_VGC_PREVIEW_LV                               0x4073 // Used for VGC style AI preview
 #define VAR_ROUTE121_STATE                               0x4074
-#define VAR_ROUTE122_STATE                               0x4075 // Unused Var
-#define VAR_ROUTE123_STATE                               0x4076 // Unused Var
-#define VAR_ROUTE124_STATE                               0x4077 // Unused Var
-#define VAR_ROUTE125_STATE                               0x4078 // Unused Var
-#define VAR_ROUTE126_STATE                               0x4079 // Unused Var
-#define VAR_ROUTE127_STATE                               0x407A // Unused Var
+#define VAR_VGC_PREVIEW_0                                0x4075 // Used for VGC style AI preview
+#define VAR_VGC_PREVIEW_1                                0x4076 // Used for VGC style AI preview
+#define VAR_VGC_PREVIEW_2                                0x4077 // Used for VGC style AI preview
+#define VAR_VGC_PREVIEW_3                                0x4078 // Used for VGC style AI preview
+#define VAR_VGC_PREVIEW_4                                0x4079 // Used for VGC style AI preview
+#define VAR_VGC_PREVIEW_5                                0x407A // Used for VGC style AI preview
 #define VAR_ROUTE128_STATE                               0x407B
 #define VAR_ROUTE129_STATE                               0x407C // Unused Var
 #define VAR_ROUTE130_STATE                               0x407D // Unused Var

@@ -5,29 +5,20 @@ mapscripts ForestsEdge_MapScripts {
 
 script ForestsEdge_OnResume {
     if (flag(FLAG_VGC_PENDING_RESTORE)) {
-        special(LoadPlayerParty)
+        special(Vgc_RestorePartyBackup)
         special(HealPlayerParty)
         callnative(UpdateFollowingPokemon)
-
+        special(Vgc_RestorePartyBackup)
         clearflag(FLAG_VGC_PENDING_RESTORE)
-    }
+    }  
     end
 }
 
 
 script ForceWildNow {
-    setwildbattle(SPECIES_ZIGZAGOON, 5, ITEM_NONE)
+    giveitem(ITEM_SAFETY_GOGGLES, 4)
+    setwildbattle(SPECIES_ZIGZAGOON, 5)
     dowildbattle
     end
 }
-script ReArmStepEncounters {
-    special(WildDbg_Snapshot)
 
-    if (var(VAR_0x8001) == 1) {
-        msgbox("DBG: Spray active", MSGBOX_DEFAULT)
-    }
-    if (var(VAR_0x8002) == 1) {
-        msgbox("DBG: Lure (not Repel)", MSGBOX_DEFAULT)
-    }
-
-}

@@ -13,7 +13,48 @@
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_GYM",
   "connections": null,
-  "object_events": [],
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_JUAN",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewHope_Gym_EventScript_Ronan",
+      "flag": "FLAG_RONAN"
+    },
+    {
+      "local_id": "LOCALID_FREYA",
+      "graphics_id": "OBJ_EVENT_GFX_ANABEL",
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewHope_Gym_EventScript_Freya",
+      "flag": "FLAG_FREYA"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 5,
+      "y": 20,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NewHope_Gym_EventScript_Freya",
+      "flag": "0"
+    }
+  ],
   "warp_events": [
     {
       "x": 9,
@@ -30,6 +71,61 @@
       "dest_warp_id": "8"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Gym_Trigger_Left"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 18,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Gym_Trigger_Right"
+    },
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Gym_Trigger_One"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Gym_Trigger_Two"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Gym_Trigger_Three"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 21,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "NewHope_Gym_Trigger_Four"
+    }
+  ],
   "bg_events": []
 }

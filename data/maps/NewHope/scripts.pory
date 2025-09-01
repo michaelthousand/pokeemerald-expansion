@@ -1,4 +1,19 @@
-mapscripts NewHope_MapScripts {}
+mapscripts NewHope_MapScripts {
+    MAP_SCRIPT_ON_RESUME: NewHope_OnResume
+}
+
+
+script NewHope_OnResume {
+    if (flag(FLAG_VGC_PENDING_RESTORE)) {
+        special(Vgc_RestorePartyBackup)
+        special(HealPlayerParty)
+        callnative(UpdateFollowingPokemon)
+        special(Vgc_RestorePartyBackup)
+        clearflag(FLAG_VGC_PENDING_RESTORE)
+    }  
+    end
+}
+
 
 script NewHope_Trigger_BlockPath{
     if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE)) && !(flag(FLAG_LEAGUE_REG))) {
