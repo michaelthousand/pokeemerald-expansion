@@ -19,15 +19,6 @@ script TestMapA_EventScript_SetupTestBattle{
     }
 }
 
-
-
-script TestMapA_EventScript_MayTestBattle{
-    trainerbattle_single(TRAINER_MAY_ROUTE_103_TORCHIC, May_Intro, May_Outro, MayBattleOver)
-    msgbox(PostBattle_May, MSGBOX_AUTOCLOSE)
-    waitmessage
-    end
-}
-
 script MayBattleOver{
     lockall
     applymovement(1, MayLeave)
@@ -59,7 +50,6 @@ text PostBattle_May{
 
 script TestMapA_EventScript_Kyogre{
     lockall
-    setflag(FLAG_UNUSED_0x04A)
     playmoncry(SPECIES_KYOGRE, CRY_MODE_ENCOUNTER)
     delay(40)
     waitmoncry

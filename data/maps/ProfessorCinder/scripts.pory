@@ -6,7 +6,7 @@ script ProfessorCinder_EventScript_Tech {
     lockall
     faceplayer
     msgbox("This simply cannot be.", MSGBOX_DEFAULT)
-    msgbox("How coudl there be so much power\nemanating from a place like that?", MSGBOX_DEFAULT)
+    msgbox("How could there be so much power\nemanating from a place like that?", MSGBOX_DEFAULT)
     closemessage
     releaseall
     end
@@ -61,7 +61,7 @@ script ProfessorCinder_Outro {
     
     msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this\nPokédex, you’ll be helping me understand\phow they’ve adapted.", MSGBOX_DEFAULT)
 
-    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have\pall sorts of tools and technology\nto help trainers!", MSGBOX_DEFAULT)
+    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have\pall sorts of tools and technology to\nhelp trainers!", MSGBOX_DEFAULT)
 
     msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle danger await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
 

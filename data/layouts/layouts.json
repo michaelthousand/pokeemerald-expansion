@@ -172,26 +172,6 @@
       "blockdata_filepath": "data/layouts/Route101/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE102",
-      "name": "Route102_Layout",
-      "width": 50,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route102/border.bin",
-      "blockdata_filepath": "data/layouts/Route102/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE103",
-      "name": "Route103_Layout",
-      "width": 80,
-      "height": 22,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Route103/border.bin",
-      "blockdata_filepath": "data/layouts/Route103/map.bin"
-    },
-    {
       "id": "LAYOUT_ROUTE104",
       "name": "Route104_Layout",
       "width": 40,
@@ -200,56 +180,6 @@
       "secondary_tileset": "gTileset_Rustboro",
       "border_filepath": "data/layouts/Route104/border.bin",
       "blockdata_filepath": "data/layouts/Route104/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE105",
-      "name": "Route105_Layout",
-      "width": 40,
-      "height": 80,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/Route105/border.bin",
-      "blockdata_filepath": "data/layouts/Route105/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE106",
-      "name": "Route106_Layout",
-      "width": 80,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/Route106/border.bin",
-      "blockdata_filepath": "data/layouts/Route106/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE107",
-      "name": "Route107_Layout",
-      "width": 60,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
-      "border_filepath": "data/layouts/Route107/border.bin",
-      "blockdata_filepath": "data/layouts/Route107/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE108",
-      "name": "Route108_Layout",
-      "width": 60,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
-      "border_filepath": "data/layouts/Route108/border.bin",
-      "blockdata_filepath": "data/layouts/Route108/map.bin"
-    },
-    {
-      "id": "LAYOUT_ROUTE109",
-      "name": "Route109_Layout",
-      "width": 40,
-      "height": 63,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Slateport",
-      "border_filepath": "data/layouts/Route109/border.bin",
-      "blockdata_filepath": "data/layouts/Route109/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE110",
@@ -2422,16 +2352,6 @@
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE109_SEASHORE_HOUSE",
-      "name": "Route109_SeashoreHouse_Layout",
-      "width": 15,
-      "height": 10,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_SeashoreHouse",
-      "border_filepath": "data/layouts/Route109_SeashoreHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Route109_SeashoreHouse/map.bin"
-    },
-    {
       "id": "LAYOUT_ROUTE110_TRICK_HOUSE_ENTRANCE",
       "name": "Route110_TrickHouseEntrance_Layout",
       "width": 12,
@@ -4092,16 +4012,6 @@
       "blockdata_filepath": "data/layouts/TerraCave_End/map.bin"
     },
     {
-      "id": "LAYOUT_UNDERWATER_ROUTE105",
-      "name": "Underwater_Route105_Layout",
-      "width": 40,
-      "height": 80,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Underwater",
-      "border_filepath": "data/layouts/Underwater_Route105/border.bin",
-      "blockdata_filepath": "data/layouts/Underwater_Route105/map.bin"
-    },
-    {
       "id": "LAYOUT_UNDERWATER_ROUTE125",
       "name": "Underwater_Route125_Layout",
       "width": 80,
@@ -4422,16 +4332,6 @@
       "blockdata_filepath": "data/layouts/TestMapA/map.bin"
     },
     {
-      "id": "LAYOUT_TEST_ROUTE",
-      "name": "Test_Route_Layout",
-      "width": 20,
-      "height": 40,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
-      "border_filepath": "data/layouts/Test_Route/border.bin",
-      "blockdata_filepath": "data/layouts/Test_Route/map.bin"
-    },
-    {
       "id": "LAYOUT_TEST_LAB",
       "name": "TestLab_Layout",
       "width": 25,
@@ -4504,8 +4404,8 @@
     {
       "id": "LAYOUT_PORT_VALOR",
       "name": "PortValor_Layout",
-      "width": 35,
-      "height": 30,
+      "width": 50,
+      "height": 45,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/PortValor/border.bin",
@@ -4730,6 +4630,26 @@
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/NewHope_FishermansHouse/border.bin",
       "blockdata_filepath": "data/layouts/NewHope_FishermansHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_VALOR_GYM",
+      "name": "PortValor_Gym_Layout",
+      "width": 20,
+      "height": 30,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/PortValor_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/PortValor_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_VALOR_POKEMON_CENTER",
+      "name": "PortValor_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/PortValor_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/PortValor_PokemonCenter/map.bin"
     }
   ]
 }

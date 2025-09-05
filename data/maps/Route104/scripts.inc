@@ -366,13 +366,8 @@ Route104_EventScript_SailToDewfordDadCalls::
 	applymovement LOCALID_ROUTE104_BOAT, Route104_Movement_SailToDewfordBeforeDadCalls
 	applymovement LOCALID_PLAYER, Route104_Movement_SailToDewfordBeforeDadCalls
 	waitmovement 0
-	pokenavcall Route104_Text_DadPokenavCall
-	waitmessage
 	delay 30
 	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox Route104_Text_RegisteredDadInPokenav, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
 	delay 30
 	setflag FLAG_ENABLE_NORMAN_MATCH_CALL
 	applymovement LOCALID_PLAYER, Route104_Movement_SailToDewfordAfterDadCalls

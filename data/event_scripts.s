@@ -127,14 +127,7 @@ gStdScripts_End::
 	.include "data/maps/VerdanturfTown/scripts.inc"
 	.include "data/maps/PacifidlogTown/scripts.inc"
 	.include "data/maps/Route101/scripts.inc"
-	.include "data/maps/Route102/scripts.inc"
-	.include "data/maps/Route103/scripts.inc"
 	.include "data/maps/Route104/scripts.inc"
-	.include "data/maps/Route105/scripts.inc"
-	.include "data/maps/Route106/scripts.inc"
-	.include "data/maps/Route107/scripts.inc"
-	.include "data/maps/Route108/scripts.inc"
-	.include "data/maps/Route109/scripts.inc"
 	.include "data/maps/Route110/scripts.inc"
 	.include "data/maps/Route111/scripts.inc"
 	.include "data/maps/Route112/scripts.inc"
@@ -165,7 +158,6 @@ gStdScripts_End::
 	.include "data/maps/Underwater_Route127/scripts.inc"
 	.include "data/maps/Underwater_Route128/scripts.inc"
 	.include "data/maps/Underwater_Route129/scripts.inc"
-	.include "data/maps/Underwater_Route105/scripts.inc"
 	.include "data/maps/Underwater_Route125/scripts.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_1F/scripts.inc"
 	.include "data/maps/LittlerootTown_BrendansHouse_2F/scripts.inc"
@@ -559,7 +551,6 @@ gStdScripts_End::
 	.include "data/maps/TrainerHill_Elevator/scripts.inc"
 	.include "data/maps/Route104_Prototype/scripts.inc"
 	.include "data/maps/Route104_PrototypePrettyPetalFlowerShop/scripts.inc"
-	.include "data/maps/Route109_SeashoreHouse/scripts.inc"
 	.include "data/maps/Route110_TrickHouseEntrance/scripts.inc"
 	.include "data/maps/Route110_TrickHouseEnd/scripts.inc"
 	.include "data/maps/Route110_TrickHouseCorridor/scripts.inc"
@@ -627,22 +618,17 @@ EventScript_AfterWhiteOutMomHeal::
 EventScript_ResetMrBriney::
 	goto_if_eq VAR_BRINEY_LOCATION, 1, EventScript_MoveMrBrineyToHouse
 	goto_if_eq VAR_BRINEY_LOCATION, 2, EventScript_MoveMrBrineyToDewford
-	goto_if_eq VAR_BRINEY_LOCATION, 3, EventScript_MoveMrBrineyToRoute109
 	end
 
 EventScript_MoveMrBrineyToHouse::
 	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	end
 
 EventScript_MoveMrBrineyToDewford::
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
@@ -658,8 +644,6 @@ EventScript_MoveMrBrineyToRoute109::
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
 	end
 
 EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
@@ -675,7 +659,6 @@ Common_EventScript_UpdateBrineyLocation::
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Common_EventScript_NopReturn
 	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, EventScript_SetBrineyLocation_House
 	goto_if_unset FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN, EventScript_SetBrineyLocation_Dewford
-	goto_if_unset FLAG_HIDE_ROUTE_109_MR_BRINEY, EventScript_SetBrineyLocation_Route109
 	return
 
 EventScript_SetBrineyLocation_House::
@@ -812,8 +795,7 @@ Movement_FerryDepart:
 EventScript_HideMrBriney::
 	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
 	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY
-	setflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
@@ -1160,8 +1142,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/TestMapA/scripts.inc"
 
-	.include "data/maps/Test_Route/scripts.inc"
-
 	.include "data/maps/TestLab/scripts.inc"
 
 	.include "data/maps/NewHope/scripts.inc"
@@ -1223,3 +1203,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/NewHope_Gym/scripts.inc"
 
 	.include "data/maps/NewHope_FishermansHouse/scripts.inc"
+
+	.include "data/maps/PortValor_Gym/scripts.inc"
+
+	.include "data/maps/PortValor_PokemonCenter/scripts.inc"

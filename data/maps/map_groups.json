@@ -28,7 +28,6 @@
     "gMapGroup_IndoorDynamic",
     "gMapGroup_SpecialArea",
     "gMapGroup_IndoorRoute104Prototype",
-    "gMapGroup_IndoorRoute109",
     "gMapGroup_IndoorRoute110",
     "gMapGroup_IndoorRoute113",
     "gMapGroup_IndoorRoute123",
@@ -36,7 +35,8 @@
     "gMapGroup_IndoorRoute124",
     "gMapGroup_IndoorNewHope",
     "gMapGroup_IndoorForestsEdge",
-    "gMapGroup_Prometheus_Tech_Indoor"
+    "gMapGroup_Prometheus_Tech_Indoor",
+    "gMapGroup_IndoorPortValor"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -56,14 +56,7 @@
     "VerdanturfTown",
     "PacifidlogTown",
     "Route101",
-    "Route102",
-    "Route103",
     "Route104",
-    "Route105",
-    "Route106",
-    "Route107",
-    "Route108",
-    "Route109",
     "Route110",
     "Route111",
     "Route112",
@@ -94,10 +87,8 @@
     "Underwater_Route127",
     "Underwater_Route128",
     "Underwater_Route129",
-    "Underwater_Route105",
     "Underwater_Route125",
     "TestMapA",
-    "Test_Route",
     "NewHope",
     "Route1",
     "EvergreenWoods",
@@ -607,9 +598,6 @@
     "Route104_Prototype",
     "Route104_PrototypePrettyPetalFlowerShop"
   ],
-  "gMapGroup_IndoorRoute109": [
-    "Route109_SeashoreHouse"
-  ],
   "gMapGroup_IndoorRoute110": [
     "Route110_TrickHouseEntrance",
     "Route110_TrickHouseEnd",
@@ -662,5 +650,9 @@
     "Prometheus_Tech_Lab",
     "Prometheus_Tech_Training_Facility",
     "PrometheusTech_Shop"
+  ],
+  "gMapGroup_IndoorPortValor": [
+    "PortValor_Gym",
+    "PortValor_PokemonCenter"
   ]
 }

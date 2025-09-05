@@ -76,8 +76,8 @@
 #define FLAG_UNUSED_0x03E    0x3E // Unused Flag
 #define FLAG_UNUSED_0x03F    0x3F // Unused Flag
 #define FLAG_UNUSED_0x040    0x40 // Unused Flag
-#define FLAG_UNUSED_0x041    0x41 // Unused Flag
-#define FLAG_UNUSED_0x042    0x42 // Unused Flag
+#define FLAG_MARIN    0x41 // Hide Marin
+#define FLAG_SOLARA    0x42 // Hide Solara
 #define FLAG_FREYA    0x43 // Hide Freya
 #define FLAG_RONAN    0x44 // Hide Ronan
 #define FLAG_GYM_RULES    0x45 // gym rules explained
@@ -85,7 +85,7 @@
 #define FLAG_LEAGUE_REG    0x47 // League Registration
 #define FLAG_MORWEN    0x48 // Hide Morwen
 #define FLAG_KAELEN    0x49 // Hide Kaelen
-#define FLAG_UNUSED_0x04A    0x4A // Unused Flag // currently used for Kyogre fight
+#define FLAG_EXP_SHARE_ON    0x4A // Unused Flag // currently used for Kyogre fight
 #define FLAG_VGC_PENDING_RESTORE     0x4B // Marks if party needs to be restored
 #define TALKED_TO_CINDER    0x4C // marks if player spoke to Cinder for the first time
 #define STARTER_BALL_THREE    0x4D // used for test lab pokeball 3
@@ -415,7 +415,6 @@
 #define FLAG_REGISTERED_MIGUEL               (TRAINER_REGISTERED_FLAGS_START + REMATCH_MIGUEL)
 #define FLAG_REGISTERED_TIMOTHY              (TRAINER_REGISTERED_FLAGS_START + REMATCH_TIMOTHY)
 #define FLAG_REGISTERED_SHELBY               (TRAINER_REGISTERED_FLAGS_START + REMATCH_SHELBY)
-#define FLAG_REGISTERED_CALVIN               (TRAINER_REGISTERED_FLAGS_START + REMATCH_CALVIN)
 #define FLAG_REGISTERED_ELLIOT               (TRAINER_REGISTERED_FLAGS_START + REMATCH_ELLIOT)
 #define FLAG_REGISTERED_ISAIAH               (TRAINER_REGISTERED_FLAGS_START + REMATCH_ISAIAH)
 #define FLAG_REGISTERED_MARIA                (TRAINER_REGISTERED_FLAGS_START + REMATCH_MARIA)
@@ -431,7 +430,6 @@
 #define FLAG_REGISTERED_MADELINE             (TRAINER_REGISTERED_FLAGS_START + REMATCH_MADELINE)
 #define FLAG_REGISTERED_JENNY                (TRAINER_REGISTERED_FLAGS_START + REMATCH_JENNY)
 #define FLAG_REGISTERED_DIANA                (TRAINER_REGISTERED_FLAGS_START + REMATCH_DIANA)
-#define FLAG_REGISTERED_AMY_AND_LIV          (TRAINER_REGISTERED_FLAGS_START + REMATCH_AMY_AND_LIV)
 #define FLAG_REGISTERED_ERNEST               (TRAINER_REGISTERED_FLAGS_START + REMATCH_ERNEST)
 #define FLAG_REGISTERED_CORY                 (TRAINER_REGISTERED_FLAGS_START + REMATCH_CORY)
 #define FLAG_REGISTERED_EDWIN                (TRAINER_REGISTERED_FLAGS_START + REMATCH_EDWIN)

@@ -155,6 +155,12 @@
       "map": "MAP_NEW_HOPE",
       "x": 39,
       "y": 32
+    },
+    {
+      "id": "HEAL_LOCATION_PORT_VALOR",
+      "map": "MAP_PORT_VALOR",
+      "x": 17,
+      "y": 20
     }
   ]
 }

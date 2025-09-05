@@ -132,7 +132,7 @@ script Prometheus_Tech_Training_Facility_EventScript_EV {
     callnative(EVEditor_Adjust)
 
     if (var(VAR_RESULT) == 0){
-        msgbox("Done! EVs updated and stats recalculated.", MSGBOX_DEFAULT)
+        msgbox("Done! EVs updated and stats\nrecalculated.", MSGBOX_DEFAULT)
         waitmessage
     }
     elif (var(VAR_RESULT) == 1){

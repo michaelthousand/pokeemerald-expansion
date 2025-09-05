@@ -81,7 +81,7 @@ script LEAGUE_HEADQUARTERS_Chairman{
     msgbox("Ah, a new challenger! Welcome to the\nLeague.", MSGBOX_DEFAULT)
     msgbox("It’s always an honor to greet aspiring\ntrainers at the start of their journey.", MSGBOX_DEFAULT)
 
-    msgbox("Here in the REGION, we use a unique\nsystem for the Gym Challenge.", MSGBOX_DEFAULT)
+    msgbox("Here in the Valora Region, we use a\nunique system for the Gym Challenge.", MSGBOX_DEFAULT)
     msgbox("Each Gym is led not by one Leader, but by\ntwo.", MSGBOX_DEFAULT)
     msgbox("To claim a badge, you must defeat both\nLeaders of that Gym.", MSGBOX_DEFAULT)
     msgbox("Only then will their badge be officially\nrecognized by the League.", MSGBOX_DEFAULT)

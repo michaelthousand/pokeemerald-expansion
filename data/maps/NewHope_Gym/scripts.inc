@@ -291,6 +291,9 @@ NewHope_Gym_EventScript_Freya::
 # 141 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt NewHope_Gym_EventScript_Freya_1
+# 203 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_gt NewHope_Gym_EventScript_Freya_3
 	return
 
 NewHope_Gym_EventScript_Freya_1:
@@ -312,10 +315,10 @@ NewHope_Gym_EventScript_Freya_1:
 	setvar VAR_VGC_PREVIEW_5, SPECIES_WATTREL
 # 153 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq NewHope_Gym_EventScript_Freya_4
+	goto_if_eq NewHope_Gym_EventScript_Freya_8
 # 156 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 29
-NewHope_Gym_EventScript_Freya_3:
+NewHope_Gym_EventScript_Freya_7:
 # 159 "data/maps/NewHope_Gym/scripts.pory"
 	special StartVgcSummaryPreviewFromVars
 # 160 "data/maps/NewHope_Gym/scripts.pory"
@@ -324,12 +327,12 @@ NewHope_Gym_EventScript_Freya_3:
 	waitstate
 # 162 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_RESULT, FALSE
-	goto_if_eq NewHope_Gym_EventScript_Freya_8
+	goto_if_eq NewHope_Gym_EventScript_Freya_15
 # 164 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_EventScript_Freya_Text_2, MSGBOX_YESNO
 # 165 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_RESULT, NO
-	goto_if_eq NewHope_Gym_EventScript_Freya_11
+	goto_if_eq NewHope_Gym_EventScript_Freya_21
 # 173 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_EventScript_Freya_Text_3, MSGBOX_DEFAULT
 # 175 "data/maps/NewHope_Gym/scripts.pory"
@@ -342,23 +345,99 @@ NewHope_Gym_EventScript_Freya_3:
 	waitstate
 # 183 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne NewHope_Gym_EventScript_Freya_14
+	goto_if_ne NewHope_Gym_EventScript_Freya_27
 # 192 "data/maps/NewHope_Gym/scripts.pory"
 	callnative Vgc_BuildPartyFrom4Indices
 # 195 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq NewHope_Gym_EventScript_Freya_16
+	goto_if_eq NewHope_Gym_EventScript_Freya_31
+# 199 "data/maps/NewHope_Gym/scripts.pory"
+	special WeightedSelector_On
+# 200 "data/maps/NewHope_Gym/scripts.pory"
+	trainerbattle_double TRAINER_FREYA_C2, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC
 	return
 
-NewHope_Gym_EventScript_Freya_4:
-# 154 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_LV, 21
-	goto NewHope_Gym_EventScript_Freya_3
+NewHope_Gym_EventScript_Freya_2:
+# 205 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_0, SPECIES_GOTHITELLE
+# 206 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_ESPEON
+# 207 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_2, SPECIES_KILOWATTREL
+# 208 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_3, SPECIES_SCRAFTY
+# 209 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_4, SPECIES_PAWNIARD
+# 210 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_EMPOLEON
+# 211 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_eq NewHope_Gym_EventScript_Freya_12
+NewHope_Gym_EventScript_Freya_11:
+# 215 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_0, MSGBOX_DEFAULT
+# 216 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_1, MSGBOX_DEFAULT
+# 218 "data/maps/NewHope_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 219 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 220 "data/maps/NewHope_Gym/scripts.pory"
+	waitstate
+# 222 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_2, MSGBOX_YESNO
+# 223 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq NewHope_Gym_EventScript_Freya_18
+# 231 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_3, MSGBOX_DEFAULT
+# 233 "data/maps/NewHope_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 234 "data/maps/NewHope_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 237 "data/maps/NewHope_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 238 "data/maps/NewHope_Gym/scripts.pory"
+	waitstate
+# 241 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne NewHope_Gym_EventScript_Freya_24
+# 250 "data/maps/NewHope_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 253 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_eq NewHope_Gym_EventScript_Freya_29
+	return
+
+NewHope_Gym_EventScript_Freya_3:
+# 203 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 5
+	goto_if_lt NewHope_Gym_EventScript_Freya_2
+	return
 
 NewHope_Gym_EventScript_Freya_8:
+# 154 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 21
+	goto NewHope_Gym_EventScript_Freya_7
+
+NewHope_Gym_EventScript_Freya_12:
+# 212 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 41
+	goto NewHope_Gym_EventScript_Freya_11
+
+NewHope_Gym_EventScript_Freya_15:
 	end
 
-NewHope_Gym_EventScript_Freya_11:
+NewHope_Gym_EventScript_Freya_18:
+# 225 "data/maps/NewHope_Gym/scripts.pory"
+	closemessage
+# 226 "data/maps/NewHope_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 227 "data/maps/NewHope_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+NewHope_Gym_EventScript_Freya_21:
 # 167 "data/maps/NewHope_Gym/scripts.pory"
 	closemessage
 # 168 "data/maps/NewHope_Gym/scripts.pory"
@@ -367,7 +446,16 @@ NewHope_Gym_EventScript_Freya_11:
 	waitmovement 0
 	end
 
-NewHope_Gym_EventScript_Freya_14:
+NewHope_Gym_EventScript_Freya_24:
+# 243 "data/maps/NewHope_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 244 "data/maps/NewHope_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 245 "data/maps/NewHope_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+NewHope_Gym_EventScript_Freya_27:
 # 185 "data/maps/NewHope_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
 # 186 "data/maps/NewHope_Gym/scripts.pory"
@@ -376,7 +464,14 @@ NewHope_Gym_EventScript_Freya_14:
 	waitmovement 0
 	end
 
-NewHope_Gym_EventScript_Freya_16:
+NewHope_Gym_EventScript_Freya_29:
+# 254 "data/maps/NewHope_Gym/scripts.pory"
+	special WeightedSelector_On
+# 255 "data/maps/NewHope_Gym/scripts.pory"
+	trainerbattle_double TRAINER_FREYA_B1, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC
+	return
+
+NewHope_Gym_EventScript_Freya_31:
 # 196 "data/maps/NewHope_Gym/scripts.pory"
 	special WeightedSelector_On
 # 197 "data/maps/NewHope_Gym/scripts.pory"
@@ -385,289 +480,384 @@ NewHope_Gym_EventScript_Freya_16:
 
 
 NewHope_Gym_After_Freya::
-# 205 "data/maps/NewHope_Gym/scripts.pory"
+# 263 "data/maps/NewHope_Gym/scripts.pory"
 	special WeightedSelector_Off
-# 206 "data/maps/NewHope_Gym/scripts.pory"
+# 264 "data/maps/NewHope_Gym/scripts.pory"
 	special HealPlayerParty
-# 207 "data/maps/NewHope_Gym/scripts.pory"
+# 265 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Freya_Text_0, MSGBOX_AUTOCLOSE
-# 209 "data/maps/NewHope_Gym/scripts.pory"
+# 267 "data/maps/NewHope_Gym/scripts.pory"
 	giveitem ITEM_WEAKNESS_POLICY, 1
-# 210 "data/maps/NewHope_Gym/scripts.pory"
+# 268 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Freya_Text_1, MSGBOX_AUTOCLOSE
-# 212 "data/maps/NewHope_Gym/scripts.pory"
+# 270 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox PostBattle_Freya, MSGBOX_AUTOCLOSE
-# 214 "data/maps/NewHope_Gym/scripts.pory"
+# 272 "data/maps/NewHope_Gym/scripts.pory"
 	special Vgc_RestorePartyBackup
-# 215 "data/maps/NewHope_Gym/scripts.pory"
+# 273 "data/maps/NewHope_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
-# 217 "data/maps/NewHope_Gym/scripts.pory"
+# 275 "data/maps/NewHope_Gym/scripts.pory"
 	applymovement LOCALID_FREYA, Freya_Exit
-# 218 "data/maps/NewHope_Gym/scripts.pory"
+# 276 "data/maps/NewHope_Gym/scripts.pory"
 	waitmovement 0
-# 219 "data/maps/NewHope_Gym/scripts.pory"
+# 277 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_FREYA
-# 220 "data/maps/NewHope_Gym/scripts.pory"
+# 278 "data/maps/NewHope_Gym/scripts.pory"
 	removeobject LOCALID_FREYA
-# 222 "data/maps/NewHope_Gym/scripts.pory"
+# 280 "data/maps/NewHope_Gym/scripts.pory"
 	delay 150
-# 223 "data/maps/NewHope_Gym/scripts.pory"
+# 281 "data/maps/NewHope_Gym/scripts.pory"
 	clearflag FLAG_RONAN
-# 224 "data/maps/NewHope_Gym/scripts.pory"
+# 282 "data/maps/NewHope_Gym/scripts.pory"
 	addobject 1
-# 225 "data/maps/NewHope_Gym/scripts.pory"
+# 283 "data/maps/NewHope_Gym/scripts.pory"
 	delay 60
-# 226 "data/maps/NewHope_Gym/scripts.pory"
+# 284 "data/maps/NewHope_Gym/scripts.pory"
 	applymovement 1, Ronan_Enter
-# 227 "data/maps/NewHope_Gym/scripts.pory"
+# 285 "data/maps/NewHope_Gym/scripts.pory"
 	waitmovement 0
-# 229 "data/maps/NewHope_Gym/scripts.pory"
+# 287 "data/maps/NewHope_Gym/scripts.pory"
 	goto NewHope_Gym_EventScript_Ronan
 	return
 
 
 NewHope_Gym_EventScript_Ronan::
-# 233 "data/maps/NewHope_Gym/scripts.pory"
+# 291 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt NewHope_Gym_EventScript_Ronan_1
+# 349 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_gt NewHope_Gym_EventScript_Ronan_3
 	return
 
 NewHope_Gym_EventScript_Ronan_1:
-# 234 "data/maps/NewHope_Gym/scripts.pory"
+# 292 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_0, SPECIES_GROWLITHE
-# 235 "data/maps/NewHope_Gym/scripts.pory"
+# 293 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_1, SPECIES_SANDILE
-# 236 "data/maps/NewHope_Gym/scripts.pory"
+# 294 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_2, SPECIES_STARAVIA
-# 237 "data/maps/NewHope_Gym/scripts.pory"
+# 295 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_3, SPECIES_SNUBBULL
-# 238 "data/maps/NewHope_Gym/scripts.pory"
+# 296 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_4, SPECIES_MIGHTYENA
-# 239 "data/maps/NewHope_Gym/scripts.pory"
+# 297 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_5, SPECIES_HOUNDOUR
-# 240 "data/maps/NewHope_Gym/scripts.pory"
+# 298 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq NewHope_Gym_EventScript_Ronan_4
-# 243 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_LV, 29
-NewHope_Gym_EventScript_Ronan_3:
-# 246 "data/maps/NewHope_Gym/scripts.pory"
-	msgbox NewHope_Gym_EventScript_Freya_Text_0, MSGBOX_DEFAULT
-# 247 "data/maps/NewHope_Gym/scripts.pory"
-	msgbox NewHope_Gym_EventScript_Freya_Text_1, MSGBOX_DEFAULT
-# 249 "data/maps/NewHope_Gym/scripts.pory"
-	special StartVgcSummaryPreviewFromVars
-# 250 "data/maps/NewHope_Gym/scripts.pory"
-	compare VAR_RESULT, TRUE
-# 251 "data/maps/NewHope_Gym/scripts.pory"
-	waitstate
-# 253 "data/maps/NewHope_Gym/scripts.pory"
-	msgbox NewHope_Gym_EventScript_Freya_Text_2, MSGBOX_YESNO
-# 254 "data/maps/NewHope_Gym/scripts.pory"
-	compare VAR_RESULT, NO
 	goto_if_eq NewHope_Gym_EventScript_Ronan_8
-# 262 "data/maps/NewHope_Gym/scripts.pory"
-	msgbox NewHope_Gym_EventScript_Freya_Text_3, MSGBOX_DEFAULT
-# 264 "data/maps/NewHope_Gym/scripts.pory"
-	special Vgc_SavePartyBackup
-# 265 "data/maps/NewHope_Gym/scripts.pory"
-	setflag FLAG_VGC_PENDING_RESTORE
-# 268 "data/maps/NewHope_Gym/scripts.pory"
-	special Vgc_ChoosePartyOfFour
-# 269 "data/maps/NewHope_Gym/scripts.pory"
+# 301 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 29
+NewHope_Gym_EventScript_Ronan_7:
+# 304 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_0, MSGBOX_DEFAULT
+# 305 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_1, MSGBOX_DEFAULT
+# 307 "data/maps/NewHope_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 308 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 309 "data/maps/NewHope_Gym/scripts.pory"
 	waitstate
-# 272 "data/maps/NewHope_Gym/scripts.pory"
+# 311 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_2, MSGBOX_YESNO
+# 312 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq NewHope_Gym_EventScript_Ronan_15
+# 320 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_3, MSGBOX_DEFAULT
+# 322 "data/maps/NewHope_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 323 "data/maps/NewHope_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 326 "data/maps/NewHope_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 327 "data/maps/NewHope_Gym/scripts.pory"
+	waitstate
+# 330 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne NewHope_Gym_EventScript_Ronan_11
-# 281 "data/maps/NewHope_Gym/scripts.pory"
+	goto_if_ne NewHope_Gym_EventScript_Ronan_21
+# 339 "data/maps/NewHope_Gym/scripts.pory"
 	callnative Vgc_BuildPartyFrom4Indices
-# 284 "data/maps/NewHope_Gym/scripts.pory"
+# 342 "data/maps/NewHope_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq NewHope_Gym_EventScript_Ronan_13
+	goto_if_eq NewHope_Gym_EventScript_Ronan_26
+# 346 "data/maps/NewHope_Gym/scripts.pory"
+	special WeightedSelector_On
+# 347 "data/maps/NewHope_Gym/scripts.pory"
+	trainerbattle_double TRAINER_RONAN_C2, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC
 	return
 
-NewHope_Gym_EventScript_Ronan_4:
-# 241 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_LV, 21
-	goto NewHope_Gym_EventScript_Ronan_3
+NewHope_Gym_EventScript_Ronan_2:
+# 351 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_0, SPECIES_GRANBULL
+# 352 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_ARCANINE
+# 353 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_2, SPECIES_STARAPTOR
+# 354 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_3, SPECIES_KROOKODILE
+# 355 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_4, SPECIES_MIGHTYENA
+# 356 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_INCINEROAR
+# 357 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_eq NewHope_Gym_EventScript_Ronan_12
+NewHope_Gym_EventScript_Ronan_11:
+# 361 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_0, MSGBOX_DEFAULT
+# 362 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_1, MSGBOX_DEFAULT
+# 364 "data/maps/NewHope_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 365 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 366 "data/maps/NewHope_Gym/scripts.pory"
+	waitstate
+# 368 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_2, MSGBOX_YESNO
+# 369 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq NewHope_Gym_EventScript_Ronan_18
+# 377 "data/maps/NewHope_Gym/scripts.pory"
+	msgbox NewHope_Gym_EventScript_Freya_Text_3, MSGBOX_DEFAULT
+# 379 "data/maps/NewHope_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 380 "data/maps/NewHope_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 383 "data/maps/NewHope_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 384 "data/maps/NewHope_Gym/scripts.pory"
+	waitstate
+# 387 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne NewHope_Gym_EventScript_Ronan_24
+# 396 "data/maps/NewHope_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 399 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_eq NewHope_Gym_EventScript_Ronan_29
+	return
+
+NewHope_Gym_EventScript_Ronan_3:
+# 349 "data/maps/NewHope_Gym/scripts.pory"
+	compare VAR_BADGES, 5
+	goto_if_lt NewHope_Gym_EventScript_Ronan_2
+	return
 
 NewHope_Gym_EventScript_Ronan_8:
-# 256 "data/maps/NewHope_Gym/scripts.pory"
+# 299 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 21
+	goto NewHope_Gym_EventScript_Ronan_7
+
+NewHope_Gym_EventScript_Ronan_12:
+# 358 "data/maps/NewHope_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 41
+	goto NewHope_Gym_EventScript_Ronan_11
+
+NewHope_Gym_EventScript_Ronan_15:
+# 314 "data/maps/NewHope_Gym/scripts.pory"
 	closemessage
-# 257 "data/maps/NewHope_Gym/scripts.pory"
+# 315 "data/maps/NewHope_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 258 "data/maps/NewHope_Gym/scripts.pory"
+# 316 "data/maps/NewHope_Gym/scripts.pory"
 	waitmovement 0
 	end
 
-NewHope_Gym_EventScript_Ronan_11:
-# 274 "data/maps/NewHope_Gym/scripts.pory"
+NewHope_Gym_EventScript_Ronan_18:
+# 371 "data/maps/NewHope_Gym/scripts.pory"
+	closemessage
+# 372 "data/maps/NewHope_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 373 "data/maps/NewHope_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+NewHope_Gym_EventScript_Ronan_21:
+# 332 "data/maps/NewHope_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
-# 275 "data/maps/NewHope_Gym/scripts.pory"
+# 333 "data/maps/NewHope_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 276 "data/maps/NewHope_Gym/scripts.pory"
+# 334 "data/maps/NewHope_Gym/scripts.pory"
 	waitmovement 0
 	end
 
-NewHope_Gym_EventScript_Ronan_13:
-# 285 "data/maps/NewHope_Gym/scripts.pory"
+NewHope_Gym_EventScript_Ronan_24:
+# 389 "data/maps/NewHope_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 390 "data/maps/NewHope_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 391 "data/maps/NewHope_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+NewHope_Gym_EventScript_Ronan_26:
+# 343 "data/maps/NewHope_Gym/scripts.pory"
 	special WeightedSelector_On
-# 286 "data/maps/NewHope_Gym/scripts.pory"
+# 344 "data/maps/NewHope_Gym/scripts.pory"
 	trainerbattle_double TRAINER_RONAN_C1, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC
+	return
+
+NewHope_Gym_EventScript_Ronan_29:
+# 400 "data/maps/NewHope_Gym/scripts.pory"
+	special WeightedSelector_On
+# 401 "data/maps/NewHope_Gym/scripts.pory"
+	trainerbattle_double TRAINER_RONAN_B1, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC
 	return
 
 
 NewHope_Gym_After_Ronan::
-# 295 "data/maps/NewHope_Gym/scripts.pory"
+# 410 "data/maps/NewHope_Gym/scripts.pory"
 	special WeightedSelector_Off
-# 296 "data/maps/NewHope_Gym/scripts.pory"
+# 411 "data/maps/NewHope_Gym/scripts.pory"
 	special HealPlayerParty
-# 297 "data/maps/NewHope_Gym/scripts.pory"
+# 412 "data/maps/NewHope_Gym/scripts.pory"
 	special Vgc_RestorePartyBackup
-# 298 "data/maps/NewHope_Gym/scripts.pory"
+# 413 "data/maps/NewHope_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
-# 300 "data/maps/NewHope_Gym/scripts.pory"
+# 415 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Freya_Text_0, MSGBOX_AUTOCLOSE
-# 302 "data/maps/NewHope_Gym/scripts.pory"
+# 417 "data/maps/NewHope_Gym/scripts.pory"
 	giveitem ITEM_TM_TORMENT, 1
-# 303 "data/maps/NewHope_Gym/scripts.pory"
+# 418 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_0, MSGBOX_AUTOCLOSE
-# 304 "data/maps/NewHope_Gym/scripts.pory"
+# 419 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_1, MSGBOX_AUTOCLOSE
-# 306 "data/maps/NewHope_Gym/scripts.pory"
+# 421 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox PostBattle_Ronan, MSGBOX_AUTOCLOSE
-# 308 "data/maps/NewHope_Gym/scripts.pory"
+# 423 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE01_GET, NewHope_Gym_After_Ronan_2
-# 314 "data/maps/NewHope_Gym/scripts.pory"
+# 429 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE02_GET, NewHope_Gym_After_Ronan_3
-# 320 "data/maps/NewHope_Gym/scripts.pory"
+# 435 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE03_GET, NewHope_Gym_After_Ronan_4
-# 326 "data/maps/NewHope_Gym/scripts.pory"
+# 441 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE04_GET, NewHope_Gym_After_Ronan_5
-# 332 "data/maps/NewHope_Gym/scripts.pory"
+# 447 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE05_GET, NewHope_Gym_After_Ronan_6
-# 338 "data/maps/NewHope_Gym/scripts.pory"
+# 453 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE06_GET, NewHope_Gym_After_Ronan_7
-# 344 "data/maps/NewHope_Gym/scripts.pory"
+# 459 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE07_GET, NewHope_Gym_After_Ronan_8
-# 350 "data/maps/NewHope_Gym/scripts.pory"
+# 465 "data/maps/NewHope_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE08_GET, NewHope_Gym_After_Ronan_9
 NewHope_Gym_After_Ronan_1:
-# 358 "data/maps/NewHope_Gym/scripts.pory"
+# 473 "data/maps/NewHope_Gym/scripts.pory"
 	applymovement 1, Ronan_Exit
-# 359 "data/maps/NewHope_Gym/scripts.pory"
+# 474 "data/maps/NewHope_Gym/scripts.pory"
 	waitmovement 0
-# 360 "data/maps/NewHope_Gym/scripts.pory"
+# 475 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_RONAN
-# 361 "data/maps/NewHope_Gym/scripts.pory"
+# 476 "data/maps/NewHope_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 362 "data/maps/NewHope_Gym/scripts.pory"
+# 477 "data/maps/NewHope_Gym/scripts.pory"
 	waitmovement 0
-# 363 "data/maps/NewHope_Gym/scripts.pory"
+# 478 "data/maps/NewHope_Gym/scripts.pory"
 	releaseall
 	end
 
 NewHope_Gym_After_Ronan_2:
-# 309 "data/maps/NewHope_Gym/scripts.pory"
+# 424 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 310 "data/maps/NewHope_Gym/scripts.pory"
+# 425 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 311 "data/maps/NewHope_Gym/scripts.pory"
+# 426 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 312 "data/maps/NewHope_Gym/scripts.pory"
+# 427 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 29
-# 313 "data/maps/NewHope_Gym/scripts.pory"
+# 428 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_3, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_3:
-# 315 "data/maps/NewHope_Gym/scripts.pory"
+# 430 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE02_GET
-# 316 "data/maps/NewHope_Gym/scripts.pory"
+# 431 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 317 "data/maps/NewHope_Gym/scripts.pory"
+# 432 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 318 "data/maps/NewHope_Gym/scripts.pory"
+# 433 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 41
-# 319 "data/maps/NewHope_Gym/scripts.pory"
+# 434 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_4, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_4:
-# 321 "data/maps/NewHope_Gym/scripts.pory"
+# 436 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE03_GET
-# 322 "data/maps/NewHope_Gym/scripts.pory"
+# 437 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 323 "data/maps/NewHope_Gym/scripts.pory"
+# 438 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 324 "data/maps/NewHope_Gym/scripts.pory"
+# 439 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 49
-# 325 "data/maps/NewHope_Gym/scripts.pory"
+# 440 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_5, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_5:
-# 327 "data/maps/NewHope_Gym/scripts.pory"
+# 442 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE04_GET
-# 328 "data/maps/NewHope_Gym/scripts.pory"
+# 443 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 329 "data/maps/NewHope_Gym/scripts.pory"
+# 444 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 330 "data/maps/NewHope_Gym/scripts.pory"
+# 445 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 56
-# 331 "data/maps/NewHope_Gym/scripts.pory"
+# 446 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_6, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_6:
-# 333 "data/maps/NewHope_Gym/scripts.pory"
+# 448 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE05_GET
-# 334 "data/maps/NewHope_Gym/scripts.pory"
+# 449 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 335 "data/maps/NewHope_Gym/scripts.pory"
+# 450 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 336 "data/maps/NewHope_Gym/scripts.pory"
+# 451 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 71
-# 337 "data/maps/NewHope_Gym/scripts.pory"
+# 452 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_7, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_7:
-# 339 "data/maps/NewHope_Gym/scripts.pory"
+# 454 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE06_GET
-# 340 "data/maps/NewHope_Gym/scripts.pory"
+# 455 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 341 "data/maps/NewHope_Gym/scripts.pory"
+# 456 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 342 "data/maps/NewHope_Gym/scripts.pory"
+# 457 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 78
-# 343 "data/maps/NewHope_Gym/scripts.pory"
+# 458 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_8, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_8:
-# 345 "data/maps/NewHope_Gym/scripts.pory"
+# 460 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE07_GET
-# 346 "data/maps/NewHope_Gym/scripts.pory"
+# 461 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 347 "data/maps/NewHope_Gym/scripts.pory"
+# 462 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 348 "data/maps/NewHope_Gym/scripts.pory"
+# 463 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 85
-# 349 "data/maps/NewHope_Gym/scripts.pory"
+# 464 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_9, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
 NewHope_Gym_After_Ronan_9:
-# 351 "data/maps/NewHope_Gym/scripts.pory"
+# 466 "data/maps/NewHope_Gym/scripts.pory"
 	setflag FLAG_BADGE08_GET
-# 352 "data/maps/NewHope_Gym/scripts.pory"
+# 467 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_2, MSGBOX_DEFAULT
-# 353 "data/maps/NewHope_Gym/scripts.pory"
+# 468 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 354 "data/maps/NewHope_Gym/scripts.pory"
+# 469 "data/maps/NewHope_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 90
-# 355 "data/maps/NewHope_Gym/scripts.pory"
+# 470 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_10, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
 
@@ -769,77 +959,77 @@ NewHope_Gym_EventScript_Freya_Text_3:
 	.string "Choose your pokemon.$"
 
 NewHope_Gym_After_Freya_Text_0:
-# 207 "data/maps/NewHope_Gym/scripts.pory"
+# 265 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Your Pokemon have been healed.$"
 
 NewHope_Gym_After_Freya_Text_1:
-# 210 "data/maps/NewHope_Gym/scripts.pory"
+# 268 "data/maps/NewHope_Gym/scripts.pory"
 	.string "That item will make sure you\nstay in the fight.$"
 
 NewHope_Gym_After_Ronan_Text_0:
-# 303 "data/maps/NewHope_Gym/scripts.pory"
+# 418 "data/maps/NewHope_Gym/scripts.pory"
 	.string "That TM contains Torment.$"
 
 NewHope_Gym_After_Ronan_Text_1:
-# 304 "data/maps/NewHope_Gym/scripts.pory"
+# 419 "data/maps/NewHope_Gym/scripts.pory"
 	.string "It will really throw your opponents\noff balance.$"
 
 NewHope_Gym_After_Ronan_Text_2:
-# 311 "data/maps/NewHope_Gym/scripts.pory"
+# 426 "data/maps/NewHope_Gym/scripts.pory"
 	.string "You got the Momentum Badge!$"
 
 NewHope_Gym_After_Ronan_Text_3:
-# 313 "data/maps/NewHope_Gym/scripts.pory"
+# 428 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 29.$"
 
 NewHope_Gym_After_Ronan_Text_4:
-# 319 "data/maps/NewHope_Gym/scripts.pory"
+# 434 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 41.$"
 
 NewHope_Gym_After_Ronan_Text_5:
-# 325 "data/maps/NewHope_Gym/scripts.pory"
+# 440 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 49.$"
 
 NewHope_Gym_After_Ronan_Text_6:
-# 331 "data/maps/NewHope_Gym/scripts.pory"
+# 446 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 56.$"
 
 NewHope_Gym_After_Ronan_Text_7:
-# 337 "data/maps/NewHope_Gym/scripts.pory"
+# 452 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 71.$"
 
 NewHope_Gym_After_Ronan_Text_8:
-# 343 "data/maps/NewHope_Gym/scripts.pory"
+# 458 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 78.$"
 
 NewHope_Gym_After_Ronan_Text_9:
-# 349 "data/maps/NewHope_Gym/scripts.pory"
+# 464 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 85.$"
 
 NewHope_Gym_After_Ronan_Text_10:
-# 355 "data/maps/NewHope_Gym/scripts.pory"
+# 470 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Level cap increased to 90.$"
 
 Freya_Intro::
-# 367 "data/maps/NewHope_Gym/scripts.pory"
+# 482 "data/maps/NewHope_Gym/scripts.pory"
 	.string "My Pokemon will outcompete yours!$"
 
 Freya_Outro::
-# 371 "data/maps/NewHope_Gym/scripts.pory"
+# 486 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Now I'm the one paralyzed.$"
 
 PostBattle_Freya::
-# 375 "data/maps/NewHope_Gym/scripts.pory"
+# 490 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Good luck against Ronan.$"
 
 Ronan_Intro::
-# 379 "data/maps/NewHope_Gym/scripts.pory"
+# 494 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Hope you brought some antidote.$"
 
 Ronan_Outro::
-# 383 "data/maps/NewHope_Gym/scripts.pory"
+# 498 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Ouch! I'm burned!$"
 
 PostBattle_Ronan::
-# 387 "data/maps/NewHope_Gym/scripts.pory"
+# 502 "data/maps/NewHope_Gym/scripts.pory"
 	.string "Good luck with the rest of the gyms.$"

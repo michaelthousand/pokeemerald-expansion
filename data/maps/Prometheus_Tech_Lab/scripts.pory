@@ -1,5 +1,35 @@
 mapscripts Prometheus_Tech_Lab_MapScripts { }
 
+script Prometheus_Tech_Lab_EventScript_ExpShare{
+    lockall
+    faceplayer
+
+    if (!(flag(FLAG_EXP_SHARE_ON))){
+        msgbox("I've developed a tool that let's all of\nyour Pokemon gain experience from battles.", MSGBOX_AUTOCLOSE)
+        msgbox("Would you like me to turn it on?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setflag(FLAG_EXP_SHARE_ON)
+            msgbox("There you go! Exp share active!", MSGBOX_AUTOCLOSE)
+            msgbox("Talk to me again if you want to\nturn it off.", MSGBOX_AUTOCLOSE)
+        } else {
+            msgbox("Maybe another time.", MSGBOX_AUTOCLOSE)
+            Return
+        }
+    } else {
+        msgbox("Want to turn exp share off?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            clearflag(FLAG_EXP_SHARE_ON)
+            msgbox("I guess you prefer grinding...", MSGBOX_AUTOCLOSE)
+        } else {
+            msgbox("Easy mode remains active.", MSGBOX_AUTOCLOSE)
+            Return
+        }
+    }
+
+    releaseall
+    end
+}
+
 script Prometheus_Tech_Lab_EventScript_Tera {
     lock
     faceplayer

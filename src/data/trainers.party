@@ -623,23 +623,6 @@ Spoink
 Level: 31
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_DAISY ===
-Name: DAISY
-Class: Aroma Lady
-Pic: Aroma Lady
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Shroomish
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Roselia
-Level: 14
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_ROSE_1 ===
 Name: ROSE
 Class: Aroma Lady
@@ -5503,19 +5486,6 @@ Zigzagoon @ Oran Berry
 Level: 16
 IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
 
-=== TRAINER_MIGUEL_1 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
-Gender: Male
-Music: Twins
-Double Battle: No
-AI: Check Bad Move
-
-Skitty @ Oran Berry
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_COLTON ===
 Name: COLTON
 Class: Pokefan
@@ -5572,58 +5542,6 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Charm
 - Feint Attack
 - Heal Bell
-
-=== TRAINER_MIGUEL_2 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
-Gender: Male
-Music: Twins
-Double Battle: No
-AI: Check Bad Move
-
-Skitty @ Oran Berry
-Level: 29
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MIGUEL_3 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
-Gender: Male
-Music: Twins
-Double Battle: No
-AI: Check Bad Move
-
-Skitty @ Oran Berry
-Level: 32
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MIGUEL_4 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
-Gender: Male
-Music: Twins
-Double Battle: No
-AI: Check Bad Move
-
-Delcatty @ Oran Berry
-Level: 35
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MIGUEL_5 ===
-Name: MIGUEL
-Class: Pokefan
-Pic: Pokefan M
-Gender: Male
-Music: Twins
-Double Battle: No
-AI: Check Bad Move
-
-Delcatty @ Sitrus Berry
-Level: 38
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_VICTORIA ===
 Name: VICTORIA
@@ -5940,36 +5858,6 @@ Hariyama
 Level: 39
 IVs: 29 HP / 29 Atk / 29 Def / 29 SpA / 29 SpD / 29 Spe
 
-=== TRAINER_CALVIN_1 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Poochyena
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_BILLY ===
-Name: BILLY
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Zigzagoon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Seedot
-Level: 7
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_JOSH ===
 Name: JOSH
 Class: Youngster
@@ -6117,78 +6005,6 @@ Aron
 Level: 19
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_CALVIN_2 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Mightyena
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_CALVIN_3 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Swellow
-Level: 28
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Mightyena
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_CALVIN_4 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Swellow
-Level: 31
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Linoone
-Level: 29
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Mightyena
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_CALVIN_5 ===
-Name: CALVIN
-Class: Youngster
-Pic: Youngster
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Swellow
-Level: 34
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Linoone
-Level: 32
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Mightyena
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
 === TRAINER_EDDIE ===
 Name: EDDIE
 Class: Youngster
@@ -6298,27 +6114,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Surf
 - Ice Beam
 - Toxic
-
-=== TRAINER_ANDREW ===
-Name: ANDREW
-Class: Fisherman
-Pic: Fisherman
-Gender: Male
-Music: Hiker
-Double Battle: No
-AI: Check Bad Move
-
-Magikarp
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Tentacool
-Level: 10
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Magikarp
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_IVAN ===
 Name: IVAN
@@ -8763,40 +8558,6 @@ Altaria
 Level: 40
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_AMY_AND_LIV_1 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Minun
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_AMY_AND_LIV_2 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Minun
-Level: 27
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
 === TRAINER_GINA_AND_MIA_1 ===
 Name: GINA & MIA
 Class: Twins
@@ -8831,23 +8592,6 @@ Dustox
 Level: 26
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_AMY_AND_LIV_3 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Minun
-Level: 9
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_GINA_AND_MIA_2 ===
 Name: GINA & MIA
 Class: Twins
@@ -8868,73 +8612,6 @@ Level: 10
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - Absorb
 - Leech Seed
-
-=== TRAINER_AMY_AND_LIV_4 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Minun
-Level: 30
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_AMY_AND_LIV_5 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Fake Tears
-- Helping Hand
-
-Minun
-Level: 33
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-- Spark
-- Charge
-- Charm
-- Helping Hand
-
-=== TRAINER_AMY_AND_LIV_6 ===
-Name: AMY & LIV
-Class: Twins
-Pic: Twins
-Gender: Male
-Music: Twins
-Double Battle: Yes
-AI: Check Bad Move
-
-Plusle
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Thunder
-- Charge
-- Fake Tears
-- Helping Hand
-
-Minun
-Level: 36
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-- Thunder
-- Charge
-- Charm
-- Helping Hand
 
 === TRAINER_HUEY ===
 Name: HUEY
@@ -9501,19 +9178,6 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Future Sight
 
-=== TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
-Name: BRENDAN
-Class: Rival
-Pic: Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_BRENDAN_ROUTE_110_MUDKIP ===
 Name: BRENDAN
 Class: Rival
@@ -9555,19 +9219,6 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Grovyle
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_BRENDAN_ROUTE_103_TREECKO ===
-Name: BRENDAN
-Class: Rival
-Pic: Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move / Try To Faint / Force Setup First Turn
-
-Torchic
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_BRENDAN_ROUTE_110_TREECKO ===
 Name: BRENDAN
@@ -9611,19 +9262,6 @@ Combusken
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
-Name: BRENDAN
-Class: Rival
-Pic: Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Mudkip
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_BRENDAN_ROUTE_110_TORCHIC ===
 Name: BRENDAN
 Class: Rival
@@ -9665,19 +9303,6 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Marshtomp
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_MAY_ROUTE_103_MUDKIP ===
-Name: MAY
-Class: Rival
-Pic: May
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Basic Trainer
-
-Treecko
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
@@ -9721,19 +9346,6 @@ Grovyle
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_TREECKO ===
-Name: MAY
-Class: Rival
-Pic: May
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Basic Trainer
-
-Torchic
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
 Class: Rival
@@ -9775,19 +9387,6 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Combusken
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_MAY_ROUTE_103_TORCHIC ===
-Name: MAY
-Class: Rival
-Pic: May
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Basic Trainer
-
-Mudkip
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY
@@ -11247,23 +10846,6 @@ IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 Wailmer
 Level: 39
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_RICK ===
-Name: RICK
-Class: Bug Catcher
-Pic: Bug Catcher
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Wurmple
-Level: 4
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_LYLE ===
 Name: LYLE
@@ -13057,32 +12639,6 @@ Magnemite
 Level: 15
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MARCOS ===
-Name: MARCOS
-Class: Guitarist
-Pic: Guitarist
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Voltorb
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_RHETT ===
-Name: RHETT
-Class: Black Belt
-Pic: Black Belt
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Makuhita
-Level: 15
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
 === TRAINER_TYRON ===
 Name: TYRON
 Class: Camper
@@ -13546,32 +13102,6 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 Camerupt
 Level: 44
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_PETE ===
-Name: PETE
-Class: Swimmer M
-Pic: Swimmer M
-Gender: Male
-Music: Swimmer
-Double Battle: No
-AI: Check Bad Move
-
-Tentacool
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ISABELLE ===
-Name: ISABELLE
-Class: Swimmer F
-Pic: Swimmer F
-Gender: Female
-Music: Swimmer
-Double Battle: No
-AI: Check Bad Move
-
-Marill
-Level: 15
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_ANDRES_1 ===
 Name: ANDRES
@@ -16706,126 +16236,6 @@ Swellow
 Level: 37
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_THALIA_2 ===
-Name: THALIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Wailmer
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-Horsea
-Level: 34
-IVs: 1 HP / 1 Atk / 1 Def / 1 SpA / 1 SpD / 1 Spe
-
-=== TRAINER_THALIA_3 ===
-Name: THALIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Luvdisc
-Level: 36
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Wailmer
-Level: 36
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-Seadra
-Level: 36
-IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
-
-=== TRAINER_THALIA_4 ===
-Name: THALIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Luvdisc
-Level: 38
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Wailmer
-Level: 38
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Seadra
-Level: 38
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_THALIA_5 ===
-Name: THALIA
-Class: Beauty
-Pic: Beauty
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Luvdisc
-Level: 40
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Wailord
-Level: 40
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Kingdra
-Level: 40
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_MARIELA ===
-Name: MARIELA
-Class: Psychic
-Pic: Psychic F
-Gender: Female
-Music: Intense
-Double Battle: No
-
-Chimecho
-Level: 41
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_ALVARO ===
-Name: ALVARO
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-
-Banette
-Level: 41
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-Kadabra
-Level: 41
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_EVERETT ===
-Name: EVERETT
-Class: Gentleman
-Pic: Gentleman
-Gender: Male
-Music: Rich
-Double Battle: No
-
-Wobbuffet
-Level: 41
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
 === TRAINER_RED ===
 Name: RED
 Class: Rival
@@ -16838,43 +16248,6 @@ Charmander
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_LEAF ===
-Name: LEAF
-Class: Rival
-Pic: Leaf
-Gender: Female
-Music: Male
-Double Battle: No
-
-Bulbasaur
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_BRENDAN_PLACEHOLDER ===
-Name: BRENDAN
-Class: RS Protag
-Pic: RS Brendan
-Gender: Male
-Music: Male
-Double Battle: No
-
-Groudon
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-=== TRAINER_MAY_PLACEHOLDER ===
-Name: MAY
-Class: RS Protag
-Pic: RS May
-Gender: Female
-Music: Male
-Double Battle: No
-
-Kyogre
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-
-
 === TRAINER_MORWEN_C1 ===
 Name: Morwen
 Class: Leader
@@ -16882,7 +16255,7 @@ Pic: Leader Flannery
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Status
 
 Noctowl @ Sitrus Berry
 Level: 21
@@ -16958,7 +16331,7 @@ Pic: Leader Flannery
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Status
 
 Noctowl @ Sitrus Berry
 Level: 29
@@ -16983,7 +16356,7 @@ Nature: Calm
 - Protect
 
 Weepinbell @ Focus Sash
-Level: 2
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 16 Atk / 240 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Chlorophyll
@@ -17027,6 +16400,83 @@ Tera Type: Fairy
 - Leech Seed
 - Protect
 
+=== TRAINER_MORWEN_B1 ===
+Name: Morwen
+Class: Leader
+Pic: Leader Flannery
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: VGC Status
+
+Victreebel @ Life Orb
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 248 Atk / 0 Def / 0 SpA / 12 SpD / 244 Spe
+Ability: Chlorophyll
+Nature: Adamant
+- Stun Spore
+- Sleep Powder
+- Leaf Storm
+- Knock Off
+
+Arbok @ Rocky Helmet
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 4 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Intimidate
+Nature: Hasty
+- Poison Jab
+- Glare
+- Snarl
+- Protect
+
+Quagsire @ Leftovers
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 16 Atk / 244 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Unaware
+Nature: Impish
+Tera Type: TYPE_STEEL
+- Aqua Tail
+- High Horsepower
+- Yawn
+- Protect
+
+Vileplume @ Black Sludge
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 252 SpD / 0 Spe
+Ability: Effect Spore
+Nature: Calm
+- Energy Ball
+- Sleep Powder
+- Leech Seed
+- Protect
+
+Breloom @ Focus Sash
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 244 Spe
+Ability: Effect Spore
+Nature: Jolly
+- Stun Spore
+- Seed Bomb
+- Brick Break
+- Protect
+
+Amoonguss @ Mental Herb
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 4 Spe
+Ability: Regenerator
+Nature: Modest
+Tera Type: TYPE_WATER
+- Pollen Puff
+- Sludge Bomb
+- Energy Ball
+- Protect
+
 === TRAINER_KAELEN_C1 ===
 Name: Kaelen
 Class: Leader
@@ -17034,7 +16484,7 @@ Pic: Leader Brawly
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Status
 
 Nidorina @ Black Sludge
 Level: 21
@@ -17111,10 +16561,10 @@ Pic: Leader Brawly
 Gender: Male
 Music: Male
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Status
 
 Nidorina @ Black Sludge
-Level: 21
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 28 Atk / 236 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Poison Point
@@ -17125,7 +16575,7 @@ Nature: Impish
 - Protect
 
 Zubat @ Rocky Helmet
-Level: 21
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 12 Atk / 0 Def / 0 SpA / 244 SpD / 8 Spe
 Ability: Inner Focus
@@ -17136,7 +16586,7 @@ Nature: Careful
 - Protect
 
 Grimer-Alola @ Sitrus Berry
-Level: 21
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 232 HP / 24 Atk / 0 Def / 0 SpA / 22 SpD / 0 Spe
 Ability: Power of Alchemy
@@ -17158,7 +16608,7 @@ Nature: Calm
 - Protect
 
 Koffing @ Eviolite
-Level: 2
+Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 0 Atk / 0 Def / 8 SpA / 240 SpD / 16 Spe
 Ability: Neutralizing Gas
@@ -17181,6 +16631,82 @@ Tera Type: Dark
 - Will-O-Wisp
 - Protect
 
+=== TRAINER_KAELEN_B1 ===
+Name: Kaelen
+Class: Leader
+Pic: Leader Brawly
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: VGC Status
+
+Nidorina @ Eviolite
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 12 Atk / 244 Def / 0 SpA / 0 SpD / 0 Spe
+Ability: Poison Point
+Nature: Impish
+- Poison Fang
+- Venom Drench
+- Toxic Spikes
+- Protect
+
+Houndoom @ Focus Sash
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+Ability: Unnerve
+Nature: Careful
+- Flame Charge
+- Crunch
+- Will-O-Wisp
+- Protect
+
+Muk-Alola @ Sitrus Berry
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 12 Atk / 0 Def / 0 SpA / 248 SpD / 0 Spe
+Ability: Power of Alchemy
+Nature: Careful
+- Poison Gas
+- Minimize
+- Knock Off
+- Protect
+
+Magcargo @ Charcoal
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 0 Atk / 0 Def / 16 SpA / 248 SpD / 0 Spe
+Ability: Flame Body
+Nature: Calm
+- Will-O-Wisp
+- Sunny Day
+- Heat Wave
+- Protect
+
+Weezing-Galar @ Black Sludge
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 0 Atk / 244 Def / 16 SpA / 0 SpD / 4 Spe
+Ability: Neutralizing Gas
+Nature: Bold
+Tera Type: TYPE_FAIRY
+- Sludge Bomb
+- Dazzling Gleam
+- Taunt
+- Protect
+
+Crobat @ Rocky Helmet
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Inner Focus
+Nature: Jolly
+- Brave Bird
+- Cross Poison
+- Venom Drench
+- Protect
+
 === TRAINER_FREYA_C1 ===
 Name: Freya
 Class: Leader
@@ -17188,7 +16714,7 @@ Pic: Salon Maiden Anabel
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Basic
 
 Wattrel @ Choice Scarf
 Level: 21
@@ -17265,7 +16791,7 @@ Pic: Salon Maiden Anabel
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Basic
 
 Wattrel @ Choice Scarf
 Level: 29
@@ -17335,15 +16861,91 @@ Tera Type: TYPE_WATER
 - Rain Dance
 - Protect
 
-
-=== TRAINER_RONAN_C1 ===
-Name: Juan
+=== TRAINER_FREYA_B1 ===
+Name: Freya
 Class: Leader
-Pic: Leader Juan
+Pic: Salon Maiden Anabel
 Gender: Female
 Music: Female
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Basic
+
+Espeon @ Life Orb
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ability: Magic Bounce
+Nature: Timid
+- Psychic
+- Shadow Ball
+- Calm Mind
+- Protect
+
+Kilowattrel @ Choice Scarf
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ability: Competitive
+Nature: Timid
+- Thunderbolt
+- Hurricane
+- Volt Switch
+- Swift
+
+Scrafty @ Assault Vest
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 244 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 12 Spe
+Ability: Intimidate
+Nature: Adamant
+Tera Type: TYPE_STEEL
+- Fake Out
+- Knock Off
+- Drain Punch
+- Throat Chop
+
+Gothitelle @ Leftovers
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 248 SpA / 12 SpD / 0 Spe
+Ability: Competitive
+Nature: Modest
+- Psychic
+- Dark Pulse
+- Calm Mind
+- Protect
+
+Pawniard @ Eviolite
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 252 Atk / 0 Def / 0 SpA / 8 SpD / 0 Spe
+Ability: Defiant
+Nature: Adamant
+- Sucker Punch
+- Iron Head
+- Swords Dance
+- Protect
+
+Empoleon @ Sitrus Berry
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 8 Atk / 0 Def / 0 SpA / 252 SpD / 0 Spe
+Ability: Competitive
+Nature: Sassy
+Tera Type: TYPE_GRASS
+- Flash Cannon
+- Ice Beam
+- Aqua Jet
+- Protect
+
+=== TRAINER_RONAN_C1 ===
+Name: Ronan
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: VGC Basic
 
 Houndour @ Charcoal
 Level: 21
@@ -17414,13 +17016,13 @@ Tera Type: TYPE_FIRE
 - Protect
 
 === TRAINER_RONAN_C2 ===
-Name: Juan
+Name: Ronan
 Class: Leader
 Pic: Leader Juan
-Gender: Female
-Music: Female
+Gender: Male
+Music: Male
 Double Battle: Yes
-AI: Smart Trainer
+AI: VGC Basic
 
 Houndour @ Charcoal
 Level: 29
@@ -17488,4 +17090,542 @@ Tera Type: TYPE_FIRE
 - Bite
 - Flamethrower
 - Agility
+- Protect
+
+=== TRAINER_RONAN_B1 ===
+Name: Ronan
+Class: Leader
+Pic: Leader Juan
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: VGC Basic
+
+Mightyena @ Rocky Helmet
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 16 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Intimidate
+Nature: Naive
+- Snarl
+- Crunch
+- Super Fang
+- Protect
+
+Granbull @ Leftovers
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 244 Atk / 0 Def / 0 SpA / 12 SpD / 0 Spe
+Ability: Intimidate
+Nature: Adamant
+- Play Rough
+- Stomping Tantrum
+- Last Resort
+- Protect
+
+Staraptor @ Choice Scarf
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 248 Atk / 0 Def / 0 SpA / 12 SpD / 248 Spe
+Ability: Intimidate
+Nature: Jolly
+Tera Type: TYPE_FLYING
+- Brave Bird
+- Close Combat
+- U-Turn
+- Hurricane
+
+Krookodile @ Assault Vest
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 12 SpA / 0 SpD / 248 Spe
+Ability: Intimidate
+Nature: Naive
+Tera Type: TYPE_STEEL
+- Snarl
+- Crunch
+- Stomping Tantrum
+- Close Combat
+
+Arcanine @ Charcoal
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 4 SpA / 0 SpD / 252 Spe
+Ability: Intimidate
+Nature: Hasty
+- Fire Blast
+- Close Combat
+- Snarl
+- Extreme Speed
+
+Incineroar @ Safety Goggles
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 244 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
+Ability: Intimidate
+- Fake Out
+- Parting Shot
+- Knock Off
+- Flare Blitz
+
+=== TRAINER_SOLARA_C1 ===
+Name: Solara
+Class: Leader
+Pic: Pike Queen Lucy
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: VGC Basic
+
+Fletchinder @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 220 HP / 36 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Flame Body
+Nature: Jolly
+- Flame Charge
+- Taunt
+- Sunny Day
+- Tailwind
+
+Growlithe @ Sitrus Berry
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 24 Atk / 0 Def / 0 SpA / 240 SpD / 8 Spe
+Ability: Intimidate
+Nature: Gentle
+- Flamethrower
+- Crunch
+- Helping Hand
+- Protect
+
+Gloom @ Eviolite
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 16 SpA / 0 SpD / 244 Spe
+Ability: Chlorophyll
+Nature: Timid
+- Leech Seed
+- Giga Drain
+- Sludge Bomb
+- Protect
+
+Ivysaur @ Black Sludge
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 248 SpA / 20 SpD / 240 Spe
+Ability: Chlorophyll
+Nature: Modest
+- Energy Ball
+- Sludge Bomb
+- Sunny Day
+- Protect
+
+Vulpix @ Heat Rock
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 4 Spe
+Ability: Drought
+Nature: Calm
+Tera Type: TYPE_STEEL
+- Burning Jealousy
+- Sunny Day
+- Confuse Ray
+- Protect
+
+Charmeleon @ Life Orb
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Solar Power
+Nature: Hasty
+Tera Type: TYPE_FIRE
+- Dragon Breath
+- Fire Fang
+- Metal Claw
+- Protect
+
+=== TRAINER_SOLARA_C2 ===
+Name: Solara
+Class: Leader
+Pic: Pike Queen Lucy
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: VGC Basic
+
+Fletchinder @ Focus Sash
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 220 HP / 36 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Flame Body
+Nature: Jolly
+- Flame Charge
+- Taunt
+- Sunny Day
+- Tailwind
+
+Growlithe @ Sitrus Berry
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 32 Atk / 0 Def / 0 SpA / 240 SpD / 0 Spe
+Ability: Intimidate
+Nature: Careful
+- Flamethrower
+- Crunch
+- Helping Hand
+- Protect
+
+Gloom @ Eviolite
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 16 SpA / 0 SpD / 244 Spe
+Ability: Chlorophyll
+Nature: Timid
+- Leech Seed
+- Giga Drain
+- Sludge Bomb
+- Protect
+
+Ivysaur @ Black Sludge
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 248 SpA / 20 SpD / 240 Spe
+Ability: Chlorophyll
+Nature: Modest
+- Energy Ball
+- Sludge Bomb
+- Sunny Day
+- Protect
+
+Vulpix @ Heat Rock
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 32 SpA / 240 SpD / 0 Spe
+Ability: Drought
+Nature: Calm
+Tera Type: TYPE_STEEL
+- Burning Jealousy
+- Sunny Day
+- Extrasensory
+- Protect
+
+Charmeleon @ Life Orb
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Solar Power
+Nature: Hasty
+Tera Type: TYPE_FIRE
+- Dragon Breath
+- Fire Fang
+- Metal Claw
+- Protect
+
+=== TRAINER_SOLARA_B1 ===
+Name: Solara
+Class: Leader
+Pic: Pike Queen Lucy
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: VGC Basic
+
+Talonflame @ Focus Sash
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 244 Atk / 0 Def / 0 SpA / 20 SpD / 244 Spe
+Ability: Flame Body
+Nature: Jolly
+- Flame Charge
+- Taunt
+- Sunny Day
+- U-Turn
+
+Arcanine @ Sitrus Berry
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 248 Atk / 0 Def / 0 SpA / 20 SpD / 240 Spe
+Ability: Intimidate
+Nature: Jolly
+- Temper Flare
+- Extreme Speed
+- Helping Hand
+- Protect
+
+Bellossom @ Rocky Helmet
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 8 SpA / 0 SpD / 248 Spe
+Ability: Chlorophyll
+Nature: Timid
+- Leech Seed
+- Giga Drain
+- Grassy Terrain
+- Protect
+
+Venusaur @ Life Orb
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ability: Chlorophyll
+Nature: Modest
+- Energy Ball
+- Sludge Bomb
+- Sunny Day
+- Protect
+
+Ninetales @ Heat Rock
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 244 SpA / 16 SpD / 248 Spe
+Ability: Drought
+Nature: Timid
+Tera Type: TYPE_STEEL
+- Flamethrower
+- Sunny Day
+- Extrasensory
+- Protect
+
+Charizard @ Choice Scarf
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 244 SpA / 16 SpD / 248 Spe
+Ability: Solar Power
+Nature: Timid
+Tera Type: TYPE_FIRE
+- Dragon Breath
+- Flamethrower
+- Air Slash
+- Solar Beam
+
+=== TRAINER_MARIN_C1 ===
+Name: Marin
+Class: Leader
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: VGC Basic
+
+Lombre @ Eviolite
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 32 Atk / 0 Def / 236 SpA / 0 SpD / 240 Spe
+Ability: Swift Swim
+Nature: Mild
+- Fake Out
+- Mega Drain
+- Chilling Water
+- Protect
+
+Buizel @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Swift Swim
+Nature: Adamant
+- Bite
+- Flip Turn
+- Rain Dance
+- Protect
+
+Shellos @ Sitrus Berry
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 12 SpA / 244 SpD / 0 Spe
+Ability: Storm Drain
+Nature: Calm
+- Water Pulse
+- Rain Dance
+- Yawn
+- Protect
+
+Goldeen @ Rocky Helmet
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 20 HP / 236 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Lightning Rod
+Nature: Adamant
+- Aqua Tail
+- Peck
+- Agility
+- Protect
+
+Horsea @ Life Orb
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 20 SpD / 236 Spe
+Ability: Swift Swim
+Nature: Modest
+Tera Type: TYPE_ICE
+- Dragon Breath
+- Aurora Beam
+- Chilling Water
+- Protect
+
+Wingull @ Damp Rock
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 8 SpA / 0 SpD / 248 Spe
+Ability: Rain Dish
+Nature: Timid
+Tera Type: TYPE_GROUND
+- Water Pulse
+- Rain Dance
+- Wide Guard
+- Protect
+
+=== TRAINER_MARIN_C2 ===
+Name: Marin
+Class: Leader
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: VGC Basic
+
+Lombre @ Eviolite
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 32 Atk / 0 Def / 236 SpA / 0 SpD / 240 Spe
+Ability: Swift Swim
+Nature: Mild
+- Fake Out
+- Mega Drain
+- Bubble Beam
+- Protect
+
+Buizel @ Focus Sash
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Swift Swim
+Nature: Adamant
+- Aqua Jet
+- Flip Turn
+- Rain Dance
+- Protect
+
+Shellos @ Sitrus Berry
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 12 SpA / 244 SpD / 0 Spe
+Ability: Storm Drain
+Nature: Calm
+- Water Pulse
+- Rain Dance
+- Yawn
+- Protect
+
+Goldeen @ Rocky Helmet
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 20 HP / 236 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Lightning Rod
+Nature: Adamant
+- Aqua Tail
+- Peck
+- Aqua Ring
+- Protect
+
+Horsea @ Life Orb
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 20 SpD / 236 Spe
+Ability: Swift Swim
+Nature: Modest
+Tera Type: TYPE_ICE
+- Flash Cannon
+- Aurora Beam
+- Bubble Beam
+- Protect
+
+Wingull @ Damp Rock
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 8 SpA / 0 SpD / 248 Spe
+Ability: Rain Dish
+Nature: Timid
+Tera Type: TYPE_GROUND
+- Water Pulse
+- Rain Dance
+- Wide Guard
+- Protect
+
+=== TRAINER_MARIN_B1 ===
+Name: Marin
+Class: Leader
+Pic: Leader Norman
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: VGC Basic
+
+Floatzel @ Focus Sash
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 248 Atk / 0 Def / 0 SpA / 16 SpD / 244 Spe
+Ability: Swift Swim
+Nature: Adamant
+- Liquidation
+- Flip Turn
+- Rain Dance
+- Protect
+
+Ludicolo @ Life Orb
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 12 Atk / 0 Def / 252 SpA / 0 SpD / 244 Spe
+Ability: Swift Swim
+Nature: Mild
+- Fake Out
+- Giga Drain
+- Hydro Pump
+- Protect
+
+Gastrodon @ Leftovers
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 12 SpA / 248 SpD / 0 Spe
+Ability: Storm Drain
+Nature: Calm
+- Muddy Water
+- Rain Dance
+- Earth Power
+- Protect
+
+Kingdra @ Choice Specs
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+Ability: Swift Swim
+Nature: Modest
+Tera Type: TYPE_ICE
+- Dragon Breath
+- Aurora Beam
+- Bubble Beam
+- Flash Cannon
+
+Pelipper @ Damp Rock
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe
+Ability: Drizzle
+Nature: Bold
+- Water Pulse
+- Rain Dance
+- Wide Guard
+- Protect
+
+Toxicroak @ Black Sludge
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Dry Skin
+Nature: Jolly
+Tera Type: TYPE_DARK
+- Sucker Punch
+- Poison Jab
+- Cross Chop
 - Protect

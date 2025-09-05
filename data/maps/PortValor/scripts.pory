@@ -1,0 +1,64 @@
+mapscripts PortValor_MapScripts {
+    MAP_SCRIPT_ON_RESUME: PortValor_OnResume
+}
+
+
+script PortValor_OnResume {
+    if (flag(FLAG_VGC_PENDING_RESTORE)) {
+        special(Vgc_RestorePartyBackup)
+        special(HealPlayerParty)
+        callnative(UpdateFollowingPokemon)
+        special(Vgc_RestorePartyBackup)
+        clearflag(FLAG_VGC_PENDING_RESTORE)
+    }  
+    end
+}
+
+
+script PortValor_EventScript_Villager1 {
+    lockall
+    faceplayer
+
+    msgbox("Would you like rare candies?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        giveitem(ITEM_RARE_CANDY, 50)
+    }
+
+    msgbox("Ability items?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        giveitem(ITEM_ABILITY_CAPSULE, 5)
+        giveitem(ITEM_ABILITY_PATCH, 5)
+    }
+
+    msgbox("Would you like a badge?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        if (var(VAR_BADGES) == 0) {
+            setvar(VAR_BADGES, 1)
+            msgbox("1st badge acquired", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_BADGES) == 1) {
+            setvar(VAR_BADGES, 2)
+            msgbox("2nd badge acquired", MSGBOX_AUTOCLOSE)
+        } else {
+            msgbox("Max badges reached", MSGBOX_AUTOCLOSE)
+        }
+
+        if (var(VAR_LEVEL_CAP) == 21){
+            setvar(VAR_LEVEL_CAP, 29)
+            msgbox("Level cap increased to 29", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 29) {
+            setvar(VAR_LEVEL_CAP, 41)
+            msgbox("Level cap increased to 41", MSGBOX_AUTOCLOSE)
+        }
+    }
+
+    msgbox("Reset badges?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == YES) {
+        setvar(VAR_BADGES, 0)
+        setvar(VAR_LEVEL_CAP, 21)
+        msgbox("Badges and lvl cap reset", MSGBOX_AUTOCLOSE)
+    }
+
+    releaseall
+    end
+}
+
