@@ -39,7 +39,7 @@ script PortValor_Gym_Trigger_One {
     if (!(flag(FLAG_GYM_RULES))) {
         lockall
         applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_One)
-        goto(PortValor_ym_EventScript_Rules)
+        goto(PortValor_Gym_EventScript_Rules)
     }
 }
 
@@ -143,11 +143,11 @@ script PortValor_Gym_EventScript_Rules {
 script PortValor_Gym_EventScript_Marin {
     if (var(VAR_BADGES) < 2) {
         // --- AI preview ---
-        setvar(VAR_VGC_PREVIEW_0, SPECIES_WINGULL)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_HORSEA)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_GOLDEEN)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_SHELLOS)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_BUIZEL)
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_LAPRAS)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_WINGULL)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_CUBONE)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GOLDEEN)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_BASCULIN)
         setvar(VAR_VGC_PREVIEW_5, SPECIES_LOMBRE)
         if (var(VAR_BADGES) == 0){
             setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
@@ -164,10 +164,11 @@ script PortValor_Gym_EventScript_Marin {
 
         msgbox("Are you ready to battle?", MSGBOX_YESNO)
         if (var(VAR_RESULT) == NO) {
-            // need to hide trainer again
             closemessage
             applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
             waitmovement(0)
+            setflag(FLAG_MARIN)
+            removeobject(LOCALID_MARIN)
             end
         }
 
@@ -205,10 +206,10 @@ script PortValor_Gym_EventScript_Marin {
         // --- AI preview ---
         setvar(VAR_VGC_PREVIEW_0, SPECIES_TOXICROAK)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_PELIPPER)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_KINGDRA)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_GASTRODON)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_LAPRAS)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAROWAK_ALOLA)
         setvar(VAR_VGC_PREVIEW_4, SPECIES_LUDICOLO)
-        setvar(VAR_VGC_PREVIEW_5, SPECIES_FLOATZEL)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_BASCULEGION)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
         }
@@ -293,11 +294,11 @@ script PortValor_Gym_After_Marin {
 script PortValor_Gym_EventScript_Solara {
     if (var(VAR_BADGES) < 2) {
         setvar(VAR_VGC_PREVIEW_0, SPECIES_CHARMELEON)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_VULPIX)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_CERULEDGE)
         setvar(VAR_VGC_PREVIEW_2, SPECIES_IVYSAUR)
         setvar(VAR_VGC_PREVIEW_3, SPECIES_GLOOM)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_GROWLITHE)
-        setvar(VAR_VGC_PREVIEW_5, SPECIES_FLETCHINDER)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_VULPIX)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_SHELLOS)
         if (var(VAR_BADGES) == 0){
             setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
         } else {
@@ -352,11 +353,11 @@ script PortValor_Gym_EventScript_Solara {
 
     } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
         setvar(VAR_VGC_PREVIEW_0, SPECIES_CHARIZARD)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_NINETALES)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_CERULEDGE)
         setvar(VAR_VGC_PREVIEW_2, SPECIES_VENUSAUR)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_BELLOSSOM)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_ARCANINE)
-        setvar(VAR_VGC_PREVIEW_5, SPECIES_TALONFLAME)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_INCINEROAR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_NINETALES)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_GASTRODON)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
         }

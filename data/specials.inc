@@ -15,6 +15,7 @@
 .set __special__, 0
 		.align 2
 gSpecials::
+	def_special Script_GiveCustomMonEVsIVs
 	def_special WeightedSelector_On
 	def_special WeightedSelector_Off
 	def_special Vgc_ChoosePartyOfFour

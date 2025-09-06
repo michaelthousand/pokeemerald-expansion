@@ -143,6 +143,20 @@
       "elevation": 0,
       "dest_map": "MAP_NEW_HOPE_FISHERMANS_HOUSE",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 33,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_EDGE",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 40,
+      "y": 19,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [

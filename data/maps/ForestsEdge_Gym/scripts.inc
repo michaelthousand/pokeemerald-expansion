@@ -1070,7 +1070,7 @@ ForestsEdgeGym_EventScript_Rules_Text_3:
 
 ForestsEdgeGym_EventScript_Rules_Text_4:
 # 151 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Battles are 4v4 double battles. You will\phave a chance to see your opponent's\nPokemon before selecting\pfrom your own party.$"
+	.string "Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_5:
 # 152 "data/maps/ForestsEdge_Gym/scripts.pory"
@@ -1078,7 +1078,7 @@ ForestsEdgeGym_EventScript_Rules_Text_5:
 
 ForestsEdgeGym_EventScript_Rules_Text_6:
 # 153 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "There's a computer to your left for thi\nvery purpose.$"
+	.string "There's a computer to your left for this\nvery purpose.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_7:
 # 154 "data/maps/ForestsEdge_Gym/scripts.pory"
@@ -1090,11 +1090,11 @@ ForestsEdgeGym_EventScript_Rules_Text_8:
 
 ForestsEdgeGym_EventScript_Rules_Text_9:
 # 156 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "And, as I mentioned, you will\nhave a chance to select different\pPokemon from your party for the second\nbattle.$"
+	.string "And, as I mentioned, you will have a\nchance to select different\pPokemon from your party for the second\nbattle.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_10:
 # 158 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Earning a badge will also award yo\npoints toward qualifying for the\pRegional Championship.$"
+	.string "Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.$"
 
 ForestsEdgeGym_EventScript_Rules_Text_11:
 # 159 "data/maps/ForestsEdge_Gym/scripts.pory"

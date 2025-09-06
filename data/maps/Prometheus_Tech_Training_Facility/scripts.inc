@@ -368,7 +368,7 @@ Prometheus_Tech_Training_Facility_EventScript_EV_Text_4:
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_5:
 # 135 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"
-	.string "Done! EVs updated and stats recalculated.$"
+	.string "Done! EVs updated and stats\nrecalculated.$"
 
 Prometheus_Tech_Training_Facility_EventScript_EV_Text_6:
 # 139 "data/maps/Prometheus_Tech_Training_Facility/scripts.pory"

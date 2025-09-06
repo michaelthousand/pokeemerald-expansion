@@ -21,20 +21,23 @@ mart PrometheusTech_StandardShopItems {
     ITEM_MACHO_BRACE
 }
 
-script PrometheusTech_Shop_EggEmployee{
+script PrometheusTech_Shop_EvoEmployee{
     lock
     faceplayer
-    message("Hello!\nI am the egg merchant.")
+    message("Hello!\nI sell evolution items.")
     message("How can I help you?")
     waitmessage
-    pokemart(PrometheusTech_EggShopItems)
+    pokemart(PrometheusTech_EvoShopItems)
     msgbox("Please come again.")
     release
     end
 }
 
-mart PrometheusTech_EggShopItems {
-    ITEM_LOADED_DICE
-    ITEM_MENTAL_HERB
-    ITEM_THROAT_SPRAY
+mart PrometheusTech_EvoShopItems {
+    ITEM_FIRE_STONE
+    ITEM_WATER_STONE
+    ITEM_THUNDER_STONE
+    ITEM_PRISM_SCALE
+    ITEM_ROTOM_CATALOG
+    ITEM_EVERSTONE
 }

@@ -62,3 +62,88 @@ script PortValor_EventScript_Villager1 {
     end
 }
 
+script PortValor_EventScript_Villager2 {
+    // 1ST
+    setvar(VAR_0x8000, SPECIES_THWACKEY)   // species
+    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8002, ITEM_EVIOLITE)      // held item
+    setvar(VAR_0x8003, 31)                 // IV for all 6 stats
+
+    setvar(VAR_0x8004, 252)                // HP
+    setvar(VAR_0x8005, 252)                  // Atk
+    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8007, 0)                  // SpA
+    setvar(VAR_0x8008, 0)                // SpD
+    setvar(VAR_0x8009, 4)                  // Spe
+
+    callnative(Script_GiveCustomMonEVsIVs)
+    
+    // 2ND
+    setvar(VAR_0x8000, SPECIES_RHYHORN)   // species
+    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8002, ITEM_ASSAULT_VEST)      // held item
+    setvar(VAR_0x8003, 31)                 // IV for all 6 stats
+
+    setvar(VAR_0x8004, 252)                // HP
+    setvar(VAR_0x8005, 252)                  // Atk
+    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8007, 0)                  // SpA
+    setvar(VAR_0x8008, 0)                // SpD
+    setvar(VAR_0x8009, 4)                  // Spe
+
+    callnative(Script_GiveCustomMonEVsIVs)
+
+    // 3RD
+    setvar(VAR_0x8000, SPECIES_QUAGSIRE)   // species
+    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8002, ITEM_LEFTOVERS)      // held item
+    setvar(VAR_0x8003, 31)                 // IV for all 6 stats
+
+    setvar(VAR_0x8004, 252)                // HP
+    setvar(VAR_0x8005, 244)                  // Atk
+    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8007, 0)                  // SpA
+    setvar(VAR_0x8008, 0)                // SpD
+    setvar(VAR_0x8009, 4)                  // Spe
+
+    callnative(Script_GiveCustomMonEVsIVs)
+
+    // 4TH
+    setvar(VAR_0x8000, SPECIES_LAPRAS)   // species
+    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8002, ITEM_MYSTIC_WATER)      // held item
+    setvar(VAR_0x8003, 31)                 // IV for all 6 stats
+
+    setvar(VAR_0x8004, 252)                // HP
+    setvar(VAR_0x8005, 0)                  // Atk
+    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8007, 252)                  // SpA
+    setvar(VAR_0x8008, 0)                // SpD
+    setvar(VAR_0x8009, 4)                  // Spe
+
+    callnative(Script_GiveCustomMonEVsIVs)
+  
+    // 5TH
+    setvar(VAR_0x8000, SPECIES_OGERPON)   // species
+    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8002, ITEM_WELLSPRING_MASK)      // held item
+    setvar(VAR_0x8003, 31)                 // IV for all 6 stats
+
+    setvar(VAR_0x8004, 252)                // HP
+    setvar(VAR_0x8005, 252)                  // Atk
+    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8007, 0)                  // SpA
+    setvar(VAR_0x8008, 0)                // SpD
+    setvar(VAR_0x8009, 4)                  // Spe
+
+    callnative(Script_GiveCustomMonEVsIVs)
+
+
+    msgbox("Pokemon added to party", MSGBOX_AUTOCLOSE)
+
+    giveitem(ITEM_ADAMANT_MINT, 10)
+    giveitem(ITEM_MODEST_MINT, 10)
+
+    end
+}
+

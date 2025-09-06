@@ -880,7 +880,7 @@ NewHope_Gym_EventScript_Rules_Text_3:
 
 NewHope_Gym_EventScript_Rules_Text_4:
 # 104 "data/maps/NewHope_Gym/scripts.pory"
-	.string "Battles are 4v4 double battles. You will\phave a chance to see your opponent's\nPokemon before selecting\pfrom your own party.$"
+	.string "Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.$"
 
 NewHope_Gym_EventScript_Rules_Text_5:
 # 105 "data/maps/NewHope_Gym/scripts.pory"
@@ -888,7 +888,7 @@ NewHope_Gym_EventScript_Rules_Text_5:
 
 NewHope_Gym_EventScript_Rules_Text_6:
 # 106 "data/maps/NewHope_Gym/scripts.pory"
-	.string "There's a computer to your left for thi\nvery purpose.$"
+	.string "There's a computer to your left for this\nvery purpose.$"
 
 NewHope_Gym_EventScript_Rules_Text_7:
 # 107 "data/maps/NewHope_Gym/scripts.pory"
@@ -900,11 +900,11 @@ NewHope_Gym_EventScript_Rules_Text_8:
 
 NewHope_Gym_EventScript_Rules_Text_9:
 # 109 "data/maps/NewHope_Gym/scripts.pory"
-	.string "And, as I mentioned, you will\nhave a chance to select different\pPokemon from your party for the second\nbattle.$"
+	.string "And, as I mentioned, you will have a\nchance to select different\pPokemon from your party for the second\nbattle.$"
 
 NewHope_Gym_EventScript_Rules_Text_10:
 # 111 "data/maps/NewHope_Gym/scripts.pory"
-	.string "Earning a badge will also award yo\npoints toward qualifying for the\pRegional Championship.$"
+	.string "Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.$"
 
 NewHope_Gym_EventScript_Rules_Text_11:
 # 112 "data/maps/NewHope_Gym/scripts.pory"
@@ -964,7 +964,7 @@ NewHope_Gym_After_Freya_Text_0:
 
 NewHope_Gym_After_Freya_Text_1:
 # 268 "data/maps/NewHope_Gym/scripts.pory"
-	.string "That item will make sure you\nstay in the fight.$"
+	.string "That item will make sure you stay in\nthe fight.$"
 
 NewHope_Gym_After_Ronan_Text_0:
 # 418 "data/maps/NewHope_Gym/scripts.pory"

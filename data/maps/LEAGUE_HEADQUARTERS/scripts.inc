@@ -312,7 +312,7 @@ LEAGUE_HEADQUARTERS_Chairman_Text_1:
 
 LEAGUE_HEADQUARTERS_Chairman_Text_2:
 # 84 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	.string "Here in the REGION, we use a unique\nsystem for the Gym Challenge.$"
+	.string "Here in the Valora Region, we use a\nunique system for the Gym Challenge.$"
 
 LEAGUE_HEADQUARTERS_Chairman_Text_3:
 # 85 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"

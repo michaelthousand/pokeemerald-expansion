@@ -17177,28 +17177,6 @@ Music: Female
 Double Battle: Yes
 AI: VGC Basic
 
-Fletchinder @ Focus Sash
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 220 HP / 36 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-Ability: Flame Body
-Nature: Jolly
-- Flame Charge
-- Taunt
-- Sunny Day
-- Tailwind
-
-Growlithe @ Sitrus Berry
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 236 HP / 24 Atk / 0 Def / 0 SpA / 240 SpD / 8 Spe
-Ability: Intimidate
-Nature: Gentle
-- Flamethrower
-- Crunch
-- Helping Hand
-- Protect
-
 Gloom @ Eviolite
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17208,6 +17186,40 @@ Nature: Timid
 - Leech Seed
 - Giga Drain
 - Sludge Bomb
+- Protect
+
+Shellos @ Sitrus Berry
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 12 SpA / 244 SpD / 0 Spe
+Ability: Storm Drain
+Nature: Calm
+- Water Pulse
+- Ancient Power
+- Yawn
+- Protect
+
+Ceruledge @ Focus Sash
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 12 SpA / 0 SpD / 244 Spe
+Ability: Weak Armor
+Nature: Hasty
+- Solar Blade
+- Shadow Claw
+- Flamethrower
+- Sunny Day
+
+Vulpix @ Heat Rock
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 240 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 4 Spe
+Ability: Drought
+Nature: Calm
+Tera Type: Steel
+- Burning Jealousy
+- Sunny Day
+- Confuse Ray
 - Protect
 
 Ivysaur @ Black Sludge
@@ -17221,25 +17233,13 @@ Nature: Modest
 - Sunny Day
 - Protect
 
-Vulpix @ Heat Rock
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 240 HP / 0 Atk / 0 Def / 12 SpA / 252 SpD / 4 Spe
-Ability: Drought
-Nature: Calm
-Tera Type: TYPE_STEEL
-- Burning Jealousy
-- Sunny Day
-- Confuse Ray
-- Protect
-
 Charmeleon @ Life Orb
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Solar Power
 Nature: Hasty
-Tera Type: TYPE_FIRE
+Tera Type: Fire
 - Dragon Breath
 - Fire Fang
 - Metal Claw
@@ -17254,28 +17254,6 @@ Music: Female
 Double Battle: Yes
 AI: VGC Basic
 
-Fletchinder @ Focus Sash
-Level: 29
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 220 HP / 36 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-Ability: Flame Body
-Nature: Jolly
-- Flame Charge
-- Taunt
-- Sunny Day
-- Tailwind
-
-Growlithe @ Sitrus Berry
-Level: 29
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 236 HP / 32 Atk / 0 Def / 0 SpA / 240 SpD / 0 Spe
-Ability: Intimidate
-Nature: Careful
-- Flamethrower
-- Crunch
-- Helping Hand
-- Protect
-
 Gloom @ Eviolite
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17285,6 +17263,40 @@ Nature: Timid
 - Leech Seed
 - Giga Drain
 - Sludge Bomb
+- Protect
+
+Shellos @ Sitrus Berry
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 12 SpA / 244 SpD / 0 Spe
+Ability: Storm Drain
+Nature: Calm
+- Water Pulse
+- Ancient Power
+- Yawn
+- Protect
+
+Ceruledge @ Focus Sash
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 12 SpA / 0 SpD / 244 Spe
+Ability: Weak Armor
+Nature: Hasty
+- Solar Blade
+- Shadow Claw
+- Flame Charge
+- Sunny Day
+
+Vulpix @ Heat Rock
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 236 HP / 0 Atk / 0 Def / 32 SpA / 240 SpD / 0 Spe
+Ability: Drought
+Nature: Calm
+Tera Type: Steel
+- Burning Jealousy
+- Sunny Day
+- Extrasensory
 - Protect
 
 Ivysaur @ Black Sludge
@@ -17298,25 +17310,13 @@ Nature: Modest
 - Sunny Day
 - Protect
 
-Vulpix @ Heat Rock
-Level: 29
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 236 HP / 0 Atk / 0 Def / 32 SpA / 240 SpD / 0 Spe
-Ability: Drought
-Nature: Calm
-Tera Type: TYPE_STEEL
-- Burning Jealousy
-- Sunny Day
-- Extrasensory
-- Protect
-
 Charmeleon @ Life Orb
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Solar Power
 Nature: Hasty
-Tera Type: TYPE_FIRE
+Tera Type: Fire
 - Dragon Breath
 - Fire Fang
 - Metal Claw
@@ -17331,37 +17331,49 @@ Music: Female
 Double Battle: Yes
 AI: VGC Basic
 
-Talonflame @ Focus Sash
+Ceruledge @ Focus Sash
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 244 Atk / 0 Def / 0 SpA / 20 SpD / 244 Spe
-Ability: Flame Body
-Nature: Jolly
+EVs: 0 HP / 252 Atk / 0 Def / 12 SpA / 0 SpD / 244 Spe
+Ability: Weak Armor
+Nature: Hasty
+- Solar Blade
+- Shadow Claw
 - Flame Charge
-- Taunt
 - Sunny Day
-- U-Turn
 
-Arcanine @ Sitrus Berry
+Gastrodon @ Leftovers
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 248 Atk / 0 Def / 0 SpA / 20 SpD / 240 Spe
-Ability: Intimidate
-Nature: Jolly
-- Temper Flare
-- Extreme Speed
-- Helping Hand
+EVs: 248 HP / 0 Atk / 0 Def / 12 SpA / 248 SpD / 0 Spe
+Ability: Storm Drain
+Nature: Calm
+- Muddy Water
+- Yawn
+- Earth Power
 - Protect
 
-Bellossom @ Rocky Helmet
+Incineroar @ Safety Goggles
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 8 SpA / 0 SpD / 248 Spe
-Ability: Chlorophyll
+EVs: 248 HP / 244 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
+Ability: Intimidate
+Nature: Adamant
+- Fake Out
+- Parting Shot
+- Temper Flare
+- Knock Off
+
+Ninetales @ Heat Rock
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 244 SpA / 16 SpD / 248 Spe
+Ability: Drought
 Nature: Timid
-- Leech Seed
-- Giga Drain
-- Grassy Terrain
+Tera Type: Steel
+- Flamethrower
+- Sunny Day
+- Extrasensory
 - Protect
 
 Venusaur @ Life Orb
@@ -17373,18 +17385,6 @@ Nature: Modest
 - Energy Ball
 - Sludge Bomb
 - Sunny Day
-- Protect
-
-Ninetales @ Heat Rock
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 0 Atk / 0 Def / 244 SpA / 16 SpD / 248 Spe
-Ability: Drought
-Nature: Timid
-Tera Type: TYPE_STEEL
-- Flamethrower
-- Sunny Day
-- Extrasensory
 - Protect
 
 Charizard @ Choice Scarf
@@ -17408,6 +17408,17 @@ Music: Male
 Double Battle: Yes
 AI: VGC Basic
 
+Goldeen @ Rocky Helmet
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 20 HP / 236 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Swift Swim
+Nature: Adamant
+- Aqua Tail
+- Peck
+- Rain Dance
+- Protect
+
 Lombre @ Eviolite
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17417,51 +17428,17 @@ Nature: Mild
 - Fake Out
 - Mega Drain
 - Chilling Water
-- Protect
-
-Buizel @ Focus Sash
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-Ability: Swift Swim
-Nature: Adamant
-- Bite
-- Flip Turn
 - Rain Dance
-- Protect
 
-Shellos @ Sitrus Berry
+Cubone @ Sitrus Berry
 Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 12 SpA / 244 SpD / 0 Spe
-Ability: Storm Drain
-Nature: Calm
-- Water Pulse
-- Rain Dance
-- Yawn
-- Protect
-
-Goldeen @ Rocky Helmet
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 20 HP / 236 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Lightning Rod
 Nature: Adamant
-- Aqua Tail
-- Peck
-- Agility
-- Protect
-
-Horsea @ Life Orb
-Level: 21
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 20 SpD / 236 Spe
-Ability: Swift Swim
-Nature: Modest
-Tera Type: TYPE_ICE
-- Dragon Breath
-- Aurora Beam
-- Chilling Water
+- Iron Head
+- Bulldoze
+- Belly Drum
 - Protect
 
 Wingull @ Damp Rock
@@ -17470,11 +17447,34 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 0 Def / 8 SpA / 0 SpD / 248 Spe
 Ability: Rain Dish
 Nature: Timid
-Tera Type: TYPE_GROUND
 - Water Pulse
 - Rain Dance
 - Wide Guard
 - Protect
+
+Basculin @ Mystic Water
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Adaptability
+Nature: Adamant
+- Aqua Jet
+- Liquidation
+- Flip Turn
+- Rain Dance
+
+Lapras @ Leftovers
+Level: 21
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 244 SpA / 12 SpD / 0 Spe
+Ability: Hydration
+Nature: Modest
+Tera Type: Steel
+- Freeze-Dry
+- Icy Wind
+- Sparkling Aria
+- Rain Dance
+
 
 === TRAINER_MARIN_C2 ===
 Name: Marin
@@ -17485,6 +17485,17 @@ Music: Male
 Double Battle: Yes
 AI: VGC Basic
 
+Goldeen @ Rocky Helmet
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 20 HP / 236 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Lightning Rod
+Nature: Adamant
+- Aqua Tail
+- Peck
+- Rain Dance
+- Protect
+
 Lombre @ Eviolite
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
@@ -17496,49 +17507,15 @@ Nature: Mild
 - Bubble Beam
 - Protect
 
-Buizel @ Focus Sash
+Cubone @ Sitrus Berry
 Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
-Ability: Swift Swim
-Nature: Adamant
-- Aqua Jet
-- Flip Turn
-- Rain Dance
-- Protect
-
-Shellos @ Sitrus Berry
-Level: 29
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 252 HP / 0 Atk / 0 Def / 12 SpA / 244 SpD / 0 Spe
-Ability: Storm Drain
-Nature: Calm
-- Water Pulse
-- Rain Dance
-- Yawn
-- Protect
-
-Goldeen @ Rocky Helmet
-Level: 29
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 20 HP / 236 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+EVs: 252 HP / 252 Atk / 4 Def / 0 SpA / 0 SpD / 0 Spe
 Ability: Lightning Rod
 Nature: Adamant
-- Aqua Tail
-- Peck
-- Aqua Ring
-- Protect
-
-Horsea @ Life Orb
-Level: 29
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 20 SpD / 236 Spe
-Ability: Swift Swim
-Nature: Modest
-Tera Type: TYPE_ICE
-- Flash Cannon
-- Aurora Beam
-- Bubble Beam
+- Iron Head
+- Bone Rush
+- Belly Drum
 - Protect
 
 Wingull @ Damp Rock
@@ -17553,6 +17530,29 @@ Tera Type: TYPE_GROUND
 - Wide Guard
 - Protect
 
+Basculin @ Mystic Water
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
+Ability: Adaptability
+Nature: Adamant
+- Aqua Jet
+- Liquidation
+- Flip Turn
+- Rain Dance
+
+Lapras @ Leftovers
+Level: 29
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 244 SpA / 12 SpD / 0 Spe
+Ability: Hydration
+Nature: Modest
+Tera Type: Steel
+- Freeze-Dry
+- Icy Wind
+- Sparkling Aria
+- Rain Dance
+
 === TRAINER_MARIN_B1 ===
 Name: Marin
 Class: Leader
@@ -17561,17 +17561,6 @@ Gender: Male
 Music: Male
 Double Battle: Yes
 AI: VGC Basic
-
-Floatzel @ Focus Sash
-Level: 41
-IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 248 Atk / 0 Def / 0 SpA / 16 SpD / 244 Spe
-Ability: Swift Swim
-Nature: Adamant
-- Liquidation
-- Flip Turn
-- Rain Dance
-- Protect
 
 Ludicolo @ Life Orb
 Level: 41
@@ -17584,28 +17573,29 @@ Nature: Mild
 - Hydro Pump
 - Protect
 
-Gastrodon @ Leftovers
+Marowak-Alola @ Leftovers
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 248 HP / 0 Atk / 0 Def / 12 SpA / 248 SpD / 0 Spe
-Ability: Storm Drain
-Nature: Calm
-- Muddy Water
+EVs: 248 HP / 252 Atk / 0 Def / 0 SpA / 8 SpD / 0 Spe
+Ability: Lightning Rod
+Nature: Adamant
+Tera Type: Ground
+- Shadow Bone
+- Bone Rush
+- Fire Punch
 - Rain Dance
-- Earth Power
-- Protect
 
-Kingdra @ Choice Specs
+Basculegion @ Mystic Water
 Level: 41
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
-EVs: 0 HP / 0 Atk / 0 Def / 252 SpA / 4 SpD / 252 Spe
+EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 8 SpD / 248 Spe
 Ability: Swift Swim
-Nature: Modest
-Tera Type: TYPE_ICE
-- Dragon Breath
-- Aurora Beam
-- Bubble Beam
-- Flash Cannon
+Nature: Adamant
+Tera Type: Ghost
+- Aqua Jet
+- Last Respects
+- Liquidation
+- Rain Dance
 
 Pelipper @ Damp Rock
 Level: 41
@@ -17613,7 +17603,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 0 Atk / 252 Def / 4 SpA / 0 SpD / 0 Spe
 Ability: Drizzle
 Nature: Bold
-- Water Pulse
+- Surf
 - Rain Dance
 - Wide Guard
 - Protect
@@ -17624,8 +17614,19 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 4 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Dry Skin
 Nature: Jolly
-Tera Type: TYPE_DARK
 - Sucker Punch
 - Poison Jab
 - Cross Chop
 - Protect
+
+Lapras @ Leftovers
+Level: 41
+IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
+EVs: 252 HP / 0 Atk / 0 Def / 252 SpA / 0 SpD / 4 Spe
+Ability: Hydration
+Nature: Modest
+Tera Type: Steel
+- Freeze-Dry
+- Alluring Voice
+- Sparkling Aria
+- Rain Dance

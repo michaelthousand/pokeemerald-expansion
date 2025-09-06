@@ -175,18 +175,33 @@ static bool8 RelearnerListContains(const u16 *moves, u8 count, u16 move)
 // Append egg moves for this mon's species into movesBuf, updating *pCount (bounded by maxCount).
 static void AppendEggMovesToRelearnerList(struct Pokemon *mon, u16 *movesBuf, u8 *pCount, u8 maxCount)
 {
-    u16 tmp[64]; // scratch; egg move pools are small
+    u16 tmp[64];
+    u8  n = 0;
+
+    // Use SPECIES (your fork doesn't expose SPECIES2)
     u16 species = GetMonData(mon, MON_DATA_SPECIES);
 
-    // Pull egg moves by species (alternatively: GetEggMoves(mon, tmp))
-    u8 n = GetEggMovesBySpecies(species, tmp);
-    u8 i;
+    // Walk backwards until we find a species that actually owns an egg-move learnset.
+    // This matches your Pokédex behavior when it shows egg moves for evolutions.
+    u16 probe = species;
+    while (probe != SPECIES_NONE)
+    {
+        if (gSpeciesInfo[probe].eggMoveLearnset != NULL)
+            break;
+        probe = GetSpeciesPreEvolution(probe);
+    }
 
-    for (i = 0; i < n; i++)
+    // If nothing in the chain has egg moves, bail out cleanly.
+    if (probe == SPECIES_NONE || gSpeciesInfo[probe].eggMoveLearnset == NULL)
+        return;
+
+    // Load egg moves from the species that owns them.
+    n = GetEggMovesBySpecies(probe, tmp);
+
+    for (u8 i = 0; i < n; i++)
     {
         u16 move = tmp[i];
 
-        // Skip if already known or already queued
         if (MonKnowsMove(mon, move))
             continue;
         if (RelearnerListContains(movesBuf, *pCount, move))
@@ -199,6 +214,7 @@ static void AppendEggMovesToRelearnerList(struct Pokemon *mon, u16 *movesBuf, u8
         (*pCount)++;
     }
 }
+
 
 static EWRAM_DATA struct
 {

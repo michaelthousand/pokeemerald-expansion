@@ -31,24 +31,30 @@ script ProfessorCinder_Triggers {
 }
 
 script ProfessorCinder_Intro {
-    if (!(flag(TALKED_TO_CINDER))){
-        lockall
-        faceplayer
+    lockall
+    faceplayer
+
+    if (!(flag(TALKED_TO_CINDER))) {
         setflag(TALKED_TO_CINDER)
         msgbox("Ah! There you are!\pYour mother said you'd be stopping by!", MSGBOX_DEFAULT)
-
         msgbox("How long has it been since I've seen you?\n10 years perhaps?", MSGBOX_DEFAULT)
         msgbox("My investigations of mythical Pokemon\nhave had me travelling for years.", MSGBOX_DEFAULT)
         msgbox("You look just like your father, you know.\nYes, the Champion himself! We were close\pfriends once, back before…\pWell, before our duties pulled us both\naway.", MSGBOX_DEFAULT)
         delay(60)
-        msgbox("Oh! Right, right, that’s why you’re here.\nI promised your father I’d help get you\pstarted on your journey.", MSGBOX_DEFAULT)
+    }
+
+    // If we don't have a starter yet, always bring the region picker back up.
+    if (!(flag(FLAG_SYS_POKEMON_GET))) {
         msgbox("Which region would you like your Pokemon\nto be from?", MSGBOX_DEFAULT)
         closemessage
         call(ProfessorCinder_EventScript_Professor)
+    } else {
+        msgbox("Good luck on your journey!", MSGBOX_DEFAULT)
+        closemessage
     }
-    faceplayer
-    msgbox("Good luck on your journey!", MSGBOX_DEFAULT)
-    closemessage
+
+    releaseall
+    end
 }
 
 script ProfessorCinder_Outro {
@@ -125,23 +131,19 @@ script Common_GiveStarter {
 
 // ---------- Professor: pick region (0..8) ----------
 script ProfessorCinder_EventScript_Professor {
-    if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
-        lock
-        faceplayer
+    if (!(flag(FLAG_SYS_POKEMON_GET))) {
         message("What region would you like to see?")
         closemessage
-        multichoice(20, 0, MULTI_STARTER_CHOICE, 0)  // indices 0..8
+        multichoice(20, 0, MULTI_STARTER_CHOICE, 0)  // 0..8
         call(StarterFade)
-
-        // Direct map (Kanto=0, Johto=1, Hoenn=2, ... Paldea=8)
-        copyvar(STARTER_REGION, VAR_RESULT)
-
+        copyvar(STARTER_REGION, VAR_RESULT)          // Kanto=0, ... Paldea=8
         msgbox("Choose your Pokemon wisely.", MSGBOX_AUTOCLOSE)
     } else {
         msgbox("Take care of your Pokemon.", MSGBOX_NPC)
     }
     end
 }
+
 
 // ---------- Poké Balls: set slot and dispatch ----------
 script ProfessorCinder_EventScript_PokeballOne {
