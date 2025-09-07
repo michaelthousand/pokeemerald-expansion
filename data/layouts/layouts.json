@@ -4650,6 +4650,36 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PortValor_PokemonCenter/border.bin",
       "blockdata_filepath": "data/layouts/PortValor_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_EVERGREEN_WOODS_SHACK",
+      "name": "EvergreenWoods_Shack_Layout",
+      "width": 12,
+      "height": 12,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/EvergreenWoods_Shack/border.bin",
+      "blockdata_filepath": "data/layouts/EvergreenWoods_Shack/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLD_STONE_CAVE3F",
+      "name": "OldStoneCave3F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/OldStoneCave3F/border.bin",
+      "blockdata_filepath": "data/layouts/OldStoneCave3F/map.bin"
+    },
+    {
+      "id": "LAYOUT_OLD_STONE_CAVE2F",
+      "name": "OldStoneCave2F_Layout",
+      "width": 50,
+      "height": 50,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/OldStoneCave2F/border.bin",
+      "blockdata_filepath": "data/layouts/OldStoneCave2F/map.bin"
     }
   ]
 }

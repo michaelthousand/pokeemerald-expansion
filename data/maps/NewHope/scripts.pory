@@ -9,8 +9,17 @@ script NewHope_OnResume {
         special(HealPlayerParty)
         callnative(UpdateFollowingPokemon)
         special(Vgc_RestorePartyBackup)
+        special(WeightedSelector_Off)
         clearflag(FLAG_VGC_PENDING_RESTORE)
     }  
+    end
+}
+
+script NewHope_EventScript_WarpPV{
+    lockall
+    faceplayer
+    msgbox("This is the warp to Port Valor", MSGBOX_AUTOCLOSE)
+    releaseall
     end
 }
 

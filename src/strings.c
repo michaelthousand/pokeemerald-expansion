@@ -1230,6 +1230,11 @@ const u8 gText_EV_Minus1[] = _("-1");
 const u8 gText_EV_SetTo0[] = _("Set to 0");
 const u8 gText_EV_SetTo252[] = _("Set to 252");
 
+const u8 gText_NewHope[] = _("New Hope");
+const u8 gText_ForestsEdge[] = _("Forest's Edge");
+const u8 gText_PortValor[] = _("Port Valor");
+const u8 gText_NoGym[] = _("Done");
+
 
 const u8 *const gTextTable_Players[] = {
     gText_F700Players,

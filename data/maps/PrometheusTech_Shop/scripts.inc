@@ -39,19 +39,19 @@ PrometheusTech_StandardShopItems:
 	.2byte ITEM_MACHO_BRACE
 	.2byte ITEM_NONE
 
-PrometheusTech_Shop_EggEmployee::
+PrometheusTech_Shop_EvoEmployee::
 # 25 "data/maps/PrometheusTech_Shop/scripts.pory"
 	lock
 # 26 "data/maps/PrometheusTech_Shop/scripts.pory"
 	faceplayer
 # 27 "data/maps/PrometheusTech_Shop/scripts.pory"
-	message PrometheusTech_Shop_EggEmployee_Text_0
+	message PrometheusTech_Shop_EvoEmployee_Text_0
 # 28 "data/maps/PrometheusTech_Shop/scripts.pory"
 	message PrometheusTech_Shop_RegularEmployee_Text_0
 # 29 "data/maps/PrometheusTech_Shop/scripts.pory"
 	waitmessage
 # 30 "data/maps/PrometheusTech_Shop/scripts.pory"
-	pokemart PrometheusTech_EggShopItems
+	pokemart PrometheusTech_EvoShopItems
 # 31 "data/maps/PrometheusTech_Shop/scripts.pory"
 	msgbox PrometheusTech_Shop_RegularEmployee_Text_1
 # 32 "data/maps/PrometheusTech_Shop/scripts.pory"
@@ -61,13 +61,19 @@ PrometheusTech_Shop_EggEmployee::
 
 	.align 2
 # 36 "data/maps/PrometheusTech_Shop/scripts.pory"
-PrometheusTech_EggShopItems:
+PrometheusTech_EvoShopItems:
 # 37 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.2byte ITEM_LOADED_DICE
+	.2byte ITEM_FIRE_STONE
 # 38 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.2byte ITEM_MENTAL_HERB
+	.2byte ITEM_WATER_STONE
 # 39 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.2byte ITEM_THROAT_SPRAY
+	.2byte ITEM_THUNDER_STONE
+# 40 "data/maps/PrometheusTech_Shop/scripts.pory"
+	.2byte ITEM_PRISM_SCALE
+# 41 "data/maps/PrometheusTech_Shop/scripts.pory"
+	.2byte ITEM_ROTOM_CATALOG
+# 42 "data/maps/PrometheusTech_Shop/scripts.pory"
+	.2byte ITEM_EVERSTONE
 	.2byte ITEM_NONE
 
 PrometheusTech_Shop_RegularEmployee_Text_0:
@@ -78,6 +84,6 @@ PrometheusTech_Shop_RegularEmployee_Text_1:
 # 9 "data/maps/PrometheusTech_Shop/scripts.pory"
 	.string "Please come again.$"
 
-PrometheusTech_Shop_EggEmployee_Text_0:
+PrometheusTech_Shop_EvoEmployee_Text_0:
 # 27 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.string "Hello!\nI am the egg merchant.$"
+	.string "Hello!\nI sell evolution items.$"

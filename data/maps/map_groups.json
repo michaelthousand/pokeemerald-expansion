@@ -36,7 +36,8 @@
     "gMapGroup_IndoorNewHope",
     "gMapGroup_IndoorForestsEdge",
     "gMapGroup_Prometheus_Tech_Indoor",
-    "gMapGroup_IndoorPortValor"
+    "gMapGroup_IndoorPortValor",
+    "gMapGroup_MiscIndoor"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -98,7 +99,9 @@
     "Prometheus_Tech_HQ",
     "Route3",
     "OldStoneCave1F",
-    "Route4"
+    "Route4",
+    "OldStoneCave2F",
+    "OldStoneCave3F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -654,5 +657,8 @@
   "gMapGroup_IndoorPortValor": [
     "PortValor_Gym",
     "PortValor_PokemonCenter"
+  ],
+  "gMapGroup_MiscIndoor": [
+    "EvergreenWoods_Shack"
   ]
 }

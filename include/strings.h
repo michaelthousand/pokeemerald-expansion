@@ -2508,4 +2508,9 @@ extern const u8 gText_EV_Minus1[];
 extern const u8 gText_EV_SetTo0[];
 extern const u8 gText_EV_SetTo252[];
 
+extern const u8 gText_NewHope[];
+extern const u8 gText_ForestsEdge[];
+extern const u8 gText_PortValor[];
+extern const u8 gText_NoGym[];
+
 #endif // GUARD_STRINGS_H

@@ -1,0 +1,95 @@
+mapscripts EvergreenWoods_Shack_MapScripts{}
+
+script EvergreenWoods_Shack_EventScript_GymGuru {
+    lockall
+    faceplayer
+
+    if (!(flag(FLAG_KUBFU))){
+        msgbox("Welcome, young trainer, to my humble home.", MSGBOX_AUTOCLOSE)
+        msgbox("I remember when I was starting out just\nlike you are.", MSGBOX_AUTOCLOSE)
+        msgbox("If you'd like, I can give you some advice\non the gyms in the region...and some\pitems too!", MSGBOX_AUTOCLOSE)
+        msgbox("I have no need for such things anymore.", MSGBOX_AUTOCLOSE)
+    } else {
+        msgbox("Welcome back, young one!", MSGBOX_AUTOCLOSE)
+    }
+
+    msgbox("Would you like some information?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) != YES) {
+        msgbox("Oh well. Maybe another time.", MSGBOX_AUTOCLOSE)
+        releaseall
+        end
+    }
+
+InfoLoop:
+    multichoice(20, 0, MULTI_GYM_GURU, 0)  // options 0..3
+    // VAR_RESULT now holds the choice
+
+    if (var(VAR_RESULT) == 0) {
+        msgbox("Ah, you want information on New Hope.", MSGBOX_AUTOCLOSE)
+        msgbox("For one leader you'll want to avoid\nPokemon that lower stats.", MSGBOX_AUTOCLOSE)
+        msgbox("However, it wouldn't be a bad idea to have\none or two for the other leader.", MSGBOX_AUTOCLOSE)
+        if (!flag(FLAG_GURU_NEWHOPE)){
+            msgbox("Here are some items for when you make it\nthere.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_CHOICE_BAND, 1)
+            msgbox("That should help you overcome stat\ndrops.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_WHITE_HERB, 1)
+            msgbox("And that will prevent at least one stat\ndrop entirely.", MSGBOX_AUTOCLOSE)
+            msgbox("Those should give you a leg up!", MSGBOX_AUTOCLOSE)
+            setflag(FLAG_GURU_NEWHOPE)
+        }
+        goto(InfoLoop)
+
+    } elif (var(VAR_RESULT) == 1) {
+        msgbox("Oh? You want to know about Forest's\nEdge?", MSGBOX_AUTOCLOSE)
+        msgbox("That gym targets your creatures by\ngiving them status conditions.", MSGBOX_AUTOCLOSE)
+        msgbox("I would try and find some equipment to\nprotect you before going there.", MSGBOX_AUTOCLOSE)
+
+        if (!flag(FLAG_GURU_FORESTSEDGE)){
+            msgbox("Here are some items for when you make it\nthere.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_TM_FACADE, 1)
+            msgbox("That TM is Facade. It doubles in damage\nif your Pokemon has a status\ncondition.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_TM_SAFEGUARD, 1)
+            msgbox("And that TM protects you from status\nconditions entirely!", MSGBOX_AUTOCLOSE)
+            msgbox("Those should give you a leg up!", MSGBOX_AUTOCLOSE)
+            setflag(FLAG_GURU_FORESTSEDGE)
+        }
+        goto(InfoLoop)
+
+    } elif (var(VAR_RESULT) == 2) {
+        msgbox("The jewel by the sea - Port Valor! I would\nlove to talk about their gym.", MSGBOX_AUTOCLOSE)
+        msgbox("That gym is all about controlling the\nweather.", MSGBOX_AUTOCLOSE)
+        msgbox("You have to prepare for both the sun and\nrain.", MSGBOX_AUTOCLOSE)
+        msgbox("But be warned - they have some tricks up\ntheir sleeves to prevent obvious\ncounters.", MSGBOX_AUTOCLOSE)
+
+        if (!(flag(FLAG_GURU_PORTVALOR))){
+            msgbox("Here are some items for when you make it\nthere.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_TM_THUNDERBOLT, 1)
+            msgbox("That TM is Thunderbolt which will help\nin the rain.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_MYSTIC_WATER, 1)
+            msgbox("And that will boost your water moves to\nhelp in the sun.", MSGBOX_AUTOCLOSE)
+            msgbox("Those should give you a leg up!", MSGBOX_AUTOCLOSE)
+            setflag(FLAG_GURU_PORTVALOR)
+        }
+        goto(InfoLoop)
+
+    } else { // VAR_RESULT == 3
+        msgbox("Oh well. Maybe another time.", MSGBOX_AUTOCLOSE)
+    }
+
+    if (!(flag(FLAG_KUBFU))){
+        msgbox("One last thing before you go.\pI have this Pokemon I never got around\nto training. Maybe you can do it.", MSGBOX_AUTOCLOSE)
+        givemon(SPECIES_KUBFU, 5, ITEM_NONE)
+        playfanfare(MUS_OBTAIN_SYMBOL)
+        msgbox("Obtained Kubfu!", MSGBOX_AUTOCLOSE)
+        waitfanfare
+        msgbox("He needs some strange item to evolve and\nI just never bothered to find out what.", MSGBOX_AUTOCLOSE)
+        msgbox("I hope he will serve you well.", MSGBOX_AUTOCLOSE)
+
+        setflag(FLAG_KUBFU)
+    }
+
+    msgbox("Take care and feel free to return if you\never need more advice!", MSGBOX_AUTOCLOSE)
+
+    releaseall
+    end
+}

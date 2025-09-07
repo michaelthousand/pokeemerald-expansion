@@ -11523,6 +11523,229 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_OLD_STONE_CAVE2F",
+          "base_label": "gOldStoneCave2F",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 40,
+                "max_level": 45,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 40,
+                "max_level": 45,
+                "species": "SPECIES_EXCADRILL"
+              },
+              {
+                "min_level": 41,
+                "max_level": 47,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 39,
+                "max_level": 46,
+                "species": "SPECIES_KLEAVOR"
+              },
+              {
+                "min_level": 43,
+                "max_level": 48,
+                "species": "SPECIES_GOLEM_ALOLA"
+              },
+              {
+                "min_level": 47,
+                "max_level": 52,
+                "species": "SPECIES_CROBAT"
+              },
+              {
+                "min_level": 51,
+                "max_level": 57,
+                "species": "SPECIES_GARCHOMP"
+              },
+              {
+                "min_level": 47,
+                "max_level": 52,
+                "species": "SPECIES_EXCADRILL"
+              },
+              {
+                "min_level": 59,
+                "max_level": 66,
+                "species": "SPECIES_GARCHOMP"
+              },
+              {
+                "min_level": 49,
+                "max_level": 54,
+                "species": "SPECIES_KLEAVOR"
+              },
+              {
+                "min_level": 50,
+                "max_level": 55,
+                "species": "SPECIES_GOLEM"
+              },
+              {
+                "min_level": 51,
+                "max_level": 54,
+                "species": "SPECIES_GOLEM_ALOLA"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_OLD_STONE_CAVE3F",
+          "base_label": "gOldStoneCave3F",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_NONE"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_TADBULB"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SHELLOS"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MARILL"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_SLOWPOKE"
+              },
+              {
+                "min_level": 5,
+                "max_level": 5,
+                "species": "SPECIES_MAREANIE"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 12,
+                "max_level": 16,
+                "species": "SPECIES_MAGIKARP"
+              },
+              {
+                "min_level": 11,
+                "max_level": 16,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 17,
+                "max_level": 21,
+                "species": "SPECIES_FEEBAS"
+              },
+              {
+                "min_level": 18,
+                "max_level": 24,
+                "species": "SPECIES_ARROKUDA"
+              },
+              {
+                "min_level": 16,
+                "max_level": 22,
+                "species": "SPECIES_BASCULIN_WHITE_STRIPED"
+              },
+              {
+                "min_level": 28,
+                "max_level": 31,
+                "species": "SPECIES_BARRASKEWDA"
+              },
+              {
+                "min_level": 21,
+                "max_level": 25,
+                "species": "SPECIES_BASCULEGION_F"
+              },
+              {
+                "min_level": 24,
+                "max_level": 29,
+                "species": "SPECIES_BASCULEGION_M"
+              },
+              {
+                "min_level": 29,
+                "max_level": 34,
+                "species": "SPECIES_MILOTIC"
+              },
+              {
+                "min_level": 18,
+                "max_level": 29,
+                "species": "SPECIES_TATSUGIRI"
+              }
+            ]
+          }
         }
       ]
     },

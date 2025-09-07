@@ -12506,7 +12506,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Kyogre
         )
         .isLegendary = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sKyogreLevelUpLearnset,
         .teachableLearnset = sKyogreTeachableLearnset,
@@ -12577,7 +12577,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #endif //OW_BATTLE_ONLY_FORMS
         .isLegendary = TRUE,
         .isPrimalReversion = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sKyogreLevelUpLearnset,
         .teachableLearnset = sKyogreTeachableLearnset,
@@ -12660,7 +12660,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Groudon
         )
         .isLegendary = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sGroudonLevelUpLearnset,
         .teachableLearnset = sGroudonTeachableLearnset,
@@ -12732,7 +12732,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #endif //OW_BATTLE_ONLY_FORMS
         .isLegendary = TRUE,
         .isPrimalReversion = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sGroudonLevelUpLearnset,
         .teachableLearnset = sGroudonTeachableLearnset,
@@ -12818,7 +12818,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Rayquaza
         )
         .isLegendary = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sRayquazaLevelUpLearnset,
         .teachableLearnset = sRayquazaTeachableLearnset,
@@ -12892,7 +12892,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
     #endif //OW_BATTLE_ONLY_FORMS
         .isLegendary = TRUE,
         .isMegaEvolution = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sRayquazaLevelUpLearnset,
         .teachableLearnset = sRayquazaTeachableLearnset,
@@ -12983,7 +12983,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_Jirachi
         )
         .isMythical = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sJirachiLevelUpLearnset,
         .teachableLearnset = sJirachiTeachableLearnset,
@@ -13063,7 +13063,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_DeoxysNormal
         )
         .isMythical = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sDeoxysNormalLevelUpLearnset,
         .teachableLearnset = sDeoxysNormalTeachableLearnset,
@@ -13133,7 +13133,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_DeoxysAttack
         )
         .isMythical = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sDeoxysAttackLevelUpLearnset,
         .teachableLearnset = sDeoxysAttackTeachableLearnset,
@@ -13204,7 +13204,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_DeoxysDefense
         )
         .isMythical = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sDeoxysDefenseLevelUpLearnset,
         .teachableLearnset = sDeoxysDefenseTeachableLearnset,
@@ -13275,7 +13275,7 @@ const struct SpeciesInfo gSpeciesInfoGen3[] =
             gShinyOverworldPalette_DeoxysSpeed
         )
         .isMythical = TRUE,
-        .isFrontierBanned = TRUE,
+        .isFrontierBanned = FALSE,
         .perfectIVCount = LEGENDARY_PERFECT_IV_COUNT,
         .levelUpLearnset = sDeoxysSpeedLevelUpLearnset,
         .teachableLearnset = sDeoxysSpeedTeachableLearnset,

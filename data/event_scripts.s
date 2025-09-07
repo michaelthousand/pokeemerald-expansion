@@ -1207,3 +1207,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PortValor_Gym/scripts.inc"
 
 	.include "data/maps/PortValor_PokemonCenter/scripts.inc"
+
+	.include "data/maps/EvergreenWoods_Shack/scripts.inc"
+
+	.include "data/maps/OldStoneCave2F/scripts.inc"
+
+	.include "data/maps/OldStoneCave3F/scripts.inc"

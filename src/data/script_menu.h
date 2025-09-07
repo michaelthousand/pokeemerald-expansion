@@ -906,6 +906,14 @@ static const struct MenuAction MultichoiceList_EV_Modes[] =
     {gText_EV_SetTo252},
 };
 
+static const struct MenuAction MultichoiceList_Gym_Guru[] =
+{
+    {gText_NewHope},
+    {gText_ForestsEdge},
+    {gText_PortValor},
+    {gText_NoGym},
+};
+
 
 
 struct MultichoiceListStruct
@@ -1043,6 +1051,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_HT_STATS]                   = MULTICHOICE(MultichoiceList_HT_Stats),
     [MULTI_EV_STATS]                   = MULTICHOICE(MultichoiceList_EV_Stats),
     [MULTI_EV_MODES]                   = MULTICHOICE(MultichoiceList_EV_Modes),
+    [MULTI_GYM_GURU]                   = MULTICHOICE(MultichoiceList_Gym_Guru),
 };
 
 const u8 *const gStdStrings[] =

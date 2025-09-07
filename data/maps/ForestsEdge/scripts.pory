@@ -9,6 +9,7 @@ script ForestsEdge_OnResume {
         special(HealPlayerParty)
         callnative(UpdateFollowingPokemon)
         special(Vgc_RestorePartyBackup)
+        special(WeightedSelector_Off)
         clearflag(FLAG_VGC_PENDING_RESTORE)
     }  
     end

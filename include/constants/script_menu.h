@@ -135,6 +135,7 @@
 #define MULTI_HT_STATS                     124
 #define MULTI_EV_STATS                     125
 #define MULTI_EV_MODES                     126
+#define MULTI_GYM_GURU                     127
 
 
 // Lilycove SS Tidal Multichoice Selections

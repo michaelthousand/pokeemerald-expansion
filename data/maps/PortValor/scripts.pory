@@ -9,12 +9,31 @@ script PortValor_OnResume {
         special(HealPlayerParty)
         callnative(UpdateFollowingPokemon)
         special(Vgc_RestorePartyBackup)
+        special(WeightedSelector_Off)
         clearflag(FLAG_VGC_PENDING_RESTORE)
     }  
     end
 }
 
+// TEMP - REMOVE AFTER TESTING CITY
+script PortValor_EventScript_WarpPT {
+    lockall
+    faceplayer
+    msgbox("This is the warp to PT", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
 
+// TEMP - REMOVE AFTER TESTING CITY
+script PortValor_EventScript_WarpNH {
+    lockall
+    faceplayer
+    msgbox("This is the warp to New Hope", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+// TEMP - REMOVE AFTER TESTING CITY
 script PortValor_EventScript_Villager1 {
     lockall
     faceplayer
@@ -62,11 +81,29 @@ script PortValor_EventScript_Villager1 {
     end
 }
 
+script PortValor_EventScript_Villager3 {
+    // 1ST
+    setvar(VAR_0x8000, SPECIES_KYOGRE)   // species
+    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8002, ITEM_BLUE_ORB)      // held item
+    setvar(VAR_0x8003, 31)                 // IV for all 6 stats
+
+    setvar(VAR_0x8004, 4)                // HP
+    setvar(VAR_0x8005, 0)                  // Atk
+    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8007, 252)                  // SpA
+    setvar(VAR_0x8008, 0)                // SpD
+    setvar(VAR_0x8009, 252)                  // Spe
+
+    callnative(Script_GiveCustomMonEVsIVs)
+}
+
+// TEMP - REMOVE AFTER TESTING CITY
 script PortValor_EventScript_Villager2 {
     // 1ST
     setvar(VAR_0x8000, SPECIES_THWACKEY)   // species
     setvar(VAR_0x8001, 21)                 // level
-    setvar(VAR_0x8002, ITEM_EVIOLITE)      // held item
+    setvar(VAR_0x8002, ITEM_GRASSY_SEED)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
     setvar(VAR_0x8004, 252)                // HP
@@ -79,14 +116,14 @@ script PortValor_EventScript_Villager2 {
     callnative(Script_GiveCustomMonEVsIVs)
     
     // 2ND
-    setvar(VAR_0x8000, SPECIES_RHYHORN)   // species
+    setvar(VAR_0x8000, SPECIES_FOONGUS)   // species
     setvar(VAR_0x8001, 21)                 // level
-    setvar(VAR_0x8002, ITEM_ASSAULT_VEST)      // held item
+    setvar(VAR_0x8002, ITEM_MENTAL_HERB)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
     setvar(VAR_0x8004, 252)                // HP
-    setvar(VAR_0x8005, 252)                  // Atk
-    setvar(VAR_0x8006, 0)                  // Def
+    setvar(VAR_0x8005, 0)                  // Atk
+    setvar(VAR_0x8006, 252)                  // Def
     setvar(VAR_0x8007, 0)                  // SpA
     setvar(VAR_0x8008, 0)                // SpD
     setvar(VAR_0x8009, 4)                  // Spe
@@ -94,24 +131,24 @@ script PortValor_EventScript_Villager2 {
     callnative(Script_GiveCustomMonEVsIVs)
 
     // 3RD
-    setvar(VAR_0x8000, SPECIES_QUAGSIRE)   // species
+    setvar(VAR_0x8000, SPECIES_MAGNEMITE)   // species
     setvar(VAR_0x8001, 21)                 // level
-    setvar(VAR_0x8002, ITEM_LEFTOVERS)      // held item
+    setvar(VAR_0x8002, ITEM_MAGNET)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
     setvar(VAR_0x8004, 252)                // HP
-    setvar(VAR_0x8005, 244)                  // Atk
+    setvar(VAR_0x8005, 0)                  // Atk
     setvar(VAR_0x8006, 0)                  // Def
-    setvar(VAR_0x8007, 0)                  // SpA
+    setvar(VAR_0x8007, 244)                  // SpA
     setvar(VAR_0x8008, 0)                // SpD
-    setvar(VAR_0x8009, 4)                  // Spe
+    setvar(VAR_0x8009, 12)                  // Spe
 
     callnative(Script_GiveCustomMonEVsIVs)
 
     // 4TH
     setvar(VAR_0x8000, SPECIES_LAPRAS)   // species
     setvar(VAR_0x8001, 21)                 // level
-    setvar(VAR_0x8002, ITEM_MYSTIC_WATER)      // held item
+    setvar(VAR_0x8002, ITEM_NEVER_MELT_ICE)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
     setvar(VAR_0x8004, 252)                // HP
@@ -126,7 +163,7 @@ script PortValor_EventScript_Villager2 {
     // 5TH
     setvar(VAR_0x8000, SPECIES_OGERPON)   // species
     setvar(VAR_0x8001, 21)                 // level
-    setvar(VAR_0x8002, ITEM_WELLSPRING_MASK)      // held item
+    setvar(VAR_0x8002, ITEM_LIFE_ORB)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
     setvar(VAR_0x8004, 252)                // HP
@@ -143,6 +180,8 @@ script PortValor_EventScript_Villager2 {
 
     giveitem(ITEM_ADAMANT_MINT, 10)
     giveitem(ITEM_MODEST_MINT, 10)
+    
+    msgbox("Have a great day", MSGBOX_AUTOCLOSE)
 
     end
 }

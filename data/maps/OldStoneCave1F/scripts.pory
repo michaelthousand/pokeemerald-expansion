@@ -1,0 +1,18 @@
+mapscripts OldStoneCave1F_MapScripts{}
+
+script Old_Stone_Cave1F_EventScript_Bag {
+    lockall
+
+    msgbox("There's a note in the bag.", MSGBOX_AUTOCLOSE)
+    msgbox("James,\nHere are the things you'll need for the\nminer plan.", MSGBOX_AUTOCLOSE)
+    msgbox("DON'T LOSE THEM! The boss won't accept\nanother failure. We'll be waiting\nin Celadon for you.", MSGBOX_AUTOCLOSE)
+    msgbox("-Jesse", MSGBOX_AUTOCLOSE)
+    setflag(FLAG_OLD_STONE_BAG)
+    removeobject(1)
+    giveitem(ITEM_SAFETY_GOGGLES, 1)
+    giveitem(ITEM_HEAVY_DUTY_BOOTS, 1)
+    giveitem(ITEM_ROCKY_HELMET, 1)
+    delay(60)
+
+    releaseall
+}

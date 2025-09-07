@@ -1,0 +1,10 @@
+mapscripts Prometheus_Tech_HQ_MapScripts { }
+
+// TEMP - REMOVE AFTER TESTING CITY
+script Prometheus_Tech_HQ_WarpPV {
+    lockall
+    faceplayer
+    msgbox("This is the warp to Port Valor", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}

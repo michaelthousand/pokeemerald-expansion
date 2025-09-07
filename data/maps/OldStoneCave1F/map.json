@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "Old_Stone_Cave1F_EventScript_Bag",
+      "flag": "FLAG_OLD_STONE_BAG"
     }
   ],
   "warp_events": [
@@ -56,6 +56,20 @@
       "elevation": 0,
       "dest_map": "MAP_OLD_STONE_CAVE1F",
       "dest_warp_id": "2"
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_STONE_CAVE2F",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 39,
+      "y": 8,
+      "elevation": 0,
+      "dest_map": "MAP_OLD_STONE_CAVE2F",
+      "dest_warp_id": "1"
     }
   ],
   "coord_events": [],

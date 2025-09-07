@@ -46,7 +46,7 @@
 #define FLAG_ROUTE1_CHERI_BERRIES    0x20 // Route 1 Cheri Berries
 #define FLAG_ROUTE1_ORAN_BERRIES    0x21 // Route 1 Oran Berries
 #define FLAG_ROUTE1_GRASSY_SEED    0x22 // Route 1 Grassy Seed
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_OLD_STONE_BAG    0x23 // Old Stone Cave bag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag
@@ -72,10 +72,10 @@
 #define FLAG_UNUSED_0x03A    0x3A // Unused Flag
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
 #define FLAG_UNUSED_0x03C    0x3C // Unused Flag
-#define FLAG_UNUSED_0x03D    0x3D // Unused Flag
-#define FLAG_UNUSED_0x03E    0x3E // Unused Flag
-#define FLAG_UNUSED_0x03F    0x3F // Unused Flag
-#define FLAG_UNUSED_0x040    0x40 // Unused Flag
+#define FLAG_GURU_PORTVALOR    0x3D // Checks if already received gifts from gym guru
+#define FLAG_GURU_FORESTSEDGE    0x3E // Checks if already received gifts from gym guru
+#define FLAG_GURU_NEWHOPE    0x3F // Checks if already received gifts from gym guru
+#define FLAG_KUBFU    0x40 // Used to determine if player received Kubfu gift
 #define FLAG_MARIN    0x41 // Hide Marin
 #define FLAG_SOLARA    0x42 // Hide Solara
 #define FLAG_FREYA    0x43 // Hide Freya
@@ -85,7 +85,7 @@
 #define FLAG_LEAGUE_REG    0x47 // League Registration
 #define FLAG_MORWEN    0x48 // Hide Morwen
 #define FLAG_KAELEN    0x49 // Hide Kaelen
-#define FLAG_EXP_SHARE_ON    0x4A // Unused Flag // currently used for Kyogre fight
+#define FLAG_EXP_SHARE_ON    0x4A // used to determine if exp share is on
 #define FLAG_VGC_PENDING_RESTORE     0x4B // Marks if party needs to be restored
 #define TALKED_TO_CINDER    0x4C // marks if player spoke to Cinder for the first time
 #define STARTER_BALL_THREE    0x4D // used for test lab pokeball 3

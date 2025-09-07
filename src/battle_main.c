@@ -580,6 +580,8 @@ static void CB2_InitBattleInternal(void)
             {
                 if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
                 {
+                    gBattleStruct->opponentMonCanTera = 0;
+                    gBattleStruct->opponentMonCanDynamax = 0;
                     CreateNPCTrainerParty(&gEnemyParty[0], TRAINER_BATTLE_PARAM.opponentA, TRUE);
                     if (gBattleTypeFlags & BATTLE_TYPE_TWO_OPPONENTS && !BATTLE_TWO_VS_ONE_OPPONENT)
                         CreateNPCTrainerParty(&gEnemyParty[PARTY_SIZE / 2], TRAINER_BATTLE_PARAM.opponentB, FALSE);
@@ -2100,6 +2102,30 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum, bool8 fir
     for (u8 i = 0; i < bringCount; i++)
         CopyMon(&party[i], &temp[idxs[i]], sizeof(struct Pokemon));
 
+    
+    /* --- INSERT: remap Tera bits to the final enemy-party slots --- */
+
+    // After copying temp[idxs[i]] -> party[i]
+    const struct Trainer *trainer = GetTrainerStructFromId(trainerNum);
+
+    // Base index for this trainer within gEnemyParty (0 for first foe, 3 for second foe)
+    u8 base = (u8)(party - gEnemyParty);
+
+    // Clear only the slots we’re about to set (this trainer’s segment)
+    for (u8 i = 0; i < bringCount; i++)
+        gBattleStruct->opponentMonCanTera &= ~(1u << (base + i));
+
+    // Set bits ONLY for mons the trainer explicitly designated to Tera in trainers.party
+    for (u8 i = 0; i < bringCount; i++) {
+        u8 srcIdx = idxs[i];                              // which original party entry we copied
+        const struct TrainerMon *pd = &trainer->party[srcIdx];
+        if (pd->teraType > 0)                             // <-- designation lives here
+            gBattleStruct->opponentMonCanTera |= (1u << (base + i));
+    }
+
+
+    /* --- end insert --- */
+
 #if defined(BUILD_DEBUG) || defined(UG_DEBUG)
     DebugPrintf("Trainer %d bring (%d): %d %d %d %d",
                 trainerNum, bringCount,
@@ -2237,6 +2263,7 @@ static u8 BuildTrainerPartyToBuffer(const struct Trainer *trainer,
         }
         if (pd->teraType > 0)
         {
+            gBattleStruct->opponentMonCanTera |= 1 << i; 
             u32 tt = pd->teraType;
             SetMonData(&out[i], MON_DATA_TERA_TYPE, &tt);
         }
