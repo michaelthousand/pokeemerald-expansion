@@ -74,6 +74,8 @@ PrometheusTech_EvoShopItems:
 	.2byte ITEM_ROTOM_CATALOG
 # 42 "data/maps/PrometheusTech_Shop/scripts.pory"
 	.2byte ITEM_EVERSTONE
+# 43 "data/maps/PrometheusTech_Shop/scripts.pory"
+	.2byte ITEM_LINKING_CORD
 	.2byte ITEM_NONE
 
 PrometheusTech_Shop_RegularEmployee_Text_0:

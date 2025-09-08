@@ -26,23 +26,23 @@ LEAGUE_HEADQUARTERS_Registration::
 # 22 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	goto_if_unset FLAG_LEAGUE_REG, LEAGUE_HEADQUARTERS_Registration_1
 # 47 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Registration_Text_5, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Registration_Text_5, MSGBOX_AUTOCLOSE
 # 48 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	release
 	end
 
 LEAGUE_HEADQUARTERS_Registration_1:
 # 23 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Registration_Text_0, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Registration_Text_0, MSGBOX_AUTOCLOSE
 # 24 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	msgbox LEAGUE_HEADQUARTERS_Registration_Text_1, MSGBOX_YESNO
 # 26 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	compare VAR_RESULT, NO
 	goto_if_eq LEAGUE_HEADQUARTERS_Registration_5
 # 32 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Registration_Text_3, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Registration_Text_3, MSGBOX_AUTOCLOSE
 # 33 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Registration_Text_4, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Registration_Text_4, MSGBOX_AUTOCLOSE
 # 36 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	compare VAR_LEVEL_CAP, 0
 	goto_if_eq LEAGUE_HEADQUARTERS_Registration_8
@@ -59,7 +59,7 @@ LEAGUE_HEADQUARTERS_Registration_7:
 
 LEAGUE_HEADQUARTERS_Registration_5:
 # 27 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Registration_Text_2, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Registration_Text_2, MSGBOX_AUTOCLOSE
 # 28 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	releaseall
 	end
@@ -170,29 +170,29 @@ PT_Admin_Leave:
 
 LEAGUE_HEADQUARTERS_Chairman::
 # 81 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_0, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_0, MSGBOX_AUTOCLOSE
 # 82 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_1, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_1, MSGBOX_AUTOCLOSE
 # 84 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_2, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_2, MSGBOX_AUTOCLOSE
 # 85 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_3, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_3, MSGBOX_AUTOCLOSE
 # 86 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_4, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_4, MSGBOX_AUTOCLOSE
 # 87 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_5, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_5, MSGBOX_AUTOCLOSE
 # 89 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_6, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_6, MSGBOX_AUTOCLOSE
 # 90 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_7, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_7, MSGBOX_AUTOCLOSE
 # 91 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_8, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_8, MSGBOX_AUTOCLOSE
 # 92 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_9, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_9, MSGBOX_AUTOCLOSE
 # 93 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_10, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_10, MSGBOX_AUTOCLOSE
 # 95 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_11, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_Chairman_Text_11, MSGBOX_AUTOCLOSE
 # 97 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	applymovement 2, Chairman_MoveOver
 # 98 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
@@ -208,11 +208,11 @@ LEAGUE_HEADQUARTERS_Chairman::
 
 LEAGUE_HEADQUARTERS_PT_Admin::
 # 107 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_0, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_0, MSGBOX_AUTOCLOSE
 # 108 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_1, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_1, MSGBOX_AUTOCLOSE
 # 109 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_2, MSGBOX_DEFAULT
+	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_2, MSGBOX_AUTOCLOSE
 # 111 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	giveitem ITEM_TM_PROTECT, 1
 # 112 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
@@ -224,56 +224,60 @@ LEAGUE_HEADQUARTERS_PT_Admin::
 # 116 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	giveitem ITEM_AMULET_COIN, 1
 # 117 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_EVIOLITE, 1
+	giveitem ITEM_LUCKY_EGG, 1
 # 118 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_LEFTOVERS, 1
+	giveitem ITEM_EVIOLITE, 1
 # 119 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_ABILITY_CAPSULE, 10
+	giveitem ITEM_LEFTOVERS, 1
 # 120 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_ABILITY_PATCH, 2
+	giveitem ITEM_ABILITY_CAPSULE, 10
 # 121 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_RARE_CANDY, 50
+	giveitem ITEM_ABILITY_PATCH, 2
 # 122 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_QUICK_BALL, 50
+	giveitem ITEM_RARE_CANDY, 50
+# 123 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	giveitem ITEM_POKE_BALL, 50
 # 124 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	message LEAGUE_HEADQUARTERS_PT_Admin_Text_6
-# 125 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	giveitem ITEM_TERA_ORB, 1
+	giveitem ITEM_QUICK_BALL, 50
 # 126 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	setflag B_FLAG_TERA_ORB_CHARGED
+	message LEAGUE_HEADQUARTERS_PT_Admin_Text_6
 # 127 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	giveitem ITEM_TERA_ORB, 1
+# 128 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	setflag B_FLAG_TERA_ORB_CHARGED
+# 129 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	setflag B_FLAG_TERA_ORB_NO_COST
-# 130 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 132 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_7
-# 131 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_8
 # 133 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	applymovement 2, Chairman_Leave
-# 134 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	applymovement 3, PT_Admin_Leave
+	msgbox LEAGUE_HEADQUARTERS_PT_Admin_Text_8
 # 135 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	waitmovement 0
+	applymovement 2, Chairman_Leave
 # 136 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	removeobject 2
+	applymovement 3, PT_Admin_Leave
 # 137 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	removeobject 3
+	waitmovement 0
+# 138 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	removeobject 2
 # 139 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	removeobject 3
+# 141 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	setflag FLAG_LEAGUE_REG
-# 140 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 142 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	release
 	end
 
 
 LEAGUEHEADQUARTERS_Trigger_BlockPath::
-# 146 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	lockall
-# 147 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	msgbox LEAGUEHEADQUARTERS_Trigger_BlockPath_Text_0
 # 148 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+	lockall
 # 149 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
-	waitmovement 0
+	msgbox LEAGUEHEADQUARTERS_Trigger_BlockPath_Text_0
 # 150 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer
+# 151 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+	waitmovement 0
+# 152 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	releaseall
 	return
 
@@ -375,17 +379,17 @@ LEAGUE_HEADQUARTERS_PT_Admin_Text_5:
 	.string "And, of course, some items!$"
 
 LEAGUE_HEADQUARTERS_PT_Admin_Text_6:
-# 124 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 126 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "But most importantly: a Tera Orb!\pThis will allow you to terastilize your\npokemon!$"
 
 LEAGUE_HEADQUARTERS_PT_Admin_Text_7:
-# 130 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 132 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "Hopefully these will help you get\ngoing!$"
 
 LEAGUE_HEADQUARTERS_PT_Admin_Text_8:
-# 131 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 133 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "Goodbye for now!$"
 
 LEAGUEHEADQUARTERS_Trigger_BlockPath_Text_0:
-# 147 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
+# 149 "data/maps/LEAGUE_HEADQUARTERS/scripts.pory"
 	.string "That area is restricted!$"

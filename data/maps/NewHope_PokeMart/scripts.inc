@@ -59,11 +59,7 @@ NewHope_PokeMart_PT_Employee::
 # 34 "data/maps/NewHope_PokeMart/scripts.pory"
 NewHopePTItems:
 # 35 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_LOADED_DICE
-# 36 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_MENTAL_HERB
-# 37 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_THROAT_SPRAY
+	.2byte ITEM_POTION
 	.2byte ITEM_NONE
 
 NewHope_PokeMart_Employee_Text_0:

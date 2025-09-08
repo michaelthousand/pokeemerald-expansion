@@ -188,12 +188,12 @@ script ForestsEdgeGym_EventScript_Rules {
 script ForestsEdge_Gym_EventScript_Morwen {
     if (var(VAR_BADGES) < 2) {
         // --- AI preview ---
-        setvar(VAR_VGC_PREVIEW_0, SPECIES_SHROOMISH)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_GLOOM)
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_SLOWPOKE_GALAR)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_TOEDSCOOL)
         setvar(VAR_VGC_PREVIEW_2, SPECIES_EKANS)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_NOCTOWL)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_QUAGSIRE)
-        setvar(VAR_VGC_PREVIEW_5, SPECIES_WEEPINBELL)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAGNEMITE)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_SNORLAX)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_PIKACHU)
         if (var(VAR_BADGES) == 0){
             setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
         } else {
@@ -240,20 +240,22 @@ script ForestsEdge_Gym_EventScript_Morwen {
         // Now start the actual fight
         if (var(VAR_BADGES) == 0) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_C1)
             trainerbattle_double(TRAINER_MORWEN_C1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         } else {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_C2)
             trainerbattle_double(TRAINER_MORWEN_C2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         }
 
     } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
         // --- AI preview ---
-        setvar(VAR_VGC_PREVIEW_0, SPECIES_BRELOOM)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_VILEPLUME)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_ARBOK)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_AMOONGUSS)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_QUAGSIRE)
-        setvar(VAR_VGC_PREVIEW_5, SPECIES_VICTREEBEL)
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_DONDOZO)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_URSALUNA)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_SANDACONDA)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAGNEZONE)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_TOEDSCRUEL)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_RAICHU_ALOLA)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
         }
@@ -298,6 +300,7 @@ script ForestsEdge_Gym_EventScript_Morwen {
         // Now start the actual fight
         if (var(VAR_BADGES) == 2) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_B1)
             trainerbattle_double(TRAINER_MORWEN_B1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         } 
     }
@@ -337,10 +340,10 @@ script ForestsEdge_Gym_After_Morwen {
 
 script ForestsEdge_Gym_EventScript_Kaelen {
     if (var(VAR_BADGES) < 2) {
-        setvar(VAR_VGC_PREVIEW_0, SPECIES_HOUNDOUR)
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_SALANDIT)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_KOFFING)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_SLUGMA)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_NIDORINA)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_TREVENANT)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_ARMAROUGE)
         setvar(VAR_VGC_PREVIEW_4, SPECIES_ZUBAT)
         setvar(VAR_VGC_PREVIEW_5, SPECIES_GRIMER_ALOLA)
         if (var(VAR_BADGES) == 0){
@@ -389,17 +392,19 @@ script ForestsEdge_Gym_EventScript_Kaelen {
 
         if (var(VAR_BADGES) == 0)  {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_C1)
             trainerbattle_double(TRAINER_KAELEN_C1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
         } else {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_C2)
             trainerbattle_double(TRAINER_KAELEN_C2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
         }
 
     } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
-        setvar(VAR_VGC_PREVIEW_0, SPECIES_HOUNDOOM)
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_SALAZZLE)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_WEEZING_GALAR)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_MAGCARGO)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_NIDORINA)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_TREVENANT)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_ARCANINE_HISUI)
         setvar(VAR_VGC_PREVIEW_4, SPECIES_CROBAT)
         setvar(VAR_VGC_PREVIEW_5, SPECIES_MUK_ALOLA)
         if (var(VAR_BADGES) == 2){
@@ -446,6 +451,7 @@ script ForestsEdge_Gym_EventScript_Kaelen {
 
         if (var(VAR_BADGES) == 0)  {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_B1)
             trainerbattle_double(TRAINER_KAELEN_B1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
         }
     }

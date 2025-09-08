@@ -196,9 +196,11 @@ script PortValor_Gym_EventScript_Marin {
         // Now start the actual fight
         if (var(VAR_BADGES) == 0) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_C1)
             trainerbattle_double(TRAINER_MARIN_C1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC)
         } else {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_C2)
             trainerbattle_double(TRAINER_MARIN_C2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC)
         }
 
@@ -254,6 +256,7 @@ script PortValor_Gym_EventScript_Marin {
         // Now start the actual fight
         if (var(VAR_BADGES) == 2) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_B1)
             trainerbattle_double(TRAINER_MARIN_B1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC)
         } 
     }
@@ -345,9 +348,11 @@ script PortValor_Gym_EventScript_Solara {
 
         if (var(VAR_BADGES) == 0)  {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_C1)
             trainerbattle_double(TRAINER_SOLARA_C1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC)
         } else {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_C2)
             trainerbattle_double(TRAINER_SOLARA_C2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC)
         }
 
@@ -402,6 +407,7 @@ script PortValor_Gym_EventScript_Solara {
 
         if (var(VAR_BADGES) == 0)  {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_B1)
             trainerbattle_double(TRAINER_SOLARA_B1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC)
         }
     }

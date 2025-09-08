@@ -20,17 +20,17 @@ script LEAGUE_HEADQUARTERS_Registration {
     faceplayer
 
     if(flag(FLAG_LEAGUE_REG) == FALSE) {
-        msgbox("Welcome to the Pokemon League\nHeadquarters!", MSGBOX_DEFAULT)
+        msgbox("Welcome to the Pokemon League\nHeadquarters!", MSGBOX_AUTOCLOSE)
         msgbox("Would you like to register for the Gym\nChallenge?", MSGBOX_YESNO)
 
         if (var(VAR_RESULT) == NO) {
-            msgbox("That's fine! Come back whenever you're\nready.", MSGBOX_DEFAULT)
+            msgbox("That's fine! Come back whenever you're\nready.", MSGBOX_AUTOCLOSE)
             releaseall
             end
         }
 
-        msgbox("Excellent! One moment, I'll call the\nLeague Chairman over.", MSGBOX_DEFAULT)
-        msgbox("He likes to meet new trainers.", MSGBOX_DEFAULT)
+        msgbox("Excellent! One moment, I'll call the\nLeague Chairman over.", MSGBOX_AUTOCLOSE)
+        msgbox("He likes to meet new trainers.", MSGBOX_AUTOCLOSE)
 
         // Initialize the cap once
         if (var(VAR_LEVEL_CAP) == 0) {
@@ -44,7 +44,7 @@ script LEAGUE_HEADQUARTERS_Registration {
         goto(LEAGUE_HEADQUARTERS_Chairman)
     }
     else {
-        msgbox("Thank you for registering!", MSGBOX_DEFAULT)
+        msgbox("Thank you for registering!", MSGBOX_AUTOCLOSE)
         release
         end
     }
@@ -78,21 +78,21 @@ movement PT_Admin_Leave {
 }
 
 script LEAGUE_HEADQUARTERS_Chairman{
-    msgbox("Ah, a new challenger! Welcome to the\nLeague.", MSGBOX_DEFAULT)
-    msgbox("It’s always an honor to greet aspiring\ntrainers at the start of their journey.", MSGBOX_DEFAULT)
+    msgbox("Ah, a new challenger! Welcome to the\nLeague.", MSGBOX_AUTOCLOSE)
+    msgbox("It’s always an honor to greet aspiring\ntrainers at the start of their journey.", MSGBOX_AUTOCLOSE)
 
-    msgbox("Here in the Valora Region, we use a\nunique system for the Gym Challenge.", MSGBOX_DEFAULT)
-    msgbox("Each Gym is led not by one Leader, but by\ntwo.", MSGBOX_DEFAULT)
-    msgbox("To claim a badge, you must defeat both\nLeaders of that Gym.", MSGBOX_DEFAULT)
-    msgbox("Only then will their badge be officially\nrecognized by the League.", MSGBOX_DEFAULT)
+    msgbox("Here in the Valora Region, we use a\nunique system for the Gym Challenge.", MSGBOX_AUTOCLOSE)
+    msgbox("Each Gym is led not by one Leader, but by\ntwo.", MSGBOX_AUTOCLOSE)
+    msgbox("To claim a badge, you must defeat both\nLeaders of that Gym.", MSGBOX_AUTOCLOSE)
+    msgbox("Only then will their badge be officially\nrecognized by the League.", MSGBOX_AUTOCLOSE)
 
-    msgbox("But the Gym Challenge isn’t the only path\nfor ambitious trainers.", MSGBOX_DEFAULT)
-    msgbox("The League also hosts a circuit of local\ntournaments, where trainers test their\pskills outside of traditional Gyms.", MSGBOX_DEFAULT)
-    msgbox("And beyond that…", MSGBOX_DEFAULT)
-    msgbox("The upcoming World Championships will\nsoon bring challengers from every region.", MSGBOX_DEFAULT)
-    msgbox("Perhaps, in time, you will be among them.", MSGBOX_DEFAULT)
+    msgbox("But the Gym Challenge isn’t the only path\nfor ambitious trainers.", MSGBOX_AUTOCLOSE)
+    msgbox("The League also hosts a circuit of local\ntournaments, where trainers test their\pskills outside of traditional Gyms.", MSGBOX_AUTOCLOSE)
+    msgbox("And beyond that…", MSGBOX_AUTOCLOSE)
+    msgbox("The upcoming World Championships will\nsoon bring challengers from every region.", MSGBOX_AUTOCLOSE)
+    msgbox("Perhaps, in time, you will be among them.", MSGBOX_AUTOCLOSE)
 
-    msgbox("Before you begin, I’d like you to meet one\nof our partners from Prometheus Tech.", MSGBOX_DEFAULT)
+    msgbox("Before you begin, I’d like you to meet one\nof our partners from Prometheus Tech.", MSGBOX_AUTOCLOSE)
     
     applymovement(2, Chairman_MoveOver)
     addobject(3)
@@ -104,9 +104,9 @@ script LEAGUE_HEADQUARTERS_Chairman{
 }
 
 script LEAGUE_HEADQUARTERS_PT_Admin {
-    msgbox("Greetings, trainer. I represent\nPrometheus Tech.", MSGBOX_DEFAULT)
-    msgbox("We proudly support new challengers with\nessential tools and items.", MSGBOX_DEFAULT)
-    msgbox("Here, please accept these to aid your\nGym Challenge.", MSGBOX_DEFAULT)
+    msgbox("Greetings, trainer. I represent\nPrometheus Tech.", MSGBOX_AUTOCLOSE)
+    msgbox("We proudly support new challengers with\nessential tools and items.", MSGBOX_AUTOCLOSE)
+    msgbox("Here, please accept these to aid your\nGym Challenge.", MSGBOX_AUTOCLOSE)
 
     giveitem(ITEM_TM_PROTECT, 1)
     msgbox("That TM contains Protect, an\nincredibly helpful move when battling.")
@@ -114,11 +114,13 @@ script LEAGUE_HEADQUARTERS_PT_Admin {
 
     message("And, of course, some items!")
     giveitem(ITEM_AMULET_COIN, 1)
+    giveitem(ITEM_LUCKY_EGG, 1)
     giveitem(ITEM_EVIOLITE, 1)
     giveitem(ITEM_LEFTOVERS, 1)
     giveitem(ITEM_ABILITY_CAPSULE, 10)
     giveitem(ITEM_ABILITY_PATCH, 2)
     giveitem(ITEM_RARE_CANDY, 50)
+    giveitem(ITEM_POKE_BALL, 50)
     giveitem(ITEM_QUICK_BALL, 50)
 
     message("But most importantly: a Tera Orb!\pThis will allow you to terastilize your\npokemon!")

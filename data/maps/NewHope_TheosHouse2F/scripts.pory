@@ -1,0 +1,7 @@
+mapscripts NewHope_TheosHouse2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: TheosHouse_OnTransition
+}
+
+script TheosHouse_OnTransition {
+    setrespawn(HEAL_LOCATION_NEW_HOPE)
+}

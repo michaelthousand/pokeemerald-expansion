@@ -16263,7 +16263,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 248 HP / 252 Def / 8 SpA
 Ability: Sturdy
 Nature: Relaxed
-Tera Type: Electric
 - Thunder Wave
 - Thunderbolt
 - Iron Head
@@ -16286,7 +16285,6 @@ IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 SpA / 252 SpD
 Ability: Mycelium Might
 Nature: Calm
-Tera Type: Steel
 - Mega Drain
 - Stun Spore
 - Leech Seed
@@ -16309,7 +16307,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 236 Atk / 20 Spe
 Ability: Intimidate
 Nature: Adamant
-Tera Type: Ground
 - Earthquake
 - Knock Off
 - Glare
@@ -16342,8 +16339,7 @@ Level: 29
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 248 HP / 252 Def / 8 SpA
 Ability: Sturdy
-Nature: Relaxed
-Tera Type: Electric
+Nature: RelaxeD
 - Thunder Wave
 - Thunderbolt
 - Iron Head
@@ -16366,7 +16362,6 @@ IVs: 31 HP / 0 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 252 HP / 4 SpA / 252 SpD
 Ability: Mycelium Might
 Nature: Calm
-Tera Type: Steel
 - Mega Drain
 - Stun Spore
 - Leech Seed
@@ -16389,7 +16384,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 236 Atk / 20 Spe
 Ability: Intimidate
 Nature: Adamant
-Tera Type: Ground
 - Earthquake
 - Knock Off
 - Glare
@@ -16533,8 +16527,7 @@ Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 12 Atk / 0 Def / 0 SpA / 252 SpD / 0 Spe
 Ability: Natural Cure
-Nature: Careful
-Tera Type: Grass
+Nature: CarefuL
 - Seed Bomb
 - Shadow Claw
 - Will-O-Wisp
@@ -16546,7 +16539,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 240 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Inner Focus
 Nature: Jolly
-Tera Type: Steel
 - Poison Fang
 - Venom Drench
 - Brave Bird
@@ -16613,7 +16605,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 12 Atk / 0 Def / 0 SpA / 252 SpD / 0 Spe
 Ability: Natural Cure
 Nature: Careful
-Tera Type: Grass
 - Seed Bomb
 - Shadow Claw
 - Will-O-Wisp
@@ -16625,7 +16616,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 244 HP / 240 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Inner Focus
 Nature: Jolly
-Tera Type: Steel
 - Poison Fang
 - Venom Drench
 - Brave Bird
@@ -17011,12 +17001,13 @@ Nature: Jolly
 - Protect
 
 Tauros-Paldea-Aqua @ Assault Vest
-Level: 22
+Level: 21
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 8 SpD / 248 Spe
 Ability: Intimidate
 Nature: Jolly
 Tera Type: Steel
+- Aqua Jet
 - Liquidation
 - Body Press
 - Stomping Tantrum
@@ -17094,6 +17085,7 @@ EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 8 SpD / 248 Spe
 Ability: Intimidate
 Nature: Jolly
 Tera Type: Steel
+- Aqua Jet
 - Liquidation
 - Body Press
 - Stomping Tantrum
@@ -17137,7 +17129,6 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 EVs: 0 HP / 252 Atk / 0 Def / 0 SpA / 4 SpD / 252 Spe
 Ability: Intimidate
 Nature: Adamant
-Tera Type: Water
 - Aqua Tail
 - Earthquake
 - Dragon Dance
@@ -17160,7 +17151,6 @@ IVs: 31 HP / 252 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 EVs: 12 HP / 244 Atk / 0 Def / 0 SpA / 0 SpD / 252 Spe
 Ability: Defiant
 Nature: Jolly
-Tera Type: Ghost
 - Close Combat
 - Shadow Claw
 - Coaching

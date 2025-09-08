@@ -40,4 +40,5 @@ mart PrometheusTech_EvoShopItems {
     ITEM_PRISM_SCALE
     ITEM_ROTOM_CATALOG
     ITEM_EVERSTONE
+    ITEM_LINKING_CORD
 }

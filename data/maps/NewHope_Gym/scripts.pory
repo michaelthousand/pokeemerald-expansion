@@ -145,10 +145,10 @@ script NewHope_Gym_EventScript_Freya {
         msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
 
         setvar(VAR_VGC_PREVIEW_0, SPECIES_PRINPLUP)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_SCRAGGY)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_TRAPINCH)
         setvar(VAR_VGC_PREVIEW_2, SPECIES_PAWNIARD)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_KIRLIA)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_ESPEON)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GOTHITA)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_MANKEY)
         setvar(VAR_VGC_PREVIEW_5, SPECIES_WATTREL)
         if (var(VAR_BADGES) == 0){
             setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
@@ -194,18 +194,20 @@ script NewHope_Gym_EventScript_Freya {
         // Now start the actual fight
         if (var(VAR_BADGES) == 0) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_C1)
             trainerbattle_double(TRAINER_FREYA_C1, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
         } else {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_C2)
             trainerbattle_double(TRAINER_FREYA_C2, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
         }
 
     } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
         // --- AI preview ---
         setvar(VAR_VGC_PREVIEW_0, SPECIES_GOTHITELLE)
-        setvar(VAR_VGC_PREVIEW_1, SPECIES_ESPEON)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_KILOWATTREL)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_SCRAFTY)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_OGERPON)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_MILOTIC)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_ANNIHILAPE)
         setvar(VAR_VGC_PREVIEW_4, SPECIES_PAWNIARD)
         setvar(VAR_VGC_PREVIEW_5, SPECIES_EMPOLEON)
         if (var(VAR_BADGES) == 2){
@@ -252,6 +254,7 @@ script NewHope_Gym_EventScript_Freya {
         // Now start the actual fight
         if (var(VAR_BADGES) == 2) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_B1)
             trainerbattle_double(TRAINER_FREYA_B1, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
         } 
     }
@@ -341,18 +344,20 @@ script NewHope_Gym_EventScript_Ronan {
 
         if (var(VAR_BADGES) == 0)  {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_C1)
             trainerbattle_double(TRAINER_RONAN_C1, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
         } else {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_C2)
             trainerbattle_double(TRAINER_RONAN_C2, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
         }
     } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
         // --- AI preview ---
-        setvar(VAR_VGC_PREVIEW_0, SPECIES_GRANBULL)
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_PORYGON2)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_ARCANINE)
-        setvar(VAR_VGC_PREVIEW_2, SPECIES_STARAPTOR)
-        setvar(VAR_VGC_PREVIEW_3, SPECIES_KROOKODILE)
-        setvar(VAR_VGC_PREVIEW_4, SPECIES_MIGHTYENA)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_GYARADOS)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAUSHOLD_FOUR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_ANNIHILAPE)
         setvar(VAR_VGC_PREVIEW_5, SPECIES_INCINEROAR)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
@@ -398,6 +403,7 @@ script NewHope_Gym_EventScript_Ronan {
         // Now start the actual fight
         if (var(VAR_BADGES) == 2) {
             special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_B1)
             trainerbattle_double(TRAINER_RONAN_B1, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
         } 
     }

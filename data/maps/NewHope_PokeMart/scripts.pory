@@ -32,7 +32,5 @@ script NewHope_PokeMart_PT_Employee{
 }
 
 mart NewHopePTItems {
-    ITEM_LOADED_DICE
-    ITEM_MENTAL_HERB
-    ITEM_THROAT_SPRAY
+    ITEM_POTION
 }

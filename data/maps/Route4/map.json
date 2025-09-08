@@ -22,8 +22,8 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 4,
-      "y": 6,
+      "x": 12,
+      "y": 11,
       "elevation": 0,
       "dest_map": "MAP_OLD_STONE_CAVE1F",
       "dest_warp_id": "1"

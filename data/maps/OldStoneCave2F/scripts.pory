@@ -1,0 +1,8 @@
+mapscripts OldStoneCave2F_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: OldStoneCave2F_SetFlash
+}
+
+script OldStoneCave2F_SetFlash {
+    setflashlevel(3)
+    end
+}
