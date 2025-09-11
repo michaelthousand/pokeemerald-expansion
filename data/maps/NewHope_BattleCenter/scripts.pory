@@ -5,16 +5,16 @@ script NewHope_BattleCenter_EventScript_Rules {
     lock
     faceplayer
 
-    if (flag(FLAG_BATTLE_CENTER_RULES) == FALSE) {
+    if (!(flag(FLAG_BATTLE_CENTER_RULES))) {
         msgbox("This facility has two main rooms for\ntrainers.", MSGBOX_DEFAULT)
 
         msgbox("The first is for friendly battles, where\nyou can test your skills without any\pstakes.", MSGBOX_DEFAULT)
 
         msgbox("The second room is where we host our\nLocal Tournaments.", MSGBOX_DEFAULT)
-        msgbox("Win XX battles there, and you’ll be\ncrowned the victor.", MSGBOX_DEFAULT)
+        msgbox("Win 3 battles there, and you’ll be\ncrowned the victor.", MSGBOX_DEFAULT)
         msgbox("Winners receive a special prize and, more\nimportantly, points toward Regional\pChampionship qualification.", MSGBOX_DEFAULT)
 
-        msgbox("The level cap for this facility is XX.", MSGBOX_DEFAULT)
+        msgbox("You will only compete with trainers\nfrom your same gym tier.", MSGBOX_DEFAULT)
 
         msgbox("If you’re looking to prove yourself\noutside of the Gyms, this is the place\pto do it.", MSGBOX_DEFAULT)
         msgbox("Good luck!", MSGBOX_DEFAULT)
@@ -31,7 +31,7 @@ script NewHope_BattleCenter_EventScript_Rules {
 }
 
 script NewHope_BattleCenter_Trigger_Rules {
-    if (flag(FLAG_BATTLE_CENTER_RULES) == FALSE) {
+    if (!(flag(FLAG_BATTLE_CENTER_RULES))) {
         lock
         faceplayer
         msgbox("This facility has two main rooms for\ntrainers.", MSGBOX_DEFAULT)
@@ -42,7 +42,7 @@ script NewHope_BattleCenter_Trigger_Rules {
         msgbox("Win XX battles there, and you’ll be\ncrowned the victor.", MSGBOX_DEFAULT)
         msgbox("Winners receive a special prize and, more\nimportantly, points toward Regional\pChampionship qualification.", MSGBOX_DEFAULT)
 
-        msgbox("The level cap for this facility is XX.", MSGBOX_DEFAULT)
+        msgbox("You will only compete with trainers\nfrom your same gym tier.", MSGBOX_DEFAULT)
 
         msgbox("If you’re looking to prove yourself\noutside of the Gyms, this is the place\pto do it.", MSGBOX_DEFAULT)
         msgbox("Good luck!", MSGBOX_DEFAULT)
@@ -50,11 +50,71 @@ script NewHope_BattleCenter_Trigger_Rules {
         release
         end
     }
-    else {
-        lock
-        msgbox("The level cap for this facility is XX.", MSGBOX_DEFAULT)
-        release
-        end
-    }
+}
 
+script NewHope_BattleCenter_EventScript_Friendly1 {
+    lockall
+    if (var(VAR_LEVEL_CAP) == 21){
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            end
+        }
+
+        cleartrainerflag(TRAINER_FRIENDLY_1)
+        trainerbattle_double(TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, Not_Enough_Mons, NO_MUSIC)
+    }
+    releaseall
+}
+
+script NewHope_BattleCenter_EventScript_Friendly2 {
+    lockall
+    if (var(VAR_LEVEL_CAP) == 21){
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            end
+        }
+
+        cleartrainerflag(TRAINER_FRIENDLY_2)
+        trainerbattle_double(TRAINER_FRIENDLY_2, FriendlyTrainer2_Intro, FriendlyTrainer2_Outro, Not_Enough_Mons, NO_MUSIC)
+    }
+    releaseall
+}
+
+
+text FriendlyTrainer1_Intro {
+    "Good luck and have fun!"
+}
+
+text FriendlyTrainer1_Outro {
+    "Gosh! You're good at this!"
+}
+
+text FriendlyTrainer2_Intro {
+    "I'm going to win!"
+}
+
+text FriendlyTrainer2_Outro {
+    "This is supposed to a friendly match..."
 }

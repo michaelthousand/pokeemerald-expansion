@@ -16,8 +16,8 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
-      "x": 7,
-      "y": 7,
+      "x": 4,
+      "y": 4,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -30,15 +30,15 @@
   ],
   "warp_events": [
     {
-      "x": 5,
-      "y": 11,
+      "x": 3,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_EVERGREEN_WOODS",
       "dest_warp_id": "0"
     },
     {
-      "x": 6,
-      "y": 11,
+      "x": 4,
+      "y": 7,
       "elevation": 0,
       "dest_map": "MAP_EVERGREEN_WOODS",
       "dest_warp_id": "0"

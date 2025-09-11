@@ -1,0 +1,38 @@
+mapscripts PortValor_PokeMart_MapScripts{}
+
+script PortValor_PokeMart_Employee{
+    lock
+    faceplayer
+    message("How can I help you?")
+    waitmessage
+    pokemart(PortValorMartItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart PortValorMartItems {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_LEMONADE
+}
+
+script PortValor_PokeMart_PT_Employee{
+    lock
+    faceplayer
+    message("Hello!\nI'm you local representative for\nPrometheus Tech.")
+    message("How can I help you?")
+    waitmessage
+    pokemart(PortValorPTItems)
+    msgbox("Please come again.")
+    release
+    end
+}
+
+mart PortValorPTItems {
+    ITEM_POTION
+}

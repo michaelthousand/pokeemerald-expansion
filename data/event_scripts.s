@@ -1213,3 +1213,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/OldStoneCave2F/scripts.inc"
 
 	.include "data/maps/OldStoneCave3F/scripts.inc"
+
+	.include "data/maps/Route26/scripts.inc"
+
+	.include "data/maps/DarkFalls/scripts.inc"
+
+	.include "data/maps/PortValor_PokeMart/scripts.inc"

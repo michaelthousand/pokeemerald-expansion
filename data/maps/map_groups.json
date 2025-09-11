@@ -101,7 +101,9 @@
     "OldStoneCave1F",
     "Route4",
     "OldStoneCave2F",
-    "OldStoneCave3F"
+    "OldStoneCave3F",
+    "Route26",
+    "DarkFalls"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -656,7 +658,8 @@
   ],
   "gMapGroup_IndoorPortValor": [
     "PortValor_Gym",
-    "PortValor_PokemonCenter"
+    "PortValor_PokemonCenter",
+    "PortValor_PokeMart"
   ],
   "gMapGroup_MiscIndoor": [
     "EvergreenWoods_Shack"

@@ -16170,72 +16170,6 @@ Taillow
 Level: 33
 IVs: 2 HP / 2 Atk / 2 Def / 2 SpA / 2 SpD / 2 Spe
 
-=== TRAINER_GABRIELLE_4 ===
-Name: GABRIELLE
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Delcatty
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Mightyena
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Linoone
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Lombre
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Nuzleaf
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-Swellow
-Level: 35
-IVs: 3 HP / 3 Atk / 3 Def / 3 SpA / 3 SpD / 3 Spe
-
-=== TRAINER_GABRIELLE_5 ===
-Name: GABRIELLE
-Class: Pkmn Breeder
-Pic: Pokemon Breeder F
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Delcatty
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Mightyena
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Linoone
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Ludicolo
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Shiftry
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-Swellow
-Level: 37
-IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
 === TRAINER_RED ===
 Name: RED
 Class: Rival
@@ -16247,6 +16181,115 @@ Double Battle: No
 Charmander
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+
+=== TRAINER_FRIENDLY_1 ===
+Name: SAWYER
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Male
+Double Battle: Yes
+AI: Smart Trainer
+
+Porygon @ Eviolite
+Level: 18
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 4 HP / 20 Atk / 0 Def / 232 SpD / 0 SpA / 4 Spe
+Ability: Download
+Nature: Sassy
+- Ice Beam
+- Zen Headbutt
+- Conversion
+- Trick Room
+
+Munchlax @ Sitrus Berry
+Level: 19
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 0 HP / 228 Atk / 0 Def / 0 SpA / 236 SpD / 0 Spe
+Ability: Thick Fat
+Nature: Adamant
+- Body Slam
+- Brick Break
+- Bite
+- Protect
+
+Hatenna @ Twisted Spoon
+Level: 21
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 248 HP / 0 Atk / 0 Def / 0 SpA / 252 SpD / 4 Spe
+Ability: Magic Bounce
+Nature: Sassy
+- Psybeam
+- Psychic Terrain
+- Trick Room
+- Protect
+
+Machop @ Assault Vest
+Level: 21
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 232 HP / 248 Atk / 0 Def / 0 SpA / 16 SpD / 0 Spe
+Ability: Guts
+Nature: Adamant
+Tera Type: Fire
+- Knock Off
+- Close Combat
+- Fire Punch
+- Protect
+
+=== TRAINER_FRIENDLY_2 ===
+Name: GABRIELLE
+Class: Pkmn Breeder
+Pic: Pokemon Breeder F
+Gender: Female
+Music: Female
+Double Battle: Yes
+AI: Smart Trainer
+
+Fletchinder @ Charcoal
+Level: 17
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 0 HP / 224 Atk / 0 Def / 0 SpA / 28 SpD / 240 Spe
+Ability: Gale Wings
+Nature: Jolly
+- Flame Charge
+- Aerial Ace
+- U-turn
+- Protect
+
+Vulpix-Alola @ Never-Melt Ice
+Level: 20
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 0 HP / 0 Atk / 0 Def / 228 SpA / 0 SpD / 252 Spe
+Ability: Snow Warning
+Nature: Timid
+- Icy Wind
+- Ice Beam
+- Moonblast
+- Protect
+
+Marshtomp @ Sitrus Berry
+Level: 21
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 0 HP / 220 Atk / 0 Def / 0 SpA / 244 Atk / 24 SpD / 0 Spe
+Ability: Damp
+Nature: Adamant
+- Bulldoze
+- Waterfall
+- Avalanche
+- Protect
+
+Froslass @ Life Orb
+Level: 21
+IVs: 16 HP / 16 Atk / 16 Def / 16 SpA / 16 SpD / 16 Spe
+EVs: 232 HP / 0 Atk / 0 Def / 36 SpA / 0 SpD / 236 Spe
+Ability: Snow Cloak
+Nature: Timid
+Tera Type: Ice
+- Ominous Wind
+- Hex
+- Will-O-Wisp
+- Protect
+
 
 === TRAINER_MORWEN_C1 ===
 Name: Morwen

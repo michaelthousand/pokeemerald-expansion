@@ -816,9 +816,9 @@
 #define TRAINER_SAWYER_5                    839
 #define TRAINER_GABRIELLE_2                 840
 #define TRAINER_GABRIELLE_3                 841
-#define TRAINER_GABRIELLE_4                 842
-#define TRAINER_GABRIELLE_5                 843
-#define TRAINER_RED                         844
+#define TRAINER_RED                         842
+#define TRAINER_FRIENDLY_1                  843
+#define TRAINER_FRIENDLY_2                  844
 #define TRAINER_KAELEN_C1                   845
 #define TRAINER_KAELEN_C2                   846
 #define TRAINER_KAELEN_B1                   847

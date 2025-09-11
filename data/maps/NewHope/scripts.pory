@@ -26,6 +26,7 @@ script NewHope_EventScript_WarpPV{
 script NewHope_EventScript_Villager1 {
     lockall
     faceplayer
+    giveitem(ITEM_TM45)
 
     msgbox("Would you like rare candies?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {

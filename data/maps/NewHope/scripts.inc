@@ -43,181 +43,183 @@ NewHope_EventScript_Villager1::
 	lockall
 # 28 "data/maps/NewHope/scripts.pory"
 	faceplayer
-# 30 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_EventScript_Villager1_Text_0, MSGBOX_YESNO
+# 29 "data/maps/NewHope/scripts.pory"
+	giveitem ITEM_TM45
 # 31 "data/maps/NewHope/scripts.pory"
+	msgbox NewHope_EventScript_Villager1_Text_0, MSGBOX_YESNO
+# 32 "data/maps/NewHope/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NewHope_EventScript_Villager1_2
 NewHope_EventScript_Villager1_1:
-# 35 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_EventScript_Villager1_Text_1, MSGBOX_YESNO
 # 36 "data/maps/NewHope/scripts.pory"
+	msgbox NewHope_EventScript_Villager1_Text_1, MSGBOX_YESNO
+# 37 "data/maps/NewHope/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NewHope_EventScript_Villager1_5
 NewHope_EventScript_Villager1_4:
-# 41 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_EventScript_Villager1_Text_2, MSGBOX_YESNO
 # 42 "data/maps/NewHope/scripts.pory"
+	msgbox NewHope_EventScript_Villager1_Text_2, MSGBOX_YESNO
+# 43 "data/maps/NewHope/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NewHope_EventScript_Villager1_8
 NewHope_EventScript_Villager1_7:
-# 62 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_EventScript_Villager1_Text_8, MSGBOX_YESNO
 # 63 "data/maps/NewHope/scripts.pory"
+	msgbox NewHope_EventScript_Villager1_Text_8, MSGBOX_YESNO
+# 64 "data/maps/NewHope/scripts.pory"
 	compare VAR_RESULT, YES
 	goto_if_eq NewHope_EventScript_Villager1_11
 NewHope_EventScript_Villager1_10:
-# 69 "data/maps/NewHope/scripts.pory"
+# 70 "data/maps/NewHope/scripts.pory"
 	releaseall
 	end
 
 NewHope_EventScript_Villager1_2:
-# 32 "data/maps/NewHope/scripts.pory"
+# 33 "data/maps/NewHope/scripts.pory"
 	giveitem ITEM_RARE_CANDY, 50
 	goto NewHope_EventScript_Villager1_1
 
 NewHope_EventScript_Villager1_5:
-# 37 "data/maps/NewHope/scripts.pory"
-	giveitem ITEM_ABILITY_CAPSULE, 5
 # 38 "data/maps/NewHope/scripts.pory"
+	giveitem ITEM_ABILITY_CAPSULE, 5
+# 39 "data/maps/NewHope/scripts.pory"
 	giveitem ITEM_ABILITY_PATCH, 5
 	goto NewHope_EventScript_Villager1_4
 
 NewHope_EventScript_Villager1_8:
-# 43 "data/maps/NewHope/scripts.pory"
+# 44 "data/maps/NewHope/scripts.pory"
 	compare VAR_BADGES, 0
 	goto_if_eq NewHope_EventScript_Villager1_14
-# 46 "data/maps/NewHope/scripts.pory"
+# 47 "data/maps/NewHope/scripts.pory"
 	compare VAR_BADGES, 1
 	goto_if_eq NewHope_EventScript_Villager1_15
-# 50 "data/maps/NewHope/scripts.pory"
+# 51 "data/maps/NewHope/scripts.pory"
 	msgbox NewHope_EventScript_Villager1_Text_5, MSGBOX_AUTOCLOSE
 NewHope_EventScript_Villager1_13:
-# 53 "data/maps/NewHope/scripts.pory"
+# 54 "data/maps/NewHope/scripts.pory"
 	compare VAR_LEVEL_CAP, 21
 	goto_if_eq NewHope_EventScript_Villager1_19
-# 56 "data/maps/NewHope/scripts.pory"
+# 57 "data/maps/NewHope/scripts.pory"
 	compare VAR_LEVEL_CAP, 29
 	goto_if_eq NewHope_EventScript_Villager1_20
 	goto NewHope_EventScript_Villager1_7
 
 NewHope_EventScript_Villager1_11:
-# 64 "data/maps/NewHope/scripts.pory"
-	setvar VAR_BADGES, 0
 # 65 "data/maps/NewHope/scripts.pory"
-	setvar VAR_LEVEL_CAP, 21
+	setvar VAR_BADGES, 0
 # 66 "data/maps/NewHope/scripts.pory"
+	setvar VAR_LEVEL_CAP, 21
+# 67 "data/maps/NewHope/scripts.pory"
 	msgbox NewHope_EventScript_Villager1_Text_9, MSGBOX_AUTOCLOSE
 	goto NewHope_EventScript_Villager1_10
 
 NewHope_EventScript_Villager1_14:
-# 44 "data/maps/NewHope/scripts.pory"
-	setvar VAR_BADGES, 1
 # 45 "data/maps/NewHope/scripts.pory"
+	setvar VAR_BADGES, 1
+# 46 "data/maps/NewHope/scripts.pory"
 	msgbox NewHope_EventScript_Villager1_Text_3, MSGBOX_AUTOCLOSE
 	goto NewHope_EventScript_Villager1_13
 
 NewHope_EventScript_Villager1_15:
-# 47 "data/maps/NewHope/scripts.pory"
-	setvar VAR_BADGES, 2
 # 48 "data/maps/NewHope/scripts.pory"
+	setvar VAR_BADGES, 2
+# 49 "data/maps/NewHope/scripts.pory"
 	msgbox NewHope_EventScript_Villager1_Text_4, MSGBOX_AUTOCLOSE
 	goto NewHope_EventScript_Villager1_13
 
 NewHope_EventScript_Villager1_19:
-# 54 "data/maps/NewHope/scripts.pory"
-	setvar VAR_LEVEL_CAP, 29
 # 55 "data/maps/NewHope/scripts.pory"
+	setvar VAR_LEVEL_CAP, 29
+# 56 "data/maps/NewHope/scripts.pory"
 	msgbox NewHope_EventScript_Villager1_Text_6, MSGBOX_AUTOCLOSE
 	goto NewHope_EventScript_Villager1_7
 
 NewHope_EventScript_Villager1_20:
-# 57 "data/maps/NewHope/scripts.pory"
-	setvar VAR_LEVEL_CAP, 41
 # 58 "data/maps/NewHope/scripts.pory"
+	setvar VAR_LEVEL_CAP, 41
+# 59 "data/maps/NewHope/scripts.pory"
 	msgbox NewHope_EventScript_Villager1_Text_7, MSGBOX_AUTOCLOSE
 	goto NewHope_EventScript_Villager1_7
 
 
 NewHope_Trigger_BlockPath::
-# 74 "data/maps/NewHope/scripts.pory"
+# 75 "data/maps/NewHope/scripts.pory"
 	goto_if_unset STARTER_BALL_ONE, NewHope_Trigger_BlockPath_11
 NewHope_Trigger_BlockPath_6:
-# 81 "data/maps/NewHope/scripts.pory"
+# 82 "data/maps/NewHope/scripts.pory"
 	goto_if_unset STARTER_BALL_ONE, NewHope_Trigger_BlockPath_5
 NewHope_Trigger_BlockPath_4:
-# 88 "data/maps/NewHope/scripts.pory"
+# 89 "data/maps/NewHope/scripts.pory"
 	goto_if_unset FLAG_LEAGUE_REG, NewHope_Trigger_BlockPath_3
 	return
 
 NewHope_Trigger_BlockPath_1:
-# 75 "data/maps/NewHope/scripts.pory"
-	lockall
 # 76 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_Trigger_BlockPath_Text_0
+	lockall
 # 77 "data/maps/NewHope/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer_Up
+	msgbox NewHope_Trigger_BlockPath_Text_0
 # 78 "data/maps/NewHope/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer_Up
 # 79 "data/maps/NewHope/scripts.pory"
+	waitmovement 0
+# 80 "data/maps/NewHope/scripts.pory"
 	releaseall
 	return
 
 NewHope_Trigger_BlockPath_2:
-# 82 "data/maps/NewHope/scripts.pory"
-	lockall
 # 83 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_Trigger_BlockPath_Text_1
+	lockall
 # 84 "data/maps/NewHope/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer_Up
+	msgbox NewHope_Trigger_BlockPath_Text_1
 # 85 "data/maps/NewHope/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer_Up
 # 86 "data/maps/NewHope/scripts.pory"
+	waitmovement 0
+# 87 "data/maps/NewHope/scripts.pory"
 	releaseall
 	return
 
 NewHope_Trigger_BlockPath_3:
-# 89 "data/maps/NewHope/scripts.pory"
-	lockall
 # 90 "data/maps/NewHope/scripts.pory"
-	msgbox NewHope_Trigger_BlockPath_Text_2
+	lockall
 # 91 "data/maps/NewHope/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer_Up
+	msgbox NewHope_Trigger_BlockPath_Text_2
 # 92 "data/maps/NewHope/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, StopPlayer_Up
 # 93 "data/maps/NewHope/scripts.pory"
+	waitmovement 0
+# 94 "data/maps/NewHope/scripts.pory"
 	releaseall
 	return
 
 NewHope_Trigger_BlockPath_5:
-# 81 "data/maps/NewHope/scripts.pory"
+# 82 "data/maps/NewHope/scripts.pory"
 	goto_if_unset STARTER_BALL_TWO, NewHope_Trigger_BlockPath_7
 	goto NewHope_Trigger_BlockPath_4
 
 NewHope_Trigger_BlockPath_7:
-# 81 "data/maps/NewHope/scripts.pory"
+# 82 "data/maps/NewHope/scripts.pory"
 	goto_if_unset STARTER_BALL_THREE, NewHope_Trigger_BlockPath_2
 	goto NewHope_Trigger_BlockPath_4
 
 NewHope_Trigger_BlockPath_10:
-# 74 "data/maps/NewHope/scripts.pory"
+# 75 "data/maps/NewHope/scripts.pory"
 	goto_if_unset FLAG_LEAGUE_REG, NewHope_Trigger_BlockPath_1
 	goto NewHope_Trigger_BlockPath_6
 
 NewHope_Trigger_BlockPath_11:
-# 74 "data/maps/NewHope/scripts.pory"
+# 75 "data/maps/NewHope/scripts.pory"
 	goto_if_unset STARTER_BALL_TWO, NewHope_Trigger_BlockPath_13
 	goto NewHope_Trigger_BlockPath_6
 
 NewHope_Trigger_BlockPath_13:
-# 74 "data/maps/NewHope/scripts.pory"
+# 75 "data/maps/NewHope/scripts.pory"
 	goto_if_unset STARTER_BALL_THREE, NewHope_Trigger_BlockPath_10
 	goto NewHope_Trigger_BlockPath_6
 
 
-# 97 "data/maps/NewHope/scripts.pory"
-StopPlayer_Up:
 # 98 "data/maps/NewHope/scripts.pory"
+StopPlayer_Up:
+# 99 "data/maps/NewHope/scripts.pory"
 	walk_up
 	step_end
 
@@ -226,53 +228,53 @@ NewHope_EventScript_WarpPV_Text_0:
 	.string "This is the warp to Port Valor$"
 
 NewHope_EventScript_Villager1_Text_0:
-# 30 "data/maps/NewHope/scripts.pory"
+# 31 "data/maps/NewHope/scripts.pory"
 	.string "Would you like rare candies?$"
 
 NewHope_EventScript_Villager1_Text_1:
-# 35 "data/maps/NewHope/scripts.pory"
+# 36 "data/maps/NewHope/scripts.pory"
 	.string "Ability items?$"
 
 NewHope_EventScript_Villager1_Text_2:
-# 41 "data/maps/NewHope/scripts.pory"
+# 42 "data/maps/NewHope/scripts.pory"
 	.string "Would you like a badge?$"
 
 NewHope_EventScript_Villager1_Text_3:
-# 45 "data/maps/NewHope/scripts.pory"
+# 46 "data/maps/NewHope/scripts.pory"
 	.string "1st badge acquired$"
 
 NewHope_EventScript_Villager1_Text_4:
-# 48 "data/maps/NewHope/scripts.pory"
+# 49 "data/maps/NewHope/scripts.pory"
 	.string "2nd badge acquired$"
 
 NewHope_EventScript_Villager1_Text_5:
-# 50 "data/maps/NewHope/scripts.pory"
+# 51 "data/maps/NewHope/scripts.pory"
 	.string "Max badges reached$"
 
 NewHope_EventScript_Villager1_Text_6:
-# 55 "data/maps/NewHope/scripts.pory"
+# 56 "data/maps/NewHope/scripts.pory"
 	.string "Level cap increased to 29$"
 
 NewHope_EventScript_Villager1_Text_7:
-# 58 "data/maps/NewHope/scripts.pory"
+# 59 "data/maps/NewHope/scripts.pory"
 	.string "Level cap increased to 41$"
 
 NewHope_EventScript_Villager1_Text_8:
-# 62 "data/maps/NewHope/scripts.pory"
+# 63 "data/maps/NewHope/scripts.pory"
 	.string "Reset badges?$"
 
 NewHope_EventScript_Villager1_Text_9:
-# 66 "data/maps/NewHope/scripts.pory"
+# 67 "data/maps/NewHope/scripts.pory"
 	.string "Badges and lvl cap reset$"
 
 NewHope_Trigger_BlockPath_Text_0:
-# 76 "data/maps/NewHope/scripts.pory"
+# 77 "data/maps/NewHope/scripts.pory"
 	.string "You need a pokemon and to register with\nthe League office.$"
 
 NewHope_Trigger_BlockPath_Text_1:
-# 83 "data/maps/NewHope/scripts.pory"
+# 84 "data/maps/NewHope/scripts.pory"
 	.string "You need a pokemon first.$"
 
 NewHope_Trigger_BlockPath_Text_2:
-# 90 "data/maps/NewHope/scripts.pory"
+# 91 "data/maps/NewHope/scripts.pory"
 	.string "You need to register with the league\nfirst.$"

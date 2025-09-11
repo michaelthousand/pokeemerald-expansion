@@ -4654,8 +4654,8 @@
     {
       "id": "LAYOUT_EVERGREEN_WOODS_SHACK",
       "name": "EvergreenWoods_Shack_Layout",
-      "width": 12,
-      "height": 12,
+      "width": 8,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_BrendansMaysHouse",
       "border_filepath": "data/layouts/EvergreenWoods_Shack/border.bin",
@@ -4680,6 +4680,36 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/OldStoneCave2F/border.bin",
       "blockdata_filepath": "data/layouts/OldStoneCave2F/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE26",
+      "name": "Route26_Layout",
+      "width": 25,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/Route26/border.bin",
+      "blockdata_filepath": "data/layouts/Route26/map.bin"
+    },
+    {
+      "id": "LAYOUT_DARK_FALLS",
+      "name": "DarkFalls_Layout",
+      "width": 30,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mossdeep",
+      "border_filepath": "data/layouts/DarkFalls/border.bin",
+      "blockdata_filepath": "data/layouts/DarkFalls/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_VALOR_POKE_MART",
+      "name": "PortValor_PokeMart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/PortValor_PokeMart/border.bin",
+      "blockdata_filepath": "data/layouts/PortValor_PokeMart/map.bin"
     }
   ]
 }

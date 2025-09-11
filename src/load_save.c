@@ -19,6 +19,9 @@
 #include "event_data.h"
 #include "constants/event_objects.h"
 
+extern struct SaveBlock3 gSaveblock3;
+
+
 static void ApplyNewEncryptionKeyToAllEncryptedData(u32 encryptionKey);
 
 #define SAVEBLOCK_MOVE_RANGE    128
@@ -274,7 +277,7 @@ void LoadPlayerBag(void)
 
     // load player TMs and HMs.
     for (i = 0; i < BAG_TMHM_COUNT; i++)
-        gLoadedSaveData.TMsHMs[i] = gSaveBlock1Ptr->bagPocket_TMHM[i];
+        gLoadedSaveData.TMsHMs[i] = ((struct ItemSlot *)gSaveblock3.tmhmSlots)[i];
 
     // load player berries.
     for (i = 0; i < BAG_BERRIES_COUNT; i++)
@@ -306,7 +309,7 @@ void SavePlayerBag(void)
 
     // save player TMs and HMs.
     for (i = 0; i < BAG_TMHM_COUNT; i++)
-        gSaveBlock1Ptr->bagPocket_TMHM[i] = gLoadedSaveData.TMsHMs[i];
+        ((struct ItemSlot *)gSaveblock3.tmhmSlots)[i] = gLoadedSaveData.TMsHMs[i];
 
     // save player berries.
     for (i = 0; i < BAG_BERRIES_COUNT; i++)

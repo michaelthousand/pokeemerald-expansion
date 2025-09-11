@@ -69,12 +69,16 @@ PrometheusTech_EvoShopItems:
 # 39 "data/maps/PrometheusTech_Shop/scripts.pory"
 	.2byte ITEM_THUNDER_STONE
 # 40 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.2byte ITEM_PRISM_SCALE
+	.2byte ITEM_SUN_STONE
 # 41 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.2byte ITEM_ROTOM_CATALOG
+	.2byte ITEM_DUSK_STONE
 # 42 "data/maps/PrometheusTech_Shop/scripts.pory"
-	.2byte ITEM_EVERSTONE
+	.2byte ITEM_PRISM_SCALE
 # 43 "data/maps/PrometheusTech_Shop/scripts.pory"
+	.2byte ITEM_ROTOM_CATALOG
+# 44 "data/maps/PrometheusTech_Shop/scripts.pory"
+	.2byte ITEM_EVERSTONE
+# 45 "data/maps/PrometheusTech_Shop/scripts.pory"
 	.2byte ITEM_LINKING_CORD
 	.2byte ITEM_NONE
 

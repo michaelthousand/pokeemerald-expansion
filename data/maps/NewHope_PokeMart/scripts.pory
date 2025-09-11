@@ -3,17 +3,37 @@ mapscripts NewHope_PokeMart_MapScripts{}
 script NewHope_PokeMart_Employee{
     lock
     faceplayer
-    message("How can I help you?")
-    waitmessage
-    pokemart(NewHopeMartItems)
-    msgbox("Please come again.")
+    if (var(VAR_BADGES) < 2){
+        msgbox("Hello!", MSGBOX_AUTOCLOSE)
+        msgbox("Just so you know, we have low\nstock at the moment.", MSGBOX_AUTOCLOSE)
+        message("You'll need to come back later\nfor all of our offerings.")
+        message("How can I help you?")
+        waitmessage
+        pokemart(NewHopeMartItems_Start)
+        msgbox("Please come again.")
+    } else {
+        message("How can I help you?")
+        waitmessage
+        pokemart(NewHopeMartItems)
+        msgbox("Please come again.")
+    }
     release
     end
 }
 
-mart NewHopeMartItems {
+mart NewHopeMartItems_Start {
     ITEM_POKE_BALL
     ITEM_POTION
+    ITEM_ANTIDOTE
+    ITEM_PARALYZE_HEAL
+    ITEM_LEMONADE
+}
+
+mart NewHopeMartItems {
+    ITEM_POKE_BALL
+    ITEM_GREAT_BALL
+    ITEM_POTION
+    ITEM_SUPER_POTION
     ITEM_ANTIDOTE
     ITEM_PARALYZE_HEAL
     ITEM_LEMONADE

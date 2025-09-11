@@ -6,3 +6,35 @@ script OldStoneCave2F_SetFlash {
     setflashlevel(3)
     end
 }
+
+script OldStoneCave2F_EarthPower{
+    giveitem(ITEM_TM_EARTH_POWER, 1)
+    setflag(FLAG_EARTHPOWER)
+    removeobject(1)
+    closemessage
+    end
+}
+
+script OldStoneCave2F_PowerGem {
+    giveitem(ITEM_TM_POWER_GEM, 1)
+    setflag(FLAG_POWERGEM)
+    removeobject(2)
+    closemessage
+    end
+}
+
+script OldStoneCave2F_ThunderFang{
+    giveitem(ITEM_TM_THUNDER_FANG, 1)
+    setflag(FLAG_THUNDERFANG)
+    removeobject(3)
+    closemessage
+    end
+}
+
+script OldStoneCave2F_Dig{
+    giveitem(ITEM_TM_DIG, 1)
+    setflag(FLAG_DIG)
+    removeobject(4)
+    closemessage
+    end
+}

@@ -179,91 +179,91 @@ PortValor_EventScript_Villager3::
 
 PortValor_EventScript_Villager2::
 # 104 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_THWACKEY
+	setvar VAR_0x8000, SPECIES_WHIMSICOTT
 # 105 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 106 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_GRASSY_SEED
+	setvar VAR_0x8002, ITEM_FOCUS_SASH
 # 107 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 109 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 252
+	setvar VAR_0x8004, 114
 # 110 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 252
+	setvar VAR_0x8005, 0
 # 111 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8006, 0
 # 112 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8007, 0
+	setvar VAR_0x8007, 144
 # 113 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8008, 0
 # 114 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 4
+	setvar VAR_0x8009, 252
 # 116 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 119 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_FOONGUS
+	setvar VAR_0x8000, SPECIES_HAWLUCHA
 # 120 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 121 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_MENTAL_HERB
+	setvar VAR_0x8002, ITEM_CHOICE_BAND
 # 122 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 124 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 252
+	setvar VAR_0x8004, 12
 # 125 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 0
+	setvar VAR_0x8005, 244
 # 126 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8006, 252
+	setvar VAR_0x8006, 0
 # 127 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8007, 0
 # 128 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8008, 0
 # 129 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 4
+	setvar VAR_0x8009, 252
 # 131 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 134 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_MAGNEMITE
+	setvar VAR_0x8000, SPECIES_MILOTIC
 # 135 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 136 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_MAGNET
+	setvar VAR_0x8002, ITEM_MYSTIC_WATER
 # 137 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 139 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 252
+	setvar VAR_0x8004, 12
 # 140 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8005, 0
 # 141 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8006, 0
 # 142 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8007, 244
+	setvar VAR_0x8007, 248
 # 143 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8008, 0
+	setvar VAR_0x8008, 248
 # 144 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 12
+	setvar VAR_0x8009, 0
 # 146 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 149 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_LAPRAS
+	setvar VAR_0x8000, SPECIES_GEODUDE_ALOLA
 # 150 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 151 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_NEVER_MELT_ICE
+	setvar VAR_0x8002, ITEM_ASSAULT_VEST
 # 152 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 154 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 252
+	setvar VAR_0x8004, 12
 # 155 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 0
+	setvar VAR_0x8005, 248
 # 156 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8006, 0
+	setvar VAR_0x8006, 248
 # 157 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8007, 252
+	setvar VAR_0x8007, 0
 # 158 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8008, 0
 # 159 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 4
+	setvar VAR_0x8009, 0
 # 161 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 164 "data/maps/PortValor/scripts.pory"
@@ -271,7 +271,7 @@ PortValor_EventScript_Villager2::
 # 165 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 166 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_LIFE_ORB
+	setvar VAR_0x8002, ITEM_WELLSPRING_MASK
 # 167 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 169 "data/maps/PortValor/scripts.pory"

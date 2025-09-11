@@ -47,7 +47,7 @@ InfoLoop:
         if (!flag(FLAG_GURU_FORESTSEDGE)){
             msgbox("Here are some items for when you make it\nthere.", MSGBOX_AUTOCLOSE)
             giveitem(ITEM_TM_FACADE, 1)
-            msgbox("That TM is Facade. It doubles in damage\nif your Pokemon has a status\ncondition.", MSGBOX_AUTOCLOSE)
+            msgbox("That TM is Facade. It doubles in damage\nif your Pokemon has a status\pcondition.", MSGBOX_AUTOCLOSE)
             giveitem(ITEM_TM_SAFEGUARD, 1)
             msgbox("And that TM protects you from status\nconditions entirely!", MSGBOX_AUTOCLOSE)
             msgbox("Those should give you a leg up!", MSGBOX_AUTOCLOSE)
@@ -59,7 +59,7 @@ InfoLoop:
         msgbox("The jewel by the sea - Port Valor! I would\nlove to talk about their gym.", MSGBOX_AUTOCLOSE)
         msgbox("That gym is all about controlling the\nweather.", MSGBOX_AUTOCLOSE)
         msgbox("You have to prepare for both the sun and\nrain.", MSGBOX_AUTOCLOSE)
-        msgbox("But be warned - they have some tricks up\ntheir sleeves to prevent obvious\ncounters.", MSGBOX_AUTOCLOSE)
+        msgbox("But be warned - they have some tricks up\ntheir sleeves to prevent obvious\pcounters.", MSGBOX_AUTOCLOSE)
 
         if (!(flag(FLAG_GURU_PORTVALOR))){
             msgbox("Here are some items for when you make it\nthere.", MSGBOX_AUTOCLOSE)

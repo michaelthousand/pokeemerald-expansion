@@ -141,7 +141,7 @@
     {
       "id": "HEAL_LOCATION_FORESTS_EDGE",
       "map": "MAP_FORESTS_EDGE",
-      "x": 25,
+      "x": 11,
       "y": 8
     },
     {
@@ -153,8 +153,14 @@
     {
       "id": "HEAL_LOCATION_PORT_VALOR",
       "map": "MAP_PORT_VALOR",
-      "x": 17,
-      "y": 20
+      "x": 23,
+      "y": 11
+    },
+    {
+      "id": "HEAL_LOCATION_ROUTE26",
+      "map": "MAP_ROUTE26",
+      "x": 12,
+      "y": 10
     }
   ]
 }

@@ -681,7 +681,7 @@ ForestsEdge_Gym_After_Morwen::
 # 315 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Morwen_Text_0, MSGBOX_AUTOCLOSE
 # 317 "data/maps/ForestsEdge_Gym/scripts.pory"
-	giveitem ITEM_TM_REST, 1
+	giveitem ITEM_TM_TAUNT, 1
 # 318 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Morwen_Text_1, MSGBOX_AUTOCLOSE
 # 319 "data/maps/ForestsEdge_Gym/scripts.pory"
@@ -1166,11 +1166,11 @@ ForestsEdge_Gym_After_Morwen_Text_0:
 
 ForestsEdge_Gym_After_Morwen_Text_1:
 # 318 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "That TM contains Rest.$"
+	.string "That TM contains Taunt.$"
 
 ForestsEdge_Gym_After_Morwen_Text_2:
 # 319 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Now you can use sleep to your advantage.$"
+	.string "That will help you avoid getting\nput to sleep in the future.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_0:
 # 472 "data/maps/ForestsEdge_Gym/scripts.pory"

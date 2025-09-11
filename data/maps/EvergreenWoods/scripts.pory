@@ -1,0 +1,18 @@
+mapscripts EvergreenWoods_MapScripts { }
+
+script EvergreenWoods_GigaDrain{
+    giveitem(ITEM_TM_GIGA_DRAIN, 1)
+    setflag(FLAG_GIGADRAIN)
+    removeobject(1)
+    closemessage
+    end
+}
+
+script EvergreenWoods_StruggleBug {
+    giveitem(ITEM_TM_STRUGGLE_BUG)
+    setflag(FLAG_STRUGGLEBUG)
+    removeobject(2)
+    closemessage
+    end
+}
+

@@ -1,1 +1,9 @@
 mapscripts Route2_MapScripts {}
+
+script Route2_AirCutter{
+    giveitem(ITEM_TM_AIR_CUTTER, 1)
+    setflag(FLAG_AIRCUTTER)
+    removeobject(1)
+    closemessage
+    end
+}

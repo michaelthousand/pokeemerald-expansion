@@ -5,7 +5,7 @@ script Old_Stone_Cave1F_EventScript_Bag {
 
     msgbox("There's a note in the bag.", MSGBOX_AUTOCLOSE)
     msgbox("James,\nHere are the things you'll need for the\nminer plan.", MSGBOX_AUTOCLOSE)
-    msgbox("DON'T LOSE THEM! The boss won't accept\nanother failure. We'll be waiting\nin Celadon for you.", MSGBOX_AUTOCLOSE)
+    msgbox("DON'T LOSE THEM! The boss won't accept\nanother failure. We'll be waiting\pin Celadon for you.", MSGBOX_AUTOCLOSE)
     msgbox("-Jesse", MSGBOX_AUTOCLOSE)
     setflag(FLAG_OLD_STONE_BAG)
     removeobject(1)

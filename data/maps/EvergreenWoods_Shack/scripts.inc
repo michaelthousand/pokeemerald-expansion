@@ -245,7 +245,7 @@ EvergreenWoods_Shack_EventScript_GymGuru_Text_16:
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_17:
 # 50 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	.string "That TM is Facade. It doubles in damage\nif your Pokemon has a status\ncondition.$"
+	.string "That TM is Facade. It doubles in damage\nif your Pokemon has a status\pcondition.$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_18:
 # 52 "data/maps/EvergreenWoods_Shack/scripts.pory"
@@ -265,7 +265,7 @@ EvergreenWoods_Shack_EventScript_GymGuru_Text_21:
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_22:
 # 62 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	.string "But be warned - they have some tricks up\ntheir sleeves to prevent obvious\ncounters.$"
+	.string "But be warned - they have some tricks up\ntheir sleeves to prevent obvious\pcounters.$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_23:
 # 67 "data/maps/EvergreenWoods_Shack/scripts.pory"

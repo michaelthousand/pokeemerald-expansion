@@ -40,7 +40,7 @@ Old_Stone_Cave1F_EventScript_Bag_Text_1:
 
 Old_Stone_Cave1F_EventScript_Bag_Text_2:
 # 8 "data/maps/OldStoneCave1F/scripts.pory"
-	.string "DON'T LOSE THEM! The boss won't accept\nanother failure. We'll be waiting\nin Celadon for you.$"
+	.string "DON'T LOSE THEM! The boss won't accept\nanother failure. We'll be waiting\pin Celadon for you.$"
 
 Old_Stone_Cave1F_EventScript_Bag_Text_3:
 # 9 "data/maps/OldStoneCave1F/scripts.pory"

@@ -10812,7 +10812,7 @@
           "map": "MAP_ROUTE1",
           "base_label": "gRoute1_Day",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 5,
@@ -11092,7 +11092,7 @@
           "map": "MAP_ROUTE2",
           "base_label": "gRoute2_Day",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 8,
@@ -11459,7 +11459,7 @@
           "map": "MAP_ROUTE4",
           "base_label": "gRoute4_Day",
           "land_mons": {
-            "encounter_rate": 10,
+            "encounter_rate": 20,
             "mons": [
               {
                 "min_level": 12,
@@ -11743,6 +11743,75 @@
                 "min_level": 18,
                 "max_level": 29,
                 "species": "SPECIES_TATSUGIRI"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_ROUTE26",
+          "base_label": "gRoute26",
+          "land_mons": {
+            "encounter_rate": 20,
+            "mons": [
+              {
+                "min_level": 9,
+                "max_level": 15,
+                "species": "SPECIES_STARLY"
+              },
+              {
+                "min_level": 8,
+                "max_level": 14,
+                "species": "SPECIES_FLETCHLING"
+              },
+              {
+                "min_level": 10,
+                "max_level": 16,
+                "species": "SPECIES_TEDDIURSA"
+              },
+              {
+                "min_level": 12,
+                "max_level": 16,
+                "species": "SPECIES_MURKROW"
+              },
+              {
+                "min_level": 9,
+                "max_level": 14,
+                "species": "SPECIES_EEVEE"
+              },
+              {
+                "min_level": 8,
+                "max_level": 15,
+                "species": "SPECIES_SHINX"
+              },
+              {
+                "min_level": 12,
+                "max_level": 17,
+                "species": "SPECIES_FOONGUS"
+              },
+              {
+                "min_level": 10,
+                "max_level": 13,
+                "species": "SPECIES_RALTS"
+              },
+              {
+                "min_level": 15,
+                "max_level": 19,
+                "species": "SPECIES_HAWLUCHA"
+              },
+              {
+                "min_level": 14,
+                "max_level": 17,
+                "species": "SPECIES_APPLIN"
+              },
+              {
+                "min_level": 15,
+                "max_level": 19,
+                "species": "SPECIES_HOUNDOUR"
+              },
+              {
+                "min_level": 10,
+                "max_level": 14,
+                "species": "SPECIES_PHANTUMP"
               }
             ]
           }

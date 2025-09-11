@@ -21,6 +21,8 @@
 #include "constants/item_effects.h"
 #include "constants/hold_effects.h"
 
+extern struct SaveBlock3 gSaveblock3;
+
 static bool8 CheckPyramidBagHasItem(u16 itemId, u16 count);
 static bool8 CheckPyramidBagHasSpace(u16 itemId, u16 count);
 static const u8 *GetItemPluralName(u16);
@@ -77,8 +79,8 @@ void SetBagItemsPointers(void)
     gBagPockets[BALLS_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_PokeBalls;
     gBagPockets[BALLS_POCKET].capacity = BAG_POKEBALLS_COUNT;
 
-    gBagPockets[TMHM_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_TMHM;
-    gBagPockets[TMHM_POCKET].capacity = BAG_TMHM_COUNT;
+    gBagPockets[TMHM_POCKET].itemSlots = (struct ItemSlot *)gSaveblock3.tmhmSlots;
+    gBagPockets[TMHM_POCKET].capacity  = BAG_TMHM_COUNT;
 
     gBagPockets[BERRIES_POCKET].itemSlots = gSaveBlock1Ptr->bagPocket_Berries;
     gBagPockets[BERRIES_POCKET].capacity = BAG_BERRIES_COUNT;

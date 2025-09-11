@@ -314,9 +314,9 @@ script ForestsEdge_Gym_After_Morwen {
     special(HealPlayerParty)
     msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
 
-    giveitem(ITEM_TM_REST, 1)
-    msgbox("That TM contains Rest.", MSGBOX_AUTOCLOSE)
-    msgbox("Now you can use sleep to your advantage.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_TAUNT, 1)
+    msgbox("That TM contains Taunt.", MSGBOX_AUTOCLOSE)
+    msgbox("That will help you avoid getting\nput to sleep in the future.", MSGBOX_AUTOCLOSE)
 
     msgbox(PostBattle_Morwen, MSGBOX_AUTOCLOSE)
 

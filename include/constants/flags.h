@@ -47,14 +47,14 @@
 #define FLAG_ROUTE1_ORAN_BERRIES    0x21 // Route 1 Oran Berries
 #define FLAG_ROUTE1_GRASSY_SEED    0x22 // Route 1 Grassy Seed
 #define FLAG_OLD_STONE_BAG    0x23 // Old Stone Cave bag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_GIGADRAIN    0x24 // Evergreen Woods Giga Drain TM
+#define FLAG_STRUGGLEBUG    0x25 // Evergreen Woods Struggle Bug
+#define FLAG_DIG    0x26 // Old Stone Cave Dig
+#define FLAG_EARTHPOWER    0x27 // Old Stone Cave Earth Power
+#define FLAG_POWERGEM    0x28 // Old Stone Cave Power Gem
+#define FLAG_THUNDERFANG    0x29 // Old Stone Cave Thunder Fang
+#define FLAG_TRAILBLAZE    0x2A // Route 4 Trailblaze
+#define FLAG_AIRCUTTER    0x2B // Route 2 Air Cutter
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

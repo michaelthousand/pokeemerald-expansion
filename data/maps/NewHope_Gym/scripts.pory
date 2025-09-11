@@ -267,8 +267,9 @@ script NewHope_Gym_After_Freya {
     special(HealPlayerParty)
     msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
 
-    giveitem(ITEM_WEAKNESS_POLICY, 1)
-    msgbox("That item will make sure you stay in\nthe fight.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_NASTY_PLOT, 1)
+    msgbox("That TM contains Nasty Plot.", MSGBOX_AUTOCLOSE)
+    msgbox("Use it to boost your own offense.", MSGBOX_AUTOCLOSE)
 
     msgbox(PostBattle_Freya, MSGBOX_AUTOCLOSE)
 
@@ -420,9 +421,9 @@ script NewHope_Gym_After_Ronan {
     
     msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
 
-    giveitem(ITEM_TM_TORMENT, 1)
-    msgbox("That TM contains Torment.", MSGBOX_AUTOCLOSE)
-    msgbox("It will really throw your opponents\noff balance.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_SWORDS_DANCE, 1)
+    msgbox("That TM contains Swords Dance.", MSGBOX_AUTOCLOSE)
+    msgbox("It will help you recover from Intimidate", MSGBOX_AUTOCLOSE)
 
     msgbox(PostBattle_Ronan, MSGBOX_AUTOCLOSE)
 
