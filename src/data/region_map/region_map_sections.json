@@ -1218,6 +1218,10 @@
     {
       "id": "MAPSEC_DARK_FALLS",
       "name": "Dark Falls"
+    },
+    {
+      "id": "MAPSEC_TWILIGHT_FOREST",
+      "name": "Twilight Forest"
     }
   ]
 }

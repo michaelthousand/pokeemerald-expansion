@@ -1219,3 +1219,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DarkFalls/scripts.inc"
 
 	.include "data/maps/PortValor_PokeMart/scripts.inc"
+
+	.include "data/maps/Twilight_Forest/scripts.inc"
+
+	.include "data/maps/PortValor_SailorsHouse/scripts.inc"
+
+	.include "data/maps/DarkFalls_PokemonCenter/scripts.inc"
+
+	.include "data/maps/DarkFalls_Gym/scripts.inc"

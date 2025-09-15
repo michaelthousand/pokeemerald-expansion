@@ -8,7 +8,6 @@ script ForestsEdge_Gym_OnTransition {
     end
 }
 
-
 script ForestsEdge_Gym_Trigger_Right {
     lockall
     applymovement(OBJ_EVENT_ID_PLAYER, Enter_Gym_Right)
@@ -144,16 +143,17 @@ script ForestsEdgeGym_EventScript_Rules {
 
         msgbox("Welcome, challenger. Allow me to explain\nhow Gyms work here in Valora.", MSGBOX_DEFAULT)
 
-        msgbox("Each Gym has two Leaders, and each one\nspecializes in a different styles.", MSGBOX_DEFAULT)
+        msgbox("Each Gym has two Leaders, and each one\nspecializes in different styles.", MSGBOX_DEFAULT)
         msgbox("There are no junior trainers in our gyms.", MSGBOX_DEFAULT)
         msgbox("You must defeat both Leaders to earn\na badge.", MSGBOX_DEFAULT)
+        msgbox("If you lose to either leader, you will\nneed to rebattle both.", MSGBOX_DEFAULT)
 
         msgbox("Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.", MSGBOX_DEFAULT)
         msgbox("You can cancel the battle only before\nthe first gym leader to return to the\plobby and change your team.", MSGBOX_DEFAULT)
         msgbox("There's a computer to your left for this\nvery purpose.", MSGBOX_DEFAULT)
-        msgbox("Between their battles, you won’t be\nallowed to change your party Pokemon.", MSGBOX_DEFAULT)
+        msgbox("Between the battles, you won’t be\nallowed to change your party Pokemon.", MSGBOX_DEFAULT)
         msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
-        msgbox("And, as I mentioned, you will have a\nchance to select different\pPokemon from your party for the second\nbattle.", MSGBOX_DEFAULT)
+        msgbox("And you will be able to select \nnew group of four for the second battle.", MSGBOX_DEFAULT)
 
         msgbox("Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.", MSGBOX_DEFAULT)
         msgbox("Your first opponent is Morwen.\pShe specializes in sleep and paralysis.", MSGBOX_DEFAULT)
@@ -248,7 +248,7 @@ script ForestsEdge_Gym_EventScript_Morwen {
             trainerbattle_double(TRAINER_MORWEN_C2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
         }
 
-    } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)){
         // --- AI preview ---
         setvar(VAR_VGC_PREVIEW_0, SPECIES_DONDOZO)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_URSALUNA)
@@ -258,6 +258,10 @@ script ForestsEdge_Gym_EventScript_Morwen {
         setvar(VAR_VGC_PREVIEW_5, SPECIES_RAICHU_ALOLA)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
         }
 
         msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
@@ -302,10 +306,135 @@ script ForestsEdge_Gym_EventScript_Morwen {
             special(WeightedSelector_On)
             cleartrainerflag(TRAINER_MORWEN_B1)
             trainerbattle_double(TRAINER_MORWEN_B1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
-        } 
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_B2)
+            trainerbattle_double(TRAINER_MORWEN_B2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_B3)
+            trainerbattle_double(TRAINER_MORWEN_B3, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_AMOONGUSS)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_URSALUNA)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_SANDACONDA)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAGNEZONE)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_TOEDSCRUEL)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_DRAGONITE)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_A1)
+            trainerbattle_double(TRAINER_MORWEN_A1, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_A2)
+            trainerbattle_double(TRAINER_MORWEN_A2, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MORWEN_A3)
+            trainerbattle_double(TRAINER_MORWEN_A3, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
+        }
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_BRUTE_BONNET)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_URSALUNA_BLOODMOON)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_DONDOZO)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_DRAGONITE)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_SANDACONDA)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_REGIELEKI)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_MORWEN_S)
+        trainerbattle_double(TRAINER_MORWEN_S, Morwen_Intro, Morwen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Morwen, NO_MUSIC)
     }
-    
-    // add rest of tiers
 }
 
 
@@ -400,7 +529,7 @@ script ForestsEdge_Gym_EventScript_Kaelen {
             trainerbattle_double(TRAINER_KAELEN_C2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
         }
 
-    } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)){
         setvar(VAR_VGC_PREVIEW_0, SPECIES_SALAZZLE)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_WEEZING_GALAR)
         setvar(VAR_VGC_PREVIEW_2, SPECIES_TREVENANT)
@@ -409,6 +538,10 @@ script ForestsEdge_Gym_EventScript_Kaelen {
         setvar(VAR_VGC_PREVIEW_5, SPECIES_MUK_ALOLA)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } elif (var(VAR_BADGES) == 4){
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
         }
 
         msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
@@ -449,14 +582,140 @@ script ForestsEdge_Gym_EventScript_Kaelen {
         callnative(Vgc_BuildPartyFrom4Indices)
 
 
-        if (var(VAR_BADGES) == 0)  {
+        if (var(VAR_BADGES) == 2)  {
             special(WeightedSelector_On)
             cleartrainerflag(TRAINER_KAELEN_B1)
             trainerbattle_double(TRAINER_KAELEN_B1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_B2)
+            trainerbattle_double(TRAINER_KAELEN_B2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 4){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_B3)
+            trainerbattle_double(TRAINER_KAELEN_B3, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
         }
-    }
 
-    // add rest of tiers
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_TALONFLAME)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_WEEZING_GALAR)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_OVERQWIL)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GLIMMORA)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_ARCANINE_HISUI)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_DRAGAPULT)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 61)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } elif (var(VAR_BADGES) == 7){
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        if (var(VAR_BADGES) == 5)  {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_A1)
+            trainerbattle_double(TRAINER_KAELEN_A1, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_A2)
+            trainerbattle_double(TRAINER_KAELEN_A2, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 7){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_KAELEN_A3)
+            trainerbattle_double(TRAINER_KAELEN_A3, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+        }
+
+    // ======== KAELEN S TIER TEAM ========     
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_HEATRAN)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_OKIDOGI)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_HO_OH)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GOUGING_FIRE)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_IRON_MOTH)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_MUNKIDORI)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_KAELEN_S)
+        trainerbattle_double(TRAINER_KAELEN_S, Kaelen_Intro, Kaelen_Outro, Not_Enough_Mons, ForestsEdge_Gym_After_Kaelen, NO_MUSIC)
+    }
 
 }
 

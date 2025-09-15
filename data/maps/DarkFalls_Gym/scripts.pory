@@ -1,0 +1,774 @@
+mapscripts DarkFalls_Gym_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: DarkFalls_Gym_OnTransition
+}
+
+script DarkFalls_Gym_OnTransition {
+    setflag(FLAG_SKYE)
+    setflag(FLAG_SELENE)
+    end
+}
+
+script DarkFalls_Gym_Trigger_Right {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Enter_Gym_Right)
+    waitmovement(0)
+    delay(180)
+    clearflag(FLAG_SELENE)
+    addobject(LOCALID_SELENE)
+    applymovement(LOCALID_SELENE, Selene_Enter)
+    waitmovement(0)
+    delay(60)
+    goto(DarkFalls_Gym_EventScript_Selene)
+}
+
+script DarkFalls_Gym_Trigger_Left {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Enter_Gym_Left)
+    waitmovement(0)
+    delay(180)
+    clearflag(FLAG_SELENE)
+    addobject(LOCALID_SELENE)
+    applymovement(LOCALID_SELENE, Selene_Enter)
+    waitmovement(0)
+    delay(60)
+    goto(DarkFalls_Gym_EventScript_Selene)
+}
+
+script DarkFalls_Gym_Trigger_One {
+    if (!(flag(FLAG_GYM_RULES))) {
+        lockall
+        applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_One)
+        goto(DarkFalls_Gym_EventScript_Rules)
+    }
+}
+
+script DarkFalls_Gym_Trigger_Two {
+    if (!(flag(FLAG_GYM_RULES))) {
+        lockall
+        applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Two)
+        goto(DarkFalls_Gym_EventScript_Rules)
+    }
+}
+
+script DarkFalls_Gym_Trigger_Three {
+    if (!(flag(FLAG_GYM_RULES))) {
+        lockall
+        applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Three)
+        goto(DarkFalls_Gym_EventScript_Rules)
+    }
+}
+
+script DarkFalls_Gym_Trigger_Four {
+    if (!(flag(FLAG_GYM_RULES))) {
+        lockall
+        applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Four)
+        goto(DarkFalls_Gym_EventScript_Rules)
+    }
+}
+
+movement Selene_Enter {
+    walk_down
+    walk_left * 9
+    walk_down * 2
+    walk_right
+}
+
+movement Selene_Exit {
+    walk_left
+    walk_up * 2
+    walk_right * 9
+    walk_up
+}
+
+movement Skye_Enter {
+    walk_down * 3
+    walk_right
+}
+
+movement Skye_Exit {
+    walk_left
+    walk_up * 3
+}
+
+script DarkFalls_Gym_EventScript_Rules {
+    if (!(flag(FLAG_GYM_RULES))) {
+        lockall
+        faceplayer
+
+        msgbox("Welcome, challenger. Allow me to explain\nhow Gyms work here in Valora.", MSGBOX_DEFAULT)
+
+        msgbox("Each Gym has two Leaders, and each one\nspecializes in different styles.", MSGBOX_DEFAULT)
+        msgbox("There are no junior trainers in our gyms.", MSGBOX_DEFAULT)
+        msgbox("You must defeat both Leaders to earn\na badge.", MSGBOX_DEFAULT)
+        msgbox("If you lose to either leader, you will\nneed to rebattle both.", MSGBOX_DEFAULT)
+
+        msgbox("Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.", MSGBOX_DEFAULT)
+        msgbox("You can cancel the battle only before\nthe first gym leader to return to the\plobby and change your team.", MSGBOX_DEFAULT)
+        msgbox("There's a computer to your left for this\nvery purpose.", MSGBOX_DEFAULT)
+        msgbox("Between the battles, you won’t be\nallowed to change your party Pokemon.", MSGBOX_DEFAULT)
+        msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
+        msgbox("And you will be able to select \nnew group of four for the second battle.", MSGBOX_DEFAULT)
+
+        msgbox("Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.", MSGBOX_DEFAULT)
+        msgbox("Your first opponent is Selene.\pHer team slows things down.", MSGBOX_DEFAULT)
+        msgbox("Your second opponent is Skye.\pHer team speeds things up.", MSGBOX_DEFAULT)
+        msgbox("You have 0 badges so you are in Tier C.\pYour opponent's will not bring their best\nteams.", MSGBOX_DEFAULT)
+        msgbox("But be sure to still bring a balanced\nteam...you’ll need it!", MSGBOX_DEFAULT)
+
+
+        msgbox("Good luck!", MSGBOX_DEFAULT)
+        setflag(FLAG_GYM_RULES)
+    } else {
+        msgbox("Welcome, challenger, to the New Hope\nGym!", MSGBOX_DEFAULT)
+        msgbox("Your first opponent is Selene.\pHer team slows things down.", MSGBOX_DEFAULT)
+        msgbox("Your second opponent is Skye.\pHer team speeds things up.", MSGBOX_DEFAULT)
+        // ADD MESSAGE BOX ABOUT TIER
+        if (var(VAR_BADGES) < 2) {
+            msgbox("You are in Tier C.\pYour opponent's will not bring their best\nteams.", MSGBOX_DEFAULT)
+        } elif (var(VAR_BADGES) < 6) {
+            msgbox("You are in Tier B.\pYour opponent's will not bring their best\nteams...\pbut they will step up their game.", MSGBOX_DEFAULT)
+        } elif (var(VAR_BADGES) > 5) {
+            msgbox("You are in Tier A.\pYour opponent's will not pull any punches.", MSGBOX_DEFAULT)
+        }
+
+        msgbox("Good luck!", MSGBOX_DEFAULT)
+    }
+
+    releaseall
+    end
+}
+
+script DarkFalls_Gym_EventScript_Selene {
+    if (var(VAR_BADGES) < 2) {
+        // --- AI preview ---
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_SLOWPOKE_GALAR)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_GIMMIGHOUL)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_MUNCHLAX)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_BRONZOR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_HATENNA)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_DEINO)
+        if (var(VAR_BADGES) == 0){
+            setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 29)  // preview level
+        }
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+        if (var(VAR_RESULT) == FALSE) { end }
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 0) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_C1)
+            trainerbattle_double(TRAINER_SELENE_C1, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_C2)
+            trainerbattle_double(TRAINER_SELENE_C2, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        }
+
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_INDEEDEE_F)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_HATTREM)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_PORYGON2)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_TORKOAL)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_FARIGIRAF)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_URSALUNA)
+        if (var(VAR_BADGES) == 2){
+            setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 2) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_B1)
+            trainerbattle_double(TRAINER_SELENE_B1, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_B2)
+            trainerbattle_double(TRAINER_SELENE_B2, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_B3)
+            trainerbattle_double(TRAINER_SELENE_B3, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_INDEEDEE_F)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_HATTERENE)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_PORYGON2)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_TORKOAL)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_FARIGIRAF)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_URSALUNA)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_A1)
+            trainerbattle_double(TRAINER_SELENE_A1, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_A2)
+            trainerbattle_double(TRAINER_SELENE_A2, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SELENE_A3)
+            trainerbattle_double(TRAINER_SELENE_A3, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+        }
+    
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_URSALUNA)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_FARIGIRAF)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_TORKOAL)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_HATTERENE)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_INDEEDEE_F)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_CALYREX_ICE)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_SELENE_S)
+        trainerbattle_double(TRAINER_SELENE_S, Selene_Intro, Selene_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Selene, NO_MUSIC)
+    }
+}
+
+script DarkFalls_Gym_After_Selene {
+    special(WeightedSelector_Off)
+    special(HealPlayerParty)
+    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
+
+    giveitem(ITEM_TM_TRICK_ROOM, 1)
+    msgbox("That TM contains Trick Room.", MSGBOX_AUTOCLOSE)
+    msgbox("Use it to flip the script on\nfaster opponents.", MSGBOX_AUTOCLOSE)
+
+    msgbox(PostBattle_Selene, MSGBOX_AUTOCLOSE)
+
+    special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
+
+    applymovement(LOCALID_SELENE, Selene_Exit)
+    waitmovement(0)
+    setflag(FLAG_SELENE)
+    removeobject(LOCALID_SELENE)
+
+    delay(150)
+    clearflag(FLAG_SKYE)
+    addobject(1)
+    delay(60)
+    applymovement(1, Skye_Enter)
+    waitmovement(0)
+
+    goto(DarkFalls_Gym_EventScript_Skye)
+}
+
+script DarkFalls_Gym_EventScript_Skye {
+    if (var(VAR_BADGES) < 2) {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_GLISCOR)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_WHIMSICOTT)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_RUFFLET)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_ELECTRODE_HISUI)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_HAWLUCHA)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_JOLTEON)
+        if (var(VAR_BADGES) == 0){
+            setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 29)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        if (var(VAR_BADGES) == 0)  {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_C1)
+            trainerbattle_double(TRAINER_SKYE_C1, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_C2)
+            trainerbattle_double(TRAINER_SKYE_C2, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)) {
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_GARCHOMP)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_WHIMSICOTT)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_GRENINJA)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GARGANACL)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_GLISCOR)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_MEOWSCARADA)
+        if (var(VAR_BADGES) == 2){
+            setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 2) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_B1)
+            trainerbattle_double(TRAINER_SKYE_B1, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_B2)
+            trainerbattle_double(TRAINER_SKYE_B2, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_B3)
+            trainerbattle_double(TRAINER_SKYE_B3, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_DRAGAPULT)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_NOIVERN)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_SPECTRIER)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_BRAVIARY_HISUI)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_IRON_BUNDLE)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_HYDREIGON)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_A1)
+            trainerbattle_double(TRAINER_SKYE_A1, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_A2)
+            trainerbattle_double(TRAINER_SKYE_A2, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SKYE_A3)
+            trainerbattle_double(TRAINER_SKYE_A3, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+        }
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_ZACIAN_CROWNED)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_FLUTTER_MANE)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_CHIEN_PAO)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_CLEFAIRY)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_ROARING_MOON)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_HYDREIGON)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_SKYE_S)
+        trainerbattle_double(TRAINER_SKYE_S, Skye_Intro, Skye_Outro, Not_Enough_Mons, DarkFalls_Gym_After_Skye, NO_MUSIC)
+    }
+
+}
+
+script DarkFalls_Gym_After_Skye {
+    special(WeightedSelector_Off)
+    special(HealPlayerParty)
+    special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
+    
+    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
+
+    giveitem(ITEM_TM_TAILWIND, 1)
+    msgbox("That TM contains Tailwind.", MSGBOX_AUTOCLOSE)
+    msgbox("It will give you a speed boost.", MSGBOX_AUTOCLOSE)
+
+    msgbox(PostBattle_Skye, MSGBOX_AUTOCLOSE)
+
+    if (!(flag(FLAG_BADGE01_GET))) {
+        setflag(FLAG_BADGE01_GET)
+        addvar(VAR_BADGES, 1)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        setvar(VAR_LEVEL_CAP, 29)
+        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE02_GET))) {
+        setflag(FLAG_BADGE02_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 41)
+        msgbox("Level cap increased to 41.", MSGBOX_DEFAULT)  
+    } elif (!(flag(FLAG_BADGE03_GET))) {
+        setflag(FLAG_BADGE03_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 49)
+        msgbox("Level cap increased to 49.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE04_GET))) {
+        setflag(FLAG_BADGE04_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 56)
+        msgbox("Level cap increased to 56.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE05_GET))) {
+        setflag(FLAG_BADGE05_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 71)
+        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE06_GET))) {
+        setflag(FLAG_BADGE06_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 78)
+        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE07_GET))) {
+        setflag(FLAG_BADGE07_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 85)
+        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE08_GET))) {
+        setflag(FLAG_BADGE08_GET)
+        msgbox("You got the Tempo Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 90)
+        msgbox("Level cap increased to 90.", MSGBOX_DEFAULT) 
+    }
+
+    applymovement(1, Skye_Exit)
+    waitmovement(0)
+    setflag(FLAG_SKYE)
+    applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+    waitmovement(0)
+    releaseall
+    end
+}
+
+text Selene_Intro{
+    "My Pokemon will outcompete yours!"
+}
+
+text Selene_Outro{
+    "Now I'm the one paralyzed."
+}
+
+text PostBattle_Selene{
+    "Good luck against Skye."
+}
+
+text Skye_Intro{
+    "Hope you brought some antidote."
+}
+
+text Skye_Outro{
+    "Ouch! I'm burned!"
+}
+
+text PostBattle_Skye{
+    "Good luck with the rest of the gyms."
+}
+
+
+

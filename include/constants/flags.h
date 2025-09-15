@@ -55,23 +55,23 @@
 #define FLAG_THUNDERFANG    0x29 // Old Stone Cave Thunder Fang
 #define FLAG_TRAILBLAZE    0x2A // Route 4 Trailblaze
 #define FLAG_AIRCUTTER    0x2B // Route 2 Air Cutter
-#define FLAG_UNUSED_0x02C    0x2C // Unused Flag
-#define FLAG_UNUSED_0x02D    0x2D // Unused Flag
-#define FLAG_UNUSED_0x02E    0x2E // Unused Flag
-#define FLAG_UNUSED_0x02F    0x2F // Unused Flag
-#define FLAG_UNUSED_0x030    0x30 // Unused Flag
-#define FLAG_UNUSED_0x031    0x31 // Unused Flag
-#define FLAG_UNUSED_0x032    0x32 // Unused Flag
-#define FLAG_UNUSED_0x033    0x33 // Unused Flag
-#define FLAG_UNUSED_0x034    0x34 // Unused Flag
-#define FLAG_UNUSED_0x035    0x35 // Unused Flag
-#define FLAG_UNUSED_0x036    0x36 // Unused Flag
-#define FLAG_UNUSED_0x037    0x37 // Unused Flag
-#define FLAG_UNUSED_0x038    0x38 // Unused Flag
-#define FLAG_UNUSED_0x039    0x39 // Unused Flag
-#define FLAG_UNUSED_0x03A    0x3A // Unused Flag
+#define FLAG_RAGEPOWDER    0x2C // Twilight Forest
+#define FLAG_POLLENPUFF    0x2D // Twilight Forest
+#define FLAG_DARKPULSE    0x2E // Twilight Forest
+#define FLAG_SHADOWCLAW    0x2F // Twilight Forest
+#define FLAG_SOLARBLADE    0x30 // Twilight Forest
+#define FLAG_ENERGYBALL    0x31 // Twilight Forest
+#define FLAG_ACIDSPRAY    0x32 // Twilight Forest
+#define FLAG_PSYCHICTERRAIN    0x33 // Twilight Forest
+#define FLAG_PSYCHICFANGS    0x34 // Twilight Forest
+#define FLAG_BIGROOT    0x35 // Twilight Forest
+#define FLAG_LIGHTCLAY    0x36 // Twilight Forest
+#define FLAG_PSYCHICSEED    0x37 // Twilight Forest
+#define FLAG_TWISTEDSPOON    0x38 // Twilight Forest
+#define FLAG_SPELLTAG   0x39 // Twilight Forest
+#define FLAG_WALKINGWAKE    0x3A // Checks to see if already recieved Walking Wake from sailor
 #define FLAG_UNUSED_0x03B    0x3B // Unused Flag
-#define FLAG_UNUSED_0x03C    0x3C // Unused Flag
+#define FLAG_GURU_DARKFALLS    0x3C // Checks if already received gifts from gym guru
 #define FLAG_GURU_PORTVALOR    0x3D // Checks if already received gifts from gym guru
 #define FLAG_GURU_FORESTSEDGE    0x3E // Checks if already received gifts from gym guru
 #define FLAG_GURU_NEWHOPE    0x3F // Checks if already received gifts from gym guru
@@ -98,8 +98,8 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
-#define FLAG_UNUSED_0x055                    0x55  // Unused Flag
+#define FLAG_SKYE                    0x54  // Unused Flag
+#define FLAG_SELENE                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
 #define FLAG_MET_RIVAL_MOM                   0x57
@@ -514,11 +514,11 @@
 #define FLAG_DEFEATED_HO_OH                  0x1DC
 #define FLAG_DEFEATED_LUGIA                  0x1DD
 
-#define FLAG_UNUSED_0x1DE                    0x1DE // Unused Flag
-#define FLAG_UNUSED_0x1DF                    0x1DF // Unused Flag
-#define FLAG_UNUSED_0x1E0                    0x1E0 // Unused Flag
-#define FLAG_UNUSED_0x1E1                    0x1E1 // Unused Flag
-#define FLAG_UNUSED_0x1E2                    0x1E2 // Unused Flag
+#define FLAG_GRASS_SHARDS_TWILIGHT                    0x1DE // Unused Flag
+#define FLAG_DARK_SHARDS_TWILIGHT                    0x1DF // Unused Flag
+#define FLAG_PSYCHIC_SHARDS_TWILIGHT                    0x1E0 // Unused Flag
+#define FLAG_BUG_SHARDS_TWILIGHT                    0x1E1 // Unused Flag
+#define FLAG_GRASS_SHARDS_ROUTE4                    0x1E2 // Unused Flag
 #define FLAG_UNUSED_0x1E3                    0x1E3 // Unused Flag
 
 // Mystery Gift Flags (Unknown)

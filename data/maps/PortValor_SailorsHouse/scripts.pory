@@ -1,0 +1,34 @@
+mapscripts PortValor_SailorsHouse_MapScripts {}
+
+script PortValor_EventScript_Sailor {
+    lockall
+    faceplayer
+
+    if ((var(VAR_BADGES) > 1) && !(flag(FLAG_RECEIVED_GOOD_ROD))){
+        msgbox("I think you might be ready for this.", MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_GOOD_ROD, 1)
+        setflag(FLAG_RECEIVED_GOOD_ROD)
+        msgbox("That will help you catch more than Feebas.", MSGBOX_AUTOCLOSE)
+        msgbox("Come see me again when you've trained more.", MSGBOX_AUTOCLOSE)
+    } elif ((var(VAR_BADGES) > 4) && (flag(FLAG_RECEIVED_GOOD_ROD)) && !(flag(FLAG_RECEIVED_HM_SURF))) {
+        msgbox("I think you might be ready for this.", MSGBOX_AUTOCLOSE)
+        giveitem(ITEM_HM_SURF, 1)
+        setflag(FLAG_RECEIVED_HM_SURF)
+        msgbox("Now you can sail the high seas.", MSGBOX_AUTOCLOSE)
+        msgbox("Come see me again when you've trained more.", MSGBOX_AUTOCLOSE)
+    } elif ((var(VAR_BADGES) > 7) && (flag(FLAG_RECEIVED_HM_SURF)) && !(flag(FLAG_WALKINGWAKE))) {
+        msgbox("I think you might be ready for this.", MSGBOX_AUTOCLOSE)
+        givemon(SPECIES_WALKING_WAKE, 60, ITEM_NONE)
+        setflag(FLAG_WALKINGWAKE)
+        msgbox("Now you can sail the high seas.", MSGBOX_AUTOCLOSE)
+        msgbox("Come see me again when you've trained more.", MSGBOX_AUTOCLOSE)
+    } elif (flag(FLAG_WALKINGWAKE)) {
+        msgbox("I've given you everything I can.", MSGBOX_AUTOCLOSE)
+        msgbox("Hope you have some calm seas ahead.", MSGBOX_AUTOCLOSE)
+    } else {
+        msgbox("Come see me again when you've trained more.", MSGBOX_AUTOCLOSE)
+    }
+
+    releaseall
+    end
+}

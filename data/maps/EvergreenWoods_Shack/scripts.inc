@@ -30,15 +30,18 @@ InfoLoop:
 # 58 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	compare VAR_RESULT, 2
 	goto_if_eq EvergreenWoods_Shack_EventScript_GymGuru_11
-# 76 "data/maps/EvergreenWoods_Shack/scripts.pory"
+# 74 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	compare VAR_RESULT, 3
+	goto_if_eq EvergreenWoods_Shack_EventScript_GymGuru_12
+# 91 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_6, MSGBOX_AUTOCLOSE
 EvergreenWoods_Shack_EventScript_GymGuru_8:
-# 79 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	goto_if_unset FLAG_KUBFU, EvergreenWoods_Shack_EventScript_GymGuru_17
-EvergreenWoods_Shack_EventScript_GymGuru_16:
-# 91 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_29, MSGBOX_AUTOCLOSE
-# 93 "data/maps/EvergreenWoods_Shack/scripts.pory"
+# 94 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	goto_if_unset FLAG_KUBFU, EvergreenWoods_Shack_EventScript_GymGuru_19
+EvergreenWoods_Shack_EventScript_GymGuru_18:
+# 106 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_34, MSGBOX_AUTOCLOSE
+# 108 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	releaseall
 	end
 
@@ -68,8 +71,8 @@ EvergreenWoods_Shack_EventScript_GymGuru_9:
 # 30 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_9, MSGBOX_AUTOCLOSE
 # 31 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	goto_if_unset FLAG_GURU_NEWHOPE, EvergreenWoods_Shack_EventScript_GymGuru_20
-EvergreenWoods_Shack_EventScript_GymGuru_19:
+	goto_if_unset FLAG_GURU_NEWHOPE, EvergreenWoods_Shack_EventScript_GymGuru_22
+EvergreenWoods_Shack_EventScript_GymGuru_21:
 # 40 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	goto InfoLoop
 	goto EvergreenWoods_Shack_EventScript_GymGuru_8
@@ -82,8 +85,8 @@ EvergreenWoods_Shack_EventScript_GymGuru_10:
 # 45 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_16, MSGBOX_AUTOCLOSE
 # 47 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	goto_if_unset FLAG_GURU_FORESTSEDGE, EvergreenWoods_Shack_EventScript_GymGuru_23
-EvergreenWoods_Shack_EventScript_GymGuru_22:
+	goto_if_unset FLAG_GURU_FORESTSEDGE, EvergreenWoods_Shack_EventScript_GymGuru_25
+EvergreenWoods_Shack_EventScript_GymGuru_24:
 # 56 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	goto InfoLoop
 	goto EvergreenWoods_Shack_EventScript_GymGuru_8
@@ -98,32 +101,46 @@ EvergreenWoods_Shack_EventScript_GymGuru_11:
 # 62 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_22, MSGBOX_AUTOCLOSE
 # 64 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	goto_if_unset FLAG_GURU_PORTVALOR, EvergreenWoods_Shack_EventScript_GymGuru_26
-EvergreenWoods_Shack_EventScript_GymGuru_25:
+	goto_if_unset FLAG_GURU_PORTVALOR, EvergreenWoods_Shack_EventScript_GymGuru_28
+EvergreenWoods_Shack_EventScript_GymGuru_27:
 # 73 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	goto InfoLoop
 	goto EvergreenWoods_Shack_EventScript_GymGuru_8
 
-EvergreenWoods_Shack_EventScript_GymGuru_17:
-# 80 "data/maps/EvergreenWoods_Shack/scripts.pory"
+EvergreenWoods_Shack_EventScript_GymGuru_12:
+# 75 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_25, MSGBOX_AUTOCLOSE
-# 81 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	givemon SPECIES_KUBFU, 5, ITEM_NONE
-# 82 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	playfanfare MUS_OBTAIN_SYMBOL
-# 83 "data/maps/EvergreenWoods_Shack/scripts.pory"
+# 76 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_26, MSGBOX_AUTOCLOSE
-# 84 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	waitfanfare
-# 85 "data/maps/EvergreenWoods_Shack/scripts.pory"
+# 77 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_27, MSGBOX_AUTOCLOSE
-# 86 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_28, MSGBOX_AUTOCLOSE
+# 79 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	goto_if_unset FLAG_GURU_DARKFALLS, EvergreenWoods_Shack_EventScript_GymGuru_31
+EvergreenWoods_Shack_EventScript_GymGuru_30:
 # 88 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	setflag FLAG_KUBFU
-	goto EvergreenWoods_Shack_EventScript_GymGuru_16
+	goto InfoLoop
+	goto EvergreenWoods_Shack_EventScript_GymGuru_8
 
-EvergreenWoods_Shack_EventScript_GymGuru_20:
+EvergreenWoods_Shack_EventScript_GymGuru_19:
+# 95 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_30, MSGBOX_AUTOCLOSE
+# 96 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	givemon SPECIES_KUBFU, 5, ITEM_NONE
+# 97 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	playfanfare MUS_OBTAIN_SYMBOL
+# 98 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_31, MSGBOX_AUTOCLOSE
+# 99 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	waitfanfare
+# 100 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_32, MSGBOX_AUTOCLOSE
+# 101 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_33, MSGBOX_AUTOCLOSE
+# 103 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	setflag FLAG_KUBFU
+	goto EvergreenWoods_Shack_EventScript_GymGuru_18
+
+EvergreenWoods_Shack_EventScript_GymGuru_22:
 # 32 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_10, MSGBOX_AUTOCLOSE
 # 33 "data/maps/EvergreenWoods_Shack/scripts.pory"
@@ -138,9 +155,9 @@ EvergreenWoods_Shack_EventScript_GymGuru_20:
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_13, MSGBOX_AUTOCLOSE
 # 38 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	setflag FLAG_GURU_NEWHOPE
-	goto EvergreenWoods_Shack_EventScript_GymGuru_19
+	goto EvergreenWoods_Shack_EventScript_GymGuru_21
 
-EvergreenWoods_Shack_EventScript_GymGuru_23:
+EvergreenWoods_Shack_EventScript_GymGuru_25:
 # 48 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_10, MSGBOX_AUTOCLOSE
 # 49 "data/maps/EvergreenWoods_Shack/scripts.pory"
@@ -155,9 +172,9 @@ EvergreenWoods_Shack_EventScript_GymGuru_23:
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_13, MSGBOX_AUTOCLOSE
 # 54 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	setflag FLAG_GURU_FORESTSEDGE
-	goto EvergreenWoods_Shack_EventScript_GymGuru_22
+	goto EvergreenWoods_Shack_EventScript_GymGuru_24
 
-EvergreenWoods_Shack_EventScript_GymGuru_26:
+EvergreenWoods_Shack_EventScript_GymGuru_28:
 # 65 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_10, MSGBOX_AUTOCLOSE
 # 66 "data/maps/EvergreenWoods_Shack/scripts.pory"
@@ -172,7 +189,24 @@ EvergreenWoods_Shack_EventScript_GymGuru_26:
 	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_13, MSGBOX_AUTOCLOSE
 # 71 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	setflag FLAG_GURU_PORTVALOR
-	goto EvergreenWoods_Shack_EventScript_GymGuru_25
+	goto EvergreenWoods_Shack_EventScript_GymGuru_27
+
+EvergreenWoods_Shack_EventScript_GymGuru_31:
+# 80 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_10, MSGBOX_AUTOCLOSE
+# 81 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	giveitem ITEM_IRON_BALL, 1
+# 82 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_28, MSGBOX_AUTOCLOSE
+# 83 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	giveitem ITEM_TM_ICY_WIND, 1
+# 84 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_29, MSGBOX_AUTOCLOSE
+# 85 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	msgbox EvergreenWoods_Shack_EventScript_GymGuru_Text_13, MSGBOX_AUTOCLOSE
+# 86 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	setflag FLAG_GURU_DARKFALLS
+	goto EvergreenWoods_Shack_EventScript_GymGuru_30
 
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_0:
@@ -276,21 +310,41 @@ EvergreenWoods_Shack_EventScript_GymGuru_Text_24:
 	.string "And that will boost your water moves to\nhelp in the sun.$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_25:
-# 80 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	.string "One last thing before you go.\pI have this Pokemon I never got around\nto training. Maybe you can do it.$"
+# 75 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "Ah, Dark Falls. I swear it's always\nraining there...$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_26:
-# 83 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	.string "Obtained Kubfu!$"
+# 76 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "That gym is all about speed control.$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_27:
-# 85 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	.string "He needs some strange item to evolve and\nI just never bothered to find out what.$"
+# 77 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "You better be prepared for both fast\nand slow opponents.$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_28:
-# 86 "data/maps/EvergreenWoods_Shack/scripts.pory"
-	.string "I hope he will serve you well.$"
+# 82 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "That will help you deal with slower\ntempos.$"
 
 EvergreenWoods_Shack_EventScript_GymGuru_Text_29:
-# 91 "data/maps/EvergreenWoods_Shack/scripts.pory"
+# 84 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "And that will slow down quicker teams.$"
+
+EvergreenWoods_Shack_EventScript_GymGuru_Text_30:
+# 95 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "One last thing before you go.\pI have this Pokemon I never got around\nto training. Maybe you can do it.$"
+
+EvergreenWoods_Shack_EventScript_GymGuru_Text_31:
+# 98 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "Obtained Kubfu!$"
+
+EvergreenWoods_Shack_EventScript_GymGuru_Text_32:
+# 100 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "He needs some strange item to evolve and\nI just never bothered to find out what.$"
+
+EvergreenWoods_Shack_EventScript_GymGuru_Text_33:
+# 101 "data/maps/EvergreenWoods_Shack/scripts.pory"
+	.string "I hope he will serve you well.$"
+
+EvergreenWoods_Shack_EventScript_GymGuru_Text_34:
+# 106 "data/maps/EvergreenWoods_Shack/scripts.pory"
 	.string "Take care and feel free to return if you\never need more advice!$"

@@ -30,7 +30,6 @@ MauvilleCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_SHAWN
 	settrainerflag TRAINER_BEN
 	settrainerflag TRAINER_VIVIAN
-	settrainerflag TRAINER_ANGELO
 	return
 
 LavaridgeTown_Gym_SetGymTrainers::
@@ -60,7 +59,6 @@ FortreeCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_ASHLEY
 	settrainerflag TRAINER_EDWARDO
 	settrainerflag TRAINER_HUMBERTO
-	settrainerflag TRAINER_DARIUS
 	return
 
 MossdeepCity_Gym_SetGymTrainers::

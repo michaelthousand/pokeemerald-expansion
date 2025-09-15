@@ -71,8 +71,23 @@ InfoLoop:
             setflag(FLAG_GURU_PORTVALOR)
         }
         goto(InfoLoop)
+    } elif (var(VAR_RESULT) == 3) {
+        msgbox("Ah, Dark Falls. I swear it's always\nraining there...", MSGBOX_AUTOCLOSE)
+        msgbox("That gym is all about speed control.", MSGBOX_AUTOCLOSE)
+        msgbox("You better be prepared for both fast\nand slow opponents.", MSGBOX_AUTOCLOSE)
 
-    } else { // VAR_RESULT == 3
+        if (!(flag(FLAG_GURU_DARKFALLS))){
+            msgbox("Here are some items for when you make it\nthere.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_IRON_BALL, 1)
+            msgbox("That will help you deal with slower\ntempos.", MSGBOX_AUTOCLOSE)
+            giveitem(ITEM_TM_ICY_WIND, 1)
+            msgbox("And that will slow down quicker teams.", MSGBOX_AUTOCLOSE)
+            msgbox("Those should give you a leg up!", MSGBOX_AUTOCLOSE)
+            setflag(FLAG_GURU_DARKFALLS)
+        }
+        goto(InfoLoop)
+    
+    } else { // VAR_RESULT == 4
         msgbox("Oh well. Maybe another time.", MSGBOX_AUTOCLOSE)
     }
 

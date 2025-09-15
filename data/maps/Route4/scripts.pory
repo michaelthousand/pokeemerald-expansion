@@ -7,3 +7,12 @@ script Route4_Trailblaze{
     closemessage
     end
 }
+
+script Route4_GrassShards {
+    giveitem(ITEM_GRASS_TERA_SHARD, 5)
+    addvar(VAR_GRASS_SHARDS, 5)
+    setflag(FLAG_GRASS_SHARDS_ROUTE4)
+    removeobject(2)
+    closemessage
+    end
+}

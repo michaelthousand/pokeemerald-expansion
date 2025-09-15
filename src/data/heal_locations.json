@@ -161,6 +161,12 @@
       "map": "MAP_ROUTE26",
       "x": 12,
       "y": 10
+    },
+    {
+      "id": "HEAL_LOCATION_DARK_FALLS",
+      "map": "MAP_DARK_FALLS",
+      "x": 13,
+      "y": 5
     }
   ]
 }

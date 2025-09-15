@@ -33,6 +33,22 @@ script Prometheus_Tech_Lab_EventScript_ExpShare{
 script Prometheus_Tech_Lab_EventScript_Tera {
     lock
     faceplayer
+    msgbox("Hello! If you bring me Tera Shards, I\ncan change the Tera Tye of your Pokemon.", MSGBOX_AUTOCLOSE)
+    msgbox("Let's see what shards you have...", MSGBOX_AUTOCLOSE)
+    delay(60)
+
+    if (var(VAR_GRASS_SHARDS) >= 10) {
+        msgbox("Would you like to change the Tera\nType of one of your Pokemon to\pGrass?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_GRASS, slot=VAR_0x8004)
+            msgbox("Your Pokemon's tera type is now Grass.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    }
+
 
     msgbox("Do you want to change the tera type\nfor one of your pokemon?", MSGBOX_YESNO)
     if(var(VAR_RESULT) == YES){

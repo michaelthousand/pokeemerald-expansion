@@ -71,6 +71,9 @@ script NewHope_BattleCenter_EventScript_Friendly1 {
             end
         }
 
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
         cleartrainerflag(TRAINER_FRIENDLY_1)
         trainerbattle_double(TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, Not_Enough_Mons, NO_MUSIC)
     }
@@ -95,6 +98,9 @@ script NewHope_BattleCenter_EventScript_Friendly2 {
             clearflag(FLAG_VGC_PENDING_RESTORE)
             end
         }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
 
         cleartrainerflag(TRAINER_FRIENDLY_2)
         trainerbattle_double(TRAINER_FRIENDLY_2, FriendlyTrainer2_Intro, FriendlyTrainer2_Outro, Not_Enough_Mons, NO_MUSIC)

@@ -37,7 +37,8 @@
     "gMapGroup_IndoorForestsEdge",
     "gMapGroup_Prometheus_Tech_Indoor",
     "gMapGroup_IndoorPortValor",
-    "gMapGroup_MiscIndoor"
+    "gMapGroup_MiscIndoor",
+    "gMapGroup_IndoorDarkFalls"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -103,7 +104,8 @@
     "OldStoneCave2F",
     "OldStoneCave3F",
     "Route26",
-    "DarkFalls"
+    "DarkFalls",
+    "Twilight_Forest"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -643,7 +645,8 @@
     "NewHope_TheosHouse2F",
     "NerwHope_Gym",
     "NewHope_Gym",
-    "NewHope_FishermansHouse"
+    "NewHope_FishermansHouse",
+    "DarkFalls_Gym"
   ],
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",
@@ -659,9 +662,13 @@
   "gMapGroup_IndoorPortValor": [
     "PortValor_Gym",
     "PortValor_PokemonCenter",
-    "PortValor_PokeMart"
+    "PortValor_PokeMart",
+    "PortValor_SailorsHouse"
   ],
   "gMapGroup_MiscIndoor": [
     "EvergreenWoods_Shack"
+  ],
+  "gMapGroup_IndoorDarkFalls": [
+    "DarkFalls_PokemonCenter"
   ]
 }

@@ -97,16 +97,17 @@ script NewHope_Gym_EventScript_Rules {
 
         msgbox("Welcome, challenger. Allow me to explain\nhow Gyms work here in Valora.", MSGBOX_DEFAULT)
 
-        msgbox("Each Gym has two Leaders, and each one\nspecializes in a different styles.", MSGBOX_DEFAULT)
+        msgbox("Each Gym has two Leaders, and each one\nspecializes in different styles.", MSGBOX_DEFAULT)
         msgbox("There are no junior trainers in our gyms.", MSGBOX_DEFAULT)
         msgbox("You must defeat both Leaders to earn\na badge.", MSGBOX_DEFAULT)
+        msgbox("If you lose to either leader, you will\nneed to rebattle both.", MSGBOX_DEFAULT)
 
         msgbox("Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.", MSGBOX_DEFAULT)
         msgbox("You can cancel the battle only before\nthe first gym leader to return to the\plobby and change your team.", MSGBOX_DEFAULT)
         msgbox("There's a computer to your left for this\nvery purpose.", MSGBOX_DEFAULT)
-        msgbox("Between their battles, you won’t be\nallowed to change your party Pokemon.", MSGBOX_DEFAULT)
+        msgbox("Between the battles, you won’t be\nallowed to change your party Pokemon.", MSGBOX_DEFAULT)
         msgbox("However, your Pokémon will be fully\nhealed before facing the second Leader.", MSGBOX_DEFAULT)
-        msgbox("And, as I mentioned, you will have a\nchance to select different\pPokemon from your party for the second\nbattle.", MSGBOX_DEFAULT)
+        msgbox("And you will be able to select \nnew group of four for the second battle.", MSGBOX_DEFAULT)
 
         msgbox("Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.", MSGBOX_DEFAULT)
         msgbox("Your first opponent is Freya.\pHer team is ultra competitive.", MSGBOX_DEFAULT)
@@ -202,7 +203,7 @@ script NewHope_Gym_EventScript_Freya {
             trainerbattle_double(TRAINER_FREYA_C2, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
         }
 
-    } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)){
         // --- AI preview ---
         setvar(VAR_VGC_PREVIEW_0, SPECIES_GOTHITELLE)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_OGERPON)
@@ -212,6 +213,10 @@ script NewHope_Gym_EventScript_Freya {
         setvar(VAR_VGC_PREVIEW_5, SPECIES_EMPOLEON)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
         }
 
         msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
@@ -256,10 +261,136 @@ script NewHope_Gym_EventScript_Freya {
             special(WeightedSelector_On)
             cleartrainerflag(TRAINER_FREYA_B1)
             trainerbattle_double(TRAINER_FREYA_B1, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
-        } 
-    }
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_B2)
+            trainerbattle_double(TRAINER_FREYA_B2, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_B3)
+            trainerbattle_double(TRAINER_FREYA_B3, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_ANNIHILAPE)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_MILOTIC)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_TORNADUS)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_KINGAMBIT)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_ZAPDOS_GALAR)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_OGERPON)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_A1)
+            trainerbattle_double(TRAINER_FREYA_A1, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_A2)
+            trainerbattle_double(TRAINER_FREYA_A2, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_FREYA_A3)
+            trainerbattle_double(TRAINER_FREYA_A3, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
+        }
     
-    // add rest of tiers
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_KINGAMBIT)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_THUNDURUS)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_OGERPON)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_TORNADUS)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_ZAPDOS_GALAR)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_ARTICUNO_GALAR)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_FREYA_S)
+        trainerbattle_double(TRAINER_FREYA_S, Freya_Intro, Freya_Outro, Not_Enough_Mons, NewHope_Gym_After_Freya, NO_MUSIC)
+    }
 }
 
 script NewHope_Gym_After_Freya {
@@ -352,7 +483,7 @@ script NewHope_Gym_EventScript_Ronan {
             cleartrainerflag(TRAINER_RONAN_C2)
             trainerbattle_double(TRAINER_RONAN_C2, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
         }
-    } elif ((var(VAR_BADGES) > 2) && (var(VAR_BADGES) < 5)){
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)) {
         // --- AI preview ---
         setvar(VAR_VGC_PREVIEW_0, SPECIES_PORYGON2)
         setvar(VAR_VGC_PREVIEW_1, SPECIES_ARCANINE)
@@ -362,6 +493,10 @@ script NewHope_Gym_EventScript_Ronan {
         setvar(VAR_VGC_PREVIEW_5, SPECIES_INCINEROAR)
         if (var(VAR_BADGES) == 2){
             setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
         }
 
         msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
@@ -406,10 +541,135 @@ script NewHope_Gym_EventScript_Ronan {
             special(WeightedSelector_On)
             cleartrainerflag(TRAINER_RONAN_B1)
             trainerbattle_double(TRAINER_RONAN_B1, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
-        } 
-    }
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_B2)
+            trainerbattle_double(TRAINER_RONAN_B2, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_B3)
+            trainerbattle_double(TRAINER_RONAN_B3, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_LANDORUS_THERIAN)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_INCINEROAR)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_ANNIHILAPE)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAUSHOLD_FOUR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_SALAMENCE)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_GYARADOS)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
 
-    // add rest of tiers
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_A1)
+            trainerbattle_double(TRAINER_RONAN_A1, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_A2)
+            trainerbattle_double(TRAINER_RONAN_A2, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_RONAN_A3)
+            trainerbattle_double(TRAINER_RONAN_A3, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
+        }
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_LANDORUS_THERIAN)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_INCINEROAR)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_ANNIHILAPE)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAUSHOLD_FOUR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_SALAMENCE)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_GYARADOS)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_RONAN_S)
+        trainerbattle_double(TRAINER_RONAN_S, Ronan_Intro, Ronan_Outro, Not_Enough_Mons, NewHope_Gym_After_Ronan, NO_MUSIC)
+    }
 
 }
 

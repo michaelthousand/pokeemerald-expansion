@@ -911,6 +911,7 @@ static const struct MenuAction MultichoiceList_Gym_Guru[] =
     {gText_NewHope},
     {gText_ForestsEdge},
     {gText_PortValor},
+    {gText_DarkFalls},
     {gText_NoGym},
 };
 

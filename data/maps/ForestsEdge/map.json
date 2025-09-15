@@ -22,6 +22,11 @@
       "map": "MAP_ROUTE3",
       "offset": 20,
       "direction": "down"
+    },
+    {
+      "map": "MAP_TWILIGHT_FOREST",
+      "offset": 11,
+      "direction": "left"
     }
   ],
   "object_events": [

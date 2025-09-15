@@ -41,12 +41,9 @@ script NewHope_EventScript_Villager1 {
 
     msgbox("Would you like a badge?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES) {
-        if (var(VAR_BADGES) == 0) {
-            setvar(VAR_BADGES, 1)
-            msgbox("1st badge acquired", MSGBOX_AUTOCLOSE)
-        } elif (var(VAR_BADGES) == 1) {
-            setvar(VAR_BADGES, 2)
-            msgbox("2nd badge acquired", MSGBOX_AUTOCLOSE)
+        if (var(VAR_BADGES) < 8) {
+            addvar(VAR_BADGES, 1)
+            msgbox("Badge acquired", MSGBOX_AUTOCLOSE)
         } else {
             msgbox("Max badges reached", MSGBOX_AUTOCLOSE)
         }
@@ -57,6 +54,26 @@ script NewHope_EventScript_Villager1 {
         } elif (var(VAR_LEVEL_CAP) == 29) {
             setvar(VAR_LEVEL_CAP, 41)
             msgbox("Level cap increased to 41", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 41) {
+            setvar(VAR_LEVEL_CAP, 49)
+            msgbox("Level cap increased to 49", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 49) {
+            setvar(VAR_LEVEL_CAP, 56)
+            msgbox("Level cap increased to 56", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 56) {
+            setvar(VAR_LEVEL_CAP, 64)
+            msgbox("Level cap increased to 64", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 64) {
+            setvar(VAR_LEVEL_CAP, 71)
+            msgbox("Level cap increased to 71", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 71) {
+            setvar(VAR_LEVEL_CAP, 78)
+            msgbox("Level cap increased to 78", MSGBOX_AUTOCLOSE)
+        } elif (var(VAR_LEVEL_CAP) == 78) {
+            setvar(VAR_LEVEL_CAP, 85)
+            msgbox("Level cap increased to 85", MSGBOX_AUTOCLOSE)
+        } else {
+            msgbox("Max level cap reached.", MSGBOX_AUTOCLOSE)
         }
     }
 

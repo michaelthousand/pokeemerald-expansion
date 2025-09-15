@@ -81,7 +81,7 @@ NewHope_BattleCenter_EventScript_Friendly1::
 	compare VAR_LEVEL_CAP, 21
 	goto_if_eq NewHope_BattleCenter_EventScript_Friendly1_2
 NewHope_BattleCenter_EventScript_Friendly1_1:
-# 77 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 80 "data/maps/NewHope_BattleCenter/scripts.pory"
 	releaseall
 	return
 
@@ -99,9 +99,11 @@ NewHope_BattleCenter_EventScript_Friendly1_2:
 # 68 "data/maps/NewHope_BattleCenter/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne NewHope_BattleCenter_EventScript_Friendly1_5
-# 74 "data/maps/NewHope_BattleCenter/scripts.pory"
-	cleartrainerflag TRAINER_FRIENDLY_1
 # 75 "data/maps/NewHope_BattleCenter/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 77 "data/maps/NewHope_BattleCenter/scripts.pory"
+	cleartrainerflag TRAINER_FRIENDLY_1
+# 78 "data/maps/NewHope_BattleCenter/scripts.pory"
 	trainerbattle_double TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, Not_Enough_Mons, NO_MUSIC
 	goto NewHope_BattleCenter_EventScript_Friendly1_1
 
@@ -112,38 +114,40 @@ NewHope_BattleCenter_EventScript_Friendly1_5:
 
 
 NewHope_BattleCenter_EventScript_Friendly2::
-# 81 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 84 "data/maps/NewHope_BattleCenter/scripts.pory"
 	lockall
-# 82 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 85 "data/maps/NewHope_BattleCenter/scripts.pory"
 	compare VAR_LEVEL_CAP, 21
 	goto_if_eq NewHope_BattleCenter_EventScript_Friendly2_2
 NewHope_BattleCenter_EventScript_Friendly2_1:
-# 102 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 108 "data/maps/NewHope_BattleCenter/scripts.pory"
 	releaseall
 	return
 
 NewHope_BattleCenter_EventScript_Friendly2_2:
-# 83 "data/maps/NewHope_BattleCenter/scripts.pory"
-	msgbox NewHope_BattleCenter_EventScript_Friendly1_Text_0, MSGBOX_DEFAULT
-# 85 "data/maps/NewHope_BattleCenter/scripts.pory"
-	special Vgc_SavePartyBackup
 # 86 "data/maps/NewHope_BattleCenter/scripts.pory"
-	setflag FLAG_VGC_PENDING_RESTORE
+	msgbox NewHope_BattleCenter_EventScript_Friendly1_Text_0, MSGBOX_DEFAULT
+# 88 "data/maps/NewHope_BattleCenter/scripts.pory"
+	special Vgc_SavePartyBackup
 # 89 "data/maps/NewHope_BattleCenter/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 92 "data/maps/NewHope_BattleCenter/scripts.pory"
 	special Vgc_ChoosePartyOfFour
-# 90 "data/maps/NewHope_BattleCenter/scripts.pory"
-	waitstate
 # 93 "data/maps/NewHope_BattleCenter/scripts.pory"
+	waitstate
+# 96 "data/maps/NewHope_BattleCenter/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_ne NewHope_BattleCenter_EventScript_Friendly2_5
-# 99 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 103 "data/maps/NewHope_BattleCenter/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 105 "data/maps/NewHope_BattleCenter/scripts.pory"
 	cleartrainerflag TRAINER_FRIENDLY_2
-# 100 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 106 "data/maps/NewHope_BattleCenter/scripts.pory"
 	trainerbattle_double TRAINER_FRIENDLY_2, FriendlyTrainer2_Intro, FriendlyTrainer2_Outro, Not_Enough_Mons, NO_MUSIC
 	goto NewHope_BattleCenter_EventScript_Friendly2_1
 
 NewHope_BattleCenter_EventScript_Friendly2_5:
-# 95 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 98 "data/maps/NewHope_BattleCenter/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
 	end
 
@@ -193,17 +197,17 @@ NewHope_BattleCenter_EventScript_Friendly1_Text_0:
 	.string "Choose your pokemon.$"
 
 FriendlyTrainer1_Intro::
-# 106 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 112 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "Good luck and have fun!$"
 
 FriendlyTrainer1_Outro::
-# 110 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 116 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "Gosh! You're good at this!$"
 
 FriendlyTrainer2_Intro::
-# 114 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 120 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "I'm going to win!$"
 
 FriendlyTrainer2_Outro::
-# 118 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 124 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "This is supposed to a friendly match...$"

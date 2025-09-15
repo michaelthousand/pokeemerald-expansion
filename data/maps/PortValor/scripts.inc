@@ -179,122 +179,144 @@ PortValor_EventScript_Villager3::
 
 PortValor_EventScript_Villager2::
 # 104 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_WHIMSICOTT
+	setvar VAR_0x8000, SPECIES_IRON_HANDS
 # 105 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 106 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_FOCUS_SASH
+	setvar VAR_0x8002, ITEM_ASSAULT_VEST
 # 107 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 109 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 114
+	setvar VAR_0x8004, 252
 # 110 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 0
+	setvar VAR_0x8005, 60
 # 111 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8006, 0
 # 112 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8007, 144
+	setvar VAR_0x8007, 0
 # 113 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8008, 0
+	setvar VAR_0x8008, 196
 # 114 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 252
+	setvar VAR_0x8009, 0
 # 116 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 119 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_HAWLUCHA
+	setvar VAR_0x8000, SPECIES_AMOONGUSS
 # 120 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 121 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_CHOICE_BAND
+	setvar VAR_0x8002, ITEM_ROCKY_HELMET
 # 122 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 124 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 12
+	setvar VAR_0x8004, 252
 # 125 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 244
+	setvar VAR_0x8005, 0
 # 126 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8006, 0
+	setvar VAR_0x8006, 172
 # 127 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8007, 0
 # 128 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8008, 0
+	setvar VAR_0x8008, 84
 # 129 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 252
+	setvar VAR_0x8009, 0
 # 131 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 134 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_MILOTIC
+	setvar VAR_0x8000, SPECIES_FLUTTER_MANE
 # 135 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 136 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_MYSTIC_WATER
+	setvar VAR_0x8002, ITEM_CHOICE_SPECS
 # 137 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 139 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 12
+	setvar VAR_0x8004, 4
 # 140 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8005, 0
 # 141 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8006, 0
 # 142 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8007, 248
+	setvar VAR_0x8007, 252
 # 143 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8008, 248
+	setvar VAR_0x8008, 0
 # 144 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 0
+	setvar VAR_0x8009, 252
 # 146 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 149 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_GEODUDE_ALOLA
+	setvar VAR_0x8000, SPECIES_LANDORUS_THERIAN
 # 150 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 151 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_ASSAULT_VEST
+	setvar VAR_0x8002, ITEM_SAFETY_GOGGLES
 # 152 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 154 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8004, 12
+	setvar VAR_0x8004, 252
 # 155 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 248
+	setvar VAR_0x8005, 60
 # 156 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8006, 248
+	setvar VAR_0x8006, 0
 # 157 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8007, 0
 # 158 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8008, 0
+	setvar VAR_0x8008, 196
 # 159 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8009, 0
 # 161 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 164 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8000, SPECIES_OGERPON
+	setvar VAR_0x8000, SPECIES_CRESSELIA
 # 165 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8001, 21
 # 166 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8002, ITEM_WELLSPRING_MASK
+	setvar VAR_0x8002, ITEM_MENTAL_HERB
 # 167 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8003, 31
 # 169 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8004, 252
 # 170 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8005, 252
+	setvar VAR_0x8005, 0
 # 171 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8006, 0
+	setvar VAR_0x8006, 196
 # 172 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8007, 0
 # 173 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8008, 0
+	setvar VAR_0x8008, 60
 # 174 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8009, 4
+	setvar VAR_0x8009, 0
 # 176 "data/maps/PortValor/scripts.pory"
 	callnative Script_GiveCustomMonEVsIVs
 # 179 "data/maps/PortValor/scripts.pory"
-	msgbox PortValor_EventScript_Villager2_Text_0, MSGBOX_AUTOCLOSE
+	setvar VAR_0x8000, SPECIES_CHI_YU
+# 180 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8001, 21
 # 181 "data/maps/PortValor/scripts.pory"
-	giveitem ITEM_ADAMANT_MINT, 10
+	setvar VAR_0x8002, ITEM_LIFE_ORB
 # 182 "data/maps/PortValor/scripts.pory"
-	giveitem ITEM_MODEST_MINT, 10
+	setvar VAR_0x8003, 31
 # 184 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8004, 4
+# 185 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8005, 0
+# 186 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8006, 0
+# 187 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8007, 252
+# 188 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8008, 0
+# 189 "data/maps/PortValor/scripts.pory"
+	setvar VAR_0x8009, 252
+# 191 "data/maps/PortValor/scripts.pory"
+	callnative Script_GiveCustomMonEVsIVs
+# 193 "data/maps/PortValor/scripts.pory"
+	msgbox PortValor_EventScript_Villager2_Text_0, MSGBOX_AUTOCLOSE
+# 195 "data/maps/PortValor/scripts.pory"
+	giveitem ITEM_ADAMANT_MINT, 10
+# 196 "data/maps/PortValor/scripts.pory"
+	giveitem ITEM_MODEST_MINT, 10
+# 198 "data/maps/PortValor/scripts.pory"
 	msgbox PortValor_EventScript_Villager2_Text_1, MSGBOX_AUTOCLOSE
 	end
 
@@ -348,9 +370,9 @@ PortValor_EventScript_Villager1_Text_9:
 	.string "Badges and lvl cap reset$"
 
 PortValor_EventScript_Villager2_Text_0:
-# 179 "data/maps/PortValor/scripts.pory"
+# 193 "data/maps/PortValor/scripts.pory"
 	.string "Pokemon added to party$"
 
 PortValor_EventScript_Villager2_Text_1:
-# 184 "data/maps/PortValor/scripts.pory"
+# 198 "data/maps/PortValor/scripts.pory"
 	.string "Have a great day$"

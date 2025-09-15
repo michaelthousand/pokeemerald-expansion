@@ -11815,6 +11815,314 @@
               }
             ]
           }
+        },
+        {
+          "map": "MAP_TWILIGHT_FOREST",
+          "base_label": "gTwilight_Forest_Day",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 42,
+                "max_level": 47,
+                "species": "SPECIES_CORVIKNIGHT"
+              },
+              {
+                "min_level": 38,
+                "max_level": 45,
+                "species": "SPECIES_MAUSHOLD"
+              },
+              {
+                "min_level": 38,
+                "max_level": 44,
+                "species": "SPECIES_TOEDSCRUEL"
+              },
+              {
+                "min_level": 44,
+                "max_level": 54,
+                "species": "SPECIES_AMOONGUSS"
+              },
+              {
+                "min_level": 47,
+                "max_level": 51,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 37,
+                "max_level": 50,
+                "species": "SPECIES_INDEEDEE"
+              },
+              {
+                "min_level": 43,
+                "max_level": 51,
+                "species": "SPECIES_ORANGURU"
+              },
+              {
+                "min_level": 32,
+                "max_level": 39,
+                "species": "SPECIES_GOTHORITA"
+              },
+              {
+                "min_level": 38,
+                "max_level": 47,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 39,
+                "max_level": 49,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 54,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 58,
+                "species": "SPECIES_OKIDOGI"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 31,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_SLOWBRO_GALAR"
+              },
+              {
+                "min_level": 32,
+                "max_level": 37,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 51,
+                "species": "SPECIES_TOXAPEX"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 27,
+                "max_level": 32,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 41,
+                "max_level": 45,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 41,
+                "max_level": 45,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_BASCULEGION"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_BASCULEGION"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_TATSUGIRI"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 41,
+                "max_level": 50,
+                "species": "SPECIES_TATSUGIRI"
+              }
+            ]
+          }
+        },
+        {
+          "map": "MAP_TWILIGHT_FOREST",
+          "base_label": "gTwilight_Forest_Night",
+          "land_mons": {
+            "encounter_rate": 10,
+            "mons": [
+              {
+                "min_level": 31,
+                "max_level": 42,
+                "species": "SPECIES_MISDREAVUS"
+              },
+              {
+                "min_level": 38,
+                "max_level": 45,
+                "species": "SPECIES_MAUSHOLD"
+              },
+              {
+                "min_level": 31,
+                "max_level": 35,
+                "species": "SPECIES_SHUPPET"
+              },
+              {
+                "min_level": 32,
+                "max_level": 39,
+                "species": "SPECIES_GOTHORITA"
+              },
+              {
+                "min_level": 47,
+                "max_level": 51,
+                "species": "SPECIES_URSARING"
+              },
+              {
+                "min_level": 37,
+                "max_level": 50,
+                "species": "SPECIES_INDEEDEE"
+              },
+              {
+                "min_level": 38,
+                "max_level": 49,
+                "species": "SPECIES_DUSCLOPS"
+              },
+              {
+                "min_level": 37,
+                "max_level": 43,
+                "species": "SPECIES_HAUNTER"
+              },
+              {
+                "min_level": 38,
+                "max_level": 47,
+                "species": "SPECIES_PAWNIARD"
+              },
+              {
+                "min_level": 39,
+                "max_level": 49,
+                "species": "SPECIES_SABLEYE"
+              },
+              {
+                "min_level": 45,
+                "max_level": 54,
+                "species": "SPECIES_LARVESTA"
+              },
+              {
+                "min_level": 52,
+                "max_level": 58,
+                "species": "SPECIES_MUNKIDORI"
+              }
+            ]
+          },
+          "water_mons": {
+            "encounter_rate": 4,
+            "mons": [
+              {
+                "min_level": 20,
+                "max_level": 30,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 31,
+                "max_level": 40,
+                "species": "SPECIES_SLOWPOKE_GALAR"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_SLOWBRO_GALAR"
+              },
+              {
+                "min_level": 32,
+                "max_level": 37,
+                "species": "SPECIES_MAREANIE"
+              },
+              {
+                "min_level": 41,
+                "max_level": 51,
+                "species": "SPECIES_TOXAPEX"
+              }
+            ]
+          },
+          "fishing_mons": {
+            "encounter_rate": 30,
+            "mons": [
+              {
+                "min_level": 18,
+                "max_level": 25,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 27,
+                "max_level": 32,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 41,
+                "max_level": 45,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 41,
+                "max_level": 45,
+                "species": "SPECIES_BASCULIN"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_BASCULEGION"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_BASCULEGION"
+              },
+              {
+                "min_level": 35,
+                "max_level": 40,
+                "species": "SPECIES_TATSUGIRI"
+              },
+              {
+                "min_level": 45,
+                "max_level": 55,
+                "species": "SPECIES_GYARADOS"
+              },
+              {
+                "min_level": 41,
+                "max_level": 50,
+                "species": "SPECIES_TATSUGIRI"
+              }
+            ]
+          }
         }
       ]
     },

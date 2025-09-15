@@ -760,83 +760,84 @@
 #define TRAINER_FLANNERY_3                  783
 #define TRAINER_FLANNERY_4                  784
 #define TRAINER_FLANNERY_5                  785
-#define TRAINER_NORMAN_2                    786
-#define TRAINER_NORMAN_3                    787
-#define TRAINER_NORMAN_4                    788
-#define TRAINER_NORMAN_5                    789
-#define TRAINER_WINONA_2                    790
-#define TRAINER_WINONA_3                    791
-#define TRAINER_WINONA_4                    792
-#define TRAINER_WINONA_5                    793
-#define TRAINER_TATE_AND_LIZA_2             794
-#define TRAINER_TATE_AND_LIZA_3             795
-#define TRAINER_TATE_AND_LIZA_4             796
-#define TRAINER_TATE_AND_LIZA_5             797
-#define TRAINER_JUAN_2                      798
-#define TRAINER_JUAN_3                      799
-#define TRAINER_JUAN_4                      800
-#define TRAINER_JUAN_5                      801
-#define TRAINER_ANGELO                      802
-#define TRAINER_DARIUS                      803
-#define TRAINER_STEVEN                      804
-#define TRAINER_ANABEL                      805
-#define TRAINER_TUCKER                      806
-#define TRAINER_SPENSER                     807
-#define TRAINER_GRETA                       808
-#define TRAINER_NOLAND                      809
-#define TRAINER_LUCY                        810
-#define TRAINER_BRANDON                     811
-#define TRAINER_ANDRES_2                    812
-#define TRAINER_ANDRES_3                    813
-#define TRAINER_ANDRES_4                    814
-#define TRAINER_ANDRES_5                    815
-#define TRAINER_CORY_2                      816
-#define TRAINER_CORY_3                      817
-#define TRAINER_CORY_4                      818
-#define TRAINER_CORY_5                      819
-#define TRAINER_PABLO_2                     820
-#define TRAINER_PABLO_3                     821
-#define TRAINER_PABLO_4                     822
-#define TRAINER_PABLO_5                     823
-#define TRAINER_KOJI_2                      824
-#define TRAINER_KOJI_3                      825
-#define TRAINER_KOJI_4                      826
-#define TRAINER_KOJI_5                      827
-#define TRAINER_CRISTIN_2                   828
-#define TRAINER_CRISTIN_3                   829
-#define TRAINER_CRISTIN_4                   830
-#define TRAINER_CRISTIN_5                   831
-#define TRAINER_FERNANDO_2                  832
-#define TRAINER_FERNANDO_3                  833
-#define TRAINER_FERNANDO_4                  834
-#define TRAINER_FERNANDO_5                  835
-#define TRAINER_SAWYER_2                    836
-#define TRAINER_SAWYER_3                    837
-#define TRAINER_SAWYER_4                    838
-#define TRAINER_SAWYER_5                    839
-#define TRAINER_GABRIELLE_2                 840
-#define TRAINER_GABRIELLE_3                 841
-#define TRAINER_RED                         842
-#define TRAINER_FRIENDLY_1                  843
-#define TRAINER_FRIENDLY_2                  844
-#define TRAINER_KAELEN_C1                   845
-#define TRAINER_KAELEN_C2                   846
-#define TRAINER_KAELEN_B1                   847
-#define TRAINER_MORWEN_C1                   848
-#define TRAINER_MORWEN_C2                   849
-#define TRAINER_MORWEN_B1                   850
-#define TRAINER_FREYA_C1                    851
-#define TRAINER_FREYA_C2                    852
-#define TRAINER_FREYA_B1                    853
-#define TRAINER_RONAN_C1                    854
-#define TRAINER_RONAN_C2                    855
-#define TRAINER_RONAN_B1                    856
-#define TRAINER_SOLARA_C1                   857
-#define TRAINER_SOLARA_C2                   858
-#define TRAINER_SOLARA_B1                   859
-#define TRAINER_MARIN_C1                    860
-#define TRAINER_MARIN_C2                    861
-#define TRAINER_MARIN_B1                    862
+
+
+#define TRAINER_RED                         786
+#define TRAINER_FRIENDLY_1                  787
+#define TRAINER_FRIENDLY_2                  788
+
+#define TRAINER_SKYE_C1                     792
+#define TRAINER_SKYE_C2                     793
+#define TRAINER_SKYE_B1                     794
+#define TRAINER_SKYE_B2                     795
+#define TRAINER_SKYE_B3                     796
+#define TRAINER_SKYE_A1                     797
+#define TRAINER_SKYE_A2                     798
+#define TRAINER_SKYE_A3                     799
+#define TRAINER_SKYE_S                      800
+#define TRAINER_SELENE_C1                   801 // built
+#define TRAINER_SELENE_C2                   802 // built
+#define TRAINER_SELENE_B1                   803 // built
+#define TRAINER_SELENE_B2                   804 // built
+#define TRAINER_SELENE_B3                   805 // built
+#define TRAINER_SELENE_A1                   806 // built
+#define TRAINER_SELENE_A2                   807 // built
+#define TRAINER_SELENE_A3                   808 // built
+#define TRAINER_SELENE_S                    809 // built
+#define TRAINER_KAELEN_C1                   810 // built
+#define TRAINER_KAELEN_C2                   811 // built
+#define TRAINER_KAELEN_B1                   812 // built
+#define TRAINER_KAELEN_B2                   813 // built
+#define TRAINER_KAELEN_B3                   814 // built
+#define TRAINER_KAELEN_A1                   815 // built
+#define TRAINER_KAELEN_A2                   816 // built
+#define TRAINER_KAELEN_A3                   817 // built
+#define TRAINER_KAELEN_S                    818 // built
+#define TRAINER_MORWEN_C1                   819 // built
+#define TRAINER_MORWEN_C2                   820 // built
+#define TRAINER_MORWEN_B1                   821 // built
+#define TRAINER_MORWEN_B2                   822 // built
+#define TRAINER_MORWEN_B3                   823 // built
+#define TRAINER_MORWEN_A1                   824 // built
+#define TRAINER_MORWEN_A2                   825 // built
+#define TRAINER_MORWEN_A3                   826 // built
+#define TRAINER_MORWEN_S                    827 // built
+#define TRAINER_FREYA_C1                    828 // built
+#define TRAINER_FREYA_C2                    829 // built
+#define TRAINER_FREYA_B1                    830 // built
+#define TRAINER_FREYA_B2                    831 // built
+#define TRAINER_FREYA_B3                    832 // built
+#define TRAINER_FREYA_A1                    833 // built
+#define TRAINER_FREYA_A2                    834 // built
+#define TRAINER_FREYA_A3                    835 // built
+#define TRAINER_FREYA_S                     836 // built
+#define TRAINER_RONAN_C1                    837 // built
+#define TRAINER_RONAN_C2                    838 // built
+#define TRAINER_RONAN_B1                    839 // built
+#define TRAINER_RONAN_B2                    840 // built
+#define TRAINER_RONAN_B3                    841 // built
+#define TRAINER_RONAN_A1                    842 // built
+#define TRAINER_RONAN_A2                    843 // built
+#define TRAINER_RONAN_A3                    844 // built
+#define TRAINER_RONAN_S                     845 // built
+#define TRAINER_SOLARA_C1                   846 // built
+#define TRAINER_SOLARA_C2                   847 // built
+#define TRAINER_SOLARA_B1                   848 // built
+#define TRAINER_SOLARA_B2                   849 
+#define TRAINER_SOLARA_B3                   850
+#define TRAINER_SOLARA_A1                   851 
+#define TRAINER_SOLARA_A2                   852 
+#define TRAINER_SOLARA_A3                   853
+#define TRAINER_SOLARA_S                    854
+#define TRAINER_MARIN_C1                    855 // built
+#define TRAINER_MARIN_C2                    856 // built
+#define TRAINER_MARIN_B1                    857 // built
+#define TRAINER_MARIN_B2                    858
+#define TRAINER_MARIN_B3                    859
+#define TRAINER_MARIN_A1                    860 
+#define TRAINER_MARIN_A2                    861
+#define TRAINER_MARIN_A3                    862
+#define TRAINER_MARIN_S                     863
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled

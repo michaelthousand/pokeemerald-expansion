@@ -207,26 +207,26 @@ Solara_Exit:
 PortValor_Gym_EventScript_Rules::
 # 96 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_GYM_RULES, PortValor_Gym_EventScript_Rules_2
-# 123 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Rules_Text_16, MSGBOX_DEFAULT
 # 124 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Rules_Text_11, MSGBOX_DEFAULT
+	msgbox PortValor_Gym_EventScript_Rules_Text_17, MSGBOX_DEFAULT
 # 125 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_12, MSGBOX_DEFAULT
-# 127 "data/maps/PortValor_Gym/scripts.pory"
+# 126 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Rules_Text_13, MSGBOX_DEFAULT
+# 128 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt PortValor_Gym_EventScript_Rules_6
-# 129 "data/maps/PortValor_Gym/scripts.pory"
+# 130 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 6
 	goto_if_lt PortValor_Gym_EventScript_Rules_7
-# 131 "data/maps/PortValor_Gym/scripts.pory"
+# 132 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 5
 	goto_if_gt PortValor_Gym_EventScript_Rules_8
 PortValor_Gym_EventScript_Rules_5:
-# 135 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Rules_Text_15, MSGBOX_DEFAULT
+# 136 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Rules_Text_16, MSGBOX_DEFAULT
 PortValor_Gym_EventScript_Rules_1:
-# 138 "data/maps/PortValor_Gym/scripts.pory"
+# 139 "data/maps/PortValor_Gym/scripts.pory"
 	releaseall
 	end
 
@@ -243,7 +243,7 @@ PortValor_Gym_EventScript_Rules_2:
 	msgbox PortValor_Gym_EventScript_Rules_Text_2, MSGBOX_DEFAULT
 # 104 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_3, MSGBOX_DEFAULT
-# 106 "data/maps/PortValor_Gym/scripts.pory"
+# 105 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_4, MSGBOX_DEFAULT
 # 107 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_5, MSGBOX_DEFAULT
@@ -255,7 +255,7 @@ PortValor_Gym_EventScript_Rules_2:
 	msgbox PortValor_Gym_EventScript_Rules_Text_8, MSGBOX_DEFAULT
 # 111 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_9, MSGBOX_DEFAULT
-# 113 "data/maps/PortValor_Gym/scripts.pory"
+# 112 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_10, MSGBOX_DEFAULT
 # 114 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_11, MSGBOX_DEFAULT
@@ -265,611 +265,1051 @@ PortValor_Gym_EventScript_Rules_2:
 	msgbox PortValor_Gym_EventScript_Rules_Text_13, MSGBOX_DEFAULT
 # 117 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_14, MSGBOX_DEFAULT
-# 120 "data/maps/PortValor_Gym/scripts.pory"
+# 118 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_15, MSGBOX_DEFAULT
 # 121 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Rules_Text_16, MSGBOX_DEFAULT
+# 122 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_GYM_RULES
 	goto PortValor_Gym_EventScript_Rules_1
 
 PortValor_Gym_EventScript_Rules_6:
-# 128 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Rules_Text_17, MSGBOX_DEFAULT
-	goto PortValor_Gym_EventScript_Rules_5
-
-PortValor_Gym_EventScript_Rules_7:
-# 130 "data/maps/PortValor_Gym/scripts.pory"
+# 129 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_18, MSGBOX_DEFAULT
 	goto PortValor_Gym_EventScript_Rules_5
 
-PortValor_Gym_EventScript_Rules_8:
-# 132 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Rules_7:
+# 131 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Rules_Text_19, MSGBOX_DEFAULT
+	goto PortValor_Gym_EventScript_Rules_5
+
+PortValor_Gym_EventScript_Rules_8:
+# 133 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Rules_Text_20, MSGBOX_DEFAULT
 	goto PortValor_Gym_EventScript_Rules_5
 
 
 PortValor_Gym_EventScript_Marin::
-# 144 "data/maps/PortValor_Gym/scripts.pory"
+# 145 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt PortValor_Gym_EventScript_Marin_1
-# 207 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_BADGES, 2
-	goto_if_gt PortValor_Gym_EventScript_Marin_3
+# 208 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 1
+	goto_if_gt PortValor_Gym_EventScript_Marin_8
+PortValor_Gym_EventScript_Marin_6:
+# 275 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 4
+	goto_if_gt PortValor_Gym_EventScript_Marin_5
+PortValor_Gym_EventScript_Marin_4:
+# 344 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_0, SPECIES_OGERPON_WELLSPRING
+# 345 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_BASCULEGION
+# 346 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_2, SPECIES_LAPRAS
+# 347 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_3, SPECIES_PELIPPER
+# 348 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_4, SPECIES_KYOGRE
+# 349 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_RHYPERIOR
+# 351 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 85
+# 353 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 354 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
+# 356 "data/maps/PortValor_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 357 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 358 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 360 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 361 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Marin_29
+# 369 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
+# 371 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 372 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 375 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 376 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 379 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne PortValor_Gym_EventScript_Marin_41
+# 388 "data/maps/PortValor_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 391 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 392 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_S
+# 393 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_MARIN_S, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
 	return
 
 PortValor_Gym_EventScript_Marin_1:
-# 146 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_0, SPECIES_LAPRAS
 # 147 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_1, SPECIES_WINGULL
+	setvar VAR_VGC_PREVIEW_0, SPECIES_LAPRAS
 # 148 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_2, SPECIES_CUBONE
+	setvar VAR_VGC_PREVIEW_1, SPECIES_WINGULL
 # 149 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_3, SPECIES_GOLDEEN
+	setvar VAR_VGC_PREVIEW_2, SPECIES_CUBONE
 # 150 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_4, SPECIES_BASCULIN
+	setvar VAR_VGC_PREVIEW_3, SPECIES_GOLDEEN
 # 151 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_5, SPECIES_LOMBRE
+	setvar VAR_VGC_PREVIEW_4, SPECIES_BASCULIN
 # 152 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_LOMBRE
+# 153 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq PortValor_Gym_EventScript_Marin_8
-# 155 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_eq PortValor_Gym_EventScript_Marin_13
+# 156 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 29
-PortValor_Gym_EventScript_Marin_7:
-# 158 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+PortValor_Gym_EventScript_Marin_12:
 # 159 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 160 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
-# 161 "data/maps/PortValor_Gym/scripts.pory"
-	special StartVgcSummaryPreviewFromVars
 # 162 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_RESULT, TRUE
+	special StartVgcSummaryPreviewFromVars
 # 163 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 164 "data/maps/PortValor_Gym/scripts.pory"
 	waitstate
-# 165 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
 # 166 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 167 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, NO
-	goto_if_eq PortValor_Gym_EventScript_Marin_15
-# 175 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_eq PortValor_Gym_EventScript_Marin_32
+# 176 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
-# 177 "data/maps/PortValor_Gym/scripts.pory"
-	special Vgc_SavePartyBackup
 # 178 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 179 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_VGC_PENDING_RESTORE
-# 181 "data/maps/PortValor_Gym/scripts.pory"
-	special Vgc_ChoosePartyOfFour
 # 182 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 183 "data/maps/PortValor_Gym/scripts.pory"
 	waitstate
-# 185 "data/maps/PortValor_Gym/scripts.pory"
+# 186 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne PortValor_Gym_EventScript_Marin_21
-# 194 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_ne PortValor_Gym_EventScript_Marin_44
+# 195 "data/maps/PortValor_Gym/scripts.pory"
 	callnative Vgc_BuildPartyFrom4Indices
-# 197 "data/maps/PortValor_Gym/scripts.pory"
+# 198 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq PortValor_Gym_EventScript_Marin_26
-# 202 "data/maps/PortValor_Gym/scripts.pory"
-	special WeightedSelector_On
+	goto_if_eq PortValor_Gym_EventScript_Marin_52
 # 203 "data/maps/PortValor_Gym/scripts.pory"
-	cleartrainerflag TRAINER_MARIN_C2
+	special WeightedSelector_On
 # 204 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_C2
+# 205 "data/maps/PortValor_Gym/scripts.pory"
 	trainerbattle_double TRAINER_MARIN_C2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
 	return
 
 PortValor_Gym_EventScript_Marin_2:
-# 209 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_0, SPECIES_TOXICROAK
 # 210 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_1, SPECIES_PELIPPER
+	setvar VAR_VGC_PREVIEW_0, SPECIES_TOXICROAK
 # 211 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_2, SPECIES_LAPRAS
+	setvar VAR_VGC_PREVIEW_1, SPECIES_PELIPPER
 # 212 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_3, SPECIES_MAROWAK_ALOLA
+	setvar VAR_VGC_PREVIEW_2, SPECIES_LAPRAS
 # 213 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_4, SPECIES_LUDICOLO
+	setvar VAR_VGC_PREVIEW_3, SPECIES_MAROWAK_ALOLA
 # 214 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_5, SPECIES_BASCULEGION
+	setvar VAR_VGC_PREVIEW_4, SPECIES_LUDICOLO
 # 215 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_BASCULEGION
+# 216 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 2
-	goto_if_eq PortValor_Gym_EventScript_Marin_12
-PortValor_Gym_EventScript_Marin_11:
-# 219 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
-# 220 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
-# 222 "data/maps/PortValor_Gym/scripts.pory"
-	special StartVgcSummaryPreviewFromVars
-# 223 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_RESULT, TRUE
-# 224 "data/maps/PortValor_Gym/scripts.pory"
-	waitstate
-# 226 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
-# 227 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Marin_17
+# 218 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 3
 	goto_if_eq PortValor_Gym_EventScript_Marin_18
-# 235 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
-# 237 "data/maps/PortValor_Gym/scripts.pory"
-	special Vgc_SavePartyBackup
-# 238 "data/maps/PortValor_Gym/scripts.pory"
-	setflag FLAG_VGC_PENDING_RESTORE
-# 241 "data/maps/PortValor_Gym/scripts.pory"
-	special Vgc_ChoosePartyOfFour
-# 242 "data/maps/PortValor_Gym/scripts.pory"
+# 221 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 56
+PortValor_Gym_EventScript_Marin_16:
+# 224 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 225 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
+# 227 "data/maps/PortValor_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 228 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 229 "data/maps/PortValor_Gym/scripts.pory"
 	waitstate
-# 245 "data/maps/PortValor_Gym/scripts.pory"
+# 231 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 232 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Marin_35
+# 240 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
+# 242 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 243 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 246 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 247 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 250 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne PortValor_Gym_EventScript_Marin_24
-# 254 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_ne PortValor_Gym_EventScript_Marin_47
+# 259 "data/maps/PortValor_Gym/scripts.pory"
 	callnative Vgc_BuildPartyFrom4Indices
-# 257 "data/maps/PortValor_Gym/scripts.pory"
+# 262 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 2
-	goto_if_eq PortValor_Gym_EventScript_Marin_29
+	goto_if_eq PortValor_Gym_EventScript_Marin_55
+# 266 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 3
+	goto_if_eq PortValor_Gym_EventScript_Marin_56
+# 271 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 272 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_B3
+# 273 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_MARIN_B3, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
 	return
 
 PortValor_Gym_EventScript_Marin_3:
-# 207 "data/maps/PortValor_Gym/scripts.pory"
+# 277 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_0, SPECIES_OGERPON_WELLSPRING
+# 278 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_BASCULEGION
+# 279 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_2, SPECIES_LAPRAS
+# 280 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_3, SPECIES_PELIPPER
+# 281 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_4, SPECIES_ARCHALUDON
+# 282 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_RHYPERIOR
+# 283 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 5
-	goto_if_lt PortValor_Gym_EventScript_Marin_2
+	goto_if_eq PortValor_Gym_EventScript_Marin_23
+# 285 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 6
+	goto_if_eq PortValor_Gym_EventScript_Marin_24
+# 288 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 78
+PortValor_Gym_EventScript_Marin_22:
+# 292 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 293 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
+# 295 "data/maps/PortValor_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 296 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 297 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 299 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 300 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Marin_38
+# 308 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
+# 310 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 311 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 314 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 315 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 318 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne PortValor_Gym_EventScript_Marin_50
+# 327 "data/maps/PortValor_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 330 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 5
+	goto_if_eq PortValor_Gym_EventScript_Marin_60
+# 334 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 6
+	goto_if_eq PortValor_Gym_EventScript_Marin_61
+# 339 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 340 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_A3
+# 341 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_MARIN_A3, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
 	return
 
+PortValor_Gym_EventScript_Marin_5:
+# 275 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 8
+	goto_if_lt PortValor_Gym_EventScript_Marin_3
+	goto PortValor_Gym_EventScript_Marin_4
+
 PortValor_Gym_EventScript_Marin_8:
-# 153 "data/maps/PortValor_Gym/scripts.pory"
+# 208 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 5
+	goto_if_lt PortValor_Gym_EventScript_Marin_2
+	goto PortValor_Gym_EventScript_Marin_6
+
+PortValor_Gym_EventScript_Marin_13:
+# 154 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 21
-	goto PortValor_Gym_EventScript_Marin_7
+	goto PortValor_Gym_EventScript_Marin_12
 
-PortValor_Gym_EventScript_Marin_12:
-# 216 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Marin_17:
+# 217 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 41
-	goto PortValor_Gym_EventScript_Marin_11
+	goto PortValor_Gym_EventScript_Marin_16
 
-PortValor_Gym_EventScript_Marin_15:
-# 167 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Marin_18:
+# 219 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 49
+	goto PortValor_Gym_EventScript_Marin_16
+
+PortValor_Gym_EventScript_Marin_23:
+# 284 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 64
+	goto PortValor_Gym_EventScript_Marin_22
+
+PortValor_Gym_EventScript_Marin_24:
+# 286 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 71
+	goto PortValor_Gym_EventScript_Marin_22
+
+PortValor_Gym_EventScript_Marin_29:
+# 363 "data/maps/PortValor_Gym/scripts.pory"
 	closemessage
-# 168 "data/maps/PortValor_Gym/scripts.pory"
+# 364 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 169 "data/maps/PortValor_Gym/scripts.pory"
+# 365 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Marin_32:
+# 168 "data/maps/PortValor_Gym/scripts.pory"
+	closemessage
+# 169 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
 # 170 "data/maps/PortValor_Gym/scripts.pory"
-	setflag FLAG_MARIN
+	waitmovement 0
 # 171 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_MARIN
+# 172 "data/maps/PortValor_Gym/scripts.pory"
 	removeobject LOCALID_MARIN
 	end
 
-PortValor_Gym_EventScript_Marin_18:
-# 229 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Marin_35:
+# 234 "data/maps/PortValor_Gym/scripts.pory"
 	closemessage
-# 230 "data/maps/PortValor_Gym/scripts.pory"
+# 235 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 231 "data/maps/PortValor_Gym/scripts.pory"
+# 236 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
 	end
 
-PortValor_Gym_EventScript_Marin_21:
-# 187 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Marin_38:
+# 302 "data/maps/PortValor_Gym/scripts.pory"
+	closemessage
+# 303 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 304 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Marin_41:
+# 381 "data/maps/PortValor_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
+# 382 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 383 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Marin_44:
 # 188 "data/maps/PortValor_Gym/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 189 "data/maps/PortValor_Gym/scripts.pory"
-	waitmovement 0
-	end
-
-PortValor_Gym_EventScript_Marin_24:
-# 247 "data/maps/PortValor_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
-# 248 "data/maps/PortValor_Gym/scripts.pory"
+# 189 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 249 "data/maps/PortValor_Gym/scripts.pory"
+# 190 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
 	end
 
-PortValor_Gym_EventScript_Marin_26:
-# 198 "data/maps/PortValor_Gym/scripts.pory"
-	special WeightedSelector_On
+PortValor_Gym_EventScript_Marin_47:
+# 252 "data/maps/PortValor_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 253 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 254 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Marin_50:
+# 320 "data/maps/PortValor_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 321 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 322 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Marin_52:
 # 199 "data/maps/PortValor_Gym/scripts.pory"
-	cleartrainerflag TRAINER_MARIN_C1
+	special WeightedSelector_On
 # 200 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_C1
+# 201 "data/maps/PortValor_Gym/scripts.pory"
 	trainerbattle_double TRAINER_MARIN_C1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
 	return
 
-PortValor_Gym_EventScript_Marin_29:
-# 258 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Marin_55:
+# 263 "data/maps/PortValor_Gym/scripts.pory"
 	special WeightedSelector_On
-# 259 "data/maps/PortValor_Gym/scripts.pory"
+# 264 "data/maps/PortValor_Gym/scripts.pory"
 	cleartrainerflag TRAINER_MARIN_B1
-# 260 "data/maps/PortValor_Gym/scripts.pory"
+# 265 "data/maps/PortValor_Gym/scripts.pory"
 	trainerbattle_double TRAINER_MARIN_B1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
+	return
+
+PortValor_Gym_EventScript_Marin_56:
+# 267 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 268 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_B2
+# 269 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_MARIN_B2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
+	return
+
+PortValor_Gym_EventScript_Marin_60:
+# 331 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 332 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_A1
+# 333 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_MARIN_A1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
+	return
+
+PortValor_Gym_EventScript_Marin_61:
+# 335 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 336 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_MARIN_A2
+# 337 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_MARIN_A2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_After_Marin, NO_MUSIC
 	return
 
 
 PortValor_Gym_After_Marin::
-# 269 "data/maps/PortValor_Gym/scripts.pory"
+# 399 "data/maps/PortValor_Gym/scripts.pory"
 	special WeightedSelector_Off
-# 270 "data/maps/PortValor_Gym/scripts.pory"
+# 400 "data/maps/PortValor_Gym/scripts.pory"
 	special HealPlayerParty
-# 271 "data/maps/PortValor_Gym/scripts.pory"
+# 401 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Marin_Text_0, MSGBOX_AUTOCLOSE
-# 273 "data/maps/PortValor_Gym/scripts.pory"
+# 403 "data/maps/PortValor_Gym/scripts.pory"
 	giveitem ITEM_TM_RAIN_DANCE, 1
-# 274 "data/maps/PortValor_Gym/scripts.pory"
+# 404 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Marin_Text_1, MSGBOX_AUTOCLOSE
-# 275 "data/maps/PortValor_Gym/scripts.pory"
+# 405 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Marin_Text_2, MSGBOX_AUTOCLOSE
-# 277 "data/maps/PortValor_Gym/scripts.pory"
+# 407 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PostBattle_Marin, MSGBOX_AUTOCLOSE
-# 279 "data/maps/PortValor_Gym/scripts.pory"
+# 409 "data/maps/PortValor_Gym/scripts.pory"
 	special Vgc_RestorePartyBackup
-# 280 "data/maps/PortValor_Gym/scripts.pory"
+# 410 "data/maps/PortValor_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
-# 282 "data/maps/PortValor_Gym/scripts.pory"
+# 412 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement LOCALID_MARIN, Marin_Exit
-# 283 "data/maps/PortValor_Gym/scripts.pory"
+# 413 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
-# 284 "data/maps/PortValor_Gym/scripts.pory"
+# 414 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_MARIN
-# 285 "data/maps/PortValor_Gym/scripts.pory"
+# 415 "data/maps/PortValor_Gym/scripts.pory"
 	removeobject LOCALID_MARIN
-# 287 "data/maps/PortValor_Gym/scripts.pory"
+# 417 "data/maps/PortValor_Gym/scripts.pory"
 	delay 150
-# 288 "data/maps/PortValor_Gym/scripts.pory"
+# 418 "data/maps/PortValor_Gym/scripts.pory"
 	clearflag FLAG_SOLARA
-# 289 "data/maps/PortValor_Gym/scripts.pory"
+# 419 "data/maps/PortValor_Gym/scripts.pory"
 	addobject LOCALID_SOLARA
-# 290 "data/maps/PortValor_Gym/scripts.pory"
+# 420 "data/maps/PortValor_Gym/scripts.pory"
 	delay 60
-# 291 "data/maps/PortValor_Gym/scripts.pory"
+# 421 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement LOCALID_SOLARA, Solara_Enter
-# 292 "data/maps/PortValor_Gym/scripts.pory"
+# 422 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
-# 294 "data/maps/PortValor_Gym/scripts.pory"
+# 424 "data/maps/PortValor_Gym/scripts.pory"
 	goto PortValor_Gym_EventScript_Solara
 	return
 
 
 PortValor_Gym_EventScript_Solara::
-# 298 "data/maps/PortValor_Gym/scripts.pory"
+# 428 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 2
 	goto_if_lt PortValor_Gym_EventScript_Solara_1
-# 359 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_BADGES, 2
-	goto_if_gt PortValor_Gym_EventScript_Solara_3
+# 489 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 1
+	goto_if_gt PortValor_Gym_EventScript_Solara_8
+PortValor_Gym_EventScript_Solara_6:
+# 555 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 4
+	goto_if_gt PortValor_Gym_EventScript_Solara_5
+PortValor_Gym_EventScript_Solara_4:
+# 624 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_0, SPECIES_TORKOAL
+# 625 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_VOLCARONA
+# 626 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_2, SPECIES_OGERPON_HEARTHFLAME
+# 627 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_3, SPECIES_VENUSAUR
+# 628 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_4, SPECIES_GROUDON
+# 629 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_CHI_YU
+# 631 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 85
+# 633 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 634 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
+# 636 "data/maps/PortValor_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 637 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 638 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 640 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 641 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Solara_29
+# 649 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
+# 651 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 652 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 655 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 656 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 659 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne PortValor_Gym_EventScript_Solara_41
+# 668 "data/maps/PortValor_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 671 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 672 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_SOLARA_S
+# 673 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_SOLARA_S, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
 	return
 
 PortValor_Gym_EventScript_Solara_1:
-# 299 "data/maps/PortValor_Gym/scripts.pory"
+# 429 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_0, SPECIES_CHARMELEON
-# 300 "data/maps/PortValor_Gym/scripts.pory"
+# 430 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_1, SPECIES_CERULEDGE
-# 301 "data/maps/PortValor_Gym/scripts.pory"
+# 431 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_2, SPECIES_IVYSAUR
-# 302 "data/maps/PortValor_Gym/scripts.pory"
+# 432 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_3, SPECIES_GLOOM
-# 303 "data/maps/PortValor_Gym/scripts.pory"
+# 433 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_4, SPECIES_VULPIX
-# 304 "data/maps/PortValor_Gym/scripts.pory"
+# 434 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_5, SPECIES_SHELLOS
-# 305 "data/maps/PortValor_Gym/scripts.pory"
+# 435 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq PortValor_Gym_EventScript_Solara_8
-# 308 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_eq PortValor_Gym_EventScript_Solara_13
+# 438 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 29
-PortValor_Gym_EventScript_Solara_7:
-# 311 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Solara_12:
+# 441 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
-# 312 "data/maps/PortValor_Gym/scripts.pory"
+# 442 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
-# 314 "data/maps/PortValor_Gym/scripts.pory"
+# 444 "data/maps/PortValor_Gym/scripts.pory"
 	special StartVgcSummaryPreviewFromVars
-# 315 "data/maps/PortValor_Gym/scripts.pory"
+# 445 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, TRUE
-# 316 "data/maps/PortValor_Gym/scripts.pory"
+# 446 "data/maps/PortValor_Gym/scripts.pory"
 	waitstate
-# 318 "data/maps/PortValor_Gym/scripts.pory"
+# 448 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
-# 319 "data/maps/PortValor_Gym/scripts.pory"
+# 449 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, NO
-	goto_if_eq PortValor_Gym_EventScript_Solara_15
-# 327 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_eq PortValor_Gym_EventScript_Solara_32
+# 457 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
-# 329 "data/maps/PortValor_Gym/scripts.pory"
+# 459 "data/maps/PortValor_Gym/scripts.pory"
 	special Vgc_SavePartyBackup
-# 330 "data/maps/PortValor_Gym/scripts.pory"
+# 460 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_VGC_PENDING_RESTORE
-# 333 "data/maps/PortValor_Gym/scripts.pory"
+# 463 "data/maps/PortValor_Gym/scripts.pory"
 	special Vgc_ChoosePartyOfFour
-# 334 "data/maps/PortValor_Gym/scripts.pory"
+# 464 "data/maps/PortValor_Gym/scripts.pory"
 	waitstate
-# 337 "data/maps/PortValor_Gym/scripts.pory"
+# 467 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne PortValor_Gym_EventScript_Solara_21
-# 346 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_ne PortValor_Gym_EventScript_Solara_44
+# 476 "data/maps/PortValor_Gym/scripts.pory"
 	callnative Vgc_BuildPartyFrom4Indices
-# 349 "data/maps/PortValor_Gym/scripts.pory"
+# 479 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 0
-	goto_if_eq PortValor_Gym_EventScript_Solara_26
-# 354 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_eq PortValor_Gym_EventScript_Solara_52
+# 484 "data/maps/PortValor_Gym/scripts.pory"
 	special WeightedSelector_On
-# 355 "data/maps/PortValor_Gym/scripts.pory"
+# 485 "data/maps/PortValor_Gym/scripts.pory"
 	cleartrainerflag TRAINER_SOLARA_C2
-# 356 "data/maps/PortValor_Gym/scripts.pory"
+# 486 "data/maps/PortValor_Gym/scripts.pory"
 	trainerbattle_double TRAINER_SOLARA_C2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
 	return
 
 PortValor_Gym_EventScript_Solara_2:
-# 360 "data/maps/PortValor_Gym/scripts.pory"
+# 490 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_0, SPECIES_CHARIZARD
-# 361 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_1, SPECIES_CERULEDGE
-# 362 "data/maps/PortValor_Gym/scripts.pory"
+# 491 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_ARCANINE
+# 492 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_2, SPECIES_VENUSAUR
-# 363 "data/maps/PortValor_Gym/scripts.pory"
+# 493 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_3, SPECIES_INCINEROAR
-# 364 "data/maps/PortValor_Gym/scripts.pory"
+# 494 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_4, SPECIES_NINETALES
-# 365 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_VGC_PREVIEW_5, SPECIES_GASTRODON
-# 366 "data/maps/PortValor_Gym/scripts.pory"
+# 495 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_TALONFLAME
+# 496 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 2
-	goto_if_eq PortValor_Gym_EventScript_Solara_12
-PortValor_Gym_EventScript_Solara_11:
-# 370 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
-# 371 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
-# 373 "data/maps/PortValor_Gym/scripts.pory"
-	special StartVgcSummaryPreviewFromVars
-# 374 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_RESULT, TRUE
-# 375 "data/maps/PortValor_Gym/scripts.pory"
-	waitstate
-# 377 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
-# 378 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Solara_17
+# 498 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 3
 	goto_if_eq PortValor_Gym_EventScript_Solara_18
-# 386 "data/maps/PortValor_Gym/scripts.pory"
-	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
-# 388 "data/maps/PortValor_Gym/scripts.pory"
-	special Vgc_SavePartyBackup
-# 389 "data/maps/PortValor_Gym/scripts.pory"
-	setflag FLAG_VGC_PENDING_RESTORE
-# 392 "data/maps/PortValor_Gym/scripts.pory"
-	special Vgc_ChoosePartyOfFour
-# 393 "data/maps/PortValor_Gym/scripts.pory"
+# 501 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 56
+PortValor_Gym_EventScript_Solara_16:
+# 504 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 505 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
+# 507 "data/maps/PortValor_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 508 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 509 "data/maps/PortValor_Gym/scripts.pory"
 	waitstate
-# 396 "data/maps/PortValor_Gym/scripts.pory"
+# 511 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 512 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Solara_35
+# 520 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
+# 522 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 523 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 526 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 527 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 530 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_ne PortValor_Gym_EventScript_Solara_24
-# 405 "data/maps/PortValor_Gym/scripts.pory"
+	goto_if_ne PortValor_Gym_EventScript_Solara_47
+# 539 "data/maps/PortValor_Gym/scripts.pory"
 	callnative Vgc_BuildPartyFrom4Indices
-# 408 "data/maps/PortValor_Gym/scripts.pory"
-	compare VAR_BADGES, 0
-	goto_if_eq PortValor_Gym_EventScript_Solara_29
+# 542 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 2
+	goto_if_eq PortValor_Gym_EventScript_Solara_55
+# 546 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 3
+	goto_if_eq PortValor_Gym_EventScript_Solara_56
+# 551 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 552 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_SOLARA_B3
+# 553 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_SOLARA_B3, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
 	return
 
 PortValor_Gym_EventScript_Solara_3:
-# 359 "data/maps/PortValor_Gym/scripts.pory"
+# 557 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_0, SPECIES_VENUSAUR
+# 558 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_1, SPECIES_INCINEROAR
+# 559 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_2, SPECIES_CHARIZARD
+# 560 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_3, SPECIES_TORKOAL
+# 561 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_4, SPECIES_VOLCARONA
+# 562 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_5, SPECIES_CHI_YU
+# 563 "data/maps/PortValor_Gym/scripts.pory"
 	compare VAR_BADGES, 5
-	goto_if_lt PortValor_Gym_EventScript_Solara_2
+	goto_if_eq PortValor_Gym_EventScript_Solara_23
+# 565 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 6
+	goto_if_eq PortValor_Gym_EventScript_Solara_24
+# 568 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 78
+PortValor_Gym_EventScript_Solara_22:
+# 572 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_0, MSGBOX_DEFAULT
+# 573 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_1, MSGBOX_DEFAULT
+# 575 "data/maps/PortValor_Gym/scripts.pory"
+	special StartVgcSummaryPreviewFromVars
+# 576 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, TRUE
+# 577 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 579 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_2, MSGBOX_YESNO
+# 580 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, NO
+	goto_if_eq PortValor_Gym_EventScript_Solara_38
+# 588 "data/maps/PortValor_Gym/scripts.pory"
+	msgbox PortValor_Gym_EventScript_Marin_Text_3, MSGBOX_DEFAULT
+# 590 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_SavePartyBackup
+# 591 "data/maps/PortValor_Gym/scripts.pory"
+	setflag FLAG_VGC_PENDING_RESTORE
+# 594 "data/maps/PortValor_Gym/scripts.pory"
+	special Vgc_ChoosePartyOfFour
+# 595 "data/maps/PortValor_Gym/scripts.pory"
+	waitstate
+# 598 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_RESULT, 0
+	goto_if_ne PortValor_Gym_EventScript_Solara_50
+# 607 "data/maps/PortValor_Gym/scripts.pory"
+	callnative Vgc_BuildPartyFrom4Indices
+# 610 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 5
+	goto_if_eq PortValor_Gym_EventScript_Solara_60
+# 614 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 6
+	goto_if_eq PortValor_Gym_EventScript_Solara_61
+# 619 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 620 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_SOLARA_A3
+# 621 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_SOLARA_A3, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
 	return
 
+PortValor_Gym_EventScript_Solara_5:
+# 555 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 8
+	goto_if_lt PortValor_Gym_EventScript_Solara_3
+	goto PortValor_Gym_EventScript_Solara_4
+
 PortValor_Gym_EventScript_Solara_8:
-# 306 "data/maps/PortValor_Gym/scripts.pory"
+# 489 "data/maps/PortValor_Gym/scripts.pory"
+	compare VAR_BADGES, 5
+	goto_if_lt PortValor_Gym_EventScript_Solara_2
+	goto PortValor_Gym_EventScript_Solara_6
+
+PortValor_Gym_EventScript_Solara_13:
+# 436 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 21
-	goto PortValor_Gym_EventScript_Solara_7
+	goto PortValor_Gym_EventScript_Solara_12
 
-PortValor_Gym_EventScript_Solara_12:
-# 367 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Solara_17:
+# 497 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_VGC_PREVIEW_LV, 41
-	goto PortValor_Gym_EventScript_Solara_11
-
-PortValor_Gym_EventScript_Solara_15:
-# 321 "data/maps/PortValor_Gym/scripts.pory"
-	closemessage
-# 322 "data/maps/PortValor_Gym/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 323 "data/maps/PortValor_Gym/scripts.pory"
-	waitmovement 0
-	end
+	goto PortValor_Gym_EventScript_Solara_16
 
 PortValor_Gym_EventScript_Solara_18:
-# 380 "data/maps/PortValor_Gym/scripts.pory"
-	closemessage
-# 381 "data/maps/PortValor_Gym/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 382 "data/maps/PortValor_Gym/scripts.pory"
-	waitmovement 0
-	end
+# 499 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 49
+	goto PortValor_Gym_EventScript_Solara_16
 
-PortValor_Gym_EventScript_Solara_21:
-# 339 "data/maps/PortValor_Gym/scripts.pory"
-	clearflag FLAG_VGC_PENDING_RESTORE
-# 340 "data/maps/PortValor_Gym/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 341 "data/maps/PortValor_Gym/scripts.pory"
-	waitmovement 0
-	end
+PortValor_Gym_EventScript_Solara_23:
+# 564 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 64
+	goto PortValor_Gym_EventScript_Solara_22
 
 PortValor_Gym_EventScript_Solara_24:
-# 398 "data/maps/PortValor_Gym/scripts.pory"
-	clearflag FLAG_VGC_PENDING_RESTORE
-# 399 "data/maps/PortValor_Gym/scripts.pory"
+# 566 "data/maps/PortValor_Gym/scripts.pory"
+	setvar VAR_VGC_PREVIEW_LV, 71
+	goto PortValor_Gym_EventScript_Solara_22
+
+PortValor_Gym_EventScript_Solara_29:
+# 643 "data/maps/PortValor_Gym/scripts.pory"
+	closemessage
+# 644 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 400 "data/maps/PortValor_Gym/scripts.pory"
+# 645 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
 	end
 
-PortValor_Gym_EventScript_Solara_26:
-# 350 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Solara_32:
+# 451 "data/maps/PortValor_Gym/scripts.pory"
+	closemessage
+# 452 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 453 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_35:
+# 514 "data/maps/PortValor_Gym/scripts.pory"
+	closemessage
+# 515 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 516 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_38:
+# 582 "data/maps/PortValor_Gym/scripts.pory"
+	closemessage
+# 583 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 584 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_41:
+# 661 "data/maps/PortValor_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 662 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 663 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_44:
+# 469 "data/maps/PortValor_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 470 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 471 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_47:
+# 532 "data/maps/PortValor_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 533 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 534 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_50:
+# 600 "data/maps/PortValor_Gym/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 601 "data/maps/PortValor_Gym/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
+# 602 "data/maps/PortValor_Gym/scripts.pory"
+	waitmovement 0
+	end
+
+PortValor_Gym_EventScript_Solara_52:
+# 480 "data/maps/PortValor_Gym/scripts.pory"
 	special WeightedSelector_On
-# 351 "data/maps/PortValor_Gym/scripts.pory"
+# 481 "data/maps/PortValor_Gym/scripts.pory"
 	cleartrainerflag TRAINER_SOLARA_C1
-# 352 "data/maps/PortValor_Gym/scripts.pory"
+# 482 "data/maps/PortValor_Gym/scripts.pory"
 	trainerbattle_double TRAINER_SOLARA_C1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
 	return
 
-PortValor_Gym_EventScript_Solara_29:
-# 409 "data/maps/PortValor_Gym/scripts.pory"
+PortValor_Gym_EventScript_Solara_55:
+# 543 "data/maps/PortValor_Gym/scripts.pory"
 	special WeightedSelector_On
-# 410 "data/maps/PortValor_Gym/scripts.pory"
+# 544 "data/maps/PortValor_Gym/scripts.pory"
 	cleartrainerflag TRAINER_SOLARA_B1
-# 411 "data/maps/PortValor_Gym/scripts.pory"
+# 545 "data/maps/PortValor_Gym/scripts.pory"
 	trainerbattle_double TRAINER_SOLARA_B1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
+	return
+
+PortValor_Gym_EventScript_Solara_56:
+# 547 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 548 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_SOLARA_B2
+# 549 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_SOLARA_B2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
+	return
+
+PortValor_Gym_EventScript_Solara_60:
+# 611 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 612 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_SOLARA_A1
+# 613 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_SOLARA_A1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
+	return
+
+PortValor_Gym_EventScript_Solara_61:
+# 615 "data/maps/PortValor_Gym/scripts.pory"
+	special WeightedSelector_On
+# 616 "data/maps/PortValor_Gym/scripts.pory"
+	cleartrainerflag TRAINER_SOLARA_A2
+# 617 "data/maps/PortValor_Gym/scripts.pory"
+	trainerbattle_double TRAINER_SOLARA_A2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_After_Solara, NO_MUSIC
 	return
 
 
 PortValor_Gym_After_Solara::
-# 420 "data/maps/PortValor_Gym/scripts.pory"
+# 678 "data/maps/PortValor_Gym/scripts.pory"
 	special WeightedSelector_Off
-# 421 "data/maps/PortValor_Gym/scripts.pory"
+# 679 "data/maps/PortValor_Gym/scripts.pory"
 	special HealPlayerParty
-# 422 "data/maps/PortValor_Gym/scripts.pory"
+# 680 "data/maps/PortValor_Gym/scripts.pory"
 	special Vgc_RestorePartyBackup
-# 423 "data/maps/PortValor_Gym/scripts.pory"
+# 681 "data/maps/PortValor_Gym/scripts.pory"
 	clearflag FLAG_VGC_PENDING_RESTORE
-# 425 "data/maps/PortValor_Gym/scripts.pory"
+# 683 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Marin_Text_0, MSGBOX_AUTOCLOSE
-# 427 "data/maps/PortValor_Gym/scripts.pory"
+# 685 "data/maps/PortValor_Gym/scripts.pory"
 	giveitem ITEM_TM_SUNNY_DAY, 1
-# 428 "data/maps/PortValor_Gym/scripts.pory"
+# 686 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_0, MSGBOX_AUTOCLOSE
-# 429 "data/maps/PortValor_Gym/scripts.pory"
+# 687 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_1, MSGBOX_AUTOCLOSE
-# 431 "data/maps/PortValor_Gym/scripts.pory"
+# 689 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PostBattle_Solara, MSGBOX_AUTOCLOSE
-# 433 "data/maps/PortValor_Gym/scripts.pory"
+# 691 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE01_GET, PortValor_Gym_After_Solara_2
-# 439 "data/maps/PortValor_Gym/scripts.pory"
+# 697 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE02_GET, PortValor_Gym_After_Solara_3
-# 445 "data/maps/PortValor_Gym/scripts.pory"
+# 703 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE03_GET, PortValor_Gym_After_Solara_4
-# 451 "data/maps/PortValor_Gym/scripts.pory"
+# 709 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE04_GET, PortValor_Gym_After_Solara_5
-# 457 "data/maps/PortValor_Gym/scripts.pory"
+# 715 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE05_GET, PortValor_Gym_After_Solara_6
-# 463 "data/maps/PortValor_Gym/scripts.pory"
+# 721 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE06_GET, PortValor_Gym_After_Solara_7
-# 469 "data/maps/PortValor_Gym/scripts.pory"
+# 727 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE07_GET, PortValor_Gym_After_Solara_8
-# 475 "data/maps/PortValor_Gym/scripts.pory"
+# 733 "data/maps/PortValor_Gym/scripts.pory"
 	goto_if_unset FLAG_BADGE08_GET, PortValor_Gym_After_Solara_9
 PortValor_Gym_After_Solara_1:
-# 483 "data/maps/PortValor_Gym/scripts.pory"
+# 741 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement LOCALID_SOLARA, Solara_Exit
-# 484 "data/maps/PortValor_Gym/scripts.pory"
+# 742 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
-# 485 "data/maps/PortValor_Gym/scripts.pory"
+# 743 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_SOLARA
-# 486 "data/maps/PortValor_Gym/scripts.pory"
+# 744 "data/maps/PortValor_Gym/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Exit_Gym
-# 487 "data/maps/PortValor_Gym/scripts.pory"
+# 745 "data/maps/PortValor_Gym/scripts.pory"
 	waitmovement 0
-# 488 "data/maps/PortValor_Gym/scripts.pory"
+# 746 "data/maps/PortValor_Gym/scripts.pory"
 	releaseall
 	end
 
 PortValor_Gym_After_Solara_2:
-# 434 "data/maps/PortValor_Gym/scripts.pory"
+# 692 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE01_GET
-# 435 "data/maps/PortValor_Gym/scripts.pory"
+# 693 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 436 "data/maps/PortValor_Gym/scripts.pory"
+# 694 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 437 "data/maps/PortValor_Gym/scripts.pory"
+# 695 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 29
-# 438 "data/maps/PortValor_Gym/scripts.pory"
+# 696 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_3, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_3:
-# 440 "data/maps/PortValor_Gym/scripts.pory"
+# 698 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE02_GET
-# 441 "data/maps/PortValor_Gym/scripts.pory"
+# 699 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 442 "data/maps/PortValor_Gym/scripts.pory"
+# 700 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 443 "data/maps/PortValor_Gym/scripts.pory"
+# 701 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 41
-# 444 "data/maps/PortValor_Gym/scripts.pory"
+# 702 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_4, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_4:
-# 446 "data/maps/PortValor_Gym/scripts.pory"
+# 704 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE03_GET
-# 447 "data/maps/PortValor_Gym/scripts.pory"
+# 705 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 448 "data/maps/PortValor_Gym/scripts.pory"
+# 706 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 449 "data/maps/PortValor_Gym/scripts.pory"
+# 707 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 49
-# 450 "data/maps/PortValor_Gym/scripts.pory"
+# 708 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_5, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_5:
-# 452 "data/maps/PortValor_Gym/scripts.pory"
+# 710 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE04_GET
-# 453 "data/maps/PortValor_Gym/scripts.pory"
+# 711 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 454 "data/maps/PortValor_Gym/scripts.pory"
+# 712 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 455 "data/maps/PortValor_Gym/scripts.pory"
+# 713 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 56
-# 456 "data/maps/PortValor_Gym/scripts.pory"
+# 714 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_6, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_6:
-# 458 "data/maps/PortValor_Gym/scripts.pory"
+# 716 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE05_GET
-# 459 "data/maps/PortValor_Gym/scripts.pory"
+# 717 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 460 "data/maps/PortValor_Gym/scripts.pory"
+# 718 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 461 "data/maps/PortValor_Gym/scripts.pory"
+# 719 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 71
-# 462 "data/maps/PortValor_Gym/scripts.pory"
+# 720 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_7, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_7:
-# 464 "data/maps/PortValor_Gym/scripts.pory"
+# 722 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE06_GET
-# 465 "data/maps/PortValor_Gym/scripts.pory"
+# 723 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 466 "data/maps/PortValor_Gym/scripts.pory"
+# 724 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 467 "data/maps/PortValor_Gym/scripts.pory"
+# 725 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 78
-# 468 "data/maps/PortValor_Gym/scripts.pory"
+# 726 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_8, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_8:
-# 470 "data/maps/PortValor_Gym/scripts.pory"
+# 728 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE07_GET
-# 471 "data/maps/PortValor_Gym/scripts.pory"
+# 729 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 472 "data/maps/PortValor_Gym/scripts.pory"
+# 730 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 473 "data/maps/PortValor_Gym/scripts.pory"
+# 731 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 85
-# 474 "data/maps/PortValor_Gym/scripts.pory"
+# 732 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_9, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
 PortValor_Gym_After_Solara_9:
-# 476 "data/maps/PortValor_Gym/scripts.pory"
+# 734 "data/maps/PortValor_Gym/scripts.pory"
 	setflag FLAG_BADGE08_GET
-# 477 "data/maps/PortValor_Gym/scripts.pory"
+# 735 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_2, MSGBOX_DEFAULT
-# 478 "data/maps/PortValor_Gym/scripts.pory"
+# 736 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
-# 479 "data/maps/PortValor_Gym/scripts.pory"
+# 737 "data/maps/PortValor_Gym/scripts.pory"
 	setvar VAR_LEVEL_CAP, 90
-# 480 "data/maps/PortValor_Gym/scripts.pory"
+# 738 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_10, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
 
@@ -880,7 +1320,7 @@ PortValor_Gym_EventScript_Rules_Text_0:
 
 PortValor_Gym_EventScript_Rules_Text_1:
 # 102 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Each Gym has two Leaders, and each one\nspecializes in a different styles.$"
+	.string "Each Gym has two Leaders, and each one\nspecializes in different styles.$"
 
 PortValor_Gym_EventScript_Rules_Text_2:
 # 103 "data/maps/PortValor_Gym/scripts.pory"
@@ -891,161 +1331,165 @@ PortValor_Gym_EventScript_Rules_Text_3:
 	.string "You must defeat both Leaders to earn\na badge.$"
 
 PortValor_Gym_EventScript_Rules_Text_4:
-# 106 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.$"
+# 105 "data/maps/PortValor_Gym/scripts.pory"
+	.string "If you lose to either leader, you will\nneed to rebattle both.$"
 
 PortValor_Gym_EventScript_Rules_Text_5:
 # 107 "data/maps/PortValor_Gym/scripts.pory"
-	.string "You can cancel the battle only before\nthe first gym leader to return to the\plobby and change your team.$"
+	.string "Battles are 4v4 double battles. You will\nhave a chance to see your opponent's\pPokemon before selecting from your\nown party.$"
 
 PortValor_Gym_EventScript_Rules_Text_6:
 # 108 "data/maps/PortValor_Gym/scripts.pory"
-	.string "There's a computer to your left for this\nvery purpose.$"
+	.string "You can cancel the battle only before\nthe first gym leader to return to the\plobby and change your team.$"
 
 PortValor_Gym_EventScript_Rules_Text_7:
 # 109 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Between their battles, you won’t be\nallowed to change your party Pokemon.$"
+	.string "There's a computer to your left for this\nvery purpose.$"
 
 PortValor_Gym_EventScript_Rules_Text_8:
 # 110 "data/maps/PortValor_Gym/scripts.pory"
-	.string "However, your Pokémon will be fully\nhealed before facing the second Leader.$"
+	.string "Between the battles, you won’t be\nallowed to change your party Pokemon.$"
 
 PortValor_Gym_EventScript_Rules_Text_9:
 # 111 "data/maps/PortValor_Gym/scripts.pory"
-	.string "And, as I mentioned, you will have a\nchance to select different\pPokemon from your party for the second\nbattle.$"
+	.string "However, your Pokémon will be fully\nhealed before facing the second Leader.$"
 
 PortValor_Gym_EventScript_Rules_Text_10:
-# 113 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.$"
+# 112 "data/maps/PortValor_Gym/scripts.pory"
+	.string "And you will be able to select \nnew group of four for the second battle.$"
 
 PortValor_Gym_EventScript_Rules_Text_11:
 # 114 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Your first opponent is Marin.\pBetter bring your swim trunks for him.$"
+	.string "Earning a badge will also award you\npoints toward qualifying for the\pRegional Championship.$"
 
 PortValor_Gym_EventScript_Rules_Text_12:
 # 115 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Your second opponent is Solara.\pYou'll want sunscreen for her.$"
+	.string "Your first opponent is Marin.\pBetter bring your swim trunks for him.$"
 
 PortValor_Gym_EventScript_Rules_Text_13:
 # 116 "data/maps/PortValor_Gym/scripts.pory"
-	.string "You have 0 badges so you are in Tier C.\pYour opponent's will not bring their best\nteams.$"
+	.string "Your second opponent is Solara.\pYou'll want sunscreen for her.$"
 
 PortValor_Gym_EventScript_Rules_Text_14:
 # 117 "data/maps/PortValor_Gym/scripts.pory"
-	.string "But be sure to still bring a balanced\nteam...you’ll need it!$"
+	.string "You have 0 badges so you are in Tier C.\pYour opponent's will not bring their best\nteams.$"
 
 PortValor_Gym_EventScript_Rules_Text_15:
-# 120 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Good luck!$"
+# 118 "data/maps/PortValor_Gym/scripts.pory"
+	.string "But be sure to still bring a balanced\nteam...you’ll need it!$"
 
 PortValor_Gym_EventScript_Rules_Text_16:
-# 123 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Welcome, challenger, to the Forest's Edge\nGym!$"
+# 121 "data/maps/PortValor_Gym/scripts.pory"
+	.string "Good luck!$"
 
 PortValor_Gym_EventScript_Rules_Text_17:
-# 128 "data/maps/PortValor_Gym/scripts.pory"
-	.string "You are in Tier C.\pYour opponent's will not bring their best\nteams.$"
+# 124 "data/maps/PortValor_Gym/scripts.pory"
+	.string "Welcome, challenger, to the Forest's Edge\nGym!$"
 
 PortValor_Gym_EventScript_Rules_Text_18:
-# 130 "data/maps/PortValor_Gym/scripts.pory"
-	.string "You are in Tier B.\pYour opponent's will not bring their best\nteams...\pbut they will step up their game.$"
+# 129 "data/maps/PortValor_Gym/scripts.pory"
+	.string "You are in Tier C.\pYour opponent's will not bring their best\nteams.$"
 
 PortValor_Gym_EventScript_Rules_Text_19:
-# 132 "data/maps/PortValor_Gym/scripts.pory"
+# 131 "data/maps/PortValor_Gym/scripts.pory"
+	.string "You are in Tier B.\pYour opponent's will not bring their best\nteams...\pbut they will step up their game.$"
+
+PortValor_Gym_EventScript_Rules_Text_20:
+# 133 "data/maps/PortValor_Gym/scripts.pory"
 	.string "You are in Tier A.\pYour opponent's will not pull any punches.$"
 
 PortValor_Gym_EventScript_Marin_Text_0:
-# 158 "data/maps/PortValor_Gym/scripts.pory"
+# 159 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Previewing opponent's team...$"
 
 PortValor_Gym_EventScript_Marin_Text_1:
-# 159 "data/maps/PortValor_Gym/scripts.pory"
+# 160 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Press B when ready to battle.$"
 
 PortValor_Gym_EventScript_Marin_Text_2:
-# 165 "data/maps/PortValor_Gym/scripts.pory"
+# 166 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Are you ready to battle?$"
 
 PortValor_Gym_EventScript_Marin_Text_3:
-# 175 "data/maps/PortValor_Gym/scripts.pory"
+# 176 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Choose your pokemon.$"
 
 PortValor_Gym_After_Marin_Text_0:
-# 271 "data/maps/PortValor_Gym/scripts.pory"
+# 401 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Your Pokemon have been healed.$"
 
 PortValor_Gym_After_Marin_Text_1:
-# 274 "data/maps/PortValor_Gym/scripts.pory"
+# 404 "data/maps/PortValor_Gym/scripts.pory"
 	.string "That TM contains Rain Dance.$"
 
 PortValor_Gym_After_Marin_Text_2:
-# 275 "data/maps/PortValor_Gym/scripts.pory"
+# 405 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Now you can use rain to your advantage.$"
 
 PortValor_Gym_After_Solara_Text_0:
-# 428 "data/maps/PortValor_Gym/scripts.pory"
+# 686 "data/maps/PortValor_Gym/scripts.pory"
 	.string "That TM contains Sunny Day.$"
 
 PortValor_Gym_After_Solara_Text_1:
-# 429 "data/maps/PortValor_Gym/scripts.pory"
+# 687 "data/maps/PortValor_Gym/scripts.pory"
 	.string "You'll be able to scorch your \nenemies now.$"
 
 PortValor_Gym_After_Solara_Text_2:
-# 436 "data/maps/PortValor_Gym/scripts.pory"
+# 694 "data/maps/PortValor_Gym/scripts.pory"
 	.string "You got the Climate Badge!$"
 
 PortValor_Gym_After_Solara_Text_3:
-# 438 "data/maps/PortValor_Gym/scripts.pory"
+# 696 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 29.$"
 
 PortValor_Gym_After_Solara_Text_4:
-# 444 "data/maps/PortValor_Gym/scripts.pory"
+# 702 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 41.$"
 
 PortValor_Gym_After_Solara_Text_5:
-# 450 "data/maps/PortValor_Gym/scripts.pory"
+# 708 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 49.$"
 
 PortValor_Gym_After_Solara_Text_6:
-# 456 "data/maps/PortValor_Gym/scripts.pory"
+# 714 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 56.$"
 
 PortValor_Gym_After_Solara_Text_7:
-# 462 "data/maps/PortValor_Gym/scripts.pory"
+# 720 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 71.$"
 
 PortValor_Gym_After_Solara_Text_8:
-# 468 "data/maps/PortValor_Gym/scripts.pory"
+# 726 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 78.$"
 
 PortValor_Gym_After_Solara_Text_9:
-# 474 "data/maps/PortValor_Gym/scripts.pory"
+# 732 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 85.$"
 
 PortValor_Gym_After_Solara_Text_10:
-# 480 "data/maps/PortValor_Gym/scripts.pory"
+# 738 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Level cap increased to 90.$"
 
 Marin_Intro::
-# 533 "data/maps/PortValor_Gym/scripts.pory"
+# 791 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Prepare for the hurricane!$"
 
 Marin_Outro::
-# 537 "data/maps/PortValor_Gym/scripts.pory"
+# 795 "data/maps/PortValor_Gym/scripts.pory"
 	.string "I'm all washed up.$"
 
 PostBattle_Marin::
-# 541 "data/maps/PortValor_Gym/scripts.pory"
+# 799 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Good luck aginst Solara.$"
 
 Solara_Intro::
-# 545 "data/maps/PortValor_Gym/scripts.pory"
+# 803 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Enjoy the heat.$"
 
 Solara_Outro::
-# 549 "data/maps/PortValor_Gym/scripts.pory"
+# 807 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Oh no! I'm cooked!$"
 
 PostBattle_Solara::
-# 553 "data/maps/PortValor_Gym/scripts.pory"
+# 811 "data/maps/PortValor_Gym/scripts.pory"
 	.string "Good luck with the rest of the gyms.$"

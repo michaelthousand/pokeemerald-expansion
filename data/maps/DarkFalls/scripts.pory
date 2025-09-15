@@ -1,0 +1,16 @@
+mapscripts DarkFalls_MapScripts {
+    MAP_SCRIPT_ON_RESUME: DarkFalls_OnResume
+}
+
+
+script DarkFalls_OnResume {
+    if (flag(FLAG_VGC_PENDING_RESTORE)) {
+        special(Vgc_RestorePartyBackup)
+        special(HealPlayerParty)
+        callnative(UpdateFollowingPokemon)
+        special(Vgc_RestorePartyBackup)
+        special(WeightedSelector_Off)
+        clearflag(FLAG_VGC_PENDING_RESTORE)
+    }  
+    end
+}

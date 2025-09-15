@@ -1,0 +1,129 @@
+mapscripts Twilight_Forest_MapScripts {}
+
+script Twilight_Forest_RagePowder{
+    giveitem(ITEM_TM_RAGE_POWDER)
+    setflag(FLAG_RAGEPOWDER)
+    removeobject(8)
+    closemessage
+    end
+}
+script Twilight_Forest_PollenPuff{
+    giveitem(ITEM_TM_POLLEN_PUFF)
+    setflag(FLAG_POLLENPUFF)
+    removeobject(4)
+    closemessage
+    end
+}
+script Twilight_Forest_DarkPulse{
+    giveitem(ITEM_TM_DARK_PULSE)
+    setflag(FLAG_DARKPULSE)
+    removeobject(3)
+    closemessage
+    end
+}
+script Twilight_Forest_ShadowClaw{
+    giveitem(ITEM_TM_SHADOW_CLAW)
+    setflag(FLAG_SHADOWCLAW)
+    removeobject(12)
+    closemessage
+    end
+}
+script Twilight_Forest_SolarBlade {
+    giveitem(ITEM_TM_SOLAR_BLADE)
+    setflag(FLAG_SOLARBLADE)
+    removeobject(7)
+    closemessage
+    end
+}
+script Twilight_Forest_EnergyBall {
+    giveitem(ITEM_TM_ENERGY_BALL)
+    setflag(FLAG_ENERGYBALL)
+    removeobject(9)
+    closemessage
+    end
+}
+script Twilight_Forest_AcidSpray {
+    giveitem(ITEM_TM_ACID_SPRAY)
+    setflag(FLAG_ACIDSPRAY)
+    removeobject(1)
+    closemessage
+    end
+}
+script Twilight_Forest_PsychicTerrain{
+    giveitem(ITEM_TM_PSYCHIC_TERRAIN)
+    setflag(FLAG_PSYCHICTERRAIN)
+    removeobject(1)
+    closemessage
+    end
+}
+script Twilight_Forest_PsychicFangs {
+    giveitem(ITEM_TM_PSYCHIC_FANGS)
+    setflag(FLAG_PSYCHICFANGS)
+    removeobject(11)
+    closemessage
+    end
+}
+script Twilight_Forest_BigRoot {
+    giveitem(ITEM_BIG_ROOT)
+    setflag(FLAG_BIGROOT)
+    removeobject(5)
+    closemessage
+    end
+}
+script Twilight_Forest_LightClay {
+    giveitem(ITEM_LIGHT_CLAY)
+    setflag(FLAG_LIGHTCLAY)
+    removeobject(2)
+    closemessage
+    end
+}
+script Twilight_Forest_PsychicSeed {
+    giveitem(ITEM_PSYCHIC_SEED)
+    setflag(FLAG_PSYCHICSEED)
+    removeobject(13)
+    closemessage
+    end
+}
+script Twilight_Forest_TwistedSpoon {
+    giveitem(ITEM_TWISTED_SPOON)
+    setflag(FLAG_TWISTEDSPOON)
+    removeobject(10)
+    closemessage
+    end
+}
+script Twilight_Forest_SpellTag {
+    giveitem(ITEM_SPELL_TAG)
+    setflag(FLAG_SPELLTAG)
+    removeobject(6)
+    closemessage
+    end
+}
+script Twilight_Forest_DarkShards {
+    giveitem(ITEM_DARK_TERA_SHARD, 5)
+    setflag(FLAG_DARK_SHARDS_TWILIGHT)
+    removeobject(18)
+    closemessage
+    end
+}
+script Twilight_Forest_PsychicShards {
+    giveitem(ITEM_PSYCHIC_TERA_SHARD, 5)
+    setflag(FLAG_PSYCHIC_SHARDS_TWILIGHT)
+    removeobject(17)
+    closemessage
+    end
+}
+script Twilight_Forest_BugShards {
+    giveitem(ITEM_BUG_TERA_SHARD, 5)
+    setflag(FLAG_BUG_SHARDS_TWILIGHT)
+    removeobject(16)
+    closemessage
+    end
+}
+script Twilight_Forest_GrassShards {
+    giveitem(ITEM_GRASS_TERA_SHARD, 5)
+    addvar(VAR_GRASS_SHARDS, 5)
+    setflag(FLAG_GRASS_SHARDS_TWILIGHT)
+    removeobject(15)
+    closemessage
+    end
+}
