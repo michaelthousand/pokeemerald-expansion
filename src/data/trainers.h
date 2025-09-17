@@ -41768,7 +41768,7 @@ F_TRAINER_FEMALE |
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 16870
-            .teraType = TYPE_STEEL,
+            .teraType = TYPE_WATER,
             .moves = {
 #line 16871
                 MOVE_FLARE_BLITZ,
@@ -41943,7 +41943,7 @@ F_TRAINER_FEMALE |
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 16947
-            .teraType = TYPE_STEEL,
+            .teraType = TYPE_WATER,
             .moves = {
 #line 16948
                 MOVE_FLARE_BLITZ,
@@ -42118,7 +42118,7 @@ F_TRAINER_FEMALE |
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17025
-            .teraType = TYPE_STEEL,
+            .teraType = TYPE_WATER,
             .moves = {
 #line 17026
                 MOVE_FLARE_BLITZ,
@@ -42291,7 +42291,7 @@ F_TRAINER_FEMALE |
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17102
-            .teraType = TYPE_STEEL,
+            .teraType = TYPE_WATER,
             .moves = {
 #line 17103
                 MOVE_FLARE_BLITZ,
@@ -42464,7 +42464,7 @@ F_TRAINER_FEMALE |
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17178
-            .teraType = TYPE_STEEL,
+            .teraType = TYPE_WATER,
             .moves = {
 #line 17179
                 MOVE_FLARE_BLITZ,
@@ -42637,7 +42637,7 @@ F_TRAINER_FEMALE |
             .nature = NATURE_JOLLY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
 #line 17254
-            .teraType = TYPE_STEEL,
+            .teraType = TYPE_WATER,
             .moves = {
 #line 17255
                 MOVE_FLARE_BLITZ,

@@ -1271,7 +1271,7 @@ NewHope_Gym_After_Ronan_6:
 # 717 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 718 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 71
+	setvar VAR_LEVEL_CAP, 64
 # 719 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_7, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
@@ -1284,7 +1284,7 @@ NewHope_Gym_After_Ronan_7:
 # 723 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 724 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 78
+	setvar VAR_LEVEL_CAP, 71
 # 725 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_8, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
@@ -1297,7 +1297,7 @@ NewHope_Gym_After_Ronan_8:
 # 729 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 730 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 85
+	setvar VAR_LEVEL_CAP, 78
 # 731 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_9, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
@@ -1310,7 +1310,7 @@ NewHope_Gym_After_Ronan_9:
 # 735 "data/maps/NewHope_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 736 "data/maps/NewHope_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 90
+	setvar VAR_LEVEL_CAP, 85
 # 737 "data/maps/NewHope_Gym/scripts.pory"
 	msgbox NewHope_Gym_After_Ronan_Text_10, MSGBOX_DEFAULT
 	goto NewHope_Gym_After_Ronan_1
@@ -1458,19 +1458,19 @@ NewHope_Gym_After_Ronan_Text_6:
 
 NewHope_Gym_After_Ronan_Text_7:
 # 719 "data/maps/NewHope_Gym/scripts.pory"
-	.string "Level cap increased to 71.$"
+	.string "Level cap increased to 64.$"
 
 NewHope_Gym_After_Ronan_Text_8:
 # 725 "data/maps/NewHope_Gym/scripts.pory"
-	.string "Level cap increased to 78.$"
+	.string "Level cap increased to 71.$"
 
 NewHope_Gym_After_Ronan_Text_9:
 # 731 "data/maps/NewHope_Gym/scripts.pory"
-	.string "Level cap increased to 85.$"
+	.string "Level cap increased to 78.$"
 
 NewHope_Gym_After_Ronan_Text_10:
 # 737 "data/maps/NewHope_Gym/scripts.pory"
-	.string "Level cap increased to 90.$"
+	.string "Level cap increased to 85.$"
 
 Freya_Intro::
 # 749 "data/maps/NewHope_Gym/scripts.pory"

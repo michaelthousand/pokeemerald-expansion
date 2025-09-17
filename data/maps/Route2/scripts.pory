@@ -2,8 +2,27 @@ mapscripts Route2_MapScripts {}
 
 script Route2_AirCutter{
     giveitem(ITEM_TM_AIR_CUTTER, 1)
+    msgbox("TM115 contains Air Cutter.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_AIRCUTTER)
     removeobject(1)
+    closemessage
+    end
+}
+
+script Route2_NormalShards {
+    giveitem(ITEM_NORMAL_TERA_SHARD, 7)
+    addvar(VAR_NORMAL_SHARDS, 7)
+    setflag(FLAG_NORMAL_SHARDS_ROUTE2)
+    removeobject(2)
+    closemessage
+    end
+}
+
+script Route2_GrassShards {
+    giveitem(ITEM_GRASS_TERA_SHARD, 3)
+    addvar(VAR_GRASS_SHARDS, 3)
+    setflag(FLAG_GRASS_SHARDS_ROUTE2)
+    removeobject(3)
     closemessage
     end
 }

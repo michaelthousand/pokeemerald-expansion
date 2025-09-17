@@ -104,7 +104,7 @@ NewHope_BattleCenter_EventScript_Friendly1_2:
 # 77 "data/maps/NewHope_BattleCenter/scripts.pory"
 	cleartrainerflag TRAINER_FRIENDLY_1
 # 78 "data/maps/NewHope_BattleCenter/scripts.pory"
-	trainerbattle_double TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, Not_Enough_Mons, NO_MUSIC
+	trainerbattle_double TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, After_Friendly, Not_Enough_Mons, NO_MUSIC
 	goto NewHope_BattleCenter_EventScript_Friendly1_1
 
 NewHope_BattleCenter_EventScript_Friendly1_5:
@@ -152,6 +152,20 @@ NewHope_BattleCenter_EventScript_Friendly2_5:
 	end
 
 
+After_Friendly::
+# 112 "data/maps/NewHope_BattleCenter/scripts.pory"
+	special WeightedSelector_Off
+# 113 "data/maps/NewHope_BattleCenter/scripts.pory"
+	special HealPlayerParty
+# 114 "data/maps/NewHope_BattleCenter/scripts.pory"
+	special Vgc_RestorePartyBackup
+# 115 "data/maps/NewHope_BattleCenter/scripts.pory"
+	clearflag FLAG_VGC_PENDING_RESTORE
+# 117 "data/maps/NewHope_BattleCenter/scripts.pory"
+	msgbox After_Friendly_Text_0, MSGBOX_AUTOCLOSE
+	return
+
+
 NewHope_BattleCenter_EventScript_Rules_Text_0:
 # 9 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "This facility has two main rooms for\ntrainers.$"
@@ -196,18 +210,22 @@ NewHope_BattleCenter_EventScript_Friendly1_Text_0:
 # 58 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "Choose your pokemon.$"
 
+After_Friendly_Text_0:
+# 117 "data/maps/NewHope_BattleCenter/scripts.pory"
+	.string "Your Pokemon have been healed.$"
+
 FriendlyTrainer1_Intro::
-# 112 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 121 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "Good luck and have fun!$"
 
 FriendlyTrainer1_Outro::
-# 116 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 125 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "Gosh! You're good at this!$"
 
 FriendlyTrainer2_Intro::
-# 120 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 129 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "I'm going to win!$"
 
 FriendlyTrainer2_Outro::
-# 124 "data/maps/NewHope_BattleCenter/scripts.pory"
+# 133 "data/maps/NewHope_BattleCenter/scripts.pory"
 	.string "This is supposed to a friendly match...$"

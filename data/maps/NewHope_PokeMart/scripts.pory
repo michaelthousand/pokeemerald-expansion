@@ -32,6 +32,7 @@ mart NewHopeMartItems_Start {
 mart NewHopeMartItems {
     ITEM_POKE_BALL
     ITEM_GREAT_BALL
+    ITEM_PP_UP
     ITEM_POTION
     ITEM_SUPER_POTION
     ITEM_ANTIDOTE

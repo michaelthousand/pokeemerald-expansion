@@ -631,7 +631,6 @@ Route110_EventScript_BirchScene::
 	call_if_eq VAR_0x8008, 3, Route110_EventScript_BirchExit3
 	call_if_eq VAR_0x8008, 4, Route110_EventScript_BirchExit4
 	removeobject LOCALID_ROUTE110_BIRCH
-	setvar VAR_REGISTER_BIRCH_STATE, 2
 	releaseall
 	end
 

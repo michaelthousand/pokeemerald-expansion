@@ -34,133 +34,230 @@ script Prometheus_Tech_Lab_EventScript_Tera {
     lock
     faceplayer
     msgbox("Hello! If you bring me Tera Shards, I\ncan change the Tera Tye of your Pokemon.", MSGBOX_AUTOCLOSE)
+    msgbox("I'll need 20 tera shards of a particular\ntype to make it work.", MSGBOX_AUTOCLOSE)
     msgbox("Let's see what shards you have...", MSGBOX_AUTOCLOSE)
     delay(60)
 
-    if (var(VAR_GRASS_SHARDS) >= 10) {
-        msgbox("Would you like to change the Tera\nType of one of your Pokemon to\pGrass?", MSGBOX_YESNO)
+    if (var(VAR_NORMAL_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Normal?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_NORMAL, slot=VAR_0x8004)
+            removeitem(ITEM_NORMAL_TERA_SHARD, 20)
+            addvar(VAR_NORMAL_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Normal.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_FIRE_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Fire?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_FIRE, slot=VAR_0x8004)
+            removeitem(ITEM_FIRE_TERA_SHARD, 20)
+            addvar(VAR_FIRE_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Fire.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_WATER_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Water?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_WATER, slot=VAR_0x8004)
+            removeitem(ITEM_WATER_TERA_SHARD, 20)
+            addvar(VAR_WATER_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Water.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_ELECTRIC_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Electric?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_ELECTRIC, slot=VAR_0x8004)
+            removeitem(ITEM_ELECTRIC_TERA_SHARD, 20)
+            addvar(VAR_ELECTRIC_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Electric.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_GRASS_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Grass?", MSGBOX_YESNO)
         if(var(VAR_RESULT) == YES){
             msgbox("Pick a Pokemon to set its Tera type.")
             callnative(ChoosePartyMon)
             waitstate
             setteratype(type=TYPE_GRASS, slot=VAR_0x8004)
+            removeitem(ITEM_GRASS_TERA_SHARD, 20)
+            addvar(VAR_GRASS_SHARDS, -20)
             msgbox("Your Pokemon's tera type is now Grass.", MSGBOX_DEFAULT)
             waitmessage
         }
+    } elif (var(VAR_ICE_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Ice?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_ICE, slot=VAR_0x8004)
+            removeitem(ITEM_ICE_TERA_SHARD, 20)
+            addvar(VAR_ICE_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Ice.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_FIGHTING_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Fighting?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_FIGHTING, slot=VAR_0x8004)
+            removeitem(ITEM_FIGHTING_TERA_SHARD, 20)
+            addvar(VAR_FIGHTING_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Fighting.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_POISON_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Poison?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_POISON, slot=VAR_0x8004)
+            removeitem(ITEM_POISON_TERA_SHARD, 20)
+            addvar(VAR_POISON_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Poison.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_GROUND_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Ground?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_GROUND, slot=VAR_0x8004)
+            removeitem(ITEM_GROUND_TERA_SHARD, 20)
+            addvar(VAR_GROUND_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Ground.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_FLYING_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Flying?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_FLYING, slot=VAR_0x8004)
+            removeitem(ITEM_FLYING_TERA_SHARD, 20)
+            addvar(VAR_FLYING_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Fying.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_PSYCHIC_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Psychic?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_PSYCHIC, slot=VAR_0x8004)
+            removeitem(ITEM_PSYCHIC_TERA_SHARD, 20)
+            addvar(VAR_PSYCHIC_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Psychic.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_BUG_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Bug?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_BUG, slot=VAR_0x8004)
+            removeitem(ITEM_BUG_TERA_SHARD, 20)
+            addvar(VAR_BUG_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Bug.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_ROCK_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Rock?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_ROCK, slot=VAR_0x8004)
+            removeitem(ITEM_ROCK_TERA_SHARD, 20)
+            addvar(VAR_ROCK_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Rock.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_GHOST_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Ghost?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_GHOST, slot=VAR_0x8004)
+            removeitem(ITEM_GHOST_TERA_SHARD, 20)
+            addvar(VAR_GHOST_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Ghost.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_DRAGON_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Dragon?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_DRAGON, slot=VAR_0x8004)
+            removeitem(ITEM_DRAGON_TERA_SHARD, 20)
+            addvar(VAR_DRAGON_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Dragon.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_DARK_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Dark?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_DARK, slot=VAR_0x8004)
+            removeitem(ITEM_DARK_TERA_SHARD, 20)
+            addvar(VAR_DARK_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Dark.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_STEEL_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Steel?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_STEEL, slot=VAR_0x8004)
+            removeitem(ITEM_STEEL_TERA_SHARD, 20)
+            addvar(VAR_STEEL_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Steel.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } elif (var(VAR_FAIRY_SHARDS) >= 20) {
+        msgbox("Would you like to change the Tera Type\nof one of your Pokemon to Fairy?", MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            msgbox("Pick a Pokemon to set its Tera type.")
+            callnative(ChoosePartyMon)
+            waitstate
+            setteratype(type=TYPE_FAIRY, slot=VAR_0x8004)
+            removeitem(ITEM_FAIRY_TERA_SHARD, 20)
+            addvar(VAR_FAIRY_SHARDS, -20)
+            msgbox("Your Pokemon's tera type is now Fairy.", MSGBOX_DEFAULT)
+            waitmessage
+        }
+    } else {
+        msgbox("Come back if you find more shards.", MSGBOX_AUTOCLOSE)
     }
 
-
-    msgbox("Do you want to change the tera type\nfor one of your pokemon?", MSGBOX_YESNO)
-    if(var(VAR_RESULT) == YES){
-        msgbox("Pick a Pokemon to set its Tera type.")
-
-        callnative(ChoosePartyMon)
-        waitstate
-
-        goto(TeraMenu1)
-
-        TeraMenu1:
-            multichoice(20,0, TERA_CHOICE_P1, 0)
-            if (var(VAR_RESULT) == 0){
-                setteratype(type=TYPE_NORMAL, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Normal.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 1){
-                setteratype(type=TYPE_FIRE, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Fire.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 2){
-                setteratype(type=TYPE_WATER, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Water.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 3){
-                setteratype(type=TYPE_ELECTRIC, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Electric.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 4){
-                setteratype(type=TYPE_GRASS, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Grass.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 5){
-                setteratype(type=TYPE_ICE, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Ice.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 6){
-                setteratype(type=TYPE_FIGHTING, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Fighting.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 7){
-                setteratype(type=TYPE_POISON, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Poison.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 8){
-                setteratype(type=TYPE_GROUND, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Ground.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif (var(VAR_RESULT) == 9){
-                goto(TeraMenu2)
-            }
-
-        TeraMenu2:
-            multichoice(20,0,TERA_CHOICE_P2, 0)
-            if (var(VAR_RESULT)==0){
-                setteratype(type=TYPE_FLYING, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Flying.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==1){
-                setteratype(type=TYPE_PSYCHIC, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Psychic.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==2){
-                setteratype(type=TYPE_BUG, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Bug.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==3){
-                setteratype(type=TYPE_ROCK, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Rock.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==4){
-                setteratype(type=TYPE_GHOST, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Ghost.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==5){
-                setteratype(type=TYPE_DRAGON, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Dragon.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==6){
-                setteratype(type=TYPE_DARK, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Dark.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==70){
-                setteratype(type=TYPE_STEEL, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Steel.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==8){
-                setteratype(type=TYPE_FAIRY, slot=VAR_0x8004)
-                msgbox("Your Pokemon's tera type is now Fairy.", MSGBOX_DEFAULT)
-                waitmessage
-            }
-            elif(var(VAR_RESULT)==9){
-                goto(TeraMenu1)
-            }
-        }
     release
     end
 }

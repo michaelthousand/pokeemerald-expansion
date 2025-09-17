@@ -241,13 +241,8 @@ static const u16 sSilverSymbolFlags[NUM_FRONTIER_FACILITIES] = {
 };
 
 static const u16 sNumberOneVarsAndThresholds[][2] = {
-    {VAR_DAILY_SLOTS, 100},
-    {VAR_DAILY_ROULETTE,  50},
-    {VAR_DAILY_WILDS, 100},
-    {VAR_DAILY_BLENDER,  20},
-    {VAR_DAILY_PLANTED_BERRIES,  20},
-    {VAR_DAILY_PICKED_BERRIES,  20},
-    {VAR_DAILY_BP,  30}
+    
+   
 };
 
 static const u8 *const sPokeNewsTextGroup_Upcoming[NUM_POKENEWS_TYPES + 1] = {
@@ -2468,37 +2463,34 @@ static void TryPutNumberOneOnAir(u8 actionIdx)
 
 void IncrementDailySlotsUses(void)
 {
-    VarSet(VAR_DAILY_SLOTS, VarGet(VAR_DAILY_SLOTS) + 1);
+    
 }
 
 void IncrementDailyRouletteUses(void)
 {
-    VarSet(VAR_DAILY_ROULETTE, VarGet(VAR_DAILY_ROULETTE) + 1);
 }
 
 void IncrementDailyWildBattles(void)
 {
-    VarSet(VAR_DAILY_WILDS, VarGet(VAR_DAILY_WILDS) + 1);
 }
 
 void IncrementDailyBerryBlender(void)
 {
-    VarSet(VAR_DAILY_BLENDER, VarGet(VAR_DAILY_BLENDER) + 1);
+    
 }
 
 void IncrementDailyPlantedBerries(void)
 {
-    VarSet(VAR_DAILY_PLANTED_BERRIES, VarGet(VAR_DAILY_PLANTED_BERRIES) + 1);
+   
 }
 
 void IncrementDailyPickedBerries(void)
 {
-    VarSet(VAR_DAILY_PICKED_BERRIES, VarGet(VAR_DAILY_PICKED_BERRIES) + gSpecialVar_0x8006);
 }
 
 void IncrementDailyBattlePoints(u16 delta)
 {
-    VarSet(VAR_DAILY_BP, VarGet(VAR_DAILY_BP) + delta);
+
 }
 
 // PokeNews

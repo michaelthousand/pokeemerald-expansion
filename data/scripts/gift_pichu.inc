@@ -4,15 +4,6 @@ MysteryGiftScript_SurfPichu::
 	returnram
 
 SurfPichu_GiveIfPossible:
-	specialvar VAR_GIFT_PICHU_SLOT, CalculatePlayerPartyCount
-	vgoto_if_eq VAR_GIFT_PICHU_SLOT, PARTY_SIZE, SurfPichu_FullParty
-	setflag FLAG_MYSTERY_GIFT_DONE
-	vcall SurfPichu_GiveEgg
-	lock
-	faceplayer
-	vmessage sText_MysteryGiftEgg
-	waitmessage
-	waitbuttonpress
 	playfanfare MUS_OBTAIN_ITEM
 	waitfanfare
 	release
@@ -28,14 +19,6 @@ SurfPichu_FullParty:
 	end
 
 SurfPichu_GiveEgg:
-	giveegg SPECIES_PICHU
-	setmodernfatefulencounter VAR_GIFT_PICHU_SLOT
-	setmonmetlocation VAR_GIFT_PICHU_SLOT, METLOC_FATEFUL_ENCOUNTER
-	vgoto_if_eq VAR_GIFT_PICHU_SLOT, 1, SurfPichu_Slot1
-	vgoto_if_eq VAR_GIFT_PICHU_SLOT, 2, SurfPichu_Slot2
-	vgoto_if_eq VAR_GIFT_PICHU_SLOT, 3, SurfPichu_Slot3
-	vgoto_if_eq VAR_GIFT_PICHU_SLOT, 4, SurfPichu_Slot4
-	vgoto_if_eq VAR_GIFT_PICHU_SLOT, 5, SurfPichu_Slot5
 	return
 
 SurfPichu_Slot1:

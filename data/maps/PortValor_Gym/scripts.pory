@@ -716,26 +716,26 @@ script PortValor_Gym_After_Solara {
         setflag(FLAG_BADGE05_GET)
         msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 71)
-        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 64)
+        msgbox("Level cap increased to 64.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE06_GET))) {
         setflag(FLAG_BADGE06_GET)
         msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 78)
-        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 71)
+        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE07_GET))) {
         setflag(FLAG_BADGE07_GET)
         msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 85)
-        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 78)
+        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
     } elif (!(flag(FLAG_BADGE08_GET))) {
         setflag(FLAG_BADGE08_GET)
         msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
         addvar(VAR_BADGES, 1)
-        setvar(VAR_LEVEL_CAP, 90)
-        msgbox("Level cap increased to 90.", MSGBOX_DEFAULT) 
+        setvar(VAR_LEVEL_CAP, 85)
+        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
     }
 
     applymovement(LOCALID_SOLARA, Solara_Exit)
@@ -788,26 +788,3 @@ script PortValor_Gym_After_Solara {
 
 
 
-text Marin_Intro{
-    "Prepare for the hurricane!"
-}
-
-text Marin_Outro{
-    "I'm all washed up."
-}
-
-text PostBattle_Marin{
-    "Good luck aginst Solara."
-}
-
-text Solara_Intro{
-    "Enjoy the heat."
-}
-
-text Solara_Outro{
-    "Oh no! I'm cooked!"
-}
-
-text PostBattle_Solara{
-    "Good luck with the rest of the gyms."
-}

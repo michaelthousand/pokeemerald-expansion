@@ -1,0 +1,19 @@
+mapscripts Route26_MapScripts {}
+
+script Route26_DarkShards {
+    giveitem(ITEM_DARK_TERA_SHARD, 7)
+    addvar(VAR_DARK_SHARDS, 7)
+    setflag(FLAG_DARK_SHARDS_ROUTE26)
+    removeobject(1)
+    closemessage
+    end
+}
+
+script Route26_GhostShards {
+    giveitem(ITEM_GHOST_TERA_SHARD, 3)
+    addvar(VAR_GHOST_SHARDS, 3)
+    setflag(FLAG_GHOST_SHARDS_ROUTE26)
+    removeobject(2)
+    closemessage
+    end
+}

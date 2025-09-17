@@ -663,7 +663,9 @@
     "PortValor_Gym",
     "PortValor_PokemonCenter",
     "PortValor_PokeMart",
-    "PortValor_SailorsHouse"
+    "PortValor_SailorsHouse",
+    "PortValor_Gym_Lobby",
+    "PortValor_Gym_BattleFloor"
   ],
   "gMapGroup_MiscIndoor": [
     "EvergreenWoods_Shack"

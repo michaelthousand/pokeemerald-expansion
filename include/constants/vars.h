@@ -235,24 +235,24 @@
 #define VAR_SKY_PILLAR_RAYQUAZA_CRY_DONE                 0x40D7
 #define VAR_SOOTOPOLIS_WALLACE_STATE                     0x40D8
 #define VAR_HAS_TALKED_TO_SEAFLOOR_CAVERN_ENTRANCE_GRUNT 0x40D9
-#define VAR_REGISTER_BIRCH_STATE                         0x40DA
-#define VAR_UNUSED_0x40DB                                0x40DB // Unused Var
-#define VAR_UNUSED_0x40DC                                0x40DC // Unused Var
-#define VAR_GIFT_PICHU_SLOT                              0x40DD
-#define VAR_GIFT_UNUSED_1                                0x40DE // Var is written to, but never read
-#define VAR_GIFT_UNUSED_2                                0x40DF // Var is written to, but never read
-#define VAR_GIFT_UNUSED_3                                0x40E0 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_4                                0x40E1 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_5                                0x40E2 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_6                                0x40E3 // Var is written to, but never read
-#define VAR_GIFT_UNUSED_7                                0x40E4 // var is written to, but never read
+#define VAR_BUG_SHARDS                                  0x40DA
+#define VAR_PSYCHIC_SHARDS                                0x40DB // Unused Var
+#define VAR_FLYING_SHARDS                                0x40DC // Unused Var
+#define VAR_GROUND_SHARDS                              0x40DD
+#define VAR_POISON_SHARDS                                0x40DE // Var is written to, but never read
+#define VAR_FIGHTING_SHARDS                                0x40DF // Var is written to, but never read
+#define VAR_ICE_SHARDS                                0x40E0 // Var is written to, but never read
+#define VAR_ELECTRIC_SHARDS                                0x40E1 // Var is written to, but never read
+#define VAR_WATER_SHARDS                                0x40E2 // Var is written to, but never read
+#define VAR_NORMAL_SHARDS                               0x40E3 // Var is written to, but never read
+#define VAR_FIRE_SHARDS                                0x40E4 // var is written to, but never read
 #define VAR_GRASS_SHARDS                                0x40E5 // Unused Var
-#define VAR_DAILY_SLOTS                                  0x40E6
-#define VAR_DAILY_WILDS                                  0x40E7
-#define VAR_DAILY_BLENDER                                0x40E8
-#define VAR_DAILY_PLANTED_BERRIES                        0x40E9
-#define VAR_DAILY_PICKED_BERRIES                         0x40EA
-#define VAR_DAILY_ROULETTE                               0x40EB
+#define VAR_ROCK_SHARDS                                  0x40E6
+#define VAR_GHOST_SHARDS                                0x40E7
+#define VAR_DRAGON_SHARDS                                0x40E8
+#define VAR_DARK_SHARDS                       0x40E9
+#define VAR_STEEL_SHARDS                         0x40EA
+#define VAR_FAIRY_SHARDS                               0x40EB
 #define VAR_SECRET_BASE_STEP_COUNTER                     0x40EC // Used by Secret Base TV programs
 #define VAR_SECRET_BASE_LAST_ITEM_USED                   0x40ED // Used by Secret Base TV programs
 #define VAR_SECRET_BASE_LOW_TV_FLAGS                     0x40EE // Used by Secret Base TV programs
@@ -269,7 +269,7 @@
 #define VAR_LEVEL_CAP                                0x40F9 // Used to change level cap
 #define TERA_CHANGE_TYPE                                0x40FA // Used for tera change
 #define VAR_UNUSED_0x40FB                                0x40FB // Unused Var // USED FOR TERA CHANGE TEST
-#define VAR_UNUSED_0x40FC                                0x40FC // Unused Var // USED FOR TEST MAP NURSE
+#define GYM_STATE                                0x40FC // Unused Var // USED FOR TEST MAP NURSE
 #define TestMapA_State                                0x40FD // Unused Var // USED FOR TEST MAP STATE
 #define TESTMAPA_STATE                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK
 #define STARTER_REGION                                0x40FF // Unused Var // USED FOR STARTER POKEBALL SELECTION

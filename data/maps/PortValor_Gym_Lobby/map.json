@@ -1,0 +1,107 @@
+{
+  "id": "MAP_PORT_VALOR_GYM_LOBBY",
+  "name": "PortValor_Gym_Lobby",
+  "layout": "LAYOUT_PORT_VALOR_GYM_LOBBY",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_PORT_VALOR",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
+      "x": 5,
+      "y": 5,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PortValor_Gym_EventScript_Rules",
+      "flag": "0"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 9,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR_GYM_BATTLE_FLOOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR_GYM_BATTLE_FLOOR",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR_GYM_LOBBY",
+      "dest_warp_id": "0"
+    }
+  ],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 8,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PortValor_Gym_Lobby_TriggerOne"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PortValor_Gym_Lobby_TriggerTwo"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PortValor_Gym_Lobby_TriggerThree"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "PortValor_Gym_Lobby_TriggerFour"
+    }
+  ],
+  "bg_events": []
+}

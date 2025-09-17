@@ -64,41 +64,43 @@ NewHopeMartItems:
 # 34 "data/maps/NewHope_PokeMart/scripts.pory"
 	.2byte ITEM_GREAT_BALL
 # 35 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_POTION
+	.2byte ITEM_PP_UP
 # 36 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_SUPER_POTION
+	.2byte ITEM_POTION
 # 37 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_ANTIDOTE
+	.2byte ITEM_SUPER_POTION
 # 38 "data/maps/NewHope_PokeMart/scripts.pory"
-	.2byte ITEM_PARALYZE_HEAL
+	.2byte ITEM_ANTIDOTE
 # 39 "data/maps/NewHope_PokeMart/scripts.pory"
+	.2byte ITEM_PARALYZE_HEAL
+# 40 "data/maps/NewHope_PokeMart/scripts.pory"
 	.2byte ITEM_LEMONADE
 	.2byte ITEM_NONE
 
 NewHope_PokeMart_PT_Employee::
-# 43 "data/maps/NewHope_PokeMart/scripts.pory"
-	lock
 # 44 "data/maps/NewHope_PokeMart/scripts.pory"
-	faceplayer
+	lock
 # 45 "data/maps/NewHope_PokeMart/scripts.pory"
-	message NewHope_PokeMart_PT_Employee_Text_0
+	faceplayer
 # 46 "data/maps/NewHope_PokeMart/scripts.pory"
-	message NewHope_PokeMart_Employee_Text_3
+	message NewHope_PokeMart_PT_Employee_Text_0
 # 47 "data/maps/NewHope_PokeMart/scripts.pory"
-	waitmessage
+	message NewHope_PokeMart_Employee_Text_3
 # 48 "data/maps/NewHope_PokeMart/scripts.pory"
-	pokemart NewHopePTItems
+	waitmessage
 # 49 "data/maps/NewHope_PokeMart/scripts.pory"
-	msgbox NewHope_PokeMart_Employee_Text_4
+	pokemart NewHopePTItems
 # 50 "data/maps/NewHope_PokeMart/scripts.pory"
+	msgbox NewHope_PokeMart_Employee_Text_4
+# 51 "data/maps/NewHope_PokeMart/scripts.pory"
 	release
 	end
 
 
 	.align 2
-# 54 "data/maps/NewHope_PokeMart/scripts.pory"
-NewHopePTItems:
 # 55 "data/maps/NewHope_PokeMart/scripts.pory"
+NewHopePTItems:
+# 56 "data/maps/NewHope_PokeMart/scripts.pory"
 	.2byte ITEM_POTION
 	.2byte ITEM_NONE
 
@@ -123,5 +125,5 @@ NewHope_PokeMart_Employee_Text_4:
 	.string "Please come again.$"
 
 NewHope_PokeMart_PT_Employee_Text_0:
-# 45 "data/maps/NewHope_PokeMart/scripts.pory"
+# 46 "data/maps/NewHope_PokeMart/scripts.pory"
 	.string "Hello!\nI'm you local representative for\nPrometheus Tech.$"

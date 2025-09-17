@@ -36,7 +36,7 @@ Old_Stone_Cave1F_EventScript_Bag_Text_0:
 
 Old_Stone_Cave1F_EventScript_Bag_Text_1:
 # 7 "data/maps/OldStoneCave1F/scripts.pory"
-	.string "James,\nHere are the things you'll need for the\nminer plan.$"
+	.string "James,\nHere are the things you'll need for the\pminer plan.$"
 
 Old_Stone_Cave1F_EventScript_Bag_Text_2:
 # 8 "data/maps/OldStoneCave1F/scripts.pory"

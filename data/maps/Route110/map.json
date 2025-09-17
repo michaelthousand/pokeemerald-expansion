@@ -587,42 +587,6 @@
       "var": "VAR_ROUTE110_STATE",
       "var_value": "0",
       "script": "Route110_EventScript_RivalTrigger3"
-    },
-    {
-      "type": "trigger",
-      "x": 7,
-      "y": 85,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene1"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 85,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene2"
-    },
-    {
-      "type": "trigger",
-      "x": 9,
-      "y": 85,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene3"
-    },
-    {
-      "type": "trigger",
-      "x": 10,
-      "y": 85,
-      "elevation": 3,
-      "var": "VAR_REGISTER_BIRCH_STATE",
-      "var_value": "1",
-      "script": "Route110_EventScript_BirchScene4"
     }
   ],
   "bg_events": [

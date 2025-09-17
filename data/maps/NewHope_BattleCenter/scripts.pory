@@ -75,7 +75,7 @@ script NewHope_BattleCenter_EventScript_Friendly1 {
         callnative(Vgc_BuildPartyFrom4Indices)
 
         cleartrainerflag(TRAINER_FRIENDLY_1)
-        trainerbattle_double(TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, Not_Enough_Mons, NO_MUSIC)
+        trainerbattle_double(TRAINER_FRIENDLY_1, FriendlyTrainer1_Intro, FriendlyTrainer1_Outro, After_Friendly, Not_Enough_Mons, NO_MUSIC)
     }
     releaseall
 }
@@ -106,6 +106,15 @@ script NewHope_BattleCenter_EventScript_Friendly2 {
         trainerbattle_double(TRAINER_FRIENDLY_2, FriendlyTrainer2_Intro, FriendlyTrainer2_Outro, Not_Enough_Mons, NO_MUSIC)
     }
     releaseall
+}
+
+script After_Friendly {
+    special(WeightedSelector_Off)
+    special(HealPlayerParty)
+    special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
+    
+    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
 }
 
 

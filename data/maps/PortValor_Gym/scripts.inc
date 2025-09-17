@@ -1269,7 +1269,7 @@ PortValor_Gym_After_Solara_6:
 # 718 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 719 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 71
+	setvar VAR_LEVEL_CAP, 64
 # 720 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_7, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
@@ -1282,7 +1282,7 @@ PortValor_Gym_After_Solara_7:
 # 724 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 725 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 78
+	setvar VAR_LEVEL_CAP, 71
 # 726 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_8, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
@@ -1295,7 +1295,7 @@ PortValor_Gym_After_Solara_8:
 # 730 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 731 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 85
+	setvar VAR_LEVEL_CAP, 78
 # 732 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_9, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
@@ -1308,7 +1308,7 @@ PortValor_Gym_After_Solara_9:
 # 736 "data/maps/PortValor_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 737 "data/maps/PortValor_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 90
+	setvar VAR_LEVEL_CAP, 85
 # 738 "data/maps/PortValor_Gym/scripts.pory"
 	msgbox PortValor_Gym_After_Solara_Text_10, MSGBOX_DEFAULT
 	goto PortValor_Gym_After_Solara_1
@@ -1456,40 +1456,16 @@ PortValor_Gym_After_Solara_Text_6:
 
 PortValor_Gym_After_Solara_Text_7:
 # 720 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Level cap increased to 71.$"
+	.string "Level cap increased to 64.$"
 
 PortValor_Gym_After_Solara_Text_8:
 # 726 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Level cap increased to 78.$"
+	.string "Level cap increased to 71.$"
 
 PortValor_Gym_After_Solara_Text_9:
 # 732 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Level cap increased to 85.$"
+	.string "Level cap increased to 78.$"
 
 PortValor_Gym_After_Solara_Text_10:
 # 738 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Level cap increased to 90.$"
-
-Marin_Intro::
-# 791 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Prepare for the hurricane!$"
-
-Marin_Outro::
-# 795 "data/maps/PortValor_Gym/scripts.pory"
-	.string "I'm all washed up.$"
-
-PostBattle_Marin::
-# 799 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Good luck aginst Solara.$"
-
-Solara_Intro::
-# 803 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Enjoy the heat.$"
-
-Solara_Outro::
-# 807 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Oh no! I'm cooked!$"
-
-PostBattle_Solara::
-# 811 "data/maps/PortValor_Gym/scripts.pory"
-	.string "Good luck with the rest of the gyms.$"
+	.string "Level cap increased to 85.$"

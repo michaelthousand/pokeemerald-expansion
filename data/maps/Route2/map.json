@@ -37,6 +37,32 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "Route2_AirCutter",
       "flag": "FLAG_AIRCUTTER"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 4,
+      "y": 28,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2_NormalShards",
+      "flag": "FLAG_NORMAL_SHARDS_ROUTE2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 23,
+      "y": 8,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route2_GrassShards",
+      "flag": "FLAG_GRASS_SHARDS_ROUTE2"
     }
   ],
   "warp_events": [],

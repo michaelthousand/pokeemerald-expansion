@@ -12,7 +12,7 @@ DarkFalls_PokemonCenter_OnTransition::
 	end
 
 
-DarkFalls_PokemonCenter_Nurse1::
+DarkFalls_PokemonCenter_Nurse::
 # 13 "data/layouts/DarkFalls_PokemonCenter/scripts.pory"
 	lock
 # 14 "data/layouts/DarkFalls_PokemonCenter/scripts.pory"

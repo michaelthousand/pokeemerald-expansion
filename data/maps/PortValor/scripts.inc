@@ -181,7 +181,7 @@ PortValor_EventScript_Villager2::
 # 104 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8000, SPECIES_IRON_HANDS
 # 105 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8001, 21
+	setvar VAR_0x8001, 100
 # 106 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8002, ITEM_ASSAULT_VEST
 # 107 "data/maps/PortValor/scripts.pory"
@@ -203,7 +203,7 @@ PortValor_EventScript_Villager2::
 # 119 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8000, SPECIES_AMOONGUSS
 # 120 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8001, 21
+	setvar VAR_0x8001, 100
 # 121 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8002, ITEM_ROCKY_HELMET
 # 122 "data/maps/PortValor/scripts.pory"
@@ -225,7 +225,7 @@ PortValor_EventScript_Villager2::
 # 134 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8000, SPECIES_FLUTTER_MANE
 # 135 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8001, 21
+	setvar VAR_0x8001, 100
 # 136 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8002, ITEM_CHOICE_SPECS
 # 137 "data/maps/PortValor/scripts.pory"
@@ -247,7 +247,7 @@ PortValor_EventScript_Villager2::
 # 149 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8000, SPECIES_LANDORUS_THERIAN
 # 150 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8001, 21
+	setvar VAR_0x8001, 100
 # 151 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8002, ITEM_SAFETY_GOGGLES
 # 152 "data/maps/PortValor/scripts.pory"
@@ -269,7 +269,7 @@ PortValor_EventScript_Villager2::
 # 164 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8000, SPECIES_CRESSELIA
 # 165 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8001, 21
+	setvar VAR_0x8001, 100
 # 166 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8002, ITEM_MENTAL_HERB
 # 167 "data/maps/PortValor/scripts.pory"
@@ -291,7 +291,7 @@ PortValor_EventScript_Villager2::
 # 179 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8000, SPECIES_CHI_YU
 # 180 "data/maps/PortValor/scripts.pory"
-	setvar VAR_0x8001, 21
+	setvar VAR_0x8001, 100
 # 181 "data/maps/PortValor/scripts.pory"
 	setvar VAR_0x8002, ITEM_LIFE_ORB
 # 182 "data/maps/PortValor/scripts.pory"

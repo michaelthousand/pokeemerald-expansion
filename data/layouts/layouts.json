@@ -4697,7 +4697,7 @@
       "width": 30,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mossdeep",
+      "secondary_tileset": "gTileset_Sootopolis",
       "border_filepath": "data/layouts/DarkFalls/border.bin",
       "blockdata_filepath": "data/layouts/DarkFalls/map.bin"
     },
@@ -4750,6 +4750,26 @@
       "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/DarkFalls_Gym/border.bin",
       "blockdata_filepath": "data/layouts/DarkFalls_Gym/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_VALOR_GYM_BATTLE_FLOOR",
+      "name": "PortValor_Gym_BattleFloor_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/PortValor_Gym_BattleFloor/border.bin",
+      "blockdata_filepath": "data/layouts/PortValor_Gym_BattleFloor/map.bin"
+    },
+    {
+      "id": "LAYOUT_PORT_VALOR_GYM_LOBBY",
+      "name": "PortValor_Gym_Lobby_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/PortValor_Gym_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/PortValor_Gym_Lobby/map.bin"
     }
   ]
 }

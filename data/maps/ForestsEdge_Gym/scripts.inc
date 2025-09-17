@@ -1483,7 +1483,7 @@ ForestsEdge_Gym_After_Kaelen_6:
 # 763 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 764 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 71
+	setvar VAR_LEVEL_CAP, 64
 # 765 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_7, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
@@ -1496,7 +1496,7 @@ ForestsEdge_Gym_After_Kaelen_7:
 # 769 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 770 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 78
+	setvar VAR_LEVEL_CAP, 71
 # 771 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_8, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
@@ -1509,7 +1509,7 @@ ForestsEdge_Gym_After_Kaelen_8:
 # 775 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 776 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 85
+	setvar VAR_LEVEL_CAP, 78
 # 777 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_9, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
@@ -1522,7 +1522,7 @@ ForestsEdge_Gym_After_Kaelen_9:
 # 781 "data/maps/ForestsEdge_Gym/scripts.pory"
 	addvar VAR_BADGES, 1
 # 782 "data/maps/ForestsEdge_Gym/scripts.pory"
-	setvar VAR_LEVEL_CAP, 90
+	setvar VAR_LEVEL_CAP, 85
 # 783 "data/maps/ForestsEdge_Gym/scripts.pory"
 	msgbox ForestsEdge_Gym_After_Kaelen_Text_10, MSGBOX_DEFAULT
 	goto ForestsEdge_Gym_After_Kaelen_1
@@ -1670,19 +1670,19 @@ ForestsEdge_Gym_After_Kaelen_Text_6:
 
 ForestsEdge_Gym_After_Kaelen_Text_7:
 # 765 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Level cap increased to 71.$"
+	.string "Level cap increased to 64.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_8:
 # 771 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Level cap increased to 78.$"
+	.string "Level cap increased to 71.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_9:
 # 777 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Level cap increased to 85.$"
+	.string "Level cap increased to 78.$"
 
 ForestsEdge_Gym_After_Kaelen_Text_10:
 # 783 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Level cap increased to 90.$"
+	.string "Level cap increased to 85.$"
 
 Morwen_Intro::
 # 836 "data/maps/ForestsEdge_Gym/scripts.pory"

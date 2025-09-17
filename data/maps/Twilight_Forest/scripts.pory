@@ -2,6 +2,7 @@ mapscripts Twilight_Forest_MapScripts {}
 
 script Twilight_Forest_RagePowder{
     giveitem(ITEM_TM_RAGE_POWDER)
+    msgbox("TM150 contains Rage Powder.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_RAGEPOWDER)
     removeobject(8)
     closemessage
@@ -9,6 +10,7 @@ script Twilight_Forest_RagePowder{
 }
 script Twilight_Forest_PollenPuff{
     giveitem(ITEM_TM_POLLEN_PUFF)
+    msgbox("TM86 contains Pollen Puff.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_POLLENPUFF)
     removeobject(4)
     closemessage
@@ -16,6 +18,7 @@ script Twilight_Forest_PollenPuff{
 }
 script Twilight_Forest_DarkPulse{
     giveitem(ITEM_TM_DARK_PULSE)
+    msgbox("TM72 contains Dark Pulse.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_DARKPULSE)
     removeobject(3)
     closemessage
@@ -23,20 +26,15 @@ script Twilight_Forest_DarkPulse{
 }
 script Twilight_Forest_ShadowClaw{
     giveitem(ITEM_TM_SHADOW_CLAW)
+    msgbox("TM57 contains Shadow Claw.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_SHADOWCLAW)
     removeobject(12)
     closemessage
     end
 }
-script Twilight_Forest_SolarBlade {
-    giveitem(ITEM_TM_SOLAR_BLADE)
-    setflag(FLAG_SOLARBLADE)
-    removeobject(7)
-    closemessage
-    end
-}
 script Twilight_Forest_EnergyBall {
     giveitem(ITEM_TM_ENERGY_BALL)
+    msgbox("TM81 contains Energy Ball.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_ENERGYBALL)
     removeobject(9)
     closemessage
@@ -44,6 +42,7 @@ script Twilight_Forest_EnergyBall {
 }
 script Twilight_Forest_AcidSpray {
     giveitem(ITEM_TM_ACID_SPRAY)
+    msgbox("TM123 contains Acid Spray.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_ACIDSPRAY)
     removeobject(1)
     closemessage
@@ -51,13 +50,15 @@ script Twilight_Forest_AcidSpray {
 }
 script Twilight_Forest_PsychicTerrain{
     giveitem(ITEM_TM_PSYCHIC_TERRAIN)
+    msgbox("TM97 contains Psychic Terrain.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_PSYCHICTERRAIN)
-    removeobject(1)
+    removeobject(14)
     closemessage
     end
 }
 script Twilight_Forest_PsychicFangs {
     giveitem(ITEM_TM_PSYCHIC_FANGS)
+    msgbox("TM99 contains Psychic Fangs.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_PSYCHICFANGS)
     removeobject(11)
     closemessage
@@ -99,7 +100,8 @@ script Twilight_Forest_SpellTag {
     end
 }
 script Twilight_Forest_DarkShards {
-    giveitem(ITEM_DARK_TERA_SHARD, 5)
+    giveitem(ITEM_DARK_TERA_SHARD, 6)
+    addvar(VAR_DARK_SHARDS, 6)
     setflag(FLAG_DARK_SHARDS_TWILIGHT)
     removeobject(18)
     closemessage
@@ -107,13 +109,15 @@ script Twilight_Forest_DarkShards {
 }
 script Twilight_Forest_PsychicShards {
     giveitem(ITEM_PSYCHIC_TERA_SHARD, 5)
+    addvar(VAR_PSYCHIC_SHARDS, 5)
     setflag(FLAG_PSYCHIC_SHARDS_TWILIGHT)
     removeobject(17)
     closemessage
     end
 }
 script Twilight_Forest_BugShards {
-    giveitem(ITEM_BUG_TERA_SHARD, 5)
+    giveitem(ITEM_BUG_TERA_SHARD, 4)
+    addvar(VAR_BUG_SHARDS, 4)
     setflag(FLAG_BUG_SHARDS_TWILIGHT)
     removeobject(16)
     closemessage
@@ -124,6 +128,14 @@ script Twilight_Forest_GrassShards {
     addvar(VAR_GRASS_SHARDS, 5)
     setflag(FLAG_GRASS_SHARDS_TWILIGHT)
     removeobject(15)
+    closemessage
+    end
+}
+script Twilight_Forest_WaterShards {
+    giveitem(ITEM_WATER_TERA_SHARD, 8)
+    addvar(VAR_WATER_SHARDS, 8)
+    setflag(FLAG_WATER_SHARDS_TWILIGHT)
+    removeobject(7)
     closemessage
     end
 }

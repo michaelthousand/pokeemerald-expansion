@@ -1,0 +1,677 @@
+raw `
+PortValor_Gym_BattleFloor_MapScripts::
+    map_script MAP_SCRIPT_ON_TRANSITION, PortValor_Gym_BattleFloor_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PortValor_Gym_BattleFloor_OnFrame
+	.byte 0
+
+PortValor_Gym_BattleFloor_OnFrame:
+	map_script_2 GYM_STATE, 0, Gym_BattleFloor_1st_Gym_Leader_Enter
+	.2byte 0
+
+`
+
+script PortValor_Gym_BattleFloor_OnTransition {
+    setflag(FLAG_MARIN)
+    setflag(FLAG_SOLARA)
+    end
+}
+
+
+// ======== GYM LEADER ENTRANCE SCRIPT 1 ========
+script Gym_BattleFloor_1st_Gym_Leader_Enter {
+    lockall
+    applymovement(OBJ_EVENT_ID_PLAYER, Walk_to_Podium_Middle)
+    waitmovement(0)
+    delay(180)
+    addobject(LOCALID_MARIN)
+    clearflag(FLAG_MARIN)
+    applymovement(LOCALID_MARIN, Leader_to_Podium)
+    waitmovement(0)
+    delay(60)
+    goto(PortValor_Gym_BattleFloor_EventScript_Marin)
+    end
+}
+
+
+// ======== GYM LEADER ENTRANCE SCRIPT 2 ========
+script Gym_BattleFloor_2nd_Gym_Leader_Enter {
+    addobject(LOCALID_SOLARA)
+    clearflag(FLAG_SOLARA)
+    applymovement(LOCALID_SOLARA, Leader_to_Podium)
+    waitmovement(0)
+    delay(60)
+    goto(PortValor_Gym_EventScript_Solara)
+}
+
+
+// ======== GENERIC GYM LEADER MOVEMENTS ========
+
+movement Leader_to_Podium {
+    walk_down * 5
+    walk_right
+}
+
+movement Gym_Leader_Exit {
+    walk_left
+    walk_up * 5
+}
+
+
+// ======== AFTER 1ST GYM LEADER ========
+script PortValor_Gym_BattleFloor_After_Marin {
+    special(WeightedSelector_Off)
+    special(HealPlayerParty)
+    msgbox("Your Pokemon have been healed.", MSGBOX_AUTOCLOSE)
+
+    msgbox(PostBattle_Marin, MSGBOX_AUTOCLOSE)
+
+    special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
+
+    applymovement(LOCALID_MARIN, Gym_Leader_Exit)
+    waitmovement(0)
+    removeobject(LOCALID_MARIN)
+
+    delay(150)
+    goto(Gym_BattleFloor_2nd_Gym_Leader_Enter)
+}
+
+script PortValor_Gym_BattleFloor_EventScript_Marin {
+    if (var(VAR_BADGES) < 2) {
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_LAPRAS)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_WINGULL)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_CUBONE)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GOLDEEN)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_BASCULIN)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_LOMBRE)
+        if (var(VAR_BADGES) == 0){
+            setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 29)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            setflag(FLAG_MARIN)
+            removeobject(LOCALID_MARIN)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 0) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_C1)
+            trainerbattle_double(TRAINER_MARIN_C1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_C2)
+            trainerbattle_double(TRAINER_MARIN_C2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        }
+
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_TOXICROAK)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_PELIPPER)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_LAPRAS)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_MAROWAK_ALOLA)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_LUDICOLO)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_BASCULEGION)
+        if (var(VAR_BADGES) == 2){
+            setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 2) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_B1)
+            trainerbattle_double(TRAINER_MARIN_B1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_B2)
+            trainerbattle_double(TRAINER_MARIN_B2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_B3)
+            trainerbattle_double(TRAINER_MARIN_B3, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_OGERPON_WELLSPRING)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_BASCULEGION)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_LAPRAS)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_PELIPPER)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_ARCHALUDON)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_RHYPERIOR)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_A1)
+            trainerbattle_double(TRAINER_MARIN_A1, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_A2)
+            trainerbattle_double(TRAINER_MARIN_A2, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_MARIN_A3)
+            trainerbattle_double(TRAINER_MARIN_A3, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+        }
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_OGERPON_WELLSPRING)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_BASCULEGION)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_LAPRAS)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_PELIPPER)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_KYOGRE)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_RHYPERIOR)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_MARIN_S)
+        trainerbattle_double(TRAINER_MARIN_S, Marin_Intro, Marin_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Marin, NO_MUSIC)
+    }
+}
+
+script PortValor_Gym_BattleFloor_EventScript_Solara {
+    if (var(VAR_BADGES) < 2) {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_CHARMELEON)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_CERULEDGE)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_IVYSAUR)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_GLOOM)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_VULPIX)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_SHELLOS)
+        if (var(VAR_BADGES) == 0){
+            setvar(VAR_VGC_PREVIEW_LV, 21)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 29)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        if (var(VAR_BADGES) == 0)  {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_C1)
+            trainerbattle_double(TRAINER_SOLARA_C1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_C2)
+            trainerbattle_double(TRAINER_SOLARA_C2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        }
+
+    } elif ((var(VAR_BADGES) > 1) && (var(VAR_BADGES) < 5)){
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_CHARIZARD)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_ARCANINE)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_VENUSAUR)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_INCINEROAR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_NINETALES)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_TALONFLAME)
+        if (var(VAR_BADGES) == 2){
+            setvar(VAR_VGC_PREVIEW_LV, 41)  // preview level
+        } elif (var(VAR_BADGES) == 3){
+            setvar(VAR_VGC_PREVIEW_LV, 49)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 56)  // preview level
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        if (var(VAR_BADGES) == 2)  {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_B1)
+            trainerbattle_double(TRAINER_SOLARA_B1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 3){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_B2)
+            trainerbattle_double(TRAINER_SOLARA_B2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_B3)
+            trainerbattle_double(TRAINER_SOLARA_B3, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        }
+    } elif ((var(VAR_BADGES) > 4) && (var(VAR_BADGES) < 8)){
+        // --- AI preview ---
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_VENUSAUR)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_INCINEROAR)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_CHARIZARD)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_TORKOAL)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_VOLCARONA)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_CHI_YU)
+        if (var(VAR_BADGES) == 5){
+            setvar(VAR_VGC_PREVIEW_LV, 64)  // preview level
+        } elif (var(VAR_BADGES) == 6){
+            setvar(VAR_VGC_PREVIEW_LV, 71)  // preview level
+        } else {
+            setvar(VAR_VGC_PREVIEW_LV, 78)  // preview level
+
+        }
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+        // Now start the actual fight
+        if (var(VAR_BADGES) == 5) {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_A1)
+            trainerbattle_double(TRAINER_SOLARA_A1, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        } elif (var(VAR_BADGES) == 6){
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_A2)
+            trainerbattle_double(TRAINER_SOLARA_A2, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        } else {
+            special(WeightedSelector_On)
+            cleartrainerflag(TRAINER_SOLARA_A3)
+            trainerbattle_double(TRAINER_SOLARA_A3, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+        }
+    } else {
+        setvar(VAR_VGC_PREVIEW_0, SPECIES_TORKOAL)
+        setvar(VAR_VGC_PREVIEW_1, SPECIES_VOLCARONA)
+        setvar(VAR_VGC_PREVIEW_2, SPECIES_OGERPON_HEARTHFLAME)
+        setvar(VAR_VGC_PREVIEW_3, SPECIES_VENUSAUR)
+        setvar(VAR_VGC_PREVIEW_4, SPECIES_GROUDON)
+        setvar(VAR_VGC_PREVIEW_5, SPECIES_CHI_YU)
+        
+        setvar(VAR_VGC_PREVIEW_LV, 85)  // preview level
+
+        msgbox("Previewing opponent's team...", MSGBOX_DEFAULT)
+        msgbox("Press B when ready to battle.", MSGBOX_DEFAULT)
+
+        special(StartVgcSummaryPreviewFromVars)
+        compare(VAR_RESULT, TRUE)
+        waitstate
+
+        msgbox("Are you ready to battle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == NO) {
+            // need to hide trainer again
+            closemessage
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        msgbox("Choose your pokemon.", MSGBOX_DEFAULT)
+
+        special(Vgc_SavePartyBackup)
+        setflag(FLAG_VGC_PENDING_RESTORE)
+
+        // --- Player picks exactly 4 using the vanilla party UI (no Frontier state) ---
+        special(Vgc_ChoosePartyOfFour)   // opens the same UI the Frontier selector uses
+        waitstate
+
+        // If the player canceled, bail early
+        if (var(VAR_RESULT) != 0) {
+            //special(Vgc_RestorePartyBackup)
+            clearflag(FLAG_VGC_PENDING_RESTORE)
+            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
+            waitmovement(0)
+            end
+        }
+
+        // Build/trim the active party to the 4 chosen mons (indices in VAR_0x8000..VAR_0x8003)
+        callnative(Vgc_BuildPartyFrom4Indices)
+
+
+        special(WeightedSelector_On)
+        cleartrainerflag(TRAINER_SOLARA_S)
+        trainerbattle_double(TRAINER_SOLARA_S, Solara_Intro, Solara_Outro, Not_Enough_Mons, PortValor_Gym_BattleFloor_After_Solara, NO_MUSIC)
+    }
+}
+
+
+// ======== AFTER 2ND GYM LEADER ========
+script PortValor_Gym_BattleFloor_After_Solara {
+    special(WeightedSelector_Off)
+    special(HealPlayerParty)
+    special(Vgc_RestorePartyBackup) 
+    clearflag(FLAG_VGC_PENDING_RESTORE)
+
+    msgbox(PostBattle_Solara, MSGBOX_AUTOCLOSE)
+
+    if (!(flag(FLAG_BADGE01_GET))) {
+        setflag(FLAG_BADGE01_GET)
+        addvar(VAR_BADGES, 1)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        setvar(VAR_LEVEL_CAP, 29)
+        msgbox("Level cap increased to 29.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE02_GET))) {
+        setflag(FLAG_BADGE02_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 41)
+        msgbox("Level cap increased to 41.", MSGBOX_DEFAULT)  
+    } elif (!(flag(FLAG_BADGE03_GET))) {
+        setflag(FLAG_BADGE03_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 49)
+        msgbox("Level cap increased to 49.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE04_GET))) {
+        setflag(FLAG_BADGE04_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 56)
+        msgbox("Level cap increased to 56.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE05_GET))) {
+        setflag(FLAG_BADGE05_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 64)
+        msgbox("Level cap increased to 64.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE06_GET))) {
+        setflag(FLAG_BADGE06_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 71)
+        msgbox("Level cap increased to 71.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE07_GET))) {
+        setflag(FLAG_BADGE07_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 78)
+        msgbox("Level cap increased to 78.", MSGBOX_DEFAULT) 
+    } elif (!(flag(FLAG_BADGE08_GET))) {
+        setflag(FLAG_BADGE08_GET)
+        msgbox("You got the Climate Badge!", MSGBOX_DEFAULT)
+        addvar(VAR_BADGES, 1)
+        setvar(VAR_LEVEL_CAP, 85)
+        msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
+    }
+
+    applymovement(LOCALID_SOLARA, Gym_Leader_Exit)
+    waitmovement(0)
+    setflag(FLAG_SOLARA)
+        
+    releaseall
+    setflag(FLAG_BEAT_PORT_VALOR)
+    setvar(GYM_STATE, 1)
+    warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
+    end
+}
+
+
+// ======== LEADER TEXTS ========
+text Marin_Intro{
+    "Prepare for the hurricane!"
+}
+
+text Marin_Outro{
+    "I'm all washed up."
+}
+
+text PostBattle_Marin{
+    "Good luck aginst Solara."
+}
+
+text Solara_Intro{
+    "Enjoy the heat."
+}
+
+text Solara_Outro{
+    "Oh no! I'm cooked!"
+}
+
+text PostBattle_Solara{
+    "Good luck with the rest of the gyms."
+}

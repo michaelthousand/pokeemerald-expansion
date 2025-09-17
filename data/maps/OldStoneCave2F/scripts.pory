@@ -9,6 +9,7 @@ script OldStoneCave2F_SetFlash {
 
 script OldStoneCave2F_EarthPower{
     giveitem(ITEM_TM_EARTH_POWER, 1)
+    msgbox("TM87 contains Earth Power.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_EARTHPOWER)
     removeobject(1)
     closemessage
@@ -17,6 +18,7 @@ script OldStoneCave2F_EarthPower{
 
 script OldStoneCave2F_PowerGem {
     giveitem(ITEM_TM_POWER_GEM, 1)
+    msgbox("TM134 contains Power Gem.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_POWERGEM)
     removeobject(2)
     closemessage
@@ -25,6 +27,7 @@ script OldStoneCave2F_PowerGem {
 
 script OldStoneCave2F_ThunderFang{
     giveitem(ITEM_TM_THUNDER_FANG, 1)
+    msgbox("TM08 contains Thunder Fang.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_THUNDERFANG)
     removeobject(3)
     closemessage
@@ -33,8 +36,42 @@ script OldStoneCave2F_ThunderFang{
 
 script OldStoneCave2F_Dig{
     giveitem(ITEM_TM_DIG, 1)
+    msgbox("TM28 contains Dig.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_DIG)
     removeobject(4)
+    closemessage
+    end
+}
+
+script OldStoneCave2F_GroundShards {
+    giveitem(ITEM_GROUND_TERA_SHARD, 11)
+    addvar(VAR_GROUND_SHARDS, 11)
+    setflag(FLAG_GROUND_SHARDS_OLDSTONE)
+    removeobject(5)
+    closemessage
+    end
+}
+script OldStoneCave2F_RockShards {
+    giveitem(ITEM_ROCK_TERA_SHARD, 9)
+    addvar(VAR_ROCK_SHARDS, 9)
+    setflag(FLAG_ROCK_SHARDS_OLDSTONE)
+    removeobject(6)
+    closemessage
+    end
+}
+script OldStoneCave2F_ElectricShards {
+    giveitem(ITEM_ELECTRIC_TERA_SHARD, 6)
+    addvar(VAR_ELECTRIC_SHARDS, 6)
+    setflag(FLAG_ELECTRIC_SHARDS_OLDSTONE)
+    removeobject(7)
+    closemessage
+    end
+}
+script OldStoneCave2F_SteelShards {
+    giveitem(ITEM_STEEL_TERA_SHARD, 8)
+    addvar(VAR_STEEL_SHARDS, 8)
+    setflag(FLAG_STEEL_SHARDS_OLDSTONE)
+    removeobject(8)
     closemessage
     end
 }

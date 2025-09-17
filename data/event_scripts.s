@@ -1227,3 +1227,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/DarkFalls_PokemonCenter/scripts.inc"
 
 	.include "data/maps/DarkFalls_Gym/scripts.inc"
+
+	.include "data/maps/PortValor_Gym_BattleFloor/scripts.inc"
+
+	.include "data/maps/PortValor_Gym_Lobby/scripts.inc"

@@ -1,0 +1,91 @@
+raw `
+PortValor_Gym_Lobby_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PortValor_Gym_Lobby_OnFrame
+	.byte 0
+
+PortValor_Gym_Lobby_OnFrame:
+	map_script_2 GYM_STATE, 1, PortValor_Gym_Lobby_EventScript_Win
+	.2byte 0
+
+`
+script PortValor_Gym_Lobby_EventScript_Win {
+    setvar(GYM_STATE, 0)
+    lockall
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    delay(30)
+    msgbox("SECRETARY: Well done, {PLAYER}!", MSGBOX_AUTOCLOSE)
+    msgbox("You have successfully beaten the Port\nValor Gym!", MSGBOX_AUTOCLOSE)
+    msgbox("Here are your rewards...", MSGBOX_AUTOCLOSE)
+
+    giveitem(ITEM_TM_RAIN_DANCE, 1)
+    msgbox("That's from Marin. It contains\nRain Danc.", MSGBOX_AUTOCLOSE)
+    msgbox("Now you'll be able to rain on your\nopponent's parade.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_SUNNY_DAY, 1)
+    msgbox("And that one is from Solara. It\ncontains Sunny Day.", MSGBOX_AUTOCLOSE)
+    msgbox("You can use it to work on your tan.", MSGBOX_AUTOCLOSE)
+    msgbox("And here are some tera shards from\neach leader.")
+    giveitem(ITEM_FIRE_TERA_SHARD, 20)
+    addvar(VAR_FIRE_SHARDS, 20)
+    giveitem(ITEM_WATER_TERA_SHARD, 20)
+    addvar(VAR_WATER_SHARDS, 20)
+    msgbox("Good luck with the rest of the gyms!", MSGBOX_AUTOCLOSE)
+
+    releaseall
+    end
+}
+
+
+
+script PortValor_Gym_Lobby_TriggerOne {
+    if (!(flag(FLAG_BEAT_PORT_VALOR))){
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_One)
+            goto(PortValor_Gym_EventScript_Rules)
+        }
+    } else {
+        msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    }
+}
+
+script PortValor_Gym_Lobby_TriggerTwo {
+    if (!(flag(FLAG_BEAT_PORT_VALOR))){
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Two)
+            goto(PortValor_Gym_EventScript_Rules)
+        }
+    } else {
+        msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    }
+}
+
+script PortValor_Gym_Lobby_TriggerThree {
+    if (!(flag(FLAG_BEAT_PORT_VALOR))){
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Three)
+            goto(PortValor_Gym_EventScript_Rules)
+        }
+    } else {
+        msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    }
+}
+
+script PortValor_Gym_Lobby_TriggerFour {
+    if (!(flag(FLAG_BEAT_PORT_VALOR))){
+        if (!(flag(FLAG_GYM_RULES))) {
+            lockall
+            applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Four)
+            goto(PortValor_Gym_EventScript_Rules)
+        }
+    } else {
+        msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    }
+}
+
+

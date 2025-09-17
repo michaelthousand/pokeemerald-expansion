@@ -113,13 +113,13 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Twilight_Forest_SolarBlade",
-      "flag": "FLAG_SOLARBLADE"
+      "script": "Twilight_Forest_WaterShards",
+      "flag": "FLAG_WATER_SHARDS_TWILIGHT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 30,
-      "y": 6,
+      "y": 7,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -157,8 +157,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 24,
-      "y": 47,
+      "x": 25,
+      "y": 48,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -171,7 +171,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 8,
-      "y": 45,
+      "y": 44,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -197,7 +197,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 54,
-      "y": 47,
+      "y": 48,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -210,7 +210,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
       "x": 38,
-      "y": 4,
+      "y": 5,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,

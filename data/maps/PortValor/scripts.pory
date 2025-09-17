@@ -102,7 +102,7 @@ script PortValor_EventScript_Villager3 {
 script PortValor_EventScript_Villager2 {
     // 1ST
     setvar(VAR_0x8000, SPECIES_IRON_HANDS)   // species
-    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8001, 100)                 // level
     setvar(VAR_0x8002, ITEM_ASSAULT_VEST)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
@@ -117,7 +117,7 @@ script PortValor_EventScript_Villager2 {
     
     // 2ND
     setvar(VAR_0x8000, SPECIES_AMOONGUSS)   // species
-    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8001, 100)                 // level
     setvar(VAR_0x8002, ITEM_ROCKY_HELMET)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
@@ -132,7 +132,7 @@ script PortValor_EventScript_Villager2 {
 
     // 3RD
     setvar(VAR_0x8000, SPECIES_FLUTTER_MANE)   // species
-    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8001, 100)                 // level
     setvar(VAR_0x8002, ITEM_CHOICE_SPECS)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
@@ -147,7 +147,7 @@ script PortValor_EventScript_Villager2 {
 
     // 4TH
     setvar(VAR_0x8000, SPECIES_LANDORUS_THERIAN)   // species
-    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8001, 100)                 // level
     setvar(VAR_0x8002, ITEM_SAFETY_GOGGLES)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
@@ -162,7 +162,7 @@ script PortValor_EventScript_Villager2 {
   
     // 5TH
     setvar(VAR_0x8000, SPECIES_CRESSELIA)   // species
-    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8001, 100)                 // level
     setvar(VAR_0x8002, ITEM_MENTAL_HERB)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 
@@ -177,7 +177,7 @@ script PortValor_EventScript_Villager2 {
 
     // 6TH
     setvar(VAR_0x8000, SPECIES_CHI_YU)   // species
-    setvar(VAR_0x8001, 21)                 // level
+    setvar(VAR_0x8001, 100)                 // level
     setvar(VAR_0x8002, ITEM_LIFE_ORB)      // held item
     setvar(VAR_0x8003, 31)                 // IV for all 6 stats
 

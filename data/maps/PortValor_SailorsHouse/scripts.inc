@@ -110,7 +110,7 @@ PortValor_EventScript_Sailor_Text_1:
 
 PortValor_EventScript_Sailor_Text_2:
 # 12 "data/maps/PortValor_SailorsHouse/scripts.pory"
-	.string "Come see me again when you've trained more.$"
+	.string "Come see me again when you've trained\nmore.$"
 
 PortValor_EventScript_Sailor_Text_3:
 # 17 "data/maps/PortValor_SailorsHouse/scripts.pory"

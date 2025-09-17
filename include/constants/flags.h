@@ -59,7 +59,7 @@
 #define FLAG_POLLENPUFF    0x2D // Twilight Forest
 #define FLAG_DARKPULSE    0x2E // Twilight Forest
 #define FLAG_SHADOWCLAW    0x2F // Twilight Forest
-#define FLAG_SOLARBLADE    0x30 // Twilight Forest
+#define FLAG_UNUSED_0x30    0x30
 #define FLAG_ENERGYBALL    0x31 // Twilight Forest
 #define FLAG_ACIDSPRAY    0x32 // Twilight Forest
 #define FLAG_PSYCHICTERRAIN    0x33 // Twilight Forest
@@ -654,22 +654,22 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
-#define FLAG_UNUSED_0x26B  0x26B // Unused Flag
-#define FLAG_UNUSED_0x26C  0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
+#define FLAG_GRASS_SHARDS_EVERGREEN  0x264 // Unused Flag
+#define FLAG_BUG_SHARDS_EVERGREEN  0x265 // Unused Flag
+#define FLAG_NORMAL_SHARDS_EVERGREEN  0x266 // Unused Flag
+#define FLAG_NORMAL_SHARDS_ROUTE2  0x267 // Unused Flag
+#define FLAG_GRASS_SHARDS_ROUTE2  0x268 // Unused Flag
+#define FLAG_STEEL_SHARDS_OLDSTONE  0x269 // Unused Flag
+#define FLAG_ELECTRIC_SHARDS_OLDSTONE  0x26A // Unused Flag
+#define FLAG_GROUND_SHARDS_OLDSTONE  0x26B // Unused Flag
+#define FLAG_ROCK_SHARDS_OLDSTONE  0x26C // Unused Flag
+#define FLAG_FIRE_SHARDS_ROUTE4  0x26D // Unused Flag
+#define FLAG_NORMAL_SHARDS_ROUTE4  0x26E // Unused Flag
+#define FLAG_FIGHTING_SHARDS_ROUTE4  0x26F // Unused Flag
+#define FLAG_FLYING_SHARDS_ROUTE4  0x270 // Unused Flag
+#define FLAG_DARK_SHARDS_ROUTE26  0x271 // Unused Flag
+#define FLAG_GHOST_SHARDS_ROUTE26  0x272 // Unused Flag
+#define FLAG_WATER_SHARDS_TWILIGHT  0x273 // Unused Flag
 #define FLAG_UNUSED_0x274  0x274 // Unused Flag
 #define FLAG_UNUSED_0x275  0x275 // Unused Flag
 #define FLAG_UNUSED_0x276  0x276 // Unused Flag
@@ -741,7 +741,7 @@
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 #define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
 #define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+#define FLAG_BEAT_PORT_VALOR  0x2BB // Unused Flag
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC

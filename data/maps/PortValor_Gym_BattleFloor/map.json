@@ -1,0 +1,57 @@
+{
+  "id": "MAP_PORT_VALOR_GYM_BATTLE_FLOOR",
+  "name": "PortValor_Gym_BattleFloor",
+  "layout": "LAYOUT_PORT_VALOR_GYM_BATTLE_FLOOR",
+  "music": "MUS_DUMMY",
+  "region_map_section": "MAPSEC_PORT_VALOR",
+  "requires_flash": false,
+  "weather": "WEATHER_NONE",
+  "map_type": "MAP_TYPE_NONE",
+  "allow_cycling": false,
+  "allow_escaping": false,
+  "allow_running": false,
+  "show_map_name": false,
+  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "connections": null,
+  "object_events": [
+    {
+      "local_id": "LOCALID_SOLARA",
+      "graphics_id": "OBJ_EVENT_GFX_LUCY",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PortValor_Gym_EventScript_Solara",
+      "flag": "FLAG_SOLARA"
+    },
+    {
+      "local_id": "LOCALID_MARIN",
+      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PortValor_Gym_EventScript_Marin",
+      "flag": "FLAG_MARIN"
+    }
+  ],
+  "warp_events": [
+    {
+      "x": 14,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_PORT_VALOR_GYM_LOBBY",
+      "dest_warp_id": "2"
+    }
+  ],
+  "coord_events": [],
+  "bg_events": []
+}

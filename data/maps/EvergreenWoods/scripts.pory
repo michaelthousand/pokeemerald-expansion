@@ -2,6 +2,7 @@ mapscripts EvergreenWoods_MapScripts { }
 
 script EvergreenWoods_GigaDrain{
     giveitem(ITEM_TM_GIGA_DRAIN, 1)
+    msgbox("TM19 contains Giga Drain.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_GIGADRAIN)
     removeobject(1)
     closemessage
@@ -10,9 +11,34 @@ script EvergreenWoods_GigaDrain{
 
 script EvergreenWoods_StruggleBug {
     giveitem(ITEM_TM_STRUGGLE_BUG)
+    msgbox("TM05 contains Struggle Bug.", MSGBOX_AUTOCLOSE)
     setflag(FLAG_STRUGGLEBUG)
     removeobject(2)
     closemessage
     end
 }
 
+script EvergreenWoods_NormalShards {
+    giveitem(ITEM_NORMAL_TERA_SHARD, 5)
+    addvar(VAR_NORMAL_SHARDS, 5)
+    setflag(FLAG_NORMAL_SHARDS_EVERGREEN)
+    removeobject(5)
+    closemessage
+    end
+}
+script EvergreenWoods_BugShards {
+    giveitem(ITEM_BUG_TERA_SHARD, 5)
+    addvar(VAR_BUG_SHARDS, 5)
+    setflag(FLAG_BUG_SHARDS_EVERGREEN)
+    removeobject(4)
+    closemessage
+    end
+}
+script EvergreenWoods_GrassShards {
+    giveitem(ITEM_GRASS_TERA_SHARD, 5)
+    addvar(VAR_GRASS_SHARDS, 6)
+    setflag(FLAG_GRASS_SHARDS_EVERGREEN)
+    removeobject(3)
+    closemessage
+    end
+}
