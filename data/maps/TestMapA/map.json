@@ -65,34 +65,6 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 16,
-      "y": 1,
-      "elevation": 0,
-      "var": "TestMapA_State",
-      "var_value": "0",
-      "script": "TestMapA_Trigger_BlockPath"
-    },
-    {
-      "type": "trigger",
-      "x": 15,
-      "y": 1,
-      "elevation": 0,
-      "var": "TestMapA_State",
-      "var_value": "0",
-      "script": "TestMapA_Trigger_BlockPath"
-    },
-    {
-      "type": "trigger",
-      "x": 14,
-      "y": 1,
-      "elevation": 0,
-      "var": "TestMapA_State",
-      "var_value": "0",
-      "script": "TestMapA_Trigger_BlockPath"
-    }
-  ],
+  "coord_events": [],
   "bg_events": []
 }

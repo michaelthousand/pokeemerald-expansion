@@ -1683,31 +1683,3 @@ ForestsEdge_Gym_After_Kaelen_Text_9:
 ForestsEdge_Gym_After_Kaelen_Text_10:
 # 783 "data/maps/ForestsEdge_Gym/scripts.pory"
 	.string "Level cap increased to 85.$"
-
-Morwen_Intro::
-# 836 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "How can you win if you can't move?$"
-
-Morwen_Outro::
-# 840 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Now I'm the one paralyzed.$"
-
-PostBattle_Morwen::
-# 844 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Good luck against Kaelen.$"
-
-Kaelen_Intro::
-# 848 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Hope you brought some antidote.$"
-
-Kaelen_Outro::
-# 852 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Ouch! I'm burned!$"
-
-PostBattle_Kaelen::
-# 856 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "Good luck with the rest of the gyms.$"
-
-Not_Enough_Mons::
-# 860 "data/maps/ForestsEdge_Gym/scripts.pory"
-	.string "You need at least four battle-ready Pokémon.$"

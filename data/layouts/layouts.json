@@ -4770,6 +4770,36 @@
       "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/PortValor_Gym_Lobby/border.bin",
       "blockdata_filepath": "data/layouts/PortValor_Gym_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORESTS_EDGE_GYM_LOBBY",
+      "name": "ForestsEdge_Gym_Lobby_Layout",
+      "width": 20,
+      "height": 15,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/ForestsEdge_Gym_Lobby/border.bin",
+      "blockdata_filepath": "data/layouts/ForestsEdge_Gym_Lobby/map.bin"
+    },
+    {
+      "id": "LAYOUT_FORESTS_EDGE_GYM_BATTLE_FLOOR",
+      "name": "ForestsEdge_Gym_BattleFloor_Layout",
+      "width": 20,
+      "height": 16,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/ForestsEdge_Gym_BattleFloor/border.bin",
+      "blockdata_filepath": "data/layouts/ForestsEdge_Gym_BattleFloor/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_LEAGUE_HQ",
+      "name": "NewHope_LeagueHQ_Layout",
+      "width": 24,
+      "height": 18,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/NewHope_LeagueHQ/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_LeagueHQ/map.bin"
     }
   ]
 }

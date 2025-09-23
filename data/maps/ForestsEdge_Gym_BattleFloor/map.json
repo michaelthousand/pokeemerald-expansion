@@ -1,9 +1,9 @@
 {
-  "id": "MAP_PORT_VALOR_GYM_BATTLE_FLOOR",
-  "name": "PortValor_Gym_BattleFloor",
-  "layout": "LAYOUT_PORT_VALOR_GYM_BATTLE_FLOOR",
+  "id": "MAP_FORESTS_EDGE_GYM_BATTLE_FLOOR",
+  "name": "ForestsEdge_Gym_BattleFloor",
+  "layout": "LAYOUT_FORESTS_EDGE_GYM_BATTLE_FLOOR",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_PORT_VALOR",
+  "region_map_section": "MAPSEC_FORESTS_EDGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -15,22 +15,8 @@
   "connections": null,
   "object_events": [
     {
-      "local_id": "LOCALID_SOLARA",
-      "graphics_id": "OBJ_EVENT_GFX_LUCY",
-      "x": 5,
-      "y": 4,
-      "elevation": 0,
-      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "PortValor_Gym_BattleFloor_EventScript_Solara",
-      "flag": "FLAG_SOLARA"
-    },
-    {
-      "local_id": "LOCALID_MARIN",
-      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "local_id": "LOCALID_MORWEN",
+      "graphics_id": "OBJ_EVENT_GFX_FLANNERY",
       "x": 5,
       "y": 4,
       "elevation": 0,
@@ -39,8 +25,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PortValor_Gym_BattleFloor_EventScript_Marin",
-      "flag": "FLAG_MARIN"
+      "script": "ForestsEdge_Gym_BattleFloor_EventScript_Morwen",
+      "flag": "FLAG_MORWEN"
+    },
+    {
+      "local_id": "LOCALID_KAELEN",
+      "graphics_id": "OBJ_EVENT_GFX_BRAWLY",
+      "x": 5,
+      "y": 4,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ForestsEdge_Gym_BattleFloor_EventScript_Kaelen",
+      "flag": "FLAG_KAELEN"
     }
   ],
   "warp_events": [

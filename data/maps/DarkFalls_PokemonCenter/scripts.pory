@@ -1,16 +1,19 @@
-mapscripts DarkFalls_MapScripts {
-    MAP_SCRIPT_ON_RESUME: DarkFalls_OnResume
+mapscripts DarkFalls_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: DarkFalls_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script DarkFalls_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_DARK_FALLS)
+    end
 }
 
 
-script DarkFalls_OnResume {
-    if (flag(FLAG_VGC_PENDING_RESTORE)) {
-        special(Vgc_RestorePartyBackup)
-        special(HealPlayerParty)
-        callnative(UpdateFollowingPokemon)
-        special(Vgc_RestorePartyBackup)
-        special(WeightedSelector_Off)
-        clearflag(FLAG_VGC_PENDING_RESTORE)
-    }  
+script DarkFalls_PokemonCenter_Nurse {
+    lock
+    faceplayer
+    // Use the common nurse flow, it handles fades/text/etc.
+    call(Common_EventScript_PkmnCenterNurse)
+    release
     end
 }

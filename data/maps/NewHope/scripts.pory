@@ -1,7 +1,14 @@
-mapscripts NewHope_MapScripts {
-    MAP_SCRIPT_ON_RESUME: NewHope_OnResume
-}
+raw `
+NewHope_MapScripts::
+    map_script MAP_SCRIPT_ON_RESUME, NewHope_OnResume
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewHope_OnFrame
+	.byte 0
 
+NewHope_OnFrame:
+	map_script_2 MET_RIVAL, 0, NewHope_EventScript_Intro
+    map_script_2 VAR_STARTER_MON, 1, NewHope_EventScript_Mentor
+	.2byte 0
+`
 
 script NewHope_OnResume {
     if (flag(FLAG_VGC_PENDING_RESTORE)) {
@@ -19,6 +26,97 @@ script NewHope_EventScript_WarpPV{
     lockall
     faceplayer
     msgbox("This is the warp to Port Valor", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+
+//  ============= NPC SCRIPTS =============
+
+// Meeting RIVAL and exploring New Hope
+script NewHope_EventScript_Intro {
+    setvar(MET_RIVAL, 1)
+    setflag(FLAG_NEWHOPE_MENTOR)
+    setflag(FLAG_GOON1_1ST_CONTACT)
+    setflag(FLAG_GOON2_1ST_CONTACT)
+    setflag(FLAG_FIRST_RIVAL_BATTLE)
+    lockall
+    applymovement(LOCALID_RIVAL, npc_exclaim)
+    waitmovement(0)
+    turnobject(LOCALID_RIVAL, DIR_NORTH)
+    msgbox("RIVAL: Oh! Hey, {PLAYER}!", MSGBOX_AUTOCLOSE)
+    msgbox("I was just coming to see you.", MSGBOX_AUTOCLOSE)
+    msgbox("You're going to see Professor Cinder?", MSGBOX_AUTOCLOSE)
+    msgbox("Come on, I'll walk with you.", MSGBOX_AUTOCLOSE)
+    closemessage
+    delay(16)
+
+    applymovement(LOCALID_RIVAL, RIVAL_to_LeagueHQ)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_to_LeagueHQ)
+    waitmovement(0)
+    turnobject(LOCALID_RIVAL, DIR_NORTH)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+
+    msgbox("RIVAL: Is your dad at the League\nHeadquarters today?", MSGBOX_AUTOCLOSE)
+    msgbox("No? Well, I'm sure you'll see him soon\nenough.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_RIVAL, RIVAL_to_Cinder)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_to_Cinder)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+
+    msgbox("RIVAL: Here we are.", MSGBOX_AUTOCLOSE)
+    msgbox("I got my POKEMON from Cinder the other\nday. I already have three now.", MSGBOX_AUTOCLOSE)
+    msgbox("Maybe we'll battle once you have a few\nmore.", MSGBOX_AUTOCLOSE)
+    msgbox("I'm going to go train so I'm ready in\ncase those Galarians ever want\pmore trouble.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_RIVAL, RIVAL_to_Cinder)
+    waitmovement(0)
+    setflag(FLAG_NEWHOPE_RIVAL)
+
+    releaseall
+    end
+}
+
+// Meeting MENTOR after getting starter
+script NewHope_EventScript_Mentor {
+    setvar(VAR_STARTER_MON, 0)
+    clearflag(FLAG_NEWHOPE_MENTOR)
+    addobject(LOCALID_MENTOR)
+    lockall
+    applymovement(LOCALID_MENTOR, Mentor_Start)
+    waitmovement(0)
+    turnobject(LOCALID_MENTOR, DIR_EAST)
+    delay(8)
+    applymovement(LOCALID_MENTOR, npc_exclaim)
+    waitmovement(0)
+    turnobject(LOCALID_MENTOR, DIR_EAST)
+    delay(8)
+    applymovement(LOCALID_MENTOR, Mentor_to_Player)
+    waitmovement(0)
+    turnobject(LOCALID_MENTOR, DIR_EAST)
+
+    msgbox("MENTOR: Oh! Hey, {PLAYER}!", MSGBOX_AUTOCLOSE)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_WEST)
+    msgbox("Did you just get your first POKEMON from\nthe professor?", MSGBOX_AUTOCLOSE)
+    delay(8)
+    msgbox("Aww! It's so cute!", MSGBOX_AUTOCLOSE)
+    msgbox("My dad gave me a Pikachu for my birthday.", MSGBOX_AUTOCLOSE)
+    delay(60)
+    applymovement(LOCALID_MENTOR, npc_exclaim)
+    waitmovement(0)
+    turnobject(LOCALID_MENTOR, DIR_EAST)
+    delay(60)
+    msgbox("What?! No! You know I don't want to\nbattle with her!", MSGBOX_AUTOCLOSE)
+    msgbox("Why is everyone in this region so\nobsessed with competition?", MSGBOX_AUTOCLOSE)
+    msgbox("We weren't even alive for the war!", MSGBOX_AUTOCLOSE)
+    msgbox("I hope you wise up one day and realize\nthere's more to POKEMON than battling.", MSGBOX_AUTOCLOSE)
+    delay(16)
+    msgbox("Whatever. I'll see you later.", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_MENTOR, Mentor_Leave)
+    waitmovement(0)
+    setflag(FLAG_NEWHOPE_MENTOR)
+    removeobject(LOCALID_MENTOR)
     releaseall
     end
 }
@@ -85,8 +183,21 @@ script NewHope_EventScript_Villager1 {
     }
 
     releaseall
-    end}
+    end
+}
 
+script NewHope_EventScript_Security {
+    lockall
+    faceplayer
+    msgbox("GUARD: I'm the security guard for the\nLeague Headquarters.", MSGBOX_AUTOCLOSE)
+    msgbox("If you don't have League business, you\nbetter move along.", MSGBOX_AUTOCLOSE)
+    turnobject(LOCALID_NH_SECURITY, DIR_SOUTH)
+    releaseall
+    end
+}
+
+
+//  ============= TRIGGERS =============
 
 script NewHope_Trigger_BlockPath{
     if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE)) && !(flag(FLAG_LEAGUE_REG))) {
@@ -112,6 +223,136 @@ script NewHope_Trigger_BlockPath{
     }   
 }
 
+script NewHope_EventScript_GymTrigger {
+    if ((var(VAR_BADGES) == 0)) {
+        msgbox("This is where the rival battle will go.", MSGBOX_AUTOCLOSE)
+        closemessage
+    } elif (var(VAR_BADGES) == 2) {
+        lockall
+        clearflag(FLAG_GOON1_1ST_CONTACT)
+        addobject(LOCALID_NH_GOON1)
+        applymovement(OBJ_EVENT_ID_PLAYER, Move_Player_for_Goons)
+        turnobject(OBJ_EVENT_ID_PLAYER, DIR_WEST)
+        waitmovement(0)
+        applymovement(LOCALID_NH_GOON1, Goon1_Down)
+        waitmovement(0)
+        turnobject(LOCALID_NH_GOON1, DIR_EAST)
+        clearflag(FLAG_GOON2_1ST_CONTACT)
+        addobject(LOCALID_NH_GOON2)
+        applymovement(LOCALID_NH_GOON2, Goon2_Down)
+        waitmovement(0)
+
+        msgbox("GOON 1: I can't believe they wouldn't\nlisten.", MSGBOX_AUTOCLOSE)
+        msgbox("GOON 2: The Champion must have gotten\nto them first.\pLet's try the next gym.", MSGBOX_AUTOCLOSE)
+
+        applymovement(LOCALID_NH_GOON1, Goons_Exit_Down)
+        applymovement(LOCALID_NH_GOON2, Goons_Exit_Down)
+        waitmovement(0)
+        setflag(FLAG_GOON1_1ST_CONTACT)
+        removeobject(LOCALID_NH_GOON1)
+        setflag(FLAG_GOON2_1ST_CONTACT)
+        removeobject(LOCALID_NH_GOON2)
+        
+    } elif (var(VAR_BADGES) == 4) {
+        msgbox("This is where the second PT encounter will go.", MSGBOX_AUTOCLOSE)
+        closemessage
+    }
+
+    releaseall
+    end
+}
+
+
+//  ============= MOVEMENTS =============
+
+// Intro cutscene movements
+movement npc_exclaim {
+    emote_exclamation_mark
+    end
+}
+
+movement RIVAL_to_LeagueHQ {
+    walk_down
+    walk_down
+    walk_right * 16
+    end
+}
+
+movement Player_to_LeagueHQ {
+    walk_down
+    walk_down
+    walk_down
+    walk_down
+    walk_right * 15
+    end
+}
+
+movement RIVAL_to_Cinder {
+    walk_down * 16
+    walk_left * 12
+    end
+}
+
+movement Player_to_Cinder {
+    walk_down * 17
+    walk_left * 12
+    end
+}
+
+movement RIVAL_Leave {
+    walk_right * 10
+    end
+}
+
+// Movements for meeting mentor
+movement Mentor_Start {
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    walk_right
+    face_right
+    end
+}
+
+movement Mentor_to_Player {
+    walk_right
+    walk_right
+    face_right
+    end
+}
+
+movement Mentor_Leave {
+    walk_down
+    walk_right * 10
+    end
+}
+
+// Movements for Gym trigger
+movement Move_Player_for_Goons {
+    walk_fast_right
+    end
+}
+
+movement Goon1_Down {
+    walk_down
+    walk_left
+    end
+}
+
+movement Goon2_Down {
+    walk_down
+    end
+}
+
+movement Goons_Exit_Down {
+    walk_down * 5
+    walk_right * 5
+    walk_down * 5
+    end
+}
+
+// Movement for triggers on edge of town
 movement StopPlayer_Up{
     walk_up
 }

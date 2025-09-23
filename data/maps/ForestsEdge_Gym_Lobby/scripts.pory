@@ -1,34 +1,34 @@
 raw `
-PortValor_Gym_Lobby_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PortValor_Gym_Lobby_OnFrame
+ForestsEdge_Gym_Lobby_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ForestsEdge_Gym_Lobby_OnFrame
 	.byte 0
 
-PortValor_Gym_Lobby_OnFrame:
-	map_script_2 GYM_STATE, 1, PortValor_Gym_Lobby_EventScript_Win
+ForestsEdge_Gym_Lobby_OnFrame:
+	map_script_2 GYM_STATE, 1, ForestsEdge_Gym_Lobby_EventScript_Win
 	.2byte 0
 
 `
 
-script PortValor_Gym_Lobby_EventScript_Win {
+script ForestsEdge_Gym_Lobby_EventScript_Win {
     setvar(GYM_STATE, 0)
     lockall
     turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
     delay(30)
     msgbox("RECEPTIONIST: Well done,\n{PLAYER}!", MSGBOX_AUTOCLOSE)
-    msgbox("You have successfully beaten the Port\nValor Gym!", MSGBOX_AUTOCLOSE)
+    msgbox("You have successfully beaten the Forest's\nEdge Gym!", MSGBOX_AUTOCLOSE)
     msgbox("Here are your rewards...", MSGBOX_AUTOCLOSE)
 
-    giveitem(ITEM_TM_RAIN_DANCE, 1)
-    msgbox("That's from Marin. It contains\nRain Dance.", MSGBOX_AUTOCLOSE)
-    msgbox("Now you'll be able to rain on your\nopponent's parade.", MSGBOX_AUTOCLOSE)
-    giveitem(ITEM_TM_SUNNY_DAY, 1)
-    msgbox("And that one is from Solara. It\ncontains Sunny Day.", MSGBOX_AUTOCLOSE)
-    msgbox("You can use it to work on your tan.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_TAUNT, 1)
+    msgbox("That's from Morwen. It contains Taunt.", MSGBOX_AUTOCLOSE)
+    msgbox("You can use it to avoid being put to\nsleep in the future.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TM_WILL_O_WISP, 1)
+    msgbox("And that one is from Kaelen. It contains\nWill-o-Wisp.", MSGBOX_AUTOCLOSE)
+    msgbox("Burning your opponent drops their attack too.", MSGBOX_AUTOCLOSE)
     msgbox("And here are some tera shards from\neach leader.")
     giveitem(ITEM_FIRE_TERA_SHARD, 20)
     addvar(VAR_FIRE_SHARDS, 20)
-    giveitem(ITEM_WATER_TERA_SHARD, 20)
-    addvar(VAR_WATER_SHARDS, 20)
+    giveitem(ITEM_GRASS_TERA_SHARD, 20)
+    addvar(VAR_GRASS_SHARDS, 20)
     msgbox("Good luck with the rest of the gyms!", MSGBOX_AUTOCLOSE)
 
     releaseall
@@ -38,87 +38,62 @@ script PortValor_Gym_Lobby_EventScript_Win {
 
 // ======== GYM TRIGGERS AND MOVEMENT ========
 
-script PortValor_Gym_Lobby_TriggerOne {
-    if (flag(FLAG_BEAT_PORT_VALOR)) {
+script ForestsEdge_Gym_Lobby_TriggerOne {
+    if (flag(FLAG_BEAT_FORESTS_EDGE)) {
         msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
-    } elif (!(flag(FLAG_PORT_VALOR_CHECKED_IN))) {
-        msgbox("Excuse me! You need to check in!", MSGBOX_AUTOCLOSE)
-        delay(8)
+    } elif (!(flag(FLAG_FORESTS_EDGE_CHECKED_IN))) {
+        //msgbox("Excuse me! You need to check in!", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Movement_One)
         waitmovement(0)
-        goto(PortValor_Gym_Lobby_EventScript_Rules)
+        goto(ForestsEdge_Gym_Lobby_EventScript_Rules)
     }
     end
 }
 
-script PortValor_Gym_Lobby_TriggerTwo {
-    if (flag(FLAG_BEAT_PORT_VALOR)) {
+script ForestsEdge_Gym_Lobby_TriggerTwo {
+    if (flag(FLAG_BEAT_FORESTS_EDGE)) {
         msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
-    } elif (!(flag(FLAG_PORT_VALOR_CHECKED_IN))) {
+    } elif (!(flag(FLAG_FORESTS_EDGE_CHECKED_IN))) {
         //msgbox("Excuse me! You need to check in!", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Movement_Two)
         waitmovement(0)
-        goto(PortValor_Gym_Lobby_EventScript_Rules)
+        goto(ForestsEdge_Gym_Lobby_EventScript_Rules)
     }
     end
 }
 
-script PortValor_Gym_Lobby_TriggerThree {
-    if (flag(FLAG_BEAT_PORT_VALOR)) {
+script ForestsEdge_Gym_Lobby_TriggerThree {
+    if (flag(FLAG_BEAT_FORESTS_EDGE)) {
         msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
-    } elif (!(flag(FLAG_PORT_VALOR_CHECKED_IN))) {
+    } elif (!(flag(FLAG_FORESTS_EDGE_CHECKED_IN))) {
         //msgbox("Excuse me! You need to check in!", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Movement_Three)
         waitmovement(0)
-        goto(PortValor_Gym_Lobby_EventScript_Rules)
+        goto(ForestsEdge_Gym_Lobby_EventScript_Rules)
     }
     end
 }
 
-script PortValor_Gym_Lobby_TriggerFour {
-    if (flag(FLAG_BEAT_PORT_VALOR)) {
+script ForestsEdge_Gym_Lobby_TriggerFour {
+    if (flag(FLAG_BEAT_FORESTS_EDGE)) {
         msgbox("You have already beaten this gym.", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
-    } elif (!(flag(FLAG_PORT_VALOR_CHECKED_IN))) {
+    } elif (!(flag(FLAG_FORESTS_EDGE_CHECKED_IN))) {
         //msgbox("Excuse me! You need to check in!", MSGBOX_AUTOCLOSE)
         applymovement(OBJ_EVENT_ID_PLAYER, Gym_Rules_Movement_Four)
         waitmovement(0)
-        goto(PortValor_Gym_Lobby_EventScript_Rules)
+        goto(ForestsEdge_Gym_Lobby_EventScript_Rules)
     }
     end
-}
-
-movement Gym_Rules_Movement_One {
-    walk_down
-    walk_left * 3
-    face_up
-}
-
-movement Gym_Rules_Movement_Two {
-    walk_down
-    walk_left * 4
-    face_up
-}
-
-movement Gym_Rules_Movement_Three {
-    walk_down
-    walk_left * 5
-    face_up
-}
-
-movement Gym_Rules_Movement_Four {
-    walk_down
-    walk_left * 6
-    face_up
 }
 
 
 // ======== GYM RULES ========
 
-script PortValor_Gym_Lobby_EventScript_Rules {
+script ForestsEdge_Gym_Lobby_EventScript_Rules {
     lockall
 
     msgbox("RECEPTIONIST: Hello, challenger!", MSGBOX_AUTOCLOSE)
@@ -156,11 +131,12 @@ script PortValor_Gym_Lobby_EventScript_Rules {
 
     msgbox("Would you like information about the\ngym leaders?", MSGBOX_YESNO)
     if (var(VAR_RESULT) == YES){
-        msgbox("This gym is all about controlling the\nweather.", MSGBOX_AUTOCLOSE)
-        msgbox("Marin uses rain to his advantage,\nwhile Solara utilizes the sun.", MSGBOX_AUTOCLOSE)
+        msgbox("This gym is all about status conditions.", MSGBOX_AUTOCLOSE)
+        msgbox("Morwen will try to stop your team\nin their tracks.", MSGBOX_AUTOCLOSE)
+        msgbox("Kaelen, on the other hand, uses\nstatuses that harm your team.", MSGBOX_AUTOCLOSE)
     }
 
-    setflag(FLAG_PORT_VALOR_CHECKED_IN)
+    setflag(FLAG_FORESTS_EDGE_CHECKED_IN)
     msgbox("Good luck!", MSGBOX_AUTOCLOSE)
     releaseall
     end

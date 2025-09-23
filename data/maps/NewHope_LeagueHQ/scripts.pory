@@ -1,0 +1,213 @@
+mapscripts NewHope_LeagueHQ_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: NewHope_LeagueHQ_OnTransition
+}
+
+script NewHope_LeagueHQ_Trigger_BlockPath {
+    lockall
+    msgbox("RECEPTIONIST: That area is restricted!")
+    applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+    waitmovement(0)
+    releaseall
+}
+
+script NewHope_LeagueHQ_OnTransition {
+    removeobject(LOCALID_NH_CHAIRMAN)
+    removeobject(LOCALID_NH_PT_REP)
+    end
+}
+
+script NewHope_LeagueHQ_EventScript_Registration {
+    lockall
+    msgbox("RECEPTIONIST: Welcome to the Valora\nPOKEMON League Heaquarters.", MSGBOX_AUTOCLOSE)
+    if (!flag(FLAG_LEAGUE_REG)) {
+        msgbox("Are you here to register for the League?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES){
+            setvar(VAR_LEVEL_CAP, 21)
+            msgbox("Excellent!", MSGBOX_AUTOCLOSE)
+            msgbox("Let's start with your name.", MSGBOX_AUTOCLOSE)
+            msgbox("{PLAYER}? Okay, great.", MSGBOX_AUTOCLOSE)
+            msgbox("As a reminder, all trainers must be\nat least 18 to register for the League.", MSGBOX_AUTOCLOSE)
+            msgbox("Let me enter in your information...", MSGBOX_AUTOCLOSE)
+            delay(180)
+            msgbox("You're all set! Let me see if the\nChairman is available. He like to meet\pthe new trainers.", MSGBOX_AUTOCLOSE)
+            delay(180)
+            opendoor(12, 7)
+            waitdooranim
+            addobject(LOCALID_NH_CHAIRMAN)
+            applymovement(LOCALID_NH_CHAIRMAN, League_Reps_Enter)
+            waitmovement(0)
+            closedoor(12, 7)
+            waitdooranim
+            turnobject(OBJ_EVENT_ID_PLAYER, DIR_EAST)
+            goto(NewHope_LeagueHQ_EventScript_Chairman)
+        } else {
+            msgbox("Maybe another time.", MSGBOX_AUTOCLOSE)
+            releaseall
+            end
+        }
+    } else {
+        msgbox("You are already registered.", MSGBOX_AUTOCLOSE)
+        releaseall
+        end
+    }
+
+}
+
+script NewHope_LeagueHQ_EventScript_Chairman{
+    msgbox("CHAIRMAN: Ah, a new challenger!\pWelcome to the League.", MSGBOX_AUTOCLOSE)
+    msgbox("It’s always an honor to greet aspiring\ntrainers at the start of their journey.", MSGBOX_AUTOCLOSE)
+
+    msgbox("Here in the Valora Region, we use a\nunique system for the Gym Challenge.", MSGBOX_AUTOCLOSE)
+    msgbox("Each Gym is led not by one Leader, but by\ntwo.", MSGBOX_AUTOCLOSE)
+    msgbox("To claim a badge, you must defeat both\nLeaders of that Gym.", MSGBOX_AUTOCLOSE)
+    msgbox("Only then will their badge be officially\nrecognized by the League.", MSGBOX_AUTOCLOSE)
+
+    msgbox("But the Gym Challenge isn’t the only path\nfor ambitious trainers.", MSGBOX_AUTOCLOSE)
+    msgbox("The League also hosts a circuit of local\ntournaments, where trainers test their\pskills outside of traditional Gyms.", MSGBOX_AUTOCLOSE)
+    msgbox("And beyond that…", MSGBOX_AUTOCLOSE)
+    msgbox("The upcoming World Championships will\nsoon bring challengers from every region.", MSGBOX_AUTOCLOSE)
+    msgbox("Perhaps, in time, you will be among them.", MSGBOX_AUTOCLOSE)
+
+    msgbox("Before you begin, I’d like you to meet one\nof our partners from Prometheus Tech.", MSGBOX_AUTOCLOSE)
+    
+    applymovement(LOCALID_NH_CHAIRMAN, Chariman_Move_Over)
+    waitmovement(0)
+    turnobject(LOCALID_NH_CHAIRMAN, DIR_NORTH)
+    delay(60)
+    opendoor(12, 7)
+    waitdooranim
+    addobject(LOCALID_NH_PT_REP)
+    applymovement(LOCALID_NH_PT_REP, League_Reps_Enter)
+    waitmovement(0)
+    closedoor(12, 7)
+    waitdooranim
+    goto(NewHope_LeagueHQ_EventScript_PrometheusRep)
+}
+
+movement League_Reps_Enter {
+   walk_down * 8
+   walk_left * 3
+   end 
+}
+
+movement Chariman_Move_Over {
+    walk_down
+    walk_left
+    face_up
+    end
+}
+
+script NewHope_LeagueHQ_EventScript_PrometheusRep {
+    msgbox("PT REP: Greetings, trainer. I represent\nPrometheus Tech.", MSGBOX_AUTOCLOSE)
+    msgbox("We proudly support new challengers with\nessential tools and items.", MSGBOX_AUTOCLOSE)
+    msgbox("Be sure to stop by our campus south of\ntown.", MSGBOX_AUTOCLOSE)
+    msgbox("We have a bunch of technologies and new\nadvancements to help trainers.", MSGBOX_AUTOCLOSE)
+    msgbox("Here, please accept these to aid your\nGym Challenge.", MSGBOX_AUTOCLOSE)
+
+    giveitem(ITEM_TM_PROTECT, 1)
+    msgbox("That TM contains Protect, an\nincredibly helpful move when battling.")
+    msgbox("It's reusable so you can teach it to\nwhoever you want.")
+
+    message("And, of course, some items!")
+    giveitem(ITEM_AMULET_COIN, 1)
+    msgbox("The Amulet Coin will double the money\nyou earn from battles.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_LUCKY_EGG, 1)
+    msgbox("The Lucky Egg earns your POKEMON\nextra experience.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_EVIOLITE, 1)
+    msgbox("Eviolite helps strengthen a POKEMON\nwho can still evolve.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_LEFTOVERS, 1)
+    msgbox("Leftovers is essential for battling.\nIt slowly gives your POKEMON HP back.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_ABILITY_CAPSULE, 10)
+    giveitem(ITEM_ABILITY_PATCH, 2)
+    msgbox("Ability capsulses and patches can\nchange a POKEMON's abilities.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_RARE_CANDY, 50)
+    msgbox("Those Rare Candies will give you\nexperience quickly.", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_POKE_BALL, 50)
+    giveitem(ITEM_QUICK_BALL, 50)
+    msgbox("You need some balls, of course.", MSGBOX_AUTOCLOSE)
+
+    msgbox("But most importantly: a Tera Orb!\pThis will allow you to terastilize your\nPOKEMON!", MSGBOX_AUTOCLOSE)
+    giveitem(ITEM_TERA_ORB, 1)
+    setflag(B_FLAG_TERA_ORB_CHARGED)
+    setflag(B_FLAG_TERA_ORB_NO_COST)
+    msgbox("Terastilizing your POKEMON changes their\ntype without removing the attack\pbenefits of any original types.", MSGBOX_AUTOCLOSE)
+
+
+    msgbox("Hopefully these will help you get\ngoing!", MSGBOX_AUTOCLOSE)
+    msgbox("Goodbye for now!", MSGBOX_AUTOCLOSE)
+    closemessage
+
+    applymovement(LOCALID_NH_PT_REP, PT_Rep_to_Door)
+    applymovement(LOCALID_NH_CHAIRMAN, Chairman_to_Door)
+    waitmovement(0)
+    opendoor(12, 7)
+    waitdooranim
+
+    turnobject(LOCALID_NH_PT_REP, DIR_NORTH)
+    turnobject(LOCALID_NH_CHAIRMAN, DIR_NORTH)
+
+    applymovement(LOCALID_NH_PT_REP, League_Reps_Exit)
+    applymovement(LOCALID_NH_CHAIRMAN, League_Reps_Exit)
+    waitmovement(0)
+    closedoor(12, 7)
+    waitdooranim
+    removeobject(LOCALID_NH_PT_REP)
+    removeobject(LOCALID_NH_CHAIRMAN)
+
+    releaseall
+    end
+}
+
+movement PT_Rep_to_Door {
+    walk_right * 3
+    walk_up * 4
+    end
+}
+
+movement Chairman_to_Door {
+    walk_right * 4
+    walk_up * 4
+    end
+}
+
+movement League_Reps_Exit {
+   walk_up * 5
+   end 
+}
+
+script NewHope_LeagueHQ_EventScript_NPC1 {
+    lockall
+    faceplayer
+    msgbox("My father died in the war, I swore\nI'd become the best teainer in\pValora in case I ever get a chance\nto avenge him.", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script NewHope_LeagueHQ_EventScript_NPC2 {
+    lockall
+    msgbox("...",MSGBOX_AUTOCLOSE)
+    delay(60)
+    msgbox("How do I still not have enough points?", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script NewHope_LeagueHQ_EventScript_NPC3 {
+    lockall
+    faceplayer
+    msgbox("My daddy is a great trainer.", MSGBOX_AUTOCLOSE)
+    msgbox("He's going to be the Champion soon.", MSGBOX_AUTOCLOSE)
+    msgbox("Maybe someday you'll lose to him!", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script NewHope_LeagueHQ_EventScript_Ronan {
+    lockall
+    faceplayer
+    msgbox("RONAN: Well, hello there!", MSGBOX_AUTOCLOSE)
+    msgbox("The name is RONAN, and I'm one of the\nleaders of the New Hope Gym.", MSGBOX_AUTOCLOSE)
+    msgbox("I hope to see you someday on the\nBattle Floor!", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}

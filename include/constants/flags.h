@@ -670,11 +670,11 @@
 #define FLAG_DARK_SHARDS_ROUTE26  0x271 // Unused Flag
 #define FLAG_GHOST_SHARDS_ROUTE26  0x272 // Unused Flag
 #define FLAG_WATER_SHARDS_TWILIGHT  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
+#define FLAG_NEWHOPE_MENTOR  0x274 // Unused Flag
+#define FLAG_NEWHOPE_RIVAL  0x275 // Unused Flag
+#define FLAG_FIRST_RIVAL_BATTLE  0x276 // Unused Flag
+#define FLAG_GOON1_1ST_CONTACT  0x277 // Unused Flag
+#define FLAG_GOON2_1ST_CONTACT  0x278 // Unused Flag
 #define FLAG_UNUSED_0x279  0x279 // Unused Flag
 #define FLAG_UNUSED_0x27A  0x27A // Unused Flag
 #define FLAG_UNUSED_0x27B  0x27B // Unused Flag
@@ -738,9 +738,9 @@
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
+#define FLAG_FORESTS_EDGE_CHECKED_IN  0x2B8 // Unused Flag
+#define FLAG_BEAT_FORESTS_EDGE  0x2B9 // Unused Flag
+#define FLAG_PORT_VALOR_CHECKED_IN  0x2BA // Unused Flag
 #define FLAG_BEAT_PORT_VALOR  0x2BB // Unused Flag
 
 // Event Flags

@@ -930,12 +930,7 @@ static void GetItemNameFromPocket(u8 *dest, u16 itemId)
             StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
         }
         break;
-    case BERRIES_POCKET:
-        ConvertIntToDecimalStringN(gStringVar1, itemId - FIRST_BERRY_INDEX + 1, STR_CONV_MODE_LEADING_ZEROS, 2);
-        end = CopyItemName(itemId, gStringVar2);
-        PrependFontIdToFit(gStringVar2, end, FONT_NARROW, 61);
-        StringExpandPlaceholders(dest, gText_NumberItem_TMBerry);
-        break;
+
     default:
         end = CopyItemName(itemId, dest);
         PrependFontIdToFit(dest, end, FONT_NARROW, 88);

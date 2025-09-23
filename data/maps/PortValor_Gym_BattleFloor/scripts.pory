@@ -5,7 +5,7 @@ PortValor_Gym_BattleFloor_MapScripts::
 	.byte 0
 
 PortValor_Gym_BattleFloor_OnFrame:
-	map_script_2 GYM_STATE, 0, Gym_BattleFloor_1st_Gym_Leader_Enter
+	map_script_2 GYM_STATE, 0, PortValor_Gym_BattleFloor_1st_Gym_Leader_Enter
 	.2byte 0
 
 `
@@ -18,42 +18,96 @@ script PortValor_Gym_BattleFloor_OnTransition {
 
 
 // ======== GYM LEADER ENTRANCE SCRIPT 1 ========
-script Gym_BattleFloor_1st_Gym_Leader_Enter {
+script PortValor_Gym_BattleFloor_1st_Gym_Leader_Enter {
     lockall
-    applymovement(OBJ_EVENT_ID_PLAYER, Walk_to_Podium_Middle)
+    applymovement(OBJ_EVENT_ID_PLAYER, Walk_to_Podium)
     waitmovement(0)
-    delay(180)
+
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, Camera_to_Leader_Door)
+    waitmovement(0)
+
+    opendoor(5,4)
+    waitdooranim
+
     addobject(LOCALID_MARIN)
     clearflag(FLAG_MARIN)
+
     applymovement(LOCALID_MARIN, Leader_to_Podium)
+    applymovement(OBJ_EVENT_ID_CAMERA, Leader_to_Podium)
     waitmovement(0)
-    delay(60)
+    closedoor(5,4)
+    waitdooranim
+
+    applymovement(OBJ_EVENT_ID_CAMERA, Back_to_Player)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
     goto(PortValor_Gym_BattleFloor_EventScript_Marin)
     end
 }
 
 
 // ======== GYM LEADER ENTRANCE SCRIPT 2 ========
-script Gym_BattleFloor_2nd_Gym_Leader_Enter {
+script PortValor_Gym_BattleFloor_2nd_Gym_Leader_Enter {
+    opendoor(5,4)
+    waitdooranim
+
     addobject(LOCALID_SOLARA)
     clearflag(FLAG_SOLARA)
+
     applymovement(LOCALID_SOLARA, Leader_to_Podium)
+    applymovement(OBJ_EVENT_ID_CAMERA, Leader_to_Podium)
     waitmovement(0)
-    delay(60)
-    goto(PortValor_Gym_EventScript_Solara)
+    closedoor(5,4)
+    waitdooranim
+
+    applymovement(OBJ_EVENT_ID_CAMERA, Back_to_Player)
+    waitmovement(0)
+    special(RemoveCameraObject)
+
+    goto(PortValor_Gym_BattleFloor_EventScript_Solara)
+    end
 }
 
 
-// ======== GENERIC GYM LEADER MOVEMENTS ========
+// ======== GENERIC MOVEMENTS ========
+
+movement Walk_to_Podium {
+    walk_down * 4
+    walk_left
+}
 
 movement Leader_to_Podium {
     walk_down * 5
     walk_right
 }
 
-movement Gym_Leader_Exit {
+movement Gym_Leader_Exit_1 {
     walk_left
-    walk_up * 5
+    walk_up * 4
+}
+
+movement Gym_Leader_Exit_2 {
+    walk_up
+}
+
+movement Camera_to_Leader_Door {
+    walk_left * 3
+    walk_diag_northwest * 5
+}
+
+movement Back_to_Player {
+    walk_fast_right * 7
+}
+
+movement Back_to_Player_From_Door {
+    walk_right * 3
+    walk_diag_southeast * 5
+}
+
+movement Back_to_Leader {
+    walk_fast_left * 7
 }
 
 
@@ -68,12 +122,28 @@ script PortValor_Gym_BattleFloor_After_Marin {
     special(Vgc_RestorePartyBackup) 
     clearflag(FLAG_VGC_PENDING_RESTORE)
 
-    applymovement(LOCALID_MARIN, Gym_Leader_Exit)
+    special(SpawnCameraObject)
+    applymovement(OBJ_EVENT_ID_CAMERA, Back_to_Leader)
     waitmovement(0)
+
+    applymovement(LOCALID_MARIN, Gym_Leader_Exit_1)
+    applymovement(OBJ_EVENT_ID_CAMERA, Gym_Leader_Exit_1)
+    waitmovement(0)
+
+    opendoor(5,4)
+    waitdooranim
+
+    applymovement(OBJ_EVENT_ID_CAMERA, Gym_Leader_Exit_2)
+    applymovement(LOCALID_MARIN, Gym_Leader_Exit_2)
+    waitmovement(0)
+
     removeobject(LOCALID_MARIN)
 
+    closedoor(5,4)
+    waitdooranim
+
     delay(150)
-    goto(Gym_BattleFloor_2nd_Gym_Leader_Enter)
+    goto(PortValor_Gym_BattleFloor_2nd_Gym_Leader_Enter)
 }
 
 script PortValor_Gym_BattleFloor_EventScript_Marin {
@@ -101,10 +171,9 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         msgbox("Are you ready to battle?", MSGBOX_YESNO)
         if (var(VAR_RESULT) == NO) {
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
             setflag(FLAG_MARIN)
             removeobject(LOCALID_MARIN)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -121,8 +190,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -167,8 +235,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -185,8 +252,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -235,8 +301,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -253,8 +318,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -296,8 +360,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -314,8 +377,7 @@ script PortValor_Gym_BattleFloor_EventScript_Marin {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -354,8 +416,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -372,8 +433,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -417,8 +477,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -435,8 +494,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -485,8 +543,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -503,8 +560,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -546,8 +602,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) == NO) {
             // need to hide trainer again
             closemessage
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -564,8 +619,7 @@ script PortValor_Gym_BattleFloor_EventScript_Solara {
         if (var(VAR_RESULT) != 0) {
             //special(Vgc_RestorePartyBackup)
             clearflag(FLAG_VGC_PENDING_RESTORE)
-            applymovement(OBJ_EVENT_ID_PLAYER, Exit_Gym)
-            waitmovement(0)
+            warpsilent(MAP_PORT_VALOR_GYM_LOBBY, 4)
             end
         }
 
@@ -639,9 +693,26 @@ script PortValor_Gym_BattleFloor_After_Solara {
         msgbox("Level cap increased to 85.", MSGBOX_DEFAULT) 
     }
 
-    applymovement(LOCALID_SOLARA, Gym_Leader_Exit)
+    special(SpawnCameraObject)
+    applymovement(LOCALID_SOLARA, Gym_Leader_Exit_1)
+    applymovement(OBJ_EVENT_ID_CAMERA, Gym_Leader_Exit_1)
     waitmovement(0)
-    setflag(FLAG_SOLARA)
+
+    opendoor(5,4)
+    waitdooranim
+
+    applymovement(OBJ_EVENT_ID_CAMERA, Gym_Leader_Exit_2)
+    applymovement(LOCALID_SOLARA, Gym_Leader_Exit_2)
+    waitmovement(0)
+
+    removeobject(LOCALID_SOLARA)
+
+    closedoor(5,4)
+    waitdooranim
+
+    applymovement(OBJ_EVENT_ID_CAMERA, Back_to_Player_From_Door)
+    waitmovement(0)
+    special(RemoveCameraObject)
         
     releaseall
     setflag(FLAG_BEAT_PORT_VALOR)
@@ -674,4 +745,9 @@ text Solara_Outro{
 
 text PostBattle_Solara{
     "Good luck with the rest of the gyms."
+}
+
+
+text Not_Enough_Mons{
+    "You need at least four battle-ready Pokémon."
 }

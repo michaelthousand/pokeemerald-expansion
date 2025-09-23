@@ -646,13 +646,16 @@
     "NerwHope_Gym",
     "NewHope_Gym",
     "NewHope_FishermansHouse",
-    "DarkFalls_Gym"
+    "DarkFalls_Gym",
+    "NewHope_LeagueHQ"
   ],
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",
     "ForestsEdge_PokeCenter",
     "ForestsEdgeBattleCenter",
-    "ForestsEdge_BattleCenter"
+    "ForestsEdge_BattleCenter",
+    "ForestsEdge_Gym_Lobby",
+    "ForestsEdge_Gym_BattleFloor"
   ],
   "gMapGroup_Prometheus_Tech_Indoor": [
     "Prometheus_Tech_Lab",

@@ -18632,7 +18632,7 @@ Tera Type: Fairy
 
 
 === TRAINER_SOLARA_C1 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -18709,7 +18709,7 @@ Tera Type: Fire
 - Protect
 
 === TRAINER_SOLARA_C2 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -18786,7 +18786,7 @@ Tera Type: Fire
 - Protect
 
 === TRAINER_SOLARA_B1 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -18863,7 +18863,7 @@ Tera Type: Fire
 
 
 === TRAINER_SOLARA_B2 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -18940,7 +18940,7 @@ Tera Type: Grass
 
 
 === TRAINER_SOLARA_B3 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -19017,7 +19017,7 @@ Tera Type: Grass
 
 
 === TRAINER_SOLARA_A1 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -19094,7 +19094,7 @@ Tera Type: Grass
 
 
 === TRAINER_SOLARA_A2 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -19171,7 +19171,7 @@ Tera Type: Grass
 
 
 === TRAINER_SOLARA_A3 ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -19248,7 +19248,7 @@ Tera Type: Grass
 
 
 === TRAINER_SOLARA_S ===
-Name: Solara
+Name: SOLARA
 Class: Leader
 Pic: Pike Queen Lucy
 Gender: Female
@@ -19326,7 +19326,7 @@ Tera Type: Fire
 
 
 === TRAINER_MARIN_C1 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19402,7 +19402,7 @@ Tera Type: Steel
 - Rain Dance
 
 === TRAINER_MARIN_C2 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19479,7 +19479,7 @@ Tera Type: Steel
 - Rain Dance
 
 === TRAINER_MARIN_B1 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19555,7 +19555,7 @@ Tera Type: Steel
 - Rain Dance
 
 === TRAINER_MARIN_B2 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19631,7 +19631,7 @@ Tera Type: Steel
 - Rain Dance
 
 === TRAINER_MARIN_B3 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19709,7 +19709,7 @@ Tera Type: Steel
 
 
 === TRAINER_MARIN_A1 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19786,7 +19786,7 @@ Tera Type: Water
 
 
 === TRAINER_MARIN_A2 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19863,7 +19863,7 @@ Tera Type: Water
 
 
 === TRAINER_MARIN_A3 ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male
@@ -19940,7 +19940,7 @@ Tera Type: Water
 
 
 === TRAINER_MARIN_S ===
-Name: Marin
+Name: MARIN
 Class: Leader
 Pic: Leader Norman
 Gender: Male

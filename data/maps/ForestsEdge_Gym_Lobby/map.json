@@ -1,9 +1,9 @@
 {
-  "id": "MAP_PORT_VALOR_GYM_LOBBY",
-  "name": "PortValor_Gym_Lobby",
-  "layout": "LAYOUT_PORT_VALOR_GYM_LOBBY",
+  "id": "MAP_FORESTS_EDGE_GYM_LOBBY",
+  "name": "ForestsEdge_Gym_Lobby",
+  "layout": "LAYOUT_FORESTS_EDGE_GYM_LOBBY",
   "music": "MUS_DUMMY",
-  "region_map_section": "MAPSEC_PORT_VALOR",
+  "region_map_section": "MAPSEC_FORESTS_EDGE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PortValor_Gym_Lobby_EventScript_Rules",
+      "script": "ForestsEdge_Gym_Lobby_EventScript_Rules",
       "flag": "0"
     }
   ],
@@ -47,21 +47,21 @@
       "x": 9,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_PORT_VALOR_GYM_BATTLE_FLOOR",
+      "dest_map": "ForestsEdge_Gym_BattleFloor",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 2,
       "elevation": 0,
-      "dest_map": "MAP_PORT_VALOR_GYM_BATTLE_FLOOR",
+      "dest_map": "ForestsEdge_Gym_BattleFloor",
       "dest_warp_id": "0"
     },
     {
       "x": 5,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_PORT_VALOR_GYM_LOBBY",
+      "dest_map": "MAP_FORESTS_EDGE_GYM_LOBBY",
       "dest_warp_id": "0"
     }
   ],
@@ -73,7 +73,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "PortValor_Gym_Lobby_TriggerOne"
+      "script": "ForestsEdge_Gym_Lobby_TriggerOne"
     },
     {
       "type": "trigger",
@@ -82,7 +82,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "PortValor_Gym_Lobby_TriggerTwo"
+      "script": "ForestsEdge_Gym_Lobby_TriggerTwo"
     },
     {
       "type": "trigger",
@@ -91,7 +91,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "PortValor_Gym_Lobby_TriggerThree"
+      "script": "ForestsEdge_Gym_Lobby_TriggerThree"
     },
     {
       "type": "trigger",
@@ -100,7 +100,7 @@
       "elevation": 0,
       "var": "VAR_TEMP_0",
       "var_value": "0",
-      "script": "PortValor_Gym_Lobby_TriggerFour"
+      "script": "ForestsEdge_Gym_Lobby_TriggerFour"
     }
   ],
   "bg_events": []

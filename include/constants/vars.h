@@ -50,7 +50,7 @@
 #define VAR_RECYCLE_GOODS                                0x4020
 #define VAR_REPEL_STEP_COUNT                             0x4021
 #define VAR_ICE_STEP_COUNT                               0x4022
-#define VAR_STARTER_MON                                  0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip
+#define VAR_STARTER_MON                                  0x4023 // 0=Treecko, 1=Torchic, 2=Mudkip // taken over
 #define VAR_MIRAGE_RND_H                                 0x4024
 #define VAR_MIRAGE_RND_L                                 0x4025
 #define VAR_SECRET_BASE_MAP                              0x4026
@@ -268,9 +268,9 @@
 #define HT_STAT                                0x40F8 // Unused Var - testing for hyper training
 #define VAR_LEVEL_CAP                                0x40F9 // Used to change level cap
 #define TERA_CHANGE_TYPE                                0x40FA // Used for tera change
-#define VAR_UNUSED_0x40FB                                0x40FB // Unused Var // USED FOR TERA CHANGE TEST
+#define TALK_TO_MOM                                0x40FB // Unused Var // USED FOR TERA CHANGE TEST
 #define GYM_STATE                                0x40FC // Unused Var // USED FOR TEST MAP NURSE
-#define TestMapA_State                                0x40FD // Unused Var // USED FOR TEST MAP STATE
+#define MET_RIVAL                                0x40FD // Unused Var // USED FOR TEST MAP STATE
 #define TESTMAPA_STATE                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK
 #define STARTER_REGION                                0x40FF // Unused Var // USED FOR STARTER POKEBALL SELECTION
 

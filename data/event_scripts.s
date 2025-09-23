@@ -1231,3 +1231,9 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/PortValor_Gym_BattleFloor/scripts.inc"
 
 	.include "data/maps/PortValor_Gym_Lobby/scripts.inc"
+
+	.include "data/maps/ForestsEdge_Gym_Lobby/scripts.inc"
+
+	.include "data/maps/ForestsEdge_Gym_BattleFloor/scripts.inc"
+
+	.include "data/maps/NewHope_LeagueHQ/scripts.inc"

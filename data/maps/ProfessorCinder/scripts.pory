@@ -58,20 +58,6 @@ script ProfessorCinder_Intro {
 }
 
 script ProfessorCinder_Outro {
-    msgbox("Excellent choice! That Pokémon will serve\nyou well. But remember, strength\pcomes from more than just battling.\nTake the time to know your partner.", MSGBOX_DEFAULT)
-
-    // Give Pokédex
-    msgbox("Now then, I have something else for you.\nThis is a Pokédex.\nIt will record data on every Pokémon you encounter.", MSGBOX_DEFAULT)
-    //giveitem(ITEM_POKEDEX, 1)
-
-    
-    msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this\nPokédex, you’ll be helping me understand\phow they’ve adapted.", MSGBOX_DEFAULT)
-
-    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have\pall sorts of tools and technology to\nhelp trainers!", MSGBOX_DEFAULT)
-
-    msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle danger await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
-
-    
     if (var(VAR_TEMP_1) == 1) {
         removeobject(1)
     } elif (var(VAR_TEMP_1) == 2) {
@@ -79,6 +65,23 @@ script ProfessorCinder_Outro {
     } elif (var(VAR_TEMP_1) == 3) {
         removeobject(3)
     }
+
+    msgbox("Excellent choice! That Pokémon will serve\nyou well. But remember, strength\pcomes from more than just battling.\nTake the time to know your partner.", MSGBOX_DEFAULT)
+
+    // Give Pokédex
+    msgbox("Now then, I have something else for you.\nThis is a Pokédex.\nIt will record data on every Pokémon you encounter.", MSGBOX_DEFAULT)
+    //giveitem(ITEM_POKEDEX, 1)
+    setflag(FLAG_SYS_POKEDEX_GET)
+
+    
+    msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this\nPokédex, you’ll be helping me understand\phow they’ve adapted.", MSGBOX_DEFAULT)
+
+    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have\pall sorts of tools and technology to\nhelp trainers!", MSGBOX_DEFAULT)
+
+    msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle danger await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
+    setvar(VAR_STARTER_MON,1)
+    
+
     releaseall
     end
 }

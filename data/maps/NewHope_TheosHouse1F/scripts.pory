@@ -1,2 +1,52 @@
-mapscripts NewHope_TheosHouse1F_MapScripts {}
+raw `
+NewHope_TheosHouse1F_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, NewHope_TheosHouse1F_OnFrame
+	.byte 0
 
+NewHope_TheosHouse1F_OnFrame:
+	map_script_2 TALK_TO_MOM, 0, NewHope_TheosHouse1F_EventScript_Intro
+	.2byte 0
+
+`
+
+script NewHope_TheosHouse1F_EventScript_Intro {
+    setvar(TALK_TO_MOM, 1)
+    lockall
+    msgbox("MOM: Oh, {PLAYER}!", MSGBOX_DEFAULT)
+    closemessage
+    delay(60)
+    applymovement(OBJ_EVENT_ID_PLAYER, Go_to_Mom)
+    waitmovement(0)
+    msgbox("Happy birthday, {PLAYER}!", MSGBOX_AUTOCLOSE)
+    msgbox("I can't believe you're already 18!", MSGBOX_AUTOCLOSE)
+    msgbox("I am so proud of you...and I know your\ndad is too!", MSGBOX_AUTOCLOSE)
+    msgbox("He really did want to be here for your\nbig day, but you know how he is.", MSGBOX_AUTOCLOSE)
+    msgbox("Being the Champion comes with a lot of\nresponsibilities.", MSGBOX_AUTOCLOSE)
+    delay(60)
+    msgbox("Oh, that's right!", MSGBOX_AUTOCLOSE)
+    msgbox("He said to tell you that his old friend,\nProfessor Cinder, is waiting at his\plab for you.", MSGBOX_AUTOCLOSE)
+    msgbox("Professor Cinder is going to give you\nyour very own POKEMON!", MSGBOX_AUTOCLOSE)
+    msgbox("Don't forget to also register with the\nLeague before you leave town as well.", MSGBOX_AUTOCLOSE)
+    msgbox("All trainers need to be registered in\norder to compete in the Gym Challenge\por any other official matches.", MSGBOX_AUTOCLOSE)
+    delay(60)
+    msgbox("I can't wait to see who you will become...", MSGBOX_AUTOCLOSE)
+    msgbox("Now don't forget to pet Plato on your way\nout! He'll miss you very much!", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script NewHope_TheosHouse1F_EventScript_Plato {
+    lockall
+    msgbox("PLATO: Woof, woof!", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+movement Go_to_Mom {
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+    walk_left
+}

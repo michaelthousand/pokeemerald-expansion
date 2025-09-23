@@ -8,15 +8,7 @@ TestMapA_OnTransition:
 `
 
 script TestMapA_EventScript_SetupTestBattle{
-    if(!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))){
-        setflag(TALKED_TO_CINDER)
-        setvar(TESTMAPA_STATE, 0)
-    }
-    else{
-        if(var(TESTMAPA_STATE) == 0){
-            clearflag(TALKED_TO_CINDER)
-        }
-    }
+
 }
 
 script MayBattleOver{
@@ -25,7 +17,6 @@ script MayBattleOver{
     waitmovement(0)
     removeobject(1)
     setflag(TALKED_TO_CINDER)
-    setvar(TESTMAPA_STATE, 1)
     waitmessage
     releaseall
 }
