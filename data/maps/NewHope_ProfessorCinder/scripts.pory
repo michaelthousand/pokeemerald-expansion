@@ -1,0 +1,698 @@
+mapscripts NewHope_ProfessorCinder_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: NewHope_ProfessorCinder_EventScript_BallDefault
+}
+
+//  ============= HELPERS =============
+
+script NewHope_ProfessorCinder_EventScript_BallDefault {
+    setvar(STARTER_REGION, 0)
+    end
+}
+
+script StarterFade {
+    fadescreen(FADE_TO_BLACK)
+    delay(20)
+    fadescreen(FADE_FROM_BLACK)
+    return
+}
+
+script Common_GiveStarter {
+    copyvar(VAR_STARTER_MON, VAR_TEMP_2)
+    setflag(FLAG_SYS_POKEMON_GET)
+    // Give L5, no item
+    givemon(VAR_TEMP_2, 5, ITEM_NONE)
+
+    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Received your Pokemon!")
+        special(HealPlayerParty)
+        call(NicknamePartyMon)
+        call(NewHope_ProfessorCinder_Outro)
+    } elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
+        playfanfare(MUS_OBTAIN_ITEM)
+        msgbox("Your Pokemon was sent to your PC.")
+        special(HealPlayerParty)
+        call(NicknameBoxMon)
+        call(NewHope_ProfessorCinder_Outro)
+    } else {
+        msgbox("No more room for Pokemon.")
+        return
+    }
+
+    // Ensure UI/audio complete before touching objects/flags
+    waitfanfare
+    closemessage  
+}
+
+
+//  ============= CINDER TRIGGERS =============
+
+script ProfessorCinder_Trigger_1 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_1)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+script ProfessorCinder_Trigger_2 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_2)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+script ProfessorCinder_Trigger_3 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_3)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+script ProfessorCinder_Trigger_4 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_4)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+script ProfessorCinder_Trigger_5 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_5)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+script ProfessorCinder_Trigger_6 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_6)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+script ProfessorCinder_Trigger_7 {
+    if (!(flag(TALKED_TO_CINDER))) {
+        lockall
+        applymovement(LOCALID_NH_CINDER, Cinder_Trigger_7)
+        goto(NewHope_ProfessorCinder_Intro)
+    }
+}
+
+
+
+//  ============= CINDER SCRIPTING =============
+
+script NewHope_ProfessorCinder_Intro {
+    faceplayer
+
+    if (!(flag(TALKED_TO_CINDER))) {
+        setflag(TALKED_TO_CINDER)
+        msgbox("Ah! There you are!\pYour mother said you'd be stopping by!", MSGBOX_DEFAULT)
+        msgbox("How long has it been since I've seen you?\n10 years perhaps?", MSGBOX_DEFAULT)
+        msgbox("My investigations of mythical Pokemon\nhave had me travelling for years.", MSGBOX_DEFAULT)
+        msgbox("You look just like your father, you know.\nYes, the Champion himself! We were close\pfriends once, back before…\pWell, before our duties pulled us both\naway.", MSGBOX_DEFAULT)
+        delay(60)
+    }
+
+    // If we don't have a starter yet, always bring the region picker back up.
+    if (!(flag(FLAG_SYS_POKEMON_GET))) {
+        msgbox("Which region would you like your Pokemon\nto be from?", MSGBOX_DEFAULT)
+        closemessage
+        call(NewHope_ProfessorCinder_EventScript_Professor)
+    } else {
+        msgbox("Good luck on your journey!", MSGBOX_DEFAULT)
+        closemessage
+    }
+
+    releaseall
+    end
+}
+
+script NewHope_ProfessorCinder_EventScript_Professor {
+    if (!(flag(FLAG_SYS_POKEMON_GET))) {
+        message("What region would you like to see?")
+        closemessage
+        multichoice(20, 0, MULTI_STARTER_CHOICE, 0)  // 0..8
+        call(StarterFade)
+        copyvar(STARTER_REGION, VAR_RESULT)          // Kanto=0, ... Paldea=8
+        msgbox("Choose your Pokemon wisely.", MSGBOX_AUTOCLOSE)
+    } else {
+        msgbox("Take care of your Pokemon.", MSGBOX_NPC)
+    }
+    end
+}
+
+script NewHope_ProfessorCinder_Outro {
+    if (var(VAR_TEMP_1) == 1) {
+        removeobject(1)
+    } elif (var(VAR_TEMP_1) == 2) {
+        removeobject(2)
+    } elif (var(VAR_TEMP_1) == 3) {
+        removeobject(3)
+    }
+
+    msgbox("Excellent choice! That Pokémon will serve\nyou well. But remember, strength\pcomes from more than just battling.\nTake the time to know your partner.", MSGBOX_DEFAULT)
+
+    // Give Pokédex
+    msgbox("Now then, I have something else for you.\nThis is a Pokédex.\nIt will record data on every Pokémon you encounter.", MSGBOX_DEFAULT)
+    //giveitem(ITEM_POKEDEX, 1)
+    setflag(FLAG_SYS_POKEDEX_GET)
+
+    
+    msgbox("The war left deep scars on Valora’s land.\nMany Pokémon habitats were changed or\pshattered entirely. By filling this\nPokédex, you’ll be helping me understand\phow they’ve adapted.", MSGBOX_DEFAULT)
+
+    msgbox("One last thing: be sure to vist the \nPrometheus Tech campus south of town.\pThey fund my lab, though truthfully, they\nhardly pay me any attention. They have\pall sorts of tools and technology to\nhelp trainers!", MSGBOX_DEFAULT)
+
+    msgbox("Now then, off you go!\pAdventure, discovery, and maybe even a\nlittle danger await you out there.\pI’ll be here when you need me.", MSGBOX_DEFAULT)
+    setvar(VAR_STARTER_MON,1)
+    
+
+    releaseall
+    end
+}
+
+//  ============= MOVEMENTS =============
+
+movement Cinder_Trigger_1 {
+    walk_down
+    walk_left * 3
+    face_down
+    end
+}
+
+movement Cinder_Trigger_2 {
+    walk_down
+    walk_left * 2
+    face_down
+    end
+}
+
+movement Cinder_Trigger_3 {
+    walk_down
+    walk_left * 1
+    face_down
+    end
+}
+
+movement Cinder_Trigger_4 {
+    walk_down
+    end
+}
+
+movement Cinder_Trigger_5 {
+    walk_down
+    face_right
+    end
+}
+
+movement Cinder_Trigger_6 {
+    face_right
+    end
+}
+
+movement Cinder_Trigger_7 {
+    walk_up
+    face_right
+    end
+}
+
+
+//  ============= POKEBALLS & STARTERS =============
+
+script NewHope_ProfessorCinder_EventScript_PokeballOne {
+    lockall
+    if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
+        setvar(VAR_TEMP_1, 1)     // Grass slot
+        call(NewHope_ProfessorCinder_PickStarterForSlot)
+    } else {
+        msgbox("Don't take another.")
+    }
+    releaseall
+    end
+}
+
+script NewHope_ProfessorCinder_EventScript_PokeballTwo {
+    lockall
+    if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
+        setvar(VAR_TEMP_1, 2)     // Grass slot
+        call(NewHope_ProfessorCinder_PickStarterForSlot)
+    } else {
+        msgbox("Don't take another.")
+    }
+    releaseall
+    end
+}
+
+script NewHope_ProfessorCinder_EventScript_PokeballThree {
+    lockall
+    if (!(flag(STARTER_BALL_ONE) || flag(STARTER_BALL_TWO) || flag(STARTER_BALL_THREE))) {
+        setvar(VAR_TEMP_1, 3)     // Grass slot
+        call(NewHope_ProfessorCinder_PickStarterForSlot)
+    } else {
+        msgbox("Don't take another.")
+    }
+    releaseall
+    end
+}
+
+// ---------- Dispatcher: uses STARTER_REGION (0..8) and VAR_TEMP_1 (1/2/3) ----------
+// Kanto fully implemented. Copy the structure for the other regions.
+script NewHope_ProfessorCinder_PickStarterForSlot {
+    // Clear "got starter" in case of a canceled pick (prevents false positives)
+    clearflag(FLAG_SYS_POKEMON_GET)
+
+    // -------- Kanto (0) --------
+    if (var(STARTER_REGION) == 0) {
+        // Grass -> Bulbasaur
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_BULBASAUR, 10, 3)
+            msgbox("Do you want to choose Bulbasaur?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Charmander
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_CHARMANDER, 10, 3)
+            msgbox("Do you want to choose Charmander?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Squirtle
+        showmonpic(SPECIES_SQUIRTLE, 10, 3)
+        msgbox("Do you want to choose Squirtle?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Johto (1) --------
+    if (var(STARTER_REGION) == 1) {
+        // Grass -> Chikorita
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_CHIKORITA, 10, 3)
+            msgbox("Do you want to choose Chikorita?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_CHIKORITA)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Cyndaquil
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_CYNDAQUIL, 10, 3)
+            msgbox("Do you want to choose Cyndaquil?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_CYNDAQUIL)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Totodile
+        showmonpic(SPECIES_TOTODILE, 10, 3)
+        msgbox("Do you want to choose Totodile?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_TOTODILE)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Hoenn (2) --------
+    if (var(STARTER_REGION) == 2) {
+        // Grass -> Treecko
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_TREECKO, 10, 3)
+            msgbox("Do you want to choose Treecko?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_TREECKO)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Torchic
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_TORCHIC, 10, 3)
+            msgbox("Do you want to choose Torchic?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_TORCHIC)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Mudkip
+        showmonpic(SPECIES_MUDKIP, 10, 3)
+        msgbox("Do you want to choose Mudkip?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_MUDKIP)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Sinnoh (3) --------
+    if (var(STARTER_REGION) == 3) {
+        // Grass -> Turtwig
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_TURTWIG, 10, 3)
+            msgbox("Do you want to choose Turtwig?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_TURTWIG)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Chimchar
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_CHIMCHAR, 10, 3)
+            msgbox("Do you want to choose Chimchar?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_CHIMCHAR)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Piplup
+        showmonpic(SPECIES_PIPLUP, 10, 3)
+        msgbox("Do you want to choose Piplup?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_PIPLUP)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Unova (4) --------
+    if (var(STARTER_REGION) == 4) {
+        // Grass -> Snivy
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_SNIVY, 10, 3)
+            msgbox("Do you want to choose Snivy?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_SNIVY)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Tepig
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_TEPIG, 10, 3)
+            msgbox("Do you want to choose Tepig?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_TEPIG)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Oshawott
+        showmonpic(SPECIES_OSHAWOTT, 10, 3)
+        msgbox("Do you want to choose Oshawott?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_OSHAWOTT)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Kalos (5) --------
+    if (var(STARTER_REGION) == 5) {
+        // Grass -> Chespin
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_CHESPIN, 10, 3)
+            msgbox("Do you want to choose Chespin?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_CHESPIN)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Fennekin
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_FENNEKIN, 10, 3)
+            msgbox("Do you want to choose Fennekin?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_FENNEKIN)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Froakie
+        showmonpic(SPECIES_FROAKIE, 10, 3)
+        msgbox("Do you want to choose Froakie?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_FROAKIE)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Alola (6) --------
+    if (var(STARTER_REGION) == 6) {
+        // Grass -> Rowlet
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_ROWLET, 10, 3)
+            msgbox("Do you want to choose Rowlet?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_ROWLET)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Litten
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_LITTEN, 10, 3)
+            msgbox("Do you want to choose Litten?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_LITTEN)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Popplio
+        showmonpic(SPECIES_POPPLIO, 10, 3)
+        msgbox("Do you want to choose Popplio?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_POPPLIO)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Galar (7) --------
+    if (var(STARTER_REGION) == 7) {
+        // Grass -> Grookey
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_GROOKEY, 10, 3)
+            msgbox("Do you want to choose Grookey?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_GROOKEY)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Scorbunny
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_SCORBUNNY, 10, 3)
+            msgbox("Do you want to choose Scorbunny?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_SCORBUNNY)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Popplio
+        showmonpic(SPECIES_POPPLIO, 10, 3)
+        msgbox("Do you want to choose Popplio?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_POPPLIO)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- Paldea (8) --------
+    if (var(STARTER_REGION) == 8) {
+        // Grass -> Sprigatito
+        if (var(VAR_TEMP_1) == 1) {
+            showmonpic(SPECIES_SPRIGATITO, 10, 3)
+            msgbox("Do you want to choose Sprigatito?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_SPRIGATITO)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Fire -> Fuecoco
+        if (var(VAR_TEMP_1) == 2) {
+            showmonpic(SPECIES_FUECOCO, 10, 3)
+            msgbox("Do you want to choose Fuecoco?", MSGBOX_YESNO)
+            if (var(VAR_RESULT) == YES) {
+                setvar(VAR_TEMP_2, SPECIES_FUECOCO)
+                call(Common_GiveStarter)
+                hidemonpic
+                return
+            } else {
+                hidemonpic
+                msgbox("Maybe another choice then.")
+                return
+            }
+        }
+        // Water -> Quaxly
+        showmonpic(SPECIES_QUAXLY, 10, 3)
+        msgbox("Do you want to choose Quaxly?", MSGBOX_YESNO)
+        if (var(VAR_RESULT) == YES) {
+            setvar(VAR_TEMP_2, SPECIES_QUAXLY)
+            call(Common_GiveStarter)
+            hidemonpic
+            return
+        } else {
+            hidemonpic
+            msgbox("Maybe another choice then.")
+            return
+        }
+    }
+
+    // -------- TODO: Add Johto..Paldea blocks below, same pattern --------
+    // if (var(STARTER_REGION) == 1) { ... }
+    // if (var(STARTER_REGION) == 2) { ... }
+    // etc.
+
+    return
+}

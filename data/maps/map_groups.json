@@ -38,7 +38,8 @@
     "gMapGroup_Prometheus_Tech_Indoor",
     "gMapGroup_IndoorPortValor",
     "gMapGroup_MiscIndoor",
-    "gMapGroup_IndoorDarkFalls"
+    "gMapGroup_IndoorDarkFalls",
+    "gMapGroup_IndoorStarlightGrove"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -97,7 +98,6 @@
     "Route2",
     "PortValor",
     "ForestsEdge",
-    "Prometheus_Tech_HQ",
     "Route3",
     "OldStoneCave1F",
     "Route4",
@@ -105,7 +105,10 @@
     "OldStoneCave3F",
     "Route26",
     "DarkFalls",
-    "Twilight_Forest"
+    "Twilight_Forest",
+    "Prometheus_Tech_Campus",
+    "Route10",
+    "StarlightGrove"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -646,8 +649,8 @@
     "NerwHope_Gym",
     "NewHope_Gym",
     "NewHope_FishermansHouse",
-    "DarkFalls_Gym",
-    "NewHope_LeagueHQ"
+    "NewHope_LeagueHQ",
+    "NewHope_ProfessorCinder"
   ],
   "gMapGroup_IndoorForestsEdge": [
     "ForestsEdge_Gym",
@@ -660,7 +663,8 @@
   "gMapGroup_Prometheus_Tech_Indoor": [
     "Prometheus_Tech_Lab",
     "Prometheus_Tech_Training_Facility",
-    "PrometheusTech_Shop"
+    "PrometheusTech_Shop",
+    "Prometheus_Tech_HQ"
   ],
   "gMapGroup_IndoorPortValor": [
     "PortValor_Gym",
@@ -668,12 +672,15 @@
     "PortValor_PokeMart",
     "PortValor_SailorsHouse",
     "PortValor_Gym_Lobby",
-    "PortValor_Gym_BattleFloor"
+    "PortValor_Gym_BattleFloor",
+    "StarlightGrove_PokemonCenter"
   ],
   "gMapGroup_MiscIndoor": [
     "EvergreenWoods_Shack"
   ],
   "gMapGroup_IndoorDarkFalls": [
-    "DarkFalls_PokemonCenter"
-  ]
+    "DarkFalls_PokemonCenter",
+    "DarkFalls_Gym"
+  ],
+  "gMapGroup_IndoorStarlightGrove": []
 }

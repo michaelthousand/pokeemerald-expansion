@@ -152,12 +152,6 @@ TestMapA_Trigger_BlockPath::
 	return
 
 
-# 94 "data/maps/TestMapA/scripts.pory"
-StopPlayer:
-# 95 "data/maps/TestMapA/scripts.pory"
-	walk_down
-	step_end
-
 Won_or_Caught_Text_0:
 # 70 "data/maps/TestMapA/scripts.pory"
 	.string "You are the Pokemon Master$"

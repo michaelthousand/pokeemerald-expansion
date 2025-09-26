@@ -167,6 +167,12 @@
       "map": "MAP_DARK_FALLS",
       "x": 13,
       "y": 5
+    },
+    {
+      "id": "HEAL_LOCATION_STARLIGHT_GROVE",
+      "map": "MAP_STARLIGHT_GROVE",
+      "x": 34,
+      "y": 15
     }
   ]
 }

@@ -1,0 +1,19 @@
+mapscripts Prometheus_Tech_Campus_MapScripts { }
+
+
+
+script PT_HQ_Door_Status {
+    if (var(PT_HQ_STATUS) == 1) {
+        lockall
+        msgbox("The doors appear to be locked.", MSGBOX_DEFAULT)
+        closemessage
+        applymovement(OBJ_EVENT_ID_PLAYER, StopPlayer)
+        waitmovement(0)
+        releaseall
+    }
+    end
+}
+
+movement StopPlayer{
+    walk_down
+}

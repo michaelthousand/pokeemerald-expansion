@@ -91,6 +91,3 @@ script TestMapA_Trigger_BlockPath{
     releaseall
 }
 
-movement StopPlayer{
-    walk_down
-}

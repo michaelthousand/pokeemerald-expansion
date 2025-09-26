@@ -1174,8 +1174,6 @@ EventScript_VsSeekerChargingDone::
 
 	.include "data/maps/NewHope_PokeMart/scripts.inc"
 
-	.include "data/maps/Prometheus_Tech_HQ/scripts.inc"
-
 	.include "data/maps/Prometheus_Tech_Lab/scripts.inc"
 
 	.include "data/maps/Prometheus_Tech_Training_Facility/scripts.inc"
@@ -1237,3 +1235,15 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/ForestsEdge_Gym_BattleFloor/scripts.inc"
 
 	.include "data/maps/NewHope_LeagueHQ/scripts.inc"
+
+	.include "data/maps/NewHope_ProfessorCinder/scripts.inc"
+
+	.include "data/maps/Prometheus_Tech_Campus/scripts.inc"
+
+	.include "data/maps/Prometheus_Tech_HQ/scripts.inc"
+
+	.include "data/maps/Route10/scripts.inc"
+
+	.include "data/maps/StarlightGrove/scripts.inc"
+
+	.include "data/maps/StarlightGrove_PokemonCenter/scripts.inc"

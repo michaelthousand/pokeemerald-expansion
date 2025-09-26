@@ -1,0 +1,19 @@
+mapscripts StarlightGrove_PokemonCenter_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION: StarlightGrove_PokemonCenter_OnTransition
+    MAP_SCRIPT_ON_RESUME: CableClub_OnResume
+}
+
+script StarlightGrove_PokemonCenter_OnTransition {
+    setrespawn(HEAL_LOCATION_STARLIGHT_GROVE)
+    end
+}
+
+
+script StarlightGrove_PokemonCenter_Nurse {
+    lock
+    faceplayer
+    // Use the common nurse flow, it handles fades/text/etc.
+    call(Common_EventScript_PkmnCenterNurse)
+    release
+    end
+}

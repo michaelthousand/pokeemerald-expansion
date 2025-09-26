@@ -93,44 +93,9 @@ script ProfessorCinder_EventScript_BallDefault {
     end
 }
 
-script StarterFade {
-    fadescreen(FADE_TO_BLACK)
-    delay(20)
-    fadescreen(FADE_FROM_BLACK)
-    return
-}
 
 // Common finalizer: expects VAR_TEMP_2 = SPECIES_* to give
-script Common_GiveStarter {
-    copyvar(VAR_STARTER_MON, VAR_TEMP_2)
-    setflag(FLAG_SYS_POKEMON_GET)
-    // Give L5, no item
-    givemon(VAR_TEMP_2, 5, ITEM_NONE)
 
-    if (var(VAR_RESULT) == MON_GIVEN_TO_PARTY) {
-        playfanfare(MUS_OBTAIN_ITEM)
-        msgbox("Received your Pokemon!")
-        special(HealPlayerParty)
-        call(NicknamePartyMon)
-        call(ProfessorCinder_Outro)
-    } elif (var(VAR_RESULT) == MON_GIVEN_TO_PC) {
-        playfanfare(MUS_OBTAIN_ITEM)
-        msgbox("Your Pokemon was sent to your PC.")
-        special(HealPlayerParty)
-        call(NicknameBoxMon)
-        call(ProfessorCinder_Outro)
-    } else {
-        msgbox("No more room for Pokemon.")
-        return
-    }
-
-    // Ensure UI/audio complete before touching objects/flags
-    waitfanfare
-    closemessage
-
-    
-    
-}
 
 // ---------- Professor: pick region (0..8) ----------
 script ProfessorCinder_EventScript_Professor {

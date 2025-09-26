@@ -1,10 +1,264 @@
-mapscripts Prometheus_Tech_HQ_MapScripts { }
+raw `
+Prometheus_Tech_HQ_MapScripts::
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Prometheus_Tech_HQ_OnFrame
+	.byte 0
 
-// TEMP - REMOVE AFTER TESTING CITY
-script Prometheus_Tech_HQ_WarpPV {
+Prometheus_Tech_HQ_OnFrame:
+	map_script_2 PT_HQ_STATUS, 0, Prometheus_Tech_HQ_EventScript_Intro
+	.2byte 0
+`
+
+script Prometheus_Tech_HQ_EventScript_Intro {
+    setvar(PT_HQ_STATUS, 1)
     lockall
-    faceplayer
-    msgbox("This is the warp to Port Valor", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_PT_RECEPTION, npc_exclaim)
+    waitmovement(0)
+    turnobject(LOCALID_PT_RECEPTION, DIR_SOUTH)
+    msgbox("RECPTIONIST: Welcome!", MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_to_PT_Reception)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    msgbox("Is this your first time at the Prometheus\nTech Headquarters?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        msgbox("Liar.", MSGBOX_AUTOCLOSE)
+    }
+    msgbox("Would you like a tour of the facility to\nlearn about Prometheus Tech's history?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        removeobject(LOCALID_PT_GUIDE)
+        setflag(PT_HQ_GUIDE)
+        msgbox("That's too bad.", MSGBOX_AUTOCLOSE)
+    } else {
+        clearflag(PT_HQ_GUIDE)
+        goto(Prometheus_Tech_HQ_EventScript_Tour)
+    }
     releaseall
+    end
+}
+
+script Prometheus_Tech_HQ_EventScript_Tour {
+    msgbox("Great! I'll call over our tour guide.", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_PT_GUIDE, Guide_to_Player)
+    waitmovement(0)
+
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_EAST)
+    msgbox("GUIDE: Hello there!", MSGBOX_AUTOCLOSE)
+    msgbox("I hear you want to learn about our\ncompany's history.", MSGBOX_AUTOCLOSE)
+    msgbox("Let's get the tour started!", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_PT_GUIDE, Guide_Ahead_of_Player)
+    waitmovement(0)
+    applymovement(LOCALID_PT_GUIDE, Player_and_Guide_PT_1)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_and_Guide_PT_1)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("Prometheus Tech was founded during\nValora's independence war with the Galar\pregion.", MSGBOX_AUTOCLOSE)
+    msgbox("The main aim of our company was to\nharness the power of POKEMON and infuse it\pinto weapons for our military.", MSGBOX_AUTOCLOSE)
+    msgbox("Not to pat ourselves on the back to\nmuch, but it really was our weapons that\pturned the tide against the colonial\nforces from Galar.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Guide_PT_2)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_PT_2)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("This here is a model of the Harbinger, the\ncrown jewel of our navy.", MSGBOX_AUTOCLOSE)
+    msgbox("Or at least it was for a time.", MSGBOX_AUTOCLOSE)
+    msgbox("The Harbinger was part of the initial\nbattle of the war when it sunk troop boats\pbound for Port Valor.", MSGBOX_AUTOCLOSE)
+    msgbox("During our final stand, the Harbinger was\nsunk but provided our forces with ample\ptime to prepare a defensive strategy.", MSGBOX_AUTOCLOSE)
+    msgbox("Of course, it was fitted with our weapons\nincluding one that used the power of\pHyper Beam to punch holes in enemy\nships and fry their planes in midair.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Guide_PT_3)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_PT_3)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("This here is a model of the Trident.", MSGBOX_AUTOCLOSE)
+    msgbox("The Trident was also part of that final\nstand but managed to make it through.", MSGBOX_AUTOCLOSE)
+    msgbox("This submarine could create whirpools\nthat swallowed up enemy ships.", MSGBOX_AUTOCLOSE)
+    msgbox("It also had a weapon that utilized Ice\nBeam to freeze the hulls of enemy ships.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Guide_PT_4)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_PT_4)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("Of course, not all of our advancements\nwere for naval vessels.", MSGBOX_AUTOCLOSE)
+    msgbox("We designed all kinds of guns and bombs\nthat harnessed the various elemental\ppowers that POKEMON possess.", MSGBOX_AUTOCLOSE)
+    msgbox("This here is a flamethrower that is\ninfused with the power of a Charizard.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Player_and_Guide_PT_5)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_and_Guide_PT_5)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("That was the important part: finding the\nmost powerful POKEMON we could.", MSGBOX_AUTOCLOSE)
+    msgbox("While a basic form POKEMON may be able to\nlearn a powerful move, Prometheus Tech\psought to harness the literal power o\nthe POKEMON, not just a particular move.", MSGBOX_AUTOCLOSE)
+    msgbox("We sent teams out across our region and\nbeyond looking for rare and legendary\pspecies such as Groudon, Kyogre,\nLunala, and Ho-Oh.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Player_and_Guide_PT_5)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_and_Guide_PT_5)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("Eventually, we were able to capture a\nMiraidon, a futuristic species that's\pelectric attacks helped us build impossibly\nstrong electric weapons.", MSGBOX_AUTOCLOSE)
+    msgbox("While most of the Northwest was lost in\nthe war, our region remains free thanks to\pthe technology developed by\nPrometheus Tech.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Player_and_Guide_PT_6)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_and_Guide_PT_6)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+    turnobject(LOCALID_PT_GUIDE, DIR_NORTH)
+    msgbox("Now, however, Prometheus Tech has a far\ndifferent goal.", MSGBOX_AUTOCLOSE)
+    msgbox("In an effort to rebuild the strength of\nValora, our company helps new trainers\pwith items and techonology that will help them\ngrow quicker.", MSGBOX_AUTOCLOSE)
+
+    applymovement(LOCALID_PT_GUIDE, Guide_Ahead_of_Player)
+    waitmovement(0)
+    applymovement(LOCALID_PT_GUIDE, Player_and_Guide_PT_7)
+    delay(16)
+    applymovement(OBJ_EVENT_ID_PLAYER, Player_and_Guide_PT_7)
+    waitmovement(0)
+    turnobject(OBJ_EVENT_ID_PLAYER, DIR_WEST)
+    turnobject(LOCALID_PT_GUIDE, DIR_EAST)
+    msgbox("Be sure to visit the various buildings on\nour campus to see more of what\pPrometheus Tech can do for you!", MSGBOX_AUTOCLOSE)
+
+    msgbox("Have a great day!", MSGBOX_AUTOCLOSE)
+    applymovement(LOCALID_PT_GUIDE, Guide_PT_8)
+    waitmovement(0)
+    setflag(PT_HQ_GUIDE)
+    removeobject(LOCALID_PT_GUIDE)
+
+    releaseall
+    end
+}
+
+script Prometheus_Tech_HQ_Reception {
+    lockall
+    msgbox("RECPTIONIST: Welcome!", MSGBOX_AUTOCLOSE)
+    msgbox("Would you like a tour of the facility to\nlearn about Prometheus Tech's history?", MSGBOX_YESNO)
+    if (var(VAR_RESULT) == NO) {
+        msgbox("That's too bad.", MSGBOX_AUTOCLOSE)
+    } else {
+        clearflag(PT_HQ_GUIDE)
+        addobject(LOCALID_PT_GUIDE)
+        goto(Prometheus_Tech_HQ_EventScript_Tour)
+    }
+    releaseall
+    end
+}
+
+script Prometheus_Tech_HQ_EventScript_Security1 {
+    lockall
+    msgbox("Welcome to Prometheus Tech!", MSGBOX_AUTOCLOSE)
+    msgbox("Be careful not to touch the exhibits\nand enjoy your visit!", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+script Prometheus_Tech_HQ_EventScript_Security2 {
+    lockall
+    msgbox("Sorry, the rest of the building is off\nlimits to visitors.", MSGBOX_AUTOCLOSE)
+    releaseall
+    end
+}
+
+
+movement Player_to_PT_Reception {
+    walk_up
+    walk_up
+    walk_left
+    walk_left
+    face_up
+    end
+}
+
+movement Guide_to_Player {
+    walk_down * 6
+    walk_left * 4
+    end
+}
+
+movement Guide_Ahead_of_Player {
+    walk_down
+    walk_left * 2
+    walk_up
+    end
+}
+
+movement Player_and_Guide_PT_1 {
+    walk_left * 2
+    walk_up * 3
+    walk_left * 2
+    end
+}
+
+movement Guide_PT_2 {
+    walk_left
+    walk_down * 4
+    walk_right * 2
+    end
+}
+
+movement Player_PT_2 {
+    walk_left * 2
+    walk_down * 4
+    walk_right
+    end
+}
+
+movement Guide_PT_3 {
+    walk_right * 8
+    walk_up * 8
+    walk_left * 9
+    walk_up * 2
+    end
+}
+
+movement Player_PT_3 {
+    walk_right * 9
+    walk_up * 8
+    walk_left * 8
+    walk_up * 2
+    end
+}
+
+movement Guide_PT_4 {
+    walk_left
+    walk_up * 5
+    walk_right
+    end
+}
+
+movement Player_PT_4 {
+    walk_left * 2
+    walk_up * 5
+    end
+}
+
+movement Player_and_Guide_PT_5 {
+    walk_right * 3
+    end
+}
+
+movement Player_and_Guide_PT_6 {
+    walk_right * 9
+    end
+}
+
+movement Player_and_Guide_PT_7 {
+    walk_left * 4
+    walk_down * 10
+    end
+}
+
+movement Guide_PT_8 {
+    walk_up * 4
+    walk_right
+    walk_up * 6
     end
 }

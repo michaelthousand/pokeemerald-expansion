@@ -271,7 +271,7 @@
 #define TALK_TO_MOM                                0x40FB // Unused Var // USED FOR TERA CHANGE TEST
 #define GYM_STATE                                0x40FC // Unused Var // USED FOR TEST MAP NURSE
 #define MET_RIVAL                                0x40FD // Unused Var // USED FOR TEST MAP STATE
-#define TESTMAPA_STATE                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK
+#define PT_HQ_STATUS                                0x40FE // Unused Var // USED FOR MAY TEST BATTLE CHECK
 #define STARTER_REGION                                0x40FF // Unused Var // USED FOR STARTER POKEBALL SELECTION
 
 #define VARS_END                                         0x40FF

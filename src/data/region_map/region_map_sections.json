@@ -641,7 +641,7 @@
     },
     {
       "id": "MAPSEC_CINDERS_LAB",
-      "name": "Prof. Cinder's Lab"
+      "name": "Cinder's Lab"
     },
     {
       "id": "MAPSEC_LEAGUE_HQ",
@@ -1222,6 +1222,10 @@
     {
       "id": "MAPSEC_TWILIGHT_FOREST",
       "name": "Twilight Forest"
+    },
+    {
+      "id": "MAPSEC_STARLIGHT_GROVE",
+      "name": "Starlight Grove"
     }
   ]
 }

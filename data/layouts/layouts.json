@@ -4492,16 +4492,6 @@
       "blockdata_filepath": "data/layouts/NewHope_PokeMart/map.bin"
     },
     {
-      "id": "LAYOUT_PROMETHEUS_TECH_HQ",
-      "name": "Prometheus_Tech_HQ_Layout",
-      "width": 40,
-      "height": 25,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lilycove",
-      "border_filepath": "data/layouts/Prometheus_Tech_HQ/border.bin",
-      "blockdata_filepath": "data/layouts/Prometheus_Tech_HQ/map.bin"
-    },
-    {
       "id": "LAYOUT_PROMETHEUS_TECH_LAB",
       "name": "Prometheus_Tech_Lab_Layout",
       "width": 18,
@@ -4800,6 +4790,66 @@
       "secondary_tileset": "gTileset_BattleDome",
       "border_filepath": "data/layouts/NewHope_LeagueHQ/border.bin",
       "blockdata_filepath": "data/layouts/NewHope_LeagueHQ/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_HOPE_PROFESSOR_CINDER",
+      "name": "NewHope_ProfessorCinder_Layout",
+      "width": 25,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/NewHope_ProfessorCinder/border.bin",
+      "blockdata_filepath": "data/layouts/NewHope_ProfessorCinder/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROMETHEUS_TECH_CAMPUS",
+      "name": "Prometheus_Tech_Campus_Layout",
+      "width": 40,
+      "height": 25,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/Prometheus_Tech_Campus/border.bin",
+      "blockdata_filepath": "data/layouts/Prometheus_Tech_Campus/map.bin"
+    },
+    {
+      "id": "LAYOUT_PROMETHEUS_TECH_HQ",
+      "name": "Prometheus_Tech_HQ_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_OceanicMuseum",
+      "border_filepath": "data/layouts/Prometheus_Tech_HQ/border.bin",
+      "blockdata_filepath": "data/layouts/Prometheus_Tech_HQ/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE10",
+      "name": "Route10_Layout",
+      "width": 60,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Rustboro",
+      "border_filepath": "data/layouts/Route10/border.bin",
+      "blockdata_filepath": "data/layouts/Route10/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARLIGHT_GROVE",
+      "name": "StarlightGrove_Layout",
+      "width": 40,
+      "height": 30,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/StarlightGrove/border.bin",
+      "blockdata_filepath": "data/layouts/StarlightGrove/map.bin"
+    },
+    {
+      "id": "LAYOUT_STARLIGHT_GROVE_POKEMON_CENTER",
+      "name": "StarlightGrove_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/StarlightGrove_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/StarlightGrove_PokemonCenter/map.bin"
     }
   ]
 }

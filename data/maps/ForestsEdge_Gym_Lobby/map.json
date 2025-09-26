@@ -44,24 +44,24 @@
       "dest_warp_id": "0"
     },
     {
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "dest_map": "MAP_FORESTS_EDGE_GYM_LOBBY",
+      "dest_warp_id": "0"
+    },
+    {
       "x": 9,
       "y": 2,
       "elevation": 0,
-      "dest_map": "ForestsEdge_Gym_BattleFloor",
+      "dest_map": "MAP_FORESTS_EDGE_GYM_BATTLE_FLOOR",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 2,
       "elevation": 0,
-      "dest_map": "ForestsEdge_Gym_BattleFloor",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 5,
-      "y": 7,
-      "elevation": 0,
-      "dest_map": "MAP_FORESTS_EDGE_GYM_LOBBY",
+      "dest_map": "MAP_FORESTS_EDGE_GYM_BATTLE_FLOOR",
       "dest_warp_id": "0"
     }
   ],
